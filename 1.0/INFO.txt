@@ -1,0 +1,19 @@
+Polecam Koperek(TM) rocznik produkcji 2002r
+
+http://goo.gl/596Ui - Readme
+Archiwum programu Kop32.exe(SFX) - http://goo.gl/khYmE
+http://goo.gl/fbtNY - Instalator
+Deinstalator wpisów - http://goo.gl/m9sfb
+
+Nie gwarantuje ¿e jest dobry ani nawet ¿e to stabilna kompilacja ani ¿e czegoœ nie usunie. Ostro¿nie! Jeœli pobierzesz uruchomisz, zainstalujesz to automatycznie wyra¿asz zgode na warunki licencji zawarte w pliku License.txt lub pod adresem:
+https://dl.dropboxusercontent.com/u/10755180/PC/Koperek/Readme.html 
+
+Byly ró¿ne wersje funkcjonalne i GUI, Ultracopier, Copy Handler, Turbocopy to przekombinowane programy, aczkolwiek ich pojawienie odbiera sens tworzenia, natomiast Koperek to rodzima prosta produkcja odpowiedŸ na powolne kopiowanie w Win98 oraz 2k, napisany w licencjonowanym œrodowisku Borland BCB 3, okno potwierdzania kopiowañ pixel w pixel z windowsowym oknem(¿eby nie wprowadzaæ zamieszania) 
+
+Konfigurowalny poprzez parametry uruchomieniowe, potrafi kopiowaæ, przenosiæ, usuwaæ, kompresowaæ(format zbli¿ony do kompresji NTFS) i szyfrowaæ do plików .eno(encoded) ale jedynie lokalnych (z nazwami dysków C: D: itd.) Jest pauza i to uwa¿am za najwa¿niejsze. Reszta to bezsensowne bajery. 
+
+Z doœwiadczenia twórcy kopiowaczy od wersji XP jest nareszcie normalnie buforowane, jedyny brak to brak pauzy jeœli podczas operacji stwierdze ze coœ nie halo nie ma litoœci i to mnie wkurza i by³o powodem zainstenienia programu, zdecydowanie najlepszym zamiennikiem jest Total Commander lub FreeFileSync - to genialny programik natomiast Kop32 równie¿ doskonale zastêpuje systemowe funkcje.
+
+Wszelkie uwagi i wnioski prosze kierowaæ na adres sstsoft@wp.pl
+inne formy kontaktu znajdziesz na stronie
+https://dl.dropboxusercontent.com/u/10755180/KONTAKT.html

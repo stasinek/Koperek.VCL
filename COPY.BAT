@@ -1,0 +1,1 @@
+xcopy /y *.exe c:\winnt\system32

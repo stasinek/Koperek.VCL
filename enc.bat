@@ -1,0 +1,1 @@
+"C:\Documents and Settings\All Users\Documents\Aktualne prc++\Progs\Koperek_VS_CON\Kop_CON.exe" /encode{ARI} c:\test c:
