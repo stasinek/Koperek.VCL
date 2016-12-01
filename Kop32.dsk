@@ -10,36 +10,16 @@ File_7=SourceModule,'D:\My Projects\aktualne prc++\x86_libraries\SSTSOFT\text\ts
 File_8=SourceModule,'D:\My Projects\aktualne prc++\x86_libraries\SSTSOFT\io\tsoft_file_search.h',0,1,30,33,39,0,0
 
 [Modules]
-Module0=C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\Libraries\DLLKop32\TSoft_Kop32.cpp
-Module1=C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\Libraries\DLLIO\TSoft_IO.cpp
-Module2=C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\Libraries\DLLKop32\TSoft_BWTMatrix.cpp
-Module3=C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\Libraries\DLLIO\TSoft_IO.h
-Module4=C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\PROGS\Koperek_VCL\main.h
-Module5=C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\PROGS\Koperek_VCL\main.cpp
-Module6=C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\PROGS\Koperek_VCL\quest_frm.cpp
-Module7=C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\PROGS\Koperek_VCL\haslo_frm.cpp
-Module8=C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\PROGS\Koperek_VCL\Koper_frm.cpp
-Module9=C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\Libraries\DLLKop32\TSoft_Kop32.h
-Module10=C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\PROGS\Koperek_VCL\Kop32.bpr
-Count=11
+Module0=C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\PROGS\Koperek_VCL\Koper_frm.cpp
+Module1=C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\PROGS\Koperek_VCL\main.h
+Module2=C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\PROGS\Koperek_VCL\main.cpp
+Module3=C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\PROGS\Koperek_VCL\quest_frm.cpp
+Module4=C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\PROGS\Koperek_VCL\haslo_frm.cpp
+Module5=C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\PROGS\Koperek_VCL\Kop32.bpr
+Count=6
 EditWindowCount=1
 
-[C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\Libraries\DLLKop32\TSoft_Kop32.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\Libraries\DLLIO\TSoft_IO.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\Libraries\DLLKop32\TSoft_BWTMatrix.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\Libraries\DLLIO\TSoft_IO.h]
+[C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\PROGS\Koperek_VCL\Koper_frm.cpp]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
@@ -64,16 +44,6 @@ ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\PROGS\Koperek_VCL\Koper_frm.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\Libraries\DLLKop32\TSoft_Kop32.h]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
 [C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\PROGS\Koperek_VCL\Kop32.bpr]
 ModuleType=SourceModule
 FormState=0
@@ -84,7 +54,7 @@ FormState=0
 FormOnTop=0
 
 [EditWindow0]
-ViewCount=11
+ViewCount=6
 CurrentView=1
 View0=0
 View1=1
@@ -92,11 +62,6 @@ View2=2
 View3=3
 View4=4
 View5=5
-View6=6
-View7=7
-View8=8
-View9=9
-View10=10
 MessageView=MessageView@EditWindow0
 Create=1
 Visible=1
@@ -106,11 +71,11 @@ Top=229
 Width=825
 Height=482
 MaxLeft=-4
-MaxTop=100
+MaxTop=97
 MaxWidth=1032
-MaxHeight=644
+MaxHeight=647
 ClientWidth=1024
-ClientHeight=617
+ClientHeight=620
 LeftPanelSize=0
 RightPanelSize=0
 BottomPanelSize=0
@@ -125,69 +90,34 @@ TopLine=76
 LeftCol=1
 
 [View1]
-Module=C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\Libraries\DLLKop32\TSoft_Kop32.cpp
-CursorX=37
-CursorY=10
-TopLine=106
-LeftCol=1
-
-[View2]
-Module=C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\Libraries\DLLIO\TSoft_IO.cpp
-CursorX=67
-CursorY=1121
-TopLine=1121
-LeftCol=1
-
-[View3]
-Module=C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\Libraries\DLLIO\TSoft_IO.h
-CursorX=40
-CursorY=2
-TopLine=1
-LeftCol=1
-
-[View4]
-Module=C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\Libraries\DLLKop32\TSoft_BWTMatrix.cpp
-CursorX=41
-CursorY=17
-TopLine=1
-LeftCol=1
-
-[View5]
-Module=C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\Libraries\DLLKop32\TSoft_Kop32.h
-CursorX=42
-CursorY=162
-TopLine=155
-LeftCol=1
-
-[View6]
 Module=C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\PROGS\Koperek_VCL\Koper_frm.cpp
 CursorX=22
 CursorY=303
 TopLine=291
 LeftCol=1
 
-[View7]
+[View2]
 Module=C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\PROGS\Koperek_VCL\haslo_frm.cpp
 CursorX=11
 CursorY=25
 TopLine=6
 LeftCol=1
 
-[View8]
+[View3]
 Module=C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\PROGS\Koperek_VCL\quest_frm.cpp
 CursorX=26
 CursorY=287
 TopLine=272
 LeftCol=1
 
-[View9]
+[View4]
 Module=C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\PROGS\Koperek_VCL\main.cpp
 CursorX=15
 CursorY=4
 TopLine=1
 LeftCol=1
 
-[View10]
+[View5]
 Module=C:\Documents and Settings\stasiek.TC12\My Documents\aktualne_prc++\OBSOLETE\PROGS\Koperek_VCL\main.h
 CursorX=22
 CursorY=10
@@ -212,8 +142,8 @@ Left=9
 Top=15
 Width=1015
 Height=105
-MaxLeft=-1
-MaxTop=-1
+MaxLeft=-4
+MaxTop=-4
 MaxWidth=1032
 MaxHeight=105
 ClientWidth=1024

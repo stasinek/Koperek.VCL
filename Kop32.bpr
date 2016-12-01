@@ -5,19 +5,13 @@
     <VERSION value="BCB.06.00"/>
     <PROJECT value="Kop32.exe"/>
     <OBJFILES value="Kop32.obj main.obj Koper_frm.obj haslo_frm.obj quest_frm.obj break_frm.obj 
-      .\LIB\DLLKop32\TSoft_Mtf.obj 
-      .\LIB\DLLKop32\TSoft_Pharser.obj 
-      .\LIB\DLLKop32\TSoft_Seeker.obj 
-      .\LIB\DLLKop32\TSoft_Stack.obj 
-      .\LIB\DLLKop32\TSoft_BinTree.obj 
-      .\LIB\DLLKop32\TSoft_BWTMatrix.obj 
-      .\LIB\DLLKop32\TSoft_HDR.obj 
-      .\LIB\DLLKop32\TSoft_Huff.obj 
-      .\LIB\DLLKop32\TSoft_Koder.obj 
-      .\LIB\DLLKop32\TSoft_Kop32.obj 
-      .\LIB\DLLDatabase\TSoft_Database.obj 
-      .\LIB\DLLIO\TSoft_IO.obj .\LIB\DLLKop32\TSoft_Ari.obj 
-      infos_frm.obj Lista_frm.obj Journal_frm.obj"/>
+      LIB\DLLKop32\TSoft_Mtf.obj LIB\DLLKop32\TSoft_Pharser.obj 
+      LIB\DLLKop32\TSoft_Seeker.obj LIB\DLLKop32\TSoft_Stack.obj 
+      LIB\DLLKop32\TSoft_BinTree.obj LIB\DLLKop32\TSoft_BWTMatrix.obj 
+      LIB\DLLKop32\TSoft_HDR.obj LIB\DLLKop32\TSoft_Huff.obj 
+      LIB\DLLKop32\TSoft_Koder.obj LIB\DLLKop32\TSoft_Kop32.obj 
+      LIB\DLLDatabase\TSoft_Database.obj LIB\DLLIO\TSoft_IO.obj 
+      LIB\DLLKop32\TSoft_Ari.obj infos_frm.obj Lista_frm.obj Journal_frm.obj"/>
     <RESFILES value="Kop32.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
@@ -30,7 +24,7 @@
     <PACKAGES value="rtl.bpi vcl.bpi vclx.bpi bcbsmp.bpi dbrtl.bpi vcldb.bpi ibsmp.bpi 
       bdertl.bpi vcldbx.bpi qrpt.bpi teeui.bpi teedb.bpi tee.bpi dss.bpi 
       teeqr.bpi ibxpress.bpi USRPKG.bpi adortl.bpi"/>
-    <PATHCPP value=".;.\LIB\DLLKop32;.\LIB\DLLKop32;.\LIB\DLLKop32;.\LIB\DLLKop32;.\LIB\DLLKop32;.\LIB\DLLKop32;.\LIB\DLLKop32;.\LIB\DLLKop32;.\LIB\DLLKop32;.\LIB\DLLKop32;.\LIB\DLLDatabase;.\LIB\DLLIO;.\LIB\DLLKop32"/>
+    <PATHCPP value=".;LIB\DLLKop32;LIB\DLLKop32;LIB\DLLKop32;LIB\DLLKop32;LIB\DLLKop32;LIB\DLLKop32;LIB\DLLKop32;LIB\DLLKop32;LIB\DLLKop32;LIB\DLLKop32;LIB\DLLDatabase;LIB\DLLIO;LIB\DLLKop32"/>
     <PATHPAS value=".;"/>
     <PATHRC value=".;"/>
     <PATHASM value=".;"/>
@@ -70,19 +64,19 @@
       <FILE FILENAME="quest_frm.cpp" FORMNAME="QuestForm" UNITNAME="quest_frm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="break_frm.cpp" FORMNAME="BreakForm" UNITNAME="break_frm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="Kop32.res" FORMNAME="" UNITNAME="Kop32" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME=".\LIB\DLLKop32\TSoft_Mtf.cpp" FORMNAME="" UNITNAME="TSoft_Mtf.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME=".\LIB\DLLKop32\TSoft_Pharser.cpp" FORMNAME="" UNITNAME="TSoft_Pharser.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME=".\LIB\DLLKop32\TSoft_Seeker.cpp" FORMNAME="" UNITNAME="TSoft_Seeker.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME=".\LIB\DLLKop32\TSoft_Stack.cpp" FORMNAME="" UNITNAME="TSoft_Stack.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME=".\LIB\DLLKop32\TSoft_BinTree.cpp" FORMNAME="" UNITNAME="TSoft_BinTree.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME=".\LIB\DLLKop32\TSoft_BWTMatrix.cpp" FORMNAME="" UNITNAME="TSoft_BWTMatrix.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME=".\LIB\DLLKop32\TSoft_HDR.cpp" FORMNAME="" UNITNAME="TSoft_HDR.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME=".\LIB\DLLKop32\TSoft_Huff.Cpp" FORMNAME="" UNITNAME="TSoft_Huff.Cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME=".\LIB\DLLKop32\TSoft_Koder.cpp" FORMNAME="" UNITNAME="TSoft_Koder.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME=".\LIB\DLLKop32\TSoft_Kop32.cpp" FORMNAME="" UNITNAME="TSoft_Kop32.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME=".\LIB\DLLDatabase\TSoft_Database.cpp" FORMNAME="" UNITNAME="TSoft_Database" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME=".\LIB\DLLIO\TSoft_IO.cpp" FORMNAME="" UNITNAME="TSoft_IO" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME=".\LIB\DLLKop32\TSoft_Ari.Cpp" FORMNAME="" UNITNAME="TSoft_Ari" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="LIB\DLLKop32\TSoft_Mtf.cpp" FORMNAME="" UNITNAME="TSoft_Mtf.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="LIB\DLLKop32\TSoft_Pharser.cpp" FORMNAME="" UNITNAME="TSoft_Pharser.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="LIB\DLLKop32\TSoft_Seeker.cpp" FORMNAME="" UNITNAME="TSoft_Seeker.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="LIB\DLLKop32\TSoft_Stack.cpp" FORMNAME="" UNITNAME="TSoft_Stack.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="LIB\DLLKop32\TSoft_BinTree.cpp" FORMNAME="" UNITNAME="TSoft_BinTree.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="LIB\DLLKop32\TSoft_BWTMatrix.cpp" FORMNAME="" UNITNAME="TSoft_BWTMatrix.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="LIB\DLLKop32\TSoft_HDR.cpp" FORMNAME="" UNITNAME="TSoft_HDR.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="LIB\DLLKop32\TSoft_Huff.Cpp" FORMNAME="" UNITNAME="TSoft_Huff.Cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="LIB\DLLKop32\TSoft_Koder.cpp" FORMNAME="" UNITNAME="TSoft_Koder.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="LIB\DLLKop32\TSoft_Kop32.cpp" FORMNAME="" UNITNAME="TSoft_Kop32.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="LIB\DLLDatabase\TSoft_Database.cpp" FORMNAME="" UNITNAME="TSoft_Database" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="LIB\DLLIO\TSoft_IO.cpp" FORMNAME="" UNITNAME="TSoft_IO" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="LIB\DLLKop32\TSoft_Ari.Cpp" FORMNAME="" UNITNAME="TSoft_Ari" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="infos_frm.cpp" FORMNAME="InfosForm" UNITNAME="infos_frm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="Lista_frm.cpp" FORMNAME="ListaForm" UNITNAME="Lista_frm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="Journal_frm.cpp" FORMNAME="JournalForm" UNITNAME="Journal_frm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
