@@ -1,3 +1,5 @@
+// C:\iPAQ
+
 //---------------------------------------------------------------------------
 #include <vcl.h>
 #pragma hdrstop
@@ -8,7 +10,7 @@
 #include "break_frm.h"
 #include "lista_frm.h"
 #include "Journal_frm.h"
-#include "..\OBSOLETE_Libraries\DLLIO\TSoft_IO.h"
+#include "..\..\Libraries\DLLIO\TSoft_IO.h"
 //---------------------------------------------------------------------------
 #include "koper_frm.h"
 #include "main.h"
@@ -34,7 +36,7 @@ buffer1 = new char[255];
 buffer2 = new char[255];
 buffer3 = new char[255];
 buffer4 = new char[255];
-kop->OnBreak = KoperForm->DoBreak;
+Kop->OnBreak = KoperForm->DoBreak;
 hApp = (HINSTANCE)HInstance;
 
 }
@@ -52,15 +54,15 @@ void __fastcall TKoperForm::Timer1Timer(TObject *Sender) {
 static int tik = 0;
 static double x, xold, ic;
 
-if (MineloBajt ==kop->progress.src.all.Read && ic==kop->list.iCur) { Application->ProcessMessages();
+if (MineloBajt ==Kop->progress.src.all.Read && ic==Kop->list.iCur) { Application->ProcessMessages();
 return;}
 
-ic = kop->list.iCur;
- MineloBajt = kop->progress.src.all.Read;
-ZostaloBajt = kop->progress.src.all.Size - kop->progress.src.all.Read;
+ic = Kop->list.iCur;
+ MineloBajt = Kop->progress.src.all.Read;
+ZostaloBajt = Kop->progress.src.all.Size - Kop->progress.src.all.Read;
  MineloCzas = timeGetTime() - OldCzas;
  MineloCzasTik  = timeGetTime()-MineloCzasTikOld;
- MineloBajtTik  = kop->progress.src.all.Read-MineloBajtTikOld;
+ MineloBajtTik  = Kop->progress.src.all.Read-MineloBajtTikOld;
 if (MineloBajt > 0)
 	 ZostaloCzas = __int64(MineloCzas*ZostaloBajt)/MineloBajt;
 else ZostaloCzas = 0;
@@ -68,7 +70,7 @@ else ZostaloCzas = 0;
 if  (++tik == 10) {
 	tik = 0;
 	MineloCzasTikOld = timeGetTime();
-	MineloBajtTikOld = kop->progress.src.all.Read;
+	MineloBajtTikOld = Kop->progress.src.all.Read;
 }
 if  (tik % 10) {
 	if (MineloCzasTik!=0 && MineloCzas!=0)
@@ -127,12 +129,12 @@ if (strcmp(buffer1,this->Label1->Caption.c_str())!=0)
 if (strcmp(buffer4,this->Label2->Caption.c_str())!=0)
 	this->Label2->Caption = buffer4;
 
-sprintf(buffer1,"W Ÿródle jest jeszcze do przetworzenia %d plików, w sumie %s",(kop->list.src.Main.Count-(kop->list.iCur-kop->list.iBgn)),GetBajtText(kop->progress.src.all.Size-kop->progress.src.all.Read));
+sprintf(buffer1,"W Ÿródle jest jeszcze do przetworzenia %d plików, w sumie %s",(Kop->list.src.Main.Count-(Kop->list.iCur-Kop->list.iBgn)),GetBajtText(Kop->progress.src.all.Size-Kop->progress.src.all.Read));
 if (strcmp(buffer1,this->Label5->Caption.c_str())!=0)
 	Label5->Caption = buffer1;
 
-if (kop->options.Operation==opKODUJ && kop->progress.dst.all.Read!=0) {
-	double s = float(kop->progress.src.all.Read)/float(kop->progress.dst.all.Read);
+if (Kop->options.Operation==opKODUJ && Kop->progress.dst.all.Read!=0) {
+	double s = float(Kop->progress.src.all.Read)/float(Kop->progress.dst.all.Read);
 	sprintf(buffer4,"Stopieñ kompresji we/wy = %01.2f/1", s);
 	if (s+1!=0) AdvancedBar4->Position = 100 - (1/(s+1)) * 100;
 	else AdvancedBar4->Position = 100;
@@ -140,8 +142,8 @@ if (kop->options.Operation==opKODUJ && kop->progress.dst.all.Read!=0) {
 		this->Label4->Caption = buffer3;
 	}
 else
-if (kop->options.Operation==opKODUJ && kop->progress.src.all.Read!=0) {
-	double s = float(kop->progress.dst.all.Read)/float(kop->progress.src.all.Read);
+if (Kop->options.Operation==opKODUJ && Kop->progress.src.all.Read!=0) {
+	double s = float(Kop->progress.dst.all.Read)/float(Kop->progress.src.all.Read);
 	sprintf(buffer4,"Stopieñ dekompresji wy/wy = %01.2f/1", s);
 	if (s+1!=0) AdvancedBar4->Position = 100 - (1/(s+1)) * 100;
 	else AdvancedBar4->Position = 100;
@@ -161,8 +163,8 @@ if (BreakCode&opSEEKPROGRESS)
    {
 	BreakForm->AdvancedBar1->Position = (BreakForm->AdvancedBar1->Position +1) % 1000;
 	if (BreakCode&isSRC) {
-	if (kop->list.src.Main.Count>0) {
-		strExtractFilePath(temp0,kop->list.src.Main.Items[kop->list.src.Main.Count-1]->text);
+	if (Kop->list.src.Main.Count>0) {
+		strExtractFilePath(temp0,Kop->list.src.Main.Items[Kop->list.src.Main.Count-1]->text);
 		for (;strLen(temp0)>=55; )
 			{
 			strDel(temp0,3,8);
@@ -173,8 +175,8 @@ if (BreakCode&opSEEKPROGRESS)
 		}
 	}
 	if (BreakCode&isDST) {
-	if (kop->list.dst.Main.Count>0) {
-		strExtractFilePath(temp0,kop->list.dst.Main.Items[kop->list.dst.Main.Count-1]->text);
+	if (Kop->list.dst.Main.Count>0) {
+		strExtractFilePath(temp0,Kop->list.dst.Main.Items[Kop->list.dst.Main.Count-1]->text);
 		for (;strLen(temp0)>=55; )
 			{
 			strDel(temp0,3,8);
@@ -184,32 +186,32 @@ if (BreakCode&opSEEKPROGRESS)
 		BreakForm->Label2->Caption = temp0;
 		}
 	}
-	BreakForm->Label3->Caption = "W Ÿródle jest " + (AnsiString)kop->list.src.Main.Count + " plików o rozmiarze " + GetBajtText(kop->progress.src.all.Size);
-	if (kop->list.dst.Main.Count!=0 && kop->progress.dst.all.Size!=0) BreakForm->Label4->Caption = "W katalogach docelowych jest " + (AnsiString)kop->list.dst.Main.Count + " plików o rozmiarze " + GetBajtText(kop->progress.dst.all.Size);
+	BreakForm->Label3->Caption = "W Ÿródle jest " + (AnsiString)Kop->list.src.Main.Count + " plików o rozmiarze " + GetBajtText(Kop->progress.src.all.Size);
+	if (Kop->list.dst.Main.Count!=0 && Kop->progress.dst.all.Size!=0) BreakForm->Label4->Caption = "W katalogach docelowych jest " + (AnsiString)Kop->list.dst.Main.Count + " plików o rozmiarze " + GetBajtText(Kop->progress.dst.all.Size);
 	KoperForm->Label5->Caption = BreakForm->Label3->Caption;
    }
 if (BreakCode&onPROGRESS)
    {
-	if (kop->progress.src.all.Size!=0)
-	AdvancedBar2->Position = 100*(double(kop->progress.src.all.Read)/double(kop->progress.src.all.Size));
+	if (Kop->progress.src.all.Size!=0)
+	AdvancedBar2->Position = 100*(double(Kop->progress.src.all.Read)/double(Kop->progress.src.all.Size));
 	else
 	AdvancedBar2->Position = 0;
 
-	if (kop->progress.src.one.Size!=0)
-		AdvancedBar5->Position = 100*(double(kop->progress.src.one.Read)/double(kop->progress.src.one.Size));
+	if (Kop->progress.src.one.Size!=0)
+		AdvancedBar5->Position = 100*(double(Kop->progress.src.one.Read)/double(Kop->progress.src.one.Size));
 	else
 	AdvancedBar5->Position = 0;
 
-	if (kop->progress.dst.one.Size!=0)
-		AdvancedBar6->Position = 100*(double(kop->progress.dst.one.Read)/double(kop->progress.dst.one.Size));
+	if (Kop->progress.dst.one.Size!=0)
+		AdvancedBar6->Position = 100*(double(Kop->progress.dst.one.Read)/double(Kop->progress.dst.one.Size));
 	else
 	AdvancedBar6->Position = 0;
    }
 if (BreakCode&opKOPIUJ)
    {if (BreakCode&isDIRECTORY) strcpy(lpcaption,"KOPIUJÊ katalog ");
 	else strcpy(lpcaption,"KOPIUJÊ plik ");
-	if (kop->list.src.Main.Count!=0 && kop->list.src.Main.Count!=0)
-	sprintf(temp4,"'%s' do '%s'",strExtractFileName(temp1,kop->list.src.Main.Items[kop->list.iCur]->text),strExtractFileName(temp2,strExtractFilePath(temp3,kop->list.dst.Main.Items[kop->list.iCur]->text)));
+	if (Kop->list.src.Main.Count!=0 && Kop->list.src.Main.Count!=0)
+	sprintf(temp4,"'%s' do '%s'",strExtractFileName(temp1,Kop->list.src.Main.Items[Kop->list.iCur]->text),strExtractFileName(temp2,strExtractFilePath(temp3,Kop->list.dst.Main.Items[Kop->list.iCur]->text)));
 	strcat(lpcaption,temp4);
 	this->Caption = lpcaption;
    }
@@ -217,8 +219,8 @@ else
 if (BreakCode&opPRZENIES)
    {if (BreakCode&isDIRECTORY) strcpy(lpcaption,"PRZENOSZÊ katalog ");
 	else strcpy(lpcaption,"KOPIUJÊ plik ");
-	if (kop->list.src.Main.Count!=0 && kop->list.src.Main.Count!=0)
-	sprintf(temp4,"'%s' do '%s'",strExtractFileName(temp1,kop->list.src.Main.Items[kop->list.iCur]->text),strExtractFileName(temp2,strExtractFilePath(temp3,kop->list.dst.Main.Items[kop->list.iCur]->text)));
+	if (Kop->list.src.Main.Count!=0 && Kop->list.src.Main.Count!=0)
+	sprintf(temp4,"'%s' do '%s'",strExtractFileName(temp1,Kop->list.src.Main.Items[Kop->list.iCur]->text),strExtractFileName(temp2,strExtractFilePath(temp3,Kop->list.dst.Main.Items[Kop->list.iCur]->text)));
 	strcat(lpcaption,temp4);
 	this->Caption = lpcaption;
    }
@@ -226,8 +228,8 @@ else
 if (BreakCode&opKODUJ)
    {if (BreakCode&isDIRECTORY) strcpy(lpcaption,"KOMPRESUJE katalog ");
 	else strcpy(lpcaption,"KOMPRESUJE plik ");
-	if (kop->list.src.Main.Count!=0 && kop->list.src.Main.Count!=0)
-	sprintf(temp4,"'%s' do '%s'",strExtractFileName(temp1,kop->list.src.Main.Items[kop->list.iCur]->text),strExtractFileName(temp2,strExtractFilePath(temp3,kop->list.dst.Main.Items[kop->list.iCur]->text)));
+	if (Kop->list.src.Main.Count!=0 && Kop->list.src.Main.Count!=0)
+	sprintf(temp4,"'%s' do '%s'",strExtractFileName(temp1,Kop->list.src.Main.Items[Kop->list.iCur]->text),strExtractFileName(temp2,strExtractFilePath(temp3,Kop->list.dst.Main.Items[Kop->list.iCur]->text)));
 	strcat(lpcaption,temp4);
 	this->Caption = lpcaption;
    }
@@ -235,8 +237,8 @@ else
 if (BreakCode&opDEKODUJ)
    {if (BreakCode&isDIRECTORY) strcpy(lpcaption,"DEKOMPRESUJE katalog ");
 	else strcpy(lpcaption,"DEKOMPRESUJE plik ");
-	if (kop->list.src.Main.Count!=0 && kop->list.src.Main.Count!=0)
-	sprintf(temp4,"'%s' do '%s'",strExtractFileName(temp1,kop->list.src.Main.Items[kop->list.iCur]->text),strExtractFileName(temp2,strExtractFilePath(temp3,kop->list.dst.Main.Items[kop->list.iCur]->text)));
+	if (Kop->list.src.Main.Count!=0 && Kop->list.src.Main.Count!=0)
+	sprintf(temp4,"'%s' do '%s'",strExtractFileName(temp1,Kop->list.src.Main.Items[Kop->list.iCur]->text),strExtractFileName(temp2,strExtractFilePath(temp3,Kop->list.dst.Main.Items[Kop->list.iCur]->text)));
 	strcat(lpcaption,temp4);
 	this->Caption = lpcaption;
    }
@@ -244,8 +246,8 @@ else
 if (BreakCode&opUSUN)
    {if (BreakCode&isDIRECTORY) strcpy(lpcaption,"USUWAM katalog ");
 	else strcpy(lpcaption,"USUWAM plik ");
-	if (kop->list.src.Main.Count!=0)
-	sprintf(temp4,"'%s' z '%s'",strExtractFileName(temp1,kop->list.src.Main.Items[kop->list.iCur]->text),strExtractFileName(temp2,strExtractFilePath(temp3,kop->list.src.Main.Items[kop->list.iCur]->text)));
+	if (Kop->list.src.Main.Count!=0)
+	sprintf(temp4,"'%s' z '%s'",strExtractFileName(temp1,Kop->list.src.Main.Items[Kop->list.iCur]->text),strExtractFileName(temp2,strExtractFilePath(temp3,Kop->list.src.Main.Items[Kop->list.iCur]->text)));
 	strcat(lpcaption,temp4);
 	this->Caption = lpcaption;
    }
@@ -262,7 +264,7 @@ if (BreakCode&onSEEKING)
 else
 if (BreakCode&onIO)
    {
-	if (kop->options.Operation==opLISTUJ)
+	if (Kop->options.Operation==opLISTUJ)
 	   {Application->Title = "Listujê pliki...";
 		BreakForm->Label1->Caption = Application->Title;
 		Application->ProcessMessages();
@@ -271,8 +273,8 @@ if (BreakCode&onIO)
 	else
 	   {BreakForm->AdvancedBar1->Position = 1000;
 		BreakForm->SpeedButton3->Enabled = true;
-		while (kop->options.Stop!=true && BreakForm->Visible==true) { Application->ProcessMessages(); Sleep(220); }
-		if (kop->options.Stop!=true) {
+		while (Kop->options.Stop!=true && BreakForm->Visible==true) { Application->ProcessMessages(); Sleep(220); }
+		if (Kop->options.Stop!=true) {
 		this->OldCzas = timeGetTime();
 		this->MineloCzasTikOld = timeGetTime();
 		this->MineloBajtTikOld = 0;
@@ -290,15 +292,15 @@ if (BreakCode&onIO)
 else
 if (BreakCode&onQUEST)
    {
-	if (kop->options.Operation==opUSUN) return QuestForm->Potwierdz(1,0);
+	if (Kop->options.Operation==opUSUN) return QuestForm->Potwierdz(1,0);
 	else
 	if (QuestForm->Potwierdz(1,1)!=mrYes)
 		return mrNo;
 	else
-	if (kop->options.Operation!=opKODUJ || kop->options.Operation!=opDEKODUJ)
+	if (Kop->options.Operation!=opKODUJ || Kop->options.Operation!=opDEKODUJ)
 		return mrYes;
 	else
-	if (strlen(kop->get_Password())==0)
+	if (strlen(Kop->GetPassword())==0)
 		return HasloForm->ShowModal();
 	else
 		return mrYes;
@@ -306,15 +308,15 @@ if (BreakCode&onQUEST)
 else
 if (BreakCode&onREPLACE_QUEST)
    {
-	if (kop->list.src.Main.Count!=0 && kop->list.src.Main.Count!=0)
-	return InfosForm->ZastopInfo(kop->list.dst.Main.Items[kop->list.iCur]->text,kop->list.src.Main.Items[kop->list.iCur]->text);
+	if (Kop->list.src.Main.Count!=0 && Kop->list.src.Main.Count!=0)
+	return InfosForm->ZastopInfo(Kop->list.dst.Main.Items[Kop->list.iCur]->text,Kop->list.src.Main.Items[Kop->list.iCur]->text);
 	else return InfosForm->ZastopInfo("","");
    }
 if (MineloCzasJournal!=MineloCzas || BreakButtonJournal!=BreakButton || BreakCodeJournal!=BreakCode) {
 	/*JournalForm->ValueListEditor1->InsertRow((AnsiString)(int(MineloCzas/1000)/3600) + ":" + (AnsiString)int((int(MineloCzas/1000)%3600)/60) + ":" + (AnsiString)(int(MineloCzas/1000)%60) + " " + (AnsiString)(int(MineloCzas)%1000) + "ms",
 										 (AnsiString)BreakCode + " " + (AnsiString)BreakButton + " " +
-										 (AnsiString)kop->progress.src.one.Read + " " + (AnsiString)kop->progress.dst.one.Read + " " +
-										 (AnsiString)kop->progress.src.all.Read + " " + (AnsiString)kop->progress.dst.all.Read
+										 (AnsiString)Kop->progress.src.one.Read + " " + (AnsiString)Kop->progress.dst.one.Read + " " +
+										 (AnsiString)Kop->progress.src.all.Read + " " + (AnsiString)Kop->progress.dst.all.Read
 										 ,
 										 true);
 	*/
@@ -331,7 +333,7 @@ return mrNo;
 void __fastcall TKoperForm::FormClose(TObject *Sender, TCloseAction &Action)
 {
 SpeedButton2Click(Sender);
-kop->Stop();
+Kop->Stop();
 }
 //---------------------------------------------------------------------------
 
@@ -380,7 +382,7 @@ for (int time = timeGetTime(); Pauza==true; time = timeGetTime())
 
 void __fastcall TKoperForm::SpeedButton2Click(TObject *Sender)
 {
-Pauza = false; kop->Stop();
+Pauza = false; Kop->Stop();
 }
 //---------------------------------------------------------------------------
 

@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="DLLKop32.dll"/>
+    <OBJFILES value="DLLKop32.obj DLLTSoft_Kop32.obj DLLTSoft_Koder.obj DLLTSoft_BinTree.obj 
+      DLLTSoft_Database.obj DLLTSoft_DlaChara.obj"/>
+    <RESFILES value="DLLKop32.res"/>
+    <IDLFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value=""/>
+    <PACKAGES value="vcl.bpi rtl.bpi vclx.bpi bcbsmp.bpi dclocx.bpi USRPKG.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value=""/>
+    <SYSDEFINES value="NO_STRICT;_NO_VCL"/>
+    <MAINSOURCE value="DLLKop32.cpp"/>
+    <INCLUDEPATH value="$(BCB)\include"/>
+    <LIBPATH value="$(BCB)\lib"/>
+    <WARNINGS value=""/>
+    <WARNOPTSTR value=""/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <CFLAG1 value="-WD -O2 -H=c:\PROGRA~1\borland\CBUILD~1\lib\vcl35.csm -Hc -w -Ve -Tkh30000 
+      -X- -a8 -b -k- -vi -c -tWD -tWM"/>
+    <CFLAG2 value=""/>
+    <CFLAG3 value=""/>
+    <PFLAGS value="-$Y- -$U -$T -$L- -$I- -$D- -$B -$A8 -v -M -JPHNE"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpd -x -Gn -Gi"/>
+    <IFLAGS value=""/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0d32.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES)  import32.lib cw32mt.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="DLLKop32.cpp" FORMNAME="" UNITNAME="DLLKop32" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DLLTSoft_Kop32.cpp" FORMNAME="" UNITNAME="DLLTSoft_Kop32" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DLLTSoft_Koder.cpp" FORMNAME="" UNITNAME="DLLTSoft_Koder" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DLLTSoft_BinTree.cpp" FORMNAME="" UNITNAME="DLLTSoft_BinTree" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DLLTSoft_Database.cpp" FORMNAME="" UNITNAME="DLLTSoft_Database" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DLLTSoft_DlaChara.cpp" FORMNAME="" UNITNAME="DLLTSoft_DlaChara" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DLLKop32.res" FORMNAME="" UNITNAME="DLLKop32" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=1
+MajorVer=3
+MinorVer=0
+Release=1
+Build=46
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=1
+Locale=1045
+CodePage=1250
+
+[Version Info Keys]
+CompanyName=TSoft_, where?
+FileDescription=DLL (GUI)
+FileVersion=3.0.1.46
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=DLLTSoft_Kop32
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=1
+Item0=$(BCB)\include
+
+[HistoryLists\hlLibraryPath]
+Count=1
+Item0=$(BCB)\lib
+
+[HistoryLists\hlConditionals]
+Count=2
+Item0=_NO_VCL;_RTLDLL
+Item1=_NO_VCL
+
+[HistoryLists\hlRunParameters]
+Count=2
+Item0=/koduj &quot;A:\&quot;
+Item1=/kopiuj &quot;A:\&quot;
+
+[Debugging]
+DebugSourceDirs=
+
+[Parameters]
+RunParams=/koduj &quot;A:\&quot;
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=1
+
+[Linker]
+LibPrefix=
+LibSuffix=
+LibVersion=
+  </IDEOPTIONS>
+</PROJECT>

@@ -34,7 +34,11 @@ __published:	// IDE-managed Components
 	TAdvancedBar *AdvancedBar4;
 	TLabel *Label4;
 	TLabel *Label5;
+	TBevel *Bevel2;
 	TAdvancedBar *AdvancedBar3;
+	TBevel *Bevel3;
+	TBevel *Bevel4;
+	TBevel *Bevel5;
         void __fastcall FormCreate(TObject *Sender);
 	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
         void __fastcall Timer1Timer(TObject *Sender);

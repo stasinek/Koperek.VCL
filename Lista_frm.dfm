@@ -1,6 +1,6 @@
 object ListaForm: TListaForm
-  Left = 147
-  Top = 74
+  Left = 174
+  Top = 107
   Width = 696
   Height = 493
   Caption = 'Lista'
@@ -97,7 +97,7 @@ object ListaForm: TListaForm
     Height = 293
     ScrollBars = ssVertical
     Strings.Strings = (
-      'test=test')
+      'z=do')
     TabOrder = 7
     TitleCaptions.Strings = (
       '<'

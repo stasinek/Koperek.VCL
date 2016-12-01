@@ -1,14 +1,11 @@
 //---------------------------------------------------------------------------
 #define WIN32_LEAN_AND_MEAN
 #include <vcl.h>
-#pragma hdrstop
+#pragma hdrstop  1
 //---------------------------------------------------------------------------
 #include "main.h"
-#include <malloc.h>
-#include <fstream>
-#include "Koper_frm.h"
-#include "Journal_frm.h"
-USEFORM("Koper_frm.cpp", KoperForm);
+//---------------------------------------------------------------------------
+ USEFORM("Koper_frm.cpp", KoperForm);
 USEFORM("haslo_frm.cpp", HasloForm);
 USEFORM("quest_frm.cpp", QuestForm);
 USEFORM("break_frm.cpp", BreakForm);
@@ -16,9 +13,20 @@ USEFORM("infos_frm.cpp", InfosForm);
 USEFORM("Lista_frm.cpp", ListaForm);
 USEFORM("Journal_frm.cpp", JournalForm);
 //---------------------------------------------------------------------------
+#include "Koper_frm.h"
+ USEFORM("haslo_frm.cpp", HasloForm);
+ USEFORM("quest_frm.cpp", QuestForm);
+ USEFORM("break_frm.cpp", BreakForm);
+ USEFORM("infos_frm.cpp", InfosForm);
+ USEFORM("lista_frm.cpp", ListaForm);
+#include "Lista_frm.h"
+//---------------------------------------------------------------------------
+ USEFORM("Journal_frm.cpp", JournalForm);
+#include "Journal_frm.h"
+//---------------------------------------------------------------------------
 WINAPI WinMain(HINSTANCE hApp, HINSTANCE, char *argts, int State)
 {
-kop = new TSoft_Kop32;
+Kop = new TSoft_Kop32;
 
 try
 {
@@ -29,16 +37,16 @@ char *temp = (char*)malloc(strlen(argts)+1);
 char *commandSrc = (char*)malloc(2);
       strcpy(commandSrc,"");
 
-   Application->Initialize();
-   Application->Title = "sstoft.Koperek";
-                 Application->CreateForm(__classid(THasloForm), &HasloForm);
-		Application->CreateForm(__classid(TQuestForm), &QuestForm);
-		Application->CreateForm(__classid(TKoperForm), &KoperForm);
-		Application->CreateForm(__classid(TInfosForm), &InfosForm);
-		Application->CreateForm(__classid(TBreakForm), &BreakForm);
-		Application->CreateForm(__classid(TListaForm), &ListaForm);
-		Application->CreateForm(__classid(TJournalForm), &JournalForm);
-		Application->ShowMainForm = false;
+		Application->Initialize();
+		Application->Title = "sstoft.Koperek-VCL";
+		Application->CreateForm(__classid(THasloForm), &HasloForm);
+         Application->CreateForm(__classid(TQuestForm), &QuestForm);
+         Application->CreateForm(__classid(TKoperForm), &KoperForm);
+         Application->CreateForm(__classid(TInfosForm), &InfosForm);
+         Application->CreateForm(__classid(TBreakForm), &BreakForm);
+         Application->CreateForm(__classid(TListaForm), &ListaForm);
+         Application->CreateForm(__classid(TJournalForm), &JournalForm);
+         Application->ShowMainForm = false;
 
 if (strstr(temp,"/ZAZNACZ")!=NULL)
     Application->Icon->Handle = LoadIcon(hApp,"MAINICON6");
@@ -64,9 +72,12 @@ if (strstr(temp,"/LISTUJ")!=NULL)
 if (OpenClipboard(NULL))
    {
     if (IsClipboardFormatAvailable(CF_TEXT))
-       {free(commandSrc);
-        commandSrc = (char*)GetClipboardData(CF_TEXT);
-        commandSrc = strcpy((char*)malloc(strlen(commandSrc)+1),commandSrc);
+       {
+        char *clip_str = (char*)GetClipboardData(CF_TEXT);
+          if (clip_str!=NULL) {
+              commandSrc = strcpy((char*)realloc(clip_str,strlen(clip_str)+1),clip_str);
+              }
+          else commandSrc[0] = '\0';
        }
     CloseClipboard();
    }
@@ -79,7 +90,7 @@ if (OpenClipboard(NULL))
    }
 //---------------------
 JournalForm->ValueListEditor1->InsertRow(commandDst,commandSrc,false);
-kop->Execute(commandDst,commandSrc);
+Kop->Execute(commandDst,commandSrc);
 //---------------------
 EXIT:
 KoperForm->Timer1->Enabled = false;
@@ -90,7 +101,7 @@ delete commandDst;
 }
 catch (Exception &exception)
 {
-  Application->ShowException(&exception);
+	Application->ShowException(&exception);
 }
 DeleteObject(Application->Icon->Handle);
 return 1;

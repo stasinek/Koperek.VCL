@@ -25,9 +25,9 @@ Image1->Picture->Bitmap->Handle = LoadBitmap(hInst,"LEFTQUEST");
 int __fastcall TQuestForm::Potwierdz(bool ZEnabled,bool DEnabled)
 {
 if (ZEnabled==true)
-   {if (kop->list.src.Init.Count==0) SrcListCombo->Items->Text = "";
+   {if (Kop->list.src.Init.Count==0) SrcListCombo->Items->Text = "";
     else
-       {SrcListCombo->Items->Text = kop->list.src.Init.Text[LINES];
+       {SrcListCombo->Items->Text = Kop->list.src.Init.Text[LINES];
        }
     for (int s = 0; s < SrcListCombo->Items->Count; s++)
     for (;Canvas->TextWidth(SrcListCombo->Items->Strings[s]) > SrcListCombo->Width-25;)
@@ -41,9 +41,9 @@ if (ZEnabled==true)
 SrcListCombo->Enabled = ZEnabled;
 
 if (DEnabled==true)
-   {if (kop->list.dst.Init.Count==0) DstListCombo->Items->Text = "";
+   {if (Kop->list.dst.Init.Count==0) DstListCombo->Items->Text = "";
     else
-       {DstListCombo->Items->Text = kop->list.dst.Init.Text[LINES];
+       {DstListCombo->Items->Text = Kop->list.dst.Init.Text[LINES];
        }
    for (int s = 0; s < DstListCombo->Items->Count; s++)
    for (;Canvas->TextWidth(DstListCombo->Items->Strings[s]) > DstListCombo->Width-25;)
@@ -56,10 +56,10 @@ if (DEnabled==true)
    }
 DstListCombo->Enabled = DEnabled;
 
-Edit2->Text = kop->options.Argts.Text[COMMA];
-Edit3->Text = kop->options.Masks.Text[COMMA];
+Edit2->Text = Kop->options.Argts.Text[COMMA];
+Edit3->Text = Kop->options.Masks.Text[COMMA];
 
-switch (kop->options.Operation) {
+switch (Kop->options.Operation) {
 case opKOPIUJ:
    Image2->Picture->Icon->Handle = LoadIcon(hInst,"MAINICON");
    QuestForm->Caption = "PotwierdŸ kopiowanie...";
@@ -85,18 +85,18 @@ case opLISTUJ:
    QuestForm->Caption = "PotwierdŸ listowanie...";
 break;
 }
-if (kop->options.Operation==opKODUJ)
+if (Kop->options.Operation==opKODUJ)
    {PageControl1->ActivePageIndex = 0;
     TabSheet2->TabVisible = true;
     Button2->Caption = "&Dalej >";
     Button2->ModalResult = mrNone;
-    CheckBox1->Checked = (kop->options.Methods & mtXOR)!=0;
-    CheckBox2->Checked = (kop->options.Methods & mtSXQ)!=0;
-    CheckBox3->Checked = (kop->options.Methods & mtLZS)!=0;
-    CheckBox4->Checked = (kop->options.Methods & mtBWT)!=0;
-    CheckBox5->Checked = (kop->options.Methods & mtMTF)!=0;
-    CheckBox6->Checked = (kop->options.Methods & mtHUF)!=0;
-    CheckBox7->Checked = (kop->options.Methods & mtARI)!=0;
+    CheckBox1->Checked = (Kop->options.Methods & mtXOR)!=0;
+    CheckBox2->Checked = (Kop->options.Methods & mtSXQ)!=0;
+    CheckBox3->Checked = (Kop->options.Methods & mtLZS)!=0;
+    CheckBox4->Checked = (Kop->options.Methods & mtBWT)!=0;
+    CheckBox5->Checked = (Kop->options.Methods & mtMTF)!=0;
+    CheckBox6->Checked = (Kop->options.Methods & mtHUF)!=0;
+    CheckBox7->Checked = (Kop->options.Methods & mtARI)!=0;
    }
 else
    {PageControl1->ActivePageIndex = 0;
@@ -112,13 +112,13 @@ else return mrNo;
 
 void __fastcall TQuestForm::Edit3Change(TObject *Sender)
 {
-kop->options.Masks.Text[COMMA] = Edit3->Text.c_str();
+Kop->options.Masks.Text[COMMA] = Edit3->Text.c_str();
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TQuestForm::Edit2Change(TObject *Sender)
 {
-kop->options.Argts.Text[COMMA] = Edit2->Text.c_str();
+Kop->options.Argts.Text[COMMA] = Edit2->Text.c_str();
 }
 //---------------------------------------------------------------------------
 
@@ -127,7 +127,7 @@ void __fastcall TQuestForm::SpeedButton1Click(TObject *Sender)
 Application->ProcessMessages();
 if (SrcListCombo->ItemIndex==-1)
     return;
-kop->list.src.Init.Delete(SrcListCombo->ItemIndex);
+Kop->list.src.Init.Delete(SrcListCombo->ItemIndex);
 SrcListCombo->Items->Delete(SrcListCombo->ItemIndex);
 
 if (SrcListCombo->Items->Count==0) SrcListCombo->Clear();
@@ -141,7 +141,7 @@ void __fastcall TQuestForm::SpeedButton2Click(TObject *Sender)
 Application->ProcessMessages();
 if (DstListCombo->ItemIndex==-1)
     return;
-kop->list.dst.Init.Delete(DstListCombo->ItemIndex);
+Kop->list.dst.Init.Delete(DstListCombo->ItemIndex);
 DstListCombo->Items->Delete(DstListCombo->ItemIndex);
 
 if (DstListCombo->Items->Count==0) DstListCombo->Clear();
@@ -157,7 +157,7 @@ Application->ProcessMessages();
 if (BrowseDialog1->Execute())
    {
      SrcListCombo->Items->Insert(0,BrowseDialog1->PathName);
-      kop->list.src.Init.Insert(0,ASCHAR(BrowseDialog1->PathName.c_str()));
+      Kop->list.src.Init.Insert(0,ASCHAR(BrowseDialog1->PathName.c_str()));
 
      for (;Canvas->TextWidth(SrcListCombo->Items->Strings[0]) > SrcListCombo->Width-25;)
          {
@@ -177,7 +177,7 @@ Application->ProcessMessages();
 if (BrowseDialog1->Execute())
    {
      DstListCombo->Items->Insert(0,BrowseDialog1->PathName);
-      kop->list.dst.Init.Insert(0,ASCHAR(BrowseDialog1->PathName.c_str()));
+      Kop->list.dst.Init.Insert(0,ASCHAR(BrowseDialog1->PathName.c_str()));
 
      for (; Canvas->TextWidth(DstListCombo->Items->Strings[0]) > DstListCombo->Width-25;)
          {
@@ -243,67 +243,67 @@ if (PageControl1->ActivePageIndex==0)
 
 void __fastcall TQuestForm::CheckBox1Click(TObject *Sender)
 {
-if (CheckBox1->Checked) kop->options.Methods |= mtXOR;
+if (CheckBox1->Checked) Kop->options.Methods |= mtXOR;
 else
-    kop->options.Methods &= ~mtXOR;
+    Kop->options.Methods &= ~mtXOR;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TQuestForm::CheckBox2Click(TObject *Sender)
 {
-if (CheckBox2->Checked) kop->options.Methods |= mtSXQ;
+if (CheckBox2->Checked) Kop->options.Methods |= mtSXQ;
 else
-    kop->options.Methods &= ~mtSXQ;
+    Kop->options.Methods &= ~mtSXQ;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TQuestForm::CheckBox3Click(TObject *Sender)
 {
-if (CheckBox3->Checked) kop->options.Methods |= mtLZS;
+if (CheckBox3->Checked) Kop->options.Methods |= mtLZS;
 else
-    kop->options.Methods &= ~mtLZS;
+    Kop->options.Methods &= ~mtLZS;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TQuestForm::CheckBox4Click(TObject *Sender)
 {
-if (CheckBox4->Checked) kop->options.Methods |= mtBWT;
+if (CheckBox4->Checked) Kop->options.Methods |= mtBWT;
 else
-    kop->options.Methods &= ~mtBWT;
+    Kop->options.Methods &= ~mtBWT;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TQuestForm::CheckBox5Click(TObject *Sender)
 {
-if (CheckBox5->Checked) kop->options.Methods |= mtMTF;
+if (CheckBox5->Checked) Kop->options.Methods |= mtMTF;
 else
-    kop->options.Methods &= ~mtMTF;
+    Kop->options.Methods &= ~mtMTF;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TQuestForm::ComboBox1Change(TObject *Sender)
 {
-kop->options.Dict = ComboBox1->Text.ToIntDef(256);
-if (kop->options.Dict > 65536 || kop->options.Dict < 64)
-   {kop->options.Dict = 256;
-    ComboBox1->Text = kop->options.Dict;
+Kop->options.Dict = ComboBox1->Text.ToIntDef(256);
+if (Kop->options.Dict > 65536 || Kop->options.Dict < 64)
+   {Kop->options.Dict = 256;
+    ComboBox1->Text = Kop->options.Dict;
    }
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TQuestForm::CheckBox6Click(TObject *Sender)
 {
-if (CheckBox5->Checked) kop->options.Methods |= mtHUF;
+if (CheckBox5->Checked) Kop->options.Methods |= mtHUF;
 else
-    kop->options.Methods &= ~mtHUF;
+    Kop->options.Methods &= ~mtHUF;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TQuestForm::CheckBox7Click(TObject *Sender)
 {
-if (CheckBox5->Checked) kop->options.Methods |= mtARI;
+if (CheckBox5->Checked) Kop->options.Methods |= mtARI;
 else
-    kop->options.Methods &= ~mtARI;
+    Kop->options.Methods &= ~mtARI;
 }
 //---------------------------------------------------------------------------
 

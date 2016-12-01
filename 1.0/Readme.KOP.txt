@@ -1,12 +1,9 @@
 Program do operacji plikowych zamiennik funkcji kopiowania, przenoszenia i usuwania z explorera systemu windows.
-
 Nie gwarantuje ¿e jest dobry ani nawet ¿e to stabilna kompilacja,
 pobierasz i u¿ywasz na w³asn¹ odpowiedzialnoœæ.
 Wersja 1.0 to w zasadzie jedyna jak¹ obecnie dysponuje przed drastycznymi zmianami w kodzie Ÿród³owym, ka¿da kolejna od 2.0 jest bli¿sza w akcie tworzenia jêzykowi C, proces migracji do œrodowiska Visual Studio 2003 oraz przede wszystkim nie ma graficznych okienek poniewa¿ skupia³em siê na algorytmach kompresji,
 W kolejnej ods³ownie planowane jest stworzenie GUI na bazie html i innych socketowych códów.
 Jeœli potrzebujesz drobnych kosmetycznych zmian bo program spe³nia oczekiwania, napisz to jest ³atwe w realizacji, mam nadzieje utrzymywaæ wersje 1.0 przy ¿yciu i kto wie mo¿e nawet z czasem uzupe³niæ o wprowadzone zmiany funkcjonalne.
-
-Ultracopier, Copy Handler, Turbocopy to przekombinowane programy mój rodzima produkcja odpowiedŸ na powolne kopiowanie w Win98 oraz 2k, napisany w licencjonowanym œrodowisku Borland BCB 3, okno potwierdzania kopiowañ pixel w pixel z windowsowym oknem(¿eby nie wprowadzaæ zamieszania) Jeœli jest zapotrzebowanie to nowy kombaj do zbierania kur po wioskach powstanie wkrótce.
 Ma opcje pauzowania i wylicza czas lepiej ni¿ microsoftowe potworki, konfigurowalny poprzez parametry uruchomieniowe, potrafi kopiowaæ, przenosiæ, usuwaæ, kompresowaæ(format zbli¿ony do kompresji NTFS) i szyfrowaæ do plików .eno(encoded) 
 
 INSTALACJA:
