@@ -1,16 +1,17 @@
 //---------------------------------------------------------------------------
-#ifndef quest_frmH
-#define quest_frmH
+#ifndef __quest_frm_H
+#define __quest_frm_H
 //---------------------------------------------------------------------------
 #include <Classes.hpp>
 #include <Buttons.hpp>
 #include <ExtCtrls.hpp>
 #include <StdCtrls.hpp>
 #include <Controls.hpp>
-#include "..\Packages\browsedlg.h"
-#include "..\Packages\advbar.h"
-#include "..\Packages\hintbox.h"
+#include ".\..\..\PACKAGES\browsedlg.h"
+#include ".\..\..\PACKAGES\advbar.h"
+#include ".\..\..\PACKAGES\hintbox.h"
 #include <ComCtrls.hpp>
+#include "BROWSEDLG.h"
 //---------------------------------------------------------------------------
 class TQuestForm : public TForm
 {
@@ -53,6 +54,15 @@ __published:	// IDE-managed Components
 	TButton *Button3;
 	TButton *Button1;
 	TButton *Button2;
+    TPanel *Panel3;
+    TPanel *Panel4;
+    TSpeedButton *SpeedButton9;
+    TSpeedButton *SpeedButton5;
+    TSpeedButton *SpeedButton6;
+    TSpeedButton *SpeedButton7;
+    TSpeedButton *SpeedButton8;
+    TSpeedButton *SpeedButton10;
+    TSpeedButton *SpeedButton11;
     void __fastcall Edit3Change(TObject *Sender);
     void __fastcall Edit2Change(TObject *Sender);
     void __fastcall SpeedButton1Click(TObject *Sender);

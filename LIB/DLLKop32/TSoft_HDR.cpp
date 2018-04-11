@@ -2,12 +2,12 @@
 //-----------------Stanislaw Stasiak "TSoft_, where?" 2001-2002---------------
 //---------------------------------------------------------------------------
 #include <windows.h>
-#pragma hdrstop
 #include "TSoft_HDR.h"
 //---------------------------------------------------------------------------
 
 unsigned char __stdcall __bitptr_hdrcoder::Price_ptrPass(DWORD axdata_uncoded_length)
 {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 asm { xor EAX,EAX                  		}
 asm {                           		}
 asm { mov EDX,axdata_uncoded_length     }
@@ -19,11 +19,13 @@ asm {test  AH,0x07                 		}
 asm {setnz AH                      		}
 asm { shr  AL,3                  		}
 asm { add  AL,AH                   		}
+#endif
 }
 //---------------------------------------------------------------------------
 
 unsigned char __stdcall __bitptr_hdrcoder::Code_ptrPass(DWORD *alpcode,DWORD axdata_uncoded_length)
 {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 asm { xor EAX,EAX                  		}
 asm { xor ECX,ECX               		}
 asm { xor EDX,EDX                  		}
@@ -59,11 +61,13 @@ asm {test  CL,0x07                 		}
 asm {setnz CL                      		}
 asm { shr  AL,3                  		}
 asm { add  AL,CL                   		}
+#endif
 }
 //---------------------------------------------------------------------------
 
 unsigned char __stdcall __bitptr_hdrcoder::DeCode_ptrPass(DWORD *alpdata_uncoded_length,DWORD *alpcode)
 {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 asm { xor EAX,EAX                  		}
 asm { xor ECX,ECX                  		}
 asm { xor EDX,EDX                  		}
@@ -101,11 +105,13 @@ asm {test  AH,0x07                 		}
 asm {setnz AH                      		}
 asm { shr  AL,3                  		}
 asm { add  AL,AH                   		}
+#endif
 }
 //---------------------------------------------------------------------------
 
 unsigned char __stdcall __bitptr_hdrcoder::Price_ptrBrun(DWORD axdata_uncoded_elsize,DWORD axdata_uncoded_counte)
 {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 asm { xor EAX,EAX                  		}
 asm { mov EDX,axdata_uncoded_counte     }
 asm { bsr EAX,EDX               		}
@@ -117,11 +123,13 @@ asm {test  AH,0x07                 		}
 asm {setnz AH                      		}
 asm { shr  AL,3                  		}
 asm { add  AL,AH                   		}
+#endif
 }
 //---------------------------------------------------------------------------
 
 unsigned char __stdcall __bitptr_hdrcoder::Code_ptrBrun(DWORD *alpcode,DWORD axdata_uncoded_elsize,DWORD axdata_uncoded_counte)
 {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 asm { xor EAX,EAX                  		}
 asm { xor EDX,EDX                  		}
 asm {                           		}
@@ -162,11 +170,13 @@ asm {test  CL,0x07                 		}
 asm {setnz CL                      		}
 asm { shr  AL,3                  		}
 asm { add  AL,CL                   		}
+#endif
 }
 //---------------------------------------------------------------------------
 
 unsigned char __stdcall __bitptr_hdrcoder::DeCode_ptrBrun(DWORD *alpdata_uncoded_elsize,DWORD *alpdata_uncoded_counte,DWORD *alpcode)
 {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 asm { xor EAX,EAX                  		}
 asm { xor ECX,ECX                  		}
 asm { xor EDX,EDX                  		}
@@ -211,11 +221,13 @@ asm {test  AH,0x07                 		}
 asm {setnz AH                      		}
 asm { shr  AL,3                  		}
 asm { add  AL,AH                   		}
+#endif
 }
 //---------------------------------------------------------------------------
 
 unsigned char __stdcall __bitptr_hdrcoder::Price_ptrDict(DWORD axdata_uncoded_offset,DWORD axdata_uncoded_length)
 {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 asm { xor EBX,EBX               		}
 asm { mov EDX,axdata_uncoded_length	    }
 asm { bsr EBX,EDX               		}
@@ -232,11 +244,13 @@ asm {test  AH,0x07                 		}
 asm {setnz AH                      		}
 asm { shr  AL,3                  		}
 asm { add  AL,AH                   		}
+#endif
 }
 //---------------------------------------------------------------------------
 
 unsigned char __stdcall __bitptr_hdrcoder::Code_ptrDict(DWORD *alpcode,DWORD axdata_uncoded_offset,DWORD axdata_uncoded_length)
 {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 asm { xor EAX,EAX                  		}
 asm { xor EDX,EDX                  		}
 asm {                           		}
@@ -290,11 +304,13 @@ asm {test  CL,0x07                 		}
 asm {setnz CL                      		}
 asm { shr  AL,3                  		}
 asm { add  AL,CL                   		}
+#endif
 }
 //---------------------------------------------------------------------------
 
 unsigned char __stdcall __bitptr_hdrcoder::DeCode_ptrDict(DWORD *alpdata_uncoded_offset,DWORD *alpdata_uncoded_length,DWORD *alpcode)
 {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 asm { xor EAX,EAX                  		}
 asm { xor ECX,ECX                  		}
 asm { xor EDX,EDX                  		}
@@ -360,6 +376,7 @@ asm {test  AH,0x07                 		}
 asm {setnz AH                      		}
 asm { shr  AL,3                  		}
 asm { add  AL,AH                   		}
+#endif
 }
 //---------------------------------------------------------------------------
 //---------------------------------------------------------------------------
@@ -449,6 +466,7 @@ asm { mov EAX,EBX  }
 
 unsigned char __stdcall Code_bitHeader(DWORD *alpcode,char alpcode_bit,char axdata_uncoded)
 {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
  xor  AX,AX
  mov  AL,axdata_uncoded
@@ -481,11 +499,13 @@ MCODE_01:
 MCODE_1X:
  mov  AL,CH
 }
+#endif
 }
 //---------------------------------------------------------------------------
 
 unsigned char __stdcall DeCode_bitHeader(char *alpdata_uncoded,DWORD *axcode,char axcode_bit)
 {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
  mov ESI,axcode
  mov  AX,[ESI]
@@ -504,11 +524,13 @@ setp  CL
  mov [EDI],AL
  mov  AL,CH
 }
+#endif
 }
 //---------------------------------------------------------------------------
 
 unsigned char __stdcall Price_bitHeader(char axdata_uncoded)
 {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
  mov  AL,axdata_uncoded
 test  AL,0x03
@@ -516,6 +538,7 @@ setp  AL
  add  AL,AL
  add  AL,0x0002
 }
+#endif
 }
 //---------------------------------------------------------------------------
 // WARNING! 0 will have same code as 1 - so don't use it!
@@ -615,55 +638,73 @@ asm { add  AL,CL                }
 
 unsigned char __stdcall   Code_bitLength(DWORD *alpcode,char alpcode_bit,DWORD axdata_uncoded)
 {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 BIT_CODE_XP(alpcode,alpcode_bit,axdata_uncoded,3);
+#endif
 }
 //---------------------------------------------------------------------------
 
 unsigned char __stdcall DeCode_bitLength(DWORD *alpdata_uncoded,DWORD *axcode,char axcode_bit)
 {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 BIT_DECODE_XP(alpdata_uncoded,3,axcode,axcode_bit);
+#endif
 }
 //---------------------------------------------------------------------------
 
 unsigned char __stdcall  Price_bitLength(DWORD axdata_uncoded)
 {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 BIT_PRICE_XP(axdata_uncoded,3);
+#endif
 }
 //---------------------------------------------------------------------------< 65536
 
 unsigned char __stdcall   Code_bitOffset(DWORD *alpcode,char alpcode_bit,DWORD axdata_uncoded)
 {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 BIT_CODE_XP(alpcode,alpcode_bit,axdata_uncoded,4);
+#endif
 }
 //---------------------------------------------------------------------------
 
 unsigned char __stdcall DeCode_bitOffset(DWORD *alpdata_uncoded,DWORD *axcode,char axcode_bit)
 {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 BIT_DECODE_XP(alpdata_uncoded,4,axcode,axcode_bit);
+#endif
 }
 //---------------------------------------------------------------------------
 
 unsigned char __stdcall  Price_bitOffset(DWORD axdata_uncoded)
 {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 BIT_PRICE_XP(axdata_uncoded,4);
+#endif
 }
 //---------------------------------------------------------------------------< 2^32
 
 unsigned char __stdcall   Code_bitString(DWORD *alpcode,char alpcode_bit,DWORD axdata_uncoded)
 {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 BIT_CODE_XP(alpcode,alpcode_bit,axdata_uncoded,5);
+#endif
 }
 //---------------------------------------------------------------------------
 
 unsigned char __stdcall DeCode_bitString(DWORD *alpdata_uncoded,DWORD *axcode,char axcode_bit)
 {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 BIT_DECODE_XP(alpdata_uncoded,5,axcode,axcode_bit);
+#endif
 }
 //---------------------------------------------------------------------------
 
 unsigned char __stdcall  Price_bitString(DWORD axdata_uncoded)
 {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 BIT_PRICE_XP(axdata_uncoded,5);
+#endif
 }
 //---------------------------------------------------------------------------< 65536
 

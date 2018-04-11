@@ -1,24 +1,28 @@
-// C:\iPAQ
-
 //---------------------------------------------------------------------------
 #include <vcl.h>
-#pragma hdrstop
 //---------------------------------------------------------------------------
+#include "koper_frm.h"
 #include "quest_frm.h"
 #include "haslo_frm.h"
 #include "infos_frm.h"
 #include "break_frm.h"
 #include "lista_frm.h"
-#include "Journal_frm.h"
-#include "..\..\Libraries\DLLIO\TSoft_IO.h"
+#include "journal_frm.h"
+#include ".\LIB\DLLIO\TSoft_IO.h"
 //---------------------------------------------------------------------------
-#include "koper_frm.h"
 #include "main.h"
 //----------------------------------------------------------------------------
 #pragma link "advbar"
 #pragma link "systray"
+#pragma link "ADVBAR"
+#pragma link "SYSTRAY"
+#pragma link "ADVBAR"
+#pragma link "SYSTRAY"
+#pragma link "ADVBAR"
+#pragma link "SYSTRAY"
+#pragma link "ADVBAR"
+#pragma link "SYSTRAY"
 #pragma resource "*.dfm"
-
 //---------------------------------------------------------------------------
 TKoperForm *KoperForm;
 //---------------------------------------------------------------------------
@@ -124,13 +128,13 @@ strcpy(buffer4,buffer3);
 strcat(buffer4,", ");
 strcat(buffer4,buffer2);
 //--------------------------
-if (strcmp(buffer1,this->Label1->Caption.c_str())!=0)
+if (strcmp(buffer1,AnsiString(this->Label1->Caption.c_str()).c_str())!=0)
 	this->Label1->Caption = buffer1;
-if (strcmp(buffer4,this->Label2->Caption.c_str())!=0)
+if (strcmp(buffer4,AnsiString(this->Label2->Caption.c_str()).c_str())!=0)
 	this->Label2->Caption = buffer4;
 
 sprintf(buffer1,"W Ÿródle jest jeszcze do przetworzenia %d plików, w sumie %s",(Kop->list.src.Main.Count-(Kop->list.iCur-Kop->list.iBgn)),GetBajtText(Kop->progress.src.all.Size-Kop->progress.src.all.Read));
-if (strcmp(buffer1,this->Label5->Caption.c_str())!=0)
+if (strcmp(buffer1,AnsiString(this->Label5->Caption.c_str()).c_str())!=0)
 	Label5->Caption = buffer1;
 
 if (Kop->options.Operation==opKODUJ && Kop->progress.dst.all.Read!=0) {
@@ -138,7 +142,7 @@ if (Kop->options.Operation==opKODUJ && Kop->progress.dst.all.Read!=0) {
 	sprintf(buffer4,"Stopieñ kompresji we/wy = %01.2f/1", s);
 	if (s+1!=0) AdvancedBar4->Position = 100 - (1/(s+1)) * 100;
 	else AdvancedBar4->Position = 100;
-	if (strcmp(buffer4,this->Label4->Caption.c_str())!=0)
+	if (strcmp(buffer4,AnsiString(this->Label4->Caption.c_str()).c_str())!=0)
 		this->Label4->Caption = buffer3;
 	}
 else
@@ -147,7 +151,7 @@ if (Kop->options.Operation==opKODUJ && Kop->progress.src.all.Read!=0) {
 	sprintf(buffer4,"Stopieñ dekompresji wy/wy = %01.2f/1", s);
 	if (s+1!=0) AdvancedBar4->Position = 100 - (1/(s+1)) * 100;
 	else AdvancedBar4->Position = 100;
-	if (strcmp(buffer4,this->Label4->Caption.c_str())!=0)
+	if (strcmp(buffer4,AnsiString(this->Label4->Caption.c_str()).c_str())!=0)
 		this->Label4->Caption = buffer3;
 	}
 else AdvancedBar4->Visible = false;
@@ -170,7 +174,7 @@ if (BreakCode&opSEEKPROGRESS)
 			strDel(temp0,3,8);
 			strInsert(temp0,3,"...\\\0");
 			}
-		if (strcmp(temp0, BreakForm->Label2->Caption.c_str())!=0)
+		if (strcmp(temp0, AnsiString(BreakForm->Label2->Caption.c_str()).c_str())!=0)
 		BreakForm->Label2->Caption = temp0;
 		}
 	}
@@ -182,7 +186,7 @@ if (BreakCode&opSEEKPROGRESS)
 			strDel(temp0,3,8);
 			strInsert(temp0,3,"...\\\0");
 			}
-		if (strcmp(temp0, BreakForm->Label2->Caption.c_str())!=0)
+		if (strcmp(temp0, AnsiString(BreakForm->Label2->Caption.c_str()).c_str())!=0)
 		BreakForm->Label2->Caption = temp0;
 		}
 	}

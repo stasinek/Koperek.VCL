@@ -1,11 +1,14 @@
 //---------------------------------------------------------------------------
 #include <vcl.h>
-#pragma hdrstop
 //---------------------------------------------------------------------------
 #include "break_frm.h"
 #include "koper_frm.h"
 
 #pragma link "advbar"
+#pragma link "ADVBAR"
+#pragma link "ADVBAR"
+#pragma link "ADVBAR"
+#pragma link "ADVBAR"
 #pragma resource "*.dfm"
 //---------------------------------------------------------------------------
 TBreakForm *BreakForm;

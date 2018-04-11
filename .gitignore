@@ -35,4 +35,7 @@ _ReSharper*/
 *.exe
 *.tds
 *.ils
+*.il*
+*.map
 journal*.*
+*.map

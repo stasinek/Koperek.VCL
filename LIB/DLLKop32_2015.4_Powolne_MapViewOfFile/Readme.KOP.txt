@@ -47,11 +47,8 @@ nie aktywne /przegladaj - przgl¹dnie struktury rozmiarowej katalogów (kiedyœ by³
 /zaznacz - np. uruchomienie "Koperek.exe /zaznacz  "C:\Windows" "c:\temp" "C:\autoexec.bat" spowoduje przeniesienie nazw w showku do d:\smieci
            spowoduje skopiowanie do schowka takiego String'a 
 
-Program napisany przez Stanis³aw Stasiak "TSoft, where?"(do you want to superfreak today?) (R) 2000-2002
-w C++Builder 3 licencjonowanego na RoSt 2002 (R)
-
-return Zadowolenie;
-}
+Program napisany przez Stanis³aw Stasiak "TSoft"(R) 2000-2002
+w C++Builder 3
 
 (dla u³atwienia) Szyforwanie jest oparte na trzech metodach :
 

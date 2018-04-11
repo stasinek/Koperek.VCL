@@ -2,7 +2,7 @@
 //-----------------Stanislaw Stasiak "TSoft_, where?" 2001-2002---------------
 //---------------------------------------------------------------------------
 #include <windows.h>
-#pragma hdrstop
+//---------------------------------------------------------------------------
 #include "TSoft_IO.h"
 //---------------------------------------------------------------------------
 
@@ -49,6 +49,7 @@ return strEql(strReAlloc(alpdst,strLen(alpsrc)+1),alpsrc);
 //---------------------------------------------------------------------------
 
 long __stdcall strLen(const char *alpsrc) {
+#if (__BORLANDC__ == 0x551) || defined(_MSC_VER)
  __asm {
   mov EDI,alpsrc
   mov ESI,EDI
@@ -60,6 +61,9 @@ repnz SCASB
   dec ECX
   mov EAX,ECX
 }
+#else
+return strlen(alpsrc);
+#endif
 }
 //---------------------------------------------------------------------------
 
@@ -130,6 +134,7 @@ return alpdst;
 long __stdcall strPos(const char *alpsrc, long abegin, const char *alpfnd)
 {
 long src_size = strLen(alpsrc), fnd_size = strLen(alpfnd);
+#if (__BORLANDC__ == 0x551) || defined(_MSC_VER)
 __asm {
 //------------------------------------------
  mov EDX,fnd_size
@@ -179,6 +184,28 @@ strPosERROR:
 strPosBREAK:
 //------------------------------------------
 }
+#else
+    if (a_start > a_src_size)
+        return -1;
+    register size_t isrc_size  = src_size - abegin;
+    register size_t isrc = 0;
+    register size_t ifnd_size  = fnd_size;
+    register size_t ifnd = 0;
+    if (ifnd_size > isrc_size)
+        return -1;
+    register size_t imax_start = isrc_size - ifnd_size;
+    register char *src = &((char*)alpsrc)[abegin];
+    register char *fnd = &((char*)alpfnd)[0];
+    for ( ; isrc <= imax_start; isrc++, src = &src[1]) {
+        for (;;) {
+            if (src[ifnd]!=fnd[ifnd])
+                break;
+            if (++ifnd >= ifnd_size)  return abegin + isrc;
+        }
+    }
+    return -1;
+
+#endif
 }
 //---------------------------------------------------------------------------
 
@@ -326,8 +353,8 @@ return std::itoa(aint,str,10);
 
 long   __stdcall strToInt(const char *asrc)
 {
-return atol(asrc);
-/*__asm {
+#if (__BORLANDC__ == 0x551) || defined(_MSC_VER)
+__asm {
 //lenght
  xor EAX,EAX
  xor EBX,EBX
@@ -375,7 +402,10 @@ test ESI,ESI
 strToIntRET:
  mov EAX,EBX
 }
-*/}
+#else
+return atol(asrc);
+#endif
+}
 //---------------------------------------------------------------------------
 
 void *__stdcall ptrAlloc(long acount)
@@ -397,6 +427,7 @@ LocalFree(alpdst);
 //---------------------------------------------------------------------------
 
 void __stdcall ptrEql(void *alpdst,const void *alpsrc,long acount) {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
  mov ESI,alpsrc
  mov EDI,alpdst
@@ -409,10 +440,14 @@ __asm {
  and ECX,3
  rep MOVSB
 	}
+#else
+memmove(alpdst,alpsrc,acount);
+#endif
 }
 //---------------------------------------------------------------------------
 
 void __stdcall ptrRev(void *alpdst,const void *alpsrc,long acount) {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
  mov ESI,alpsrc
  mov EDI,alpdst
@@ -429,11 +464,25 @@ ptrRev_LOOP:
  cmp EDI,ECX
  jnl ptrRev_LOOP
 ptrRev_EXIT:
-	}
+    }
+#else
+      register char *r_src_start = (char*)alpsrc;
+      register char *r_src_end = r_src_start + acount - 1;
+      register char *r_dst_start = (char*)alpdst;
+      register char *r_dst_end = r_dst_start + acount - 1;
+      register char  a;
+
+      for (; r_src_start < r_src_end; r_src_start++, r_src_end--, r_dst_start++, r_dst_end--) {
+            a = *r_src_start;
+            *r_dst_start = *r_src_end;
+            *r_dst_end = a;
+      }
+#endif
 }
 //---------------------------------------------------------------------------
 
 void __stdcall ptrMov(void *alpdst,const void *alpsrc,long acount) {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
  mov ESI,alpsrc
  mov EDI,alpdst
@@ -467,10 +516,14 @@ ptrMovINC:
 
 ptrMovX:
 	}
+#else
+memmove(alpdst,alpsrc,acount);
+#endif
 }
 //---------------------------------------------------------------------------
 
 void __stdcall ptrSet(void *alpdst,char aznakb, long acount) {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
  mov EDI,alpdst
  mov ECX,acount
@@ -478,10 +531,12 @@ __asm {
  cld
  rep STOSB
 }
+#endif
 }
 //---------------------------------------------------------------------------
 
 void __stdcall ptrSetEx(void *alpdst,const void *alpsrc,unsigned char aesize, long acount) {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
 //------------------------------------------
  xor EAX,EAX
@@ -490,86 +545,88 @@ __asm {
  mov ESI,alpsrc
  mov  BL,aesize
 //-------------------
-MCODE_00:
+SETMCODE_00:
 //-------------------
  mov  AL,[ESI+0]
  cmp  BL, 1
- jbe MCODE_XX
+ jbe SETMCODE_XX
 //-------------------
-MCODE_01:
+SETMCODE_01:
 //-------------------
  mov  AH,[ESI+1]
  cmp  BL, 2
- jbe MCODE_XX
+ jbe SETMCODE_XX
 //-------------------
-MCODE_02:
+SETMCODE_02:
 //-------------------
 bswap EAX
  mov  AH,[ESI+2]
 bswap EAX
  cmp  BL, 3
- jbe MCODE_XX
+ jbe SETMCODE_XX
 //-------------------
-MCODE_03:
+SETMCODE_03:
 //-------------------
 bswap EAX
  mov  AL,[ESI+3]
 bswap EAX
 //-------------------
-MCODE_XX:
+SETMCODE_XX:
 //------------------------------------------<< prepare
-MPREP:
+SETMPREP:
  mov EDI,alpdst
  mov ECX,acount
 //------------------------------------------<< move  8BIT
  cmp  BL,1
- jne BIT_08_BREAK
-BIT_08:
+ jne SETEXBIT_08_BREAK
+SETEXBIT_08:
  cld
  rep stosb
- jmp BIT_XX_BREAK
+ jmp SETEXBIT_XX_BREAK
 //-------------------
-BIT_08_BREAK:
+SETEXBIT_08_BREAK:
 //------------------------------------------<< move 16BIT
  cmp  BL,2
- jne BIT_16_BREAK
-BIT_16:
+ jne SETEXBIT_16_BREAK
+SETEXBIT_16:
  cld
  rep stosw
- jmp BIT_XX_BREAK
+ jmp SETEXBIT_XX_BREAK
 //-------------------
-BIT_16_BREAK:
+SETEXBIT_16_BREAK:
 //------------------------------------------<< move 24BIT
  cmp  BL,3
- jne BIT_24_BREAK
+ jne SETEXBIT_24_BREAK
 test ECX,ECX
-  jz BIT_XX_BREAK
-BIT_24:
+  jz SETEXBIT_XX_BREAK
+SETEXBIT_24:
  stosb
  ror EAX,8
  stosw
  rol EAX,8
  dec ECX
 test ECX,ECX
- jnz BIT_24
- jmp BIT_XX_BREAK
+ jnz SETEXBIT_24
+ jmp SETEXBIT_XX_BREAK
 //-------------------
-BIT_24_BREAK:
+SETEXBIT_24_BREAK:
 //------------------------------------------<< move 32BIT
  cmp  BL,4
- jne BIT_32_BREAK
-BIT_32:
+ jne SETEXBIT_32_BREAK
+SETEXBIT_32:
  cld
  rep stosd
- jmp BIT_XX_BREAK
+ jmp SETEXBIT_XX_BREAK
 //-------------------
-BIT_32_BREAK:
-BIT_XX_BREAK:
+SETEXBIT_32_BREAK:
+SETEXBIT_XX_BREAK:
 }
+#endif
 }
 //---------------------------------------------------------------------------
 
 void __stdcall ptrShl(void *alpdst,long acount) {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
  mov ECX,acount
  mov EAX,ECX
@@ -583,10 +640,14 @@ __asm {
  and ECX,3
  rep MOVSB
 	}
+#else
+memmove(alpdst,(void*)((size_t)alpdst-1),acount);
+#endif
 }
 //---------------------------------------------------------------------------
 
 void __stdcall ptrShr(void *alpdst,long acount) {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
  mov ESI,alpdst
  mov EDI,alpdst
@@ -605,10 +666,14 @@ __asm {
  rep MOVSD
  cld
 	}
+#else
+memmove(alpdst,(void*)((size_t)alpdst+1),acount);
+#endif
 }
 //---------------------------------------------------------------------------
 
 long __stdcall ptrCmp(void *alpdst,const void *alpsrc,long acount) {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
   mov ESI,alpsrc
   mov EDI,alpdst
@@ -632,10 +697,14 @@ ptrCmpD:
   sub EAX,ECX
 ptrCmpB:
 }
+#else
+return memcmp(alpdst,alpsrc,acount);
+#endif
 }
 //---------------------------------------------------------------------------
 
 long __stdcall ptrSca(void *alpdst,char aznakb,long acount) {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
   mov  AL,aznakb
   mov ECX,acount
@@ -652,10 +721,14 @@ ptrScaDIF:
   sub EAX,ECX
 ptrScaBREAK:
 	 }
+#else
+return (size_t)memchr(alpdst,aznakb,acount)-(size_t)alpdst;
+#endif
 }
 //---------------------------------------------------------------------------
 
 long __stdcall ptrChr(const void *alpdst,char aznakb,long acount) {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
   mov  AL,aznakb
   mov ECX,acount
@@ -672,6 +745,9 @@ ptrChrDIF:
   sub EAX,ECX
 ptrChrBREAK:
 	 }
+#else
+return (size_t)memchr(alpdst,aznakb,acount)-(size_t)alpdst;
+#endif
 }
 //---------------------------------------------------------------------------
 
@@ -694,6 +770,7 @@ for (long i=aco_size-1; i >= 0; i--)
 	{shift[ alpfnd[i] ]=(unsigned __int8)i;
 	}
 }
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
  mov EDX,lpshift
  mov EAX,asrc_size
@@ -731,8 +808,9 @@ ptrFndLastNEXT:
 
  jmp ptrFndLastX
 	}
+#endif
 ptrFndLastEQL:
-	return ret_i;
+return ret_i;
 ptrFndLastX:
 return -1;
 }
@@ -757,6 +835,7 @@ for (long i=0,ic=aco_size; i < aco_size; i++,ic--)
 	{shift[ alpfnd[i] ]=(unsigned __int8)(ic-1);
 	}
 }
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
  mov EDX,aco_size
  dec EDX
@@ -797,6 +876,7 @@ ptrFndNEXT:
  jl  ptrFndFIRST
  jmp ptrFndX
 	}
+#endif
 ptrFndEQL:
    return ret_i;
 ptrFndX:
@@ -810,6 +890,7 @@ return -1;
 
 void __stdcall bitEql(void *alpdst,unsigned char adst_bit,const void *alpsrc,unsigned char asrc_bit,unsigned long abit_num)
 {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
 //------------------------------------------
  mov  BL,asrc_bit
@@ -930,11 +1011,33 @@ EDI_XX:
 //------------------------------------------<< EXITING POINTS
 BIT_XX_BREAK:
 }
+#else
+    register size_t bits = abit_num;
+    register char *src = (char*)alpsrc;
+    register unsigned __int8 src_bit = asrc_bit;
+    register char *dst = (char*)alpdst;
+    register unsigned __int8 dst_bit = adst_bit;
+    while (bits>=32) {
+
+        ((__int32*)dst)[0] = (((__int32*)dst)[0] && (0xFFFFFFFFL>>(32-dst_bit))) | ((((__int32*)src)[0]>>src_bit)<<dst_bit) && (0xFFFFFFFFL<<dst_bit);
+        dst = &dst[3];
+        src = &src[3];
+        bits-=24;
+    }
+    while (bits> 0) {
+        dst[0] = (dst[0] && (0xFFL>>dst_bit)) | (((src[0]>>src_bit)<<dst_bit) && (0xFFL<<dst_bit));
+        dst = &dst[1];
+        src = &dst[1];
+        bits-=8;
+    }
+
+#endif
 }
 //---------------------------------------------------------------------------
 
-void __stdcall bitSet(void *alpdst,const void *alpsrc,unsigned char asrc_bit,unsigned char asrc_elsize,unsigned long adst_count)
+void __stdcall bitSet(void *alpdst,const void *alpsrc,unsigned char adst_bit,unsigned char asrc_elsize,unsigned long adst_count)
 {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
 //------------------------------------------
  mov ESI,alpsrc
@@ -990,132 +1093,64 @@ shrd EAX,EDX,CL
  xor  BH,BH
 //------------------------------------------<< move 8BIT by 8BIT
  cmp EBX,1
- jne BIT_08_BREAK
-BIT_08:
+ jne BITSET_08_BREAK
+BITSET_08:
  cld
  rep stosb
- jmp BIT_XX_BREAK
+ jmp BITSET_XX_BREAK
 //-------------------
-BIT_08_BREAK:
+BITSET_08_BREAK:
 //------------------------------------------<< move 16BIT by 16BIT
  cmp EBX,2
- jne BIT_16_BREAK
-BIT_16:
+ jne BITSET_16_BREAK
+BITSET_16:
  cld
  rep stosw
- jmp BIT_XX_BREAK
+ jmp BITSET_XX_BREAK
 //-------------------
-BIT_16_BREAK:
+BITSET_16_BREAK:
 //------------------------------------------<< move 24BIT by 24BIT
  cmp EBX,3
- jne BIT_24_BREAK
+ jne BITSET_24_BREAK
 test ECX,ECX
-  jz BIT_XX_BREAK
-BIT_24:
+  jz BITSET_XX_BREAK
+BITSET_24:
  stosb
  ror EAX,8
  stosw
  rol EAX,8
  dec ECX
 test ECX,ECX
- jnz BIT_24
- jmp BIT_XX_BREAK
+ jnz BITSET_24
+ jmp BITSET_XX_BREAK
 //-------------------
-BIT_24_BREAK:
+BITSET_24_BREAK:
 //------------------------------------------<< move 32BIT by 32BIT
  cmp EBX,4
- jne BIT_32_BREAK
-BIT_32:
+ jne BITSET_32_BREAK
+BITSET_32:
  cld
  rep stosd
- jmp BIT_XX_BREAK
+ jmp BITSET_XX_BREAK
 //-------------------
-BIT_32_BREAK:
+BITSET_32_BREAK:
 //------------------------------------------<< return number of bits
-BIT_XX_BREAK:
+BITSET_XX_BREAK:
 }
+#else
+    register size_t bits = adst_count * 8;
+    register void *src = (void*)alpsrc;
+    register unsigned __int8 dst_bit = adst_bit;
+    register char *dst = (char*)alpdst;
+    register __int32 aku,zr;
+    while (bits> 0) {
+        for (zr=0; zr < asrc_elsize; zr++) {
+            aku = ((char*)src)[zr];
+            dst[0] = (dst[0] && (0xFFL>>dst_bit)) | ((aku<<dst_bit) && (0xFFL<<dst_bit));
+            dst = &dst[1];
+            src = &dst[1];
+            bits-=8;
+        }
+    }
+#endif
 }
-//---------------------------------------------------------------------------
-/*ptrEql_MMX:
-  cmp EAX,32
-  jle ptrEql_MMX_BREAK
-  sub EAX,32
- movq mm0,[ESI]
- movq mm1,[ESI+8]
- movq mm2,[ESI+8+8]
- movq mm3,[ESI+8+8+8]
-  add ESI,32
- movq [EDI],mm0
- movq [EDI+8],mm1
- movq [EDI+8+8],mm2
- movq [EDI+8+8+8],mm3
-  add EDI,32
-  jmp ptrEql_MMX
-ptrEql_MMX_BREAK:
- emms
-*/
-/*//------------------------------------------<< if, there MMX copy Q-7BYTES by Q-7BYTES
-  cmp EDX,168           // 40_INSTR/168b
-  jna BIT_MMX_NOT_NEADED
- push EAX
- push EDX
-  mov EAX,1
-cpuid
- test EDX,0x00800000   // IS, THERE MMX?
-  pop EDX
-  pop EAX
-	jz BIT_MMX_ABSENT
-  xor EAX,EAX
-  mov  AL,BL
- movd MM0,EAX
-  mov  AL,BH
- movd MM1,EAX
-  mov  AL,CH
- movd MM2,EAX
- pxor MM3,MM3
-  pcmpeqd MM3,MM3
-psrlq MM3,8
-//-------------------
-  cmp EDX,168
-  jmp BIT_MMX_BREAK
-BIT_MMX:
-  sub EDX,168
-
- movq MM5,[ESI+0x00-0]
- movq MM6,[ESI+0x08-1]
- movq MM7,[ESI+0x10-2]
-
-psrlq MM5,MM0
- pand MM5,MM3
-psllq MM5,MM1
-psrlq MM6,MM0
- pand MM6,MM3
-psllq MM6,MM1
-psrlq MM7,MM0
- pand MM7,MM3
-psllq MM7,MM1
-
- movq MM4,[EDI]
- pand MM4,MM2
-  por MM5,MM4
- movq [EDI+0x00-0],MM5
-psrlq MM5,64-8
- pand MM5,MM2
-  por MM6,MM5
- movq [EDI+0x80-1],MM6
-psrlq MM6,64-8
- pand MM6,MM2
-  por MM7,MM6
- movq [EDI+0x10-2],MM7
-
-  add ESI,21
-  add EDI,21
-  cmp EDX,168
-	ja BIT_MMX
-//-------------------
-BIT_MMX_BREAK:
- emms
-BIT_MMX_NOT_NEADED:
-BIT_MMX_ABSENT:
-*/
-

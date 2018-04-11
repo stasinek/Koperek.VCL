@@ -9,9 +9,11 @@
 #include <ComCtrls.hpp>
 #include <ExtCtrls.hpp>
 #include <mmsystem.h>
-#include "..\Packages\advbar.h"
+#include ".\..\..\PACKAGES\advbar.h"
 #include <Buttons.hpp>
-#include "systray.h"
+#include ".\..\..\PACKAGES\systray.h"
+#include "ADVBAR.h"
+#include "SYSTRAY.h"
 //---------------------------------------------------------------------------
 class TKoperForm : public TForm
 {

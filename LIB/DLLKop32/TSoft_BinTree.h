@@ -6,6 +6,8 @@
 #include <windows.h>
 #pragma hdrstop
 //---------------------------------------------------------------------------
+#include "TSoft_build_conf.h"
+//---------------------------------------------------------------------------
 #define FIND_MIN  (DWORD)0x00000002
 #define FIND_MAX  (DWORD)0x000000FF
 #define DICT_MIN  (DWORD)FIND_MAX+1

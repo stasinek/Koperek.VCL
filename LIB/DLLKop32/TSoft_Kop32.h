@@ -4,8 +4,10 @@
 #ifndef __TSoft_Kop32_HDR__
 #define __TSoft_Kop32_HDR__
 //---------------------------------------------------------------------------
-#include "..\DLLDatabase\TSoft_Database.h"
+#include "./../DLLDatabase/TSoft_Database.h"
 #include "TSoft_Stack.h"
+//---------------------------------------------------------------------------
+#include "TSoft_build_conf.h"
 //---------------------------------------------------------------------------
 // z VCL'a
 //---------------------------------------------------------------------------
@@ -32,8 +34,6 @@
 #define mrYes		(DWORD)6
 #define mrYesToAll 	(DWORD)10
 #endif
-//---------------------------------------------------------------------------
-extern "C" {
 //---------------------------------------------------------------------------
 #define HEADER_SIG (WORD)'ZL'
 typedef struct {
@@ -77,7 +77,8 @@ typedef struct {
 	unsigned __int32 Size, Offset;
 } __buffer;
 //------------------------------------
-class __declspec(dllexport) TSoft_Kop32
+namespace TSoft {
+class KOP_IMPEXP Kop32
 {
 //------------------------------------
 private:
@@ -121,19 +122,19 @@ struct __password {
 //------------------------------------
 public:
 //------------------------------------
-#define opNULL			 (BYTE)0x00L
-#define opKOPIUJ			 (BYTE)0x01L
-#define opKODUJ		 (BYTE)0x02L
-#define opDEKODUJ		 (BYTE)0x04L
-#define opPRZENIES			 (BYTE)0x08L
-#define opUSUN		 (BYTE)0x10L
-#define opLISTUJ			 (BYTE)0x20L
-#define opZAZNACZ		 (BYTE)0x40L
+#define opNULL			    (BYTE)0x00L
+#define opKOPIUJ			(BYTE)0x01L
+#define opKODUJ		        (BYTE)0x02L
+#define opDEKODUJ		    (BYTE)0x04L
+#define opPRZENIES			(BYTE)0x08L
+#define opUSUN		        (BYTE)0x10L
+#define opLISTUJ			(BYTE)0x20L
+#define opZAZNACZ		    (BYTE)0x40L
 //------------------------------------
 struct __options {
 	unsigned __int32 Operation, Break, Error;
 	bool Stop;
-	TSoft_Database Masks, Argts, Batch;
+	DATABASE_IMPEXP TSoft::Database Masks, Argts, Batch;
 
 	unsigned __int32 Cut, Block, Methods, Dict;
 	bool Cached;
@@ -147,7 +148,7 @@ struct __group {
 } src, dst;
 } progress;
 //------------------------------------
-#define IS				(BYTE)0
+#define IS				    (BYTE)0
 #define SIZE				(BYTE)1
 #define ATTRIB				(BYTE)2
 //------------------------------------
@@ -155,42 +156,42 @@ struct __group {
 //------------------------------------
 struct __list {
 	struct __destination {
-		TSoft_Database Init, Main;
+		DATABASE_IMPEXP TSoft::Database Init, Main;
 	} src, dst;
 	int iCur, iInc, iBgn;
 } list;
 //------------------------------------
-__stdcall TSoft_Kop32            (void);
+KOP_IMPEXP __stdcall Kop32                      (void);
 //------------------------------------
-void  __stdcall SetPassword    (const char *ausrpassword);
-const char *__stdcall GetPassword    ();
-int __stdcall GetPasswordSize();
+KOP_IMPEXP void  __stdcall SetPassword          (const char *ausrpassword);
+KOP_IMPEXP const char *__stdcall GetPassword    (void);
+KOP_IMPEXP int __stdcall GetPasswordSize();
 //------------------------------------
-int   __stdcall Execute  	(const char *alpDst, const char *alpSrc);
-void  __stdcall Stop		(void);
+KOP_IMPEXP int   __stdcall Execute  	        (const char *alpDst, const char *alpSrc);
+KOP_IMPEXP void  __stdcall Stop		            (void);
 //------------------------------------
 #define anQUEST		        (BYTE)0x00L
-#define anNO			(BYTE)0x01L
-#define anALL			(BYTE)0x02L
+#define anNO			    (BYTE)0x01L
+#define anALL			    (BYTE)0x02L
 //------------------------------------
 
-#define onNULL			(DWORD)0x00000000L
+#define onNULL			    (DWORD)0x00000000L
 #define onPROGRESS	        (DWORD)0x10000000L
 
 #define onSTART		        (DWORD)0x00001000L
-#define onIO	 		(DWORD)0x00004000L
+#define onIO	 		    (DWORD)0x00004000L
 #define onQUEST		        (DWORD)0x00008000L
 #define onREPLACE_QUEST		(DWORD)0x00010000L
-#define onFREESPACE_QUEST		        (DWORD)0x00020000L
-#define onSTOP			(DWORD)0x00040000L
+#define onFREESPACE_QUEST	(DWORD)0x00020000L
+#define onSTOP			    (DWORD)0x00040000L
 
-#define isFILE			(DWORD)0x00000800L
+#define isFILE			    (DWORD)0x00000800L
 #define isDIRECTORY	        (DWORD)0x00000400L
-#define isSRC			(DWORD)0x00000200L
-#define isDST			(DWORD)0x00000100L
+#define isSRC			    (DWORD)0x00000200L
+#define isDST			    (DWORD)0x00000100L
 
 #define onSEEKING			(DWORD)0x00080000L
-#define opSEEKPROGRESS	        (DWORD)0x00100000L
+#define opSEEKPROGRESS	    (DWORD)0x00100000L
 
 //------------------------------------
 int __stdcall (__closure *OnBreak)(int,int);
@@ -198,13 +199,14 @@ int __stdcall DoBreak	(int aCode,int aParam);
 int __stdcall (__closure *OnError)(int,int);
 int __stdcall DoError	(int aCode,int aParam);
 //------------------------------------
-__stdcall ~TSoft_Kop32 (void);
+KOP_IMPEXP __stdcall ~Kop32 (void);
 //------------------------------------
 //typedef int __stdcall(__closure *DoX_DEF)(int,int);
 //DoX_DEF OnBreak;
 //DoX_DEF OnError;
+//---------------------------------------------------------------------------
 };
 //---------------------------------------------------------------------------
-}
+} // namespace TSoft
 //---------------------------------------------------------------------------
 #endif

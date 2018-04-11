@@ -1,7 +1,6 @@
 //---------------------------------------------------------------------------
 #include <windows.h>
 #include "..\DLLIO\TSoft_IO.h"
-#pragma hdrstop
 #include "TSoft_HDR.h"
 #include "TSoft_BinTree.h"
 //---------------------------------------------------------------------------

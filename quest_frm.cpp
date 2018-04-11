@@ -1,14 +1,14 @@
 //---------------------------------------------------------------------------
 #include <vcl.h>
 //---------------------------------------------------------------------------
-#pragma hdrstop
-//---------------------------------------------------------------------------
 #include "Koper_frm.h"
 #include "quest_frm.h"
 #include "main.h"
 //---------------------------------------------------------------------------
-#pragma link "browsedlg"
-#pragma link "advbar"
+#pragma link "BROWSEDLG"
+#pragma link "BROWSEDLG"
+#pragma link "BROWSEDLG"
+#pragma link "BROWSEDLG"
 #pragma resource "*.dfm"
 //---------------------------------------------------------------------------
 TQuestForm *QuestForm;
@@ -62,33 +62,33 @@ Edit3->Text = Kop->options.Masks.Text[COMMA];
 switch (Kop->options.Operation) {
 case opKOPIUJ:
    Image2->Picture->Icon->Handle = LoadIcon(hInst,"MAINICON");
-   QuestForm->Caption = "PotwierdŸ kopiowanie...";
+   QuestForm->Caption = "Confirm copying...";
 break;
 case opPRZENIES:
    Image2->Picture->Icon->Handle = LoadIcon(hInst,"MAINICON2");
-   QuestForm->Caption = "PotwierdŸ przeniesienie...";
+   QuestForm->Caption = "Confirm moveing...";
 break;
 case opUSUN:
    Image2->Picture->Icon->Handle = LoadIcon(hInst,"MAINICON3");
-   QuestForm->Caption = "PotwierdŸ usuwanie...";
+   QuestForm->Caption = "Confirm deletion...";
 break;
 case opKODUJ:
    Image2->Picture->Icon->Handle = LoadIcon(hInst,"MAINICON4");
-   QuestForm->Caption = "PotwierdŸ zakodowanie...";
+   QuestForm->Caption = "Confirm compression...";
 break;
 case opDEKODUJ:
    Image2->Picture->Icon->Handle = LoadIcon(hInst,"MAINICON5");
-   QuestForm->Caption = "PotwierdŸ dekodowanie...";
+   QuestForm->Caption = "Confirm decompression...";
 break;
 case opLISTUJ:
    Image2->Picture->Icon->Handle = LoadIcon(hInst,"MAINICON8");
-   QuestForm->Caption = "PotwierdŸ listowanie...";
+   QuestForm->Caption = "Confirm listing...";
 break;
 }
 if (Kop->options.Operation==opKODUJ)
    {PageControl1->ActivePageIndex = 0;
     TabSheet2->TabVisible = true;
-    Button2->Caption = "&Dalej >";
+    Button2->Caption = "&Next >";
     Button2->ModalResult = mrNone;
     CheckBox1->Checked = (Kop->options.Methods & mtXOR)!=0;
     CheckBox2->Checked = (Kop->options.Methods & mtSXQ)!=0;
@@ -112,13 +112,13 @@ else return mrNo;
 
 void __fastcall TQuestForm::Edit3Change(TObject *Sender)
 {
-Kop->options.Masks.Text[COMMA] = Edit3->Text.c_str();
+Kop->options.Masks.Text[COMMA] = AnsiString(Edit3->Text.c_str()).c_str();
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TQuestForm::Edit2Change(TObject *Sender)
 {
-Kop->options.Argts.Text[COMMA] = Edit2->Text.c_str();
+Kop->options.Argts.Text[COMMA] = AnsiString(Edit2->Text.c_str()).c_str();
 }
 //---------------------------------------------------------------------------
 
@@ -195,23 +195,13 @@ void __fastcall TQuestForm::FormDestroy(TObject *Sender)
 DeleteObject(Image1->Picture->Bitmap->Handle);
 }
 //---------------------------------------------------------------------------
-/*int item = SrcListCombo->ItemIndex;
-if (item==-1) SrcListCombo->Text = "";
-else
-   {SrcListCombo->ItemIndex = item;
-   }
-int item = DstListCombo->ItemIndex;
-if (item==-1) DstListCombo->Text = "";
-else
-   {DstListCombo->ItemIndex = item;
-   }
-*/
+
 
 void __fastcall TQuestForm::Button2Click(TObject *Sender)
 {
 if (PageControl1->ActivePageIndex==0)
    {PageControl1->ActivePageIndex =1;
-    Button1->Caption = "< &Wstecz";
+    Button1->Caption = "< &Back";
     Button1->ModalResult = mrNone;
     Button2->Caption = "&OK";
     Button2->ModalResult = mrYes;
@@ -228,13 +218,13 @@ void __fastcall TQuestForm::Button1Click(TObject *Sender)
 {
 if (PageControl1->ActivePageIndex==1)
    {PageControl1->ActivePageIndex =0;
-    Button2->Caption = "&Dalej >";
+    Button2->Caption = "&Next >";
     Button2->ModalResult = mrNone;
     return;
    }
 if (PageControl1->ActivePageIndex==0)
    {PageControl1->ActivePageIndex =1;
-    Button1->Caption = "< &Wstecz";
+    Button1->Caption = "< &Back";
     Button1->ModalResult = mrNone;
     return;
    }
@@ -306,4 +296,7 @@ else
     Kop->options.Methods &= ~mtARI;
 }
 //---------------------------------------------------------------------------
+
+
+
 

@@ -12,7 +12,7 @@
 #include <Windows.hpp>
 #include <System.hpp>
 #include <ExtCtrls.hpp>
-#include "..\Packages\exeres.h"
+#include ".\..\..\PACKAGES\EXERES.H"
 //----------------------------------------------------------------------------
 class THasloForm : public TForm
 {
@@ -28,6 +28,7 @@ __published:
 	TLabel *Label3;
 	TImage *Image1;
 	TExeResource *ExeResource1;
+    TLabel *Label4;
 	void __fastcall FormShow(TObject *Sender);
 	void __fastcall Password2Change(TObject *Sender);
 	void __fastcall Password1Change(TObject *Sender);

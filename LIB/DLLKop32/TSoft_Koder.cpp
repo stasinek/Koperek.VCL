@@ -102,6 +102,7 @@ Crc_value =  Crc_value >> 8
 Crc_value = Crc_Value XOR table_value
 
 unsigned long *lptab  = (unsigned long*)&CRC32_tab[0];
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
  mov ESI,crc32
  mov EAX,[ESI]
@@ -111,6 +112,7 @@ __asm {
  xor EAX,[ESI+EBX]
  mov [ESI],EAX
 	}
+#endif
 */
 //---------------------------------------------------------------------------
 
@@ -143,6 +145,7 @@ Crc_value = Crc_value XOR 0xFFFFFFFFh
 */
 unsigned long __stdcall Calc_CRC32(void *alpDst,unsigned long acount)
 {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 static unsigned long *lptab = (unsigned long*)&CRC32_tab[0];
 __asm {
  mov EDI,alpDst
@@ -169,6 +172,7 @@ Calc_CRC32_NEXT:
 
 Calc_CRC32_EXIT:
    }
+#endif
 }
 //---------------------------------------------------------------------------
 #define num_BASE 65521L
@@ -188,6 +192,7 @@ Adler_value = s1<<16 | s2
 */
 unsigned long __stdcall Calc_ADLER32(void *alpDst,unsigned long acount)
 {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
  mov EDI,alpDst
  mov EDX,EDI
@@ -232,6 +237,7 @@ Calc_ADLER32_INC:
 
 Calc_ADLER32_EXIT:
 	}
+#endif
 }
 //---------------------------------------------------------------------------
 
@@ -581,6 +587,7 @@ for (;ptrd < ptrd_end; ptrd++) {
 
 void __stdcall Cript_XOR(void *alpDst,unsigned long acount, char *alpHaslo,unsigned char aHaslo_count)
 {
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
   mov EDI,alpDst
   mov EDX,EDI
@@ -607,6 +614,7 @@ Cript_XOR_PASS:
   mov ESI,EBX
 Cript_XOR_EXIT:
 }
+#endif
 }
 //---------------------------------------------------------------------------
 
@@ -626,6 +634,7 @@ unsigned short buff_sq = buff_count * buff_count;
 char *buff_ptr = strAlloc(buff_count+1);
 unsigned long ptrd 	   =(unsigned long)alpDst;
 unsigned long ptrd_end =(unsigned long)alpDst + acount - buff_count;
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
 movzx EAX,buff_count
 movzx EBX,buff_sq
@@ -668,6 +677,7 @@ movzx ECX,BX
   nop
 Cript_SXQ_BREAK:
 	}
+#endif
 strFree(buff_ptr);
 }
 //---------------------------------------------------------------------------
@@ -881,6 +891,4 @@ unsigned long ptrd     = (unsigned long)alpDst;
 unsigned long ptrd_end = (unsigned long)alpDst + acount;
 ptrEql(alpDst,alpSrc,acount - 2*acount/(1024) - 2);
 }
-
-
 //-------------------------------THE END-------------------------------------

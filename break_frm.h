@@ -7,8 +7,9 @@
 #include <StdCtrls.hpp>
 #include <Forms.hpp>
 #include <ComCtrls.hpp>
-#include "..\Packages\advbar.h"
+#include ".\..\..\PACKAGES\advbar.h"
 #include <Buttons.hpp>
+#include "ADVBAR.h"
 //---------------------------------------------------------------------------
 class TBreakForm : public TForm
 {

@@ -1,7 +1,6 @@
 //---------------------------------------------------------------------------
 
 #include <windows.h>
-#include "TSoft_IO.h"
 //---------------------------------------------------------------------------
 //   Important note about DLL memory management when your DLL uses the
 //   static version of the RunTime Library:
@@ -24,9 +23,9 @@
 //---------------------------------------------------------------------------
 
 #pragma argsused
-BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fwdreason, LPVOID lpvReserved)
+int WINAPI DllEntryPoint(HINSTANCE hinst, unsigned long reason, void* lpReserved)
 {
-    return 1;
+        return 1;
 }
 //---------------------------------------------------------------------------
  

@@ -1,0 +1,7 @@
+USEUNIT("DLLIO.cpp");
+USEUNIT("TSoft_IO.cpp");
+USERES("DLLIO.res");
+//---------------------------------------------------------------------------
+This file is used by the project manager only and should be treated like the project file
+
+DllEntryPoint

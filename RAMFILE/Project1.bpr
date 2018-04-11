@@ -19,7 +19,7 @@ RESFILES =
 RESDEPEN = $(RESFILES)
 LIBFILES =
 LIBRARIES =
-SPARELIBS = USRPKG.lib VCL35.lib
+SPARELIBS = dclusr50.lib VCL35.lib
 PACKAGES = USRPKG.bpi VCL35.bpi DCLUSR35.bpi vclx35.bpi
 DEFFILE =
 # ---------------------------------------------------------------------------

@@ -3,15 +3,20 @@
 #pragma hdrstop
 //---------------------------------------------------------------------------
 #include "koper_frm.h"
-//---------------------------------------------------------------------------
 #include "infos_frm.h"
 #include "lista_frm.h"
+//---------------------------------------------------------------------------
+#include "main.h"
+//---------------------------------------------------------------------------
 #include <shlobj.h>
 #include <stdio.h>
 #include <shellapi.h>
-#include "main.h"
 //---------------------------------------------------------------------------
 #pragma link "exeres"
+#pragma link "EXERES"
+#pragma link "EXERES"
+#pragma link "EXERES"
+#pragma link "EXERES"
 #pragma resource "*.dfm"
 //---------------------------------------------------------------------------
 TInfosForm *InfosForm;
@@ -116,7 +121,7 @@ void __fastcall TInfosForm::FormCreate(TObject *Sender)
 Image3->Canvas->Brush->Color = clBtnFace;
 Image3->Canvas->FillRect(Rect(0,0,48,48));
 DrawIconEx(Image3->Canvas->Handle,
-		   8,8,ExeResource1->Handle["#146"],32,32,
+		   8,8,(HICON)ExeResource1->Handle["#146"],32,32,
 		   NULL,NULL,DI_NORMAL);
 }
 //---------------------------------------------------------------------------

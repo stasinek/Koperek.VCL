@@ -6,6 +6,8 @@
 #include <windows.h>
 #pragma hdrstop
 //---------------------------------------------------------------------------
+#include "TSoft_build_conf.h"
+//---------------------------------------------------------------------------
 class __declspec(dllexport) TSoft_Mtf
 {
 private:

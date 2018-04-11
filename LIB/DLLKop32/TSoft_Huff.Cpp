@@ -152,7 +152,7 @@ register unsigned char bits = 0;
 //----------------------            /* travel from leaf to ROOT */
 do {
 //----------------------            /* if node's address is odd-numbered, choose "1" add to code */
-	code = code<<1 | node & 0x00000001;
+	code = (code<<1) | node & 0x00000001;
 	bits++;
 //----------------------
 } while ((node =dad[node])!=ROOT);

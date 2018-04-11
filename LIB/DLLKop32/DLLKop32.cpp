@@ -2,7 +2,7 @@
 #include <windows.h>
 #pragma hdrstop
 #include <condefs.h>
-//#include "DLLTSoft_Kop32.h"
+#include "TSoft_Kop32.h"
 //---------------------------------------------------------------------------
 //   Important note about DLL memory management when your DLL uses the
 //   static version of the RunTime Library:
@@ -23,28 +23,40 @@
 //   If your DLL uses the dynamic version of the RTL, you do not need to
 //   explicitly add MEMMGR.LIB as this will be done implicitly for you
 //---------------------------------------------------------------------------
-/*#pragma link "DLLTSoft_Kop32"
-#pragma link "DLLTSoft_Koder"
-#pragma link "DLLTSoft_BinTree"
-#pragma link "DLLTSoft_Database"
-#pragma link "DLLTSoft_DlaChara"
-*///---------------------------------------------------------------------------
-
-USEUNIT("DLLTSoft_Kop32.cpp");
-USEUNIT("DLLTSoft_Koder.cpp");
-USEUNIT("DLLTSoft_BinTree.cpp");
-USEUNIT("DLLTSoft_Database.cpp");
-USEUNIT("DLLTSoft_DlaChara.cpp");
- USERES("DLLKop32.res");
+/*
+#pragma link "TSoft_Kop32"
+#pragma link "TSoft_Koder"
+#pragma link "TSoft_BinTree"
+#pragma link "TSoft_Database"
+#pragma link "TSoft_DlaChara"
+*/
 //---------------------------------------------------------------------------
-__declspec(dllexport) TSoft_Kop32 *Kop;
+USERES("DLLKop32.res");
+USEUNIT("TSoft_Kop32.cpp");
+USEUNIT("TSoft_Koder.cpp");
+USEUNIT("TSoft_Ari.cpp");
+USEUNIT("TSoft_Huff.cpp");
+USEUNIT("TSoft_BWTMatrix.cpp");
+USEUNIT("TSoft_HDR.cpp");
+USEUNIT("TSoft_MTF.cpp");
+USEUNIT("TSoft_Seeker.cpp");
+USEUNIT("TSoft_Stack.cpp");
+USEUNIT("TSoft_Pharser.cpp");
+USEUNIT("TSoft_BinTree.cpp");
+USELIB("C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.lib");
+USELIB("C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.LIB");
+//---------------------------------------------------------------------------
+__declspec(dllexport) TSoft::Kop32 *Kop;
 //---------------------------------------------------------------------------
 
 int WINAPI DllEntryPoint(HINSTANCE, unsigned long reason, void*)
 {
 if (reason==DLL_PROCESS_ATTACH)
-    kop = new TSoft_Kop32;
-return 1;
+    Kop = new TSoft::Kop32;
+if (reason==DLL_PROCESS_DETACH)
+    delete Kop;
+
+    return 1;
 }
 //---------------------------------------------------------------------------
 

@@ -3,14 +3,15 @@
 //---------------------------------------------------------------------------
 #include <windows.h>
 #include "TSoft_Database.h"
+#pragma package(smart_init)
 //---------------------------------------------------------------------------
 //ASCHAR
 //---------------------------------------------------------------------------
-__stdcall TSoft_Database::TSoft_Item::TSoft_Item(void)
+DATABASE_IMPEXP __stdcall TSoft::Database::Item::Item(void)
 {
 maciez.ftext = strAlloc(1);
-maciez.fnode = new TSoft_Database();
-data = maciez.fdata;										
+maciez.fnode = new TSoft::Database();
+data = maciez.fdata;
 data_size = maciez.fdata_size;
 for (long i = 0; i < 8; i++)
 	 {data_size[i] = 0;
@@ -20,10 +21,10 @@ maciez.fipos = 0;
 }
 //---------------------------------------------------------------------------
 
-__stdcall TSoft_Database::TSoft_Item::TSoft_Item(char *atext, TSoft_Database *adatabase, long aipos)
+DATABASE_IMPEXP __stdcall TSoft::Database::Item::Item(char *atext, TSoft::Database *adatabase, long aipos)
 {
 maciez.ftext = strAlloc(1);
-maciez.fnode = new TSoft_Database();
+maciez.fnode = new TSoft::Database();
 data = maciez.fdata;
 data_size = maciez.fdata_size;
 for (long i = 0; i < 8; i++)
@@ -38,19 +39,19 @@ maciez.fipos = aipos;
 }
 //---------------------------------------------------------------------------
 
-__stdcall TSoft_Database::TSoft_Item::~TSoft_Item(void)
+DATABASE_IMPEXP __stdcall TSoft::Database::Item::~Item(void)
 {
 delete maciez.fnode; strFree(maciez.ftext);
 }
 //---------------------------------------------------------------------------
 
-void __stdcall TSoft_Database::TSoft_Item::set_ipos(long aipos)
+DATABASE_IMPEXP void __stdcall TSoft::Database::Item::set_ipos(long aipos)
 {
 maciez.fipos = aipos;
 }
 //---------------------------------------------------------------------------
 
-void  __stdcall TSoft_Database::TSoft_Item::set_text_size(long asize)
+DATABASE_IMPEXP void  __stdcall TSoft::Database::Item::set_text_size(long asize)
 {
 maciez.ftext_size = asize;
 maciez.ftext = strReAlloc(maciez.ftext,maciez.ftext_size+1);
@@ -58,7 +59,7 @@ maciez.ftext[asize] = '\0';
 }
 //---------------------------------------------------------------------------
 
-void __stdcall TSoft_Database::TSoft_Item::set_text(char *atext)
+DATABASE_IMPEXP void __stdcall TSoft::Database::Item::set_text(char *atext)
 {
 if (atext==NULL)
 	{
@@ -73,7 +74,7 @@ else
 }
 //---------------------------------------------------------------------------
 
-void  __stdcall TSoft_Database::TSoft_Item::set_node(TSoft_Database *anode)
+DATABASE_IMPEXP void  __stdcall TSoft::Database::Item::set_node(TSoft::Database *anode)
 {
 if (anode==NULL)
 	{
@@ -86,7 +87,7 @@ else
 }
 //---------------------------------------------------------------------------
 
-void __stdcall TSoft_Database::TSoft_Item::Eql(TSoft_Item *aItems)
+DATABASE_IMPEXP void __stdcall TSoft::Database::Item::Eql(Item *aItems)
 {
 if (aItems==NULL)
 	{
@@ -109,7 +110,7 @@ else
 }
 //---------------------------------------------------------------------------
 
-void __stdcall TSoft_Database::TSoft_Item::Clr()
+DATABASE_IMPEXP void __stdcall TSoft::Database::Item::Clr()
 {
 Eql(NULL);
 }
@@ -117,7 +118,7 @@ Eql(NULL);
 //DATABASE
 //---------------------------------------------------------------------------
 
-__stdcall TSoft_Database::TSoft_Database(void)
+DATABASE_IMPEXP __stdcall TSoft::Database::Database(void)
 {
 maciez.fLevel = 0;
 maciez.fItems = NULL;
@@ -129,7 +130,7 @@ fText = strAlloc(1);
 }
 //---------------------------------------------------------------------------
 
-__stdcall TSoft_Database::TSoft_Database(TSoft_Database *aOwner)
+DATABASE_IMPEXP __stdcall TSoft::Database::Database(TSoft::Database *aOwner)
 {
 maciez.fLevel = 0;
 maciez.fItems = NULL;
@@ -145,7 +146,7 @@ fText = strAlloc(1);
 }
 //---------------------------------------------------------------------------
 
-__stdcall TSoft_Database::TSoft_Database(char *aAlias)
+DATABASE_IMPEXP __stdcall TSoft::Database::Database(char *aAlias)
 {
 maciez.fLevel = 0;
 maciez.fItems = NULL;
@@ -159,7 +160,7 @@ fText = strAlloc(1);
 }
 //---------------------------------------------------------------------------
 
-__stdcall TSoft_Database::~TSoft_Database(void)
+DATABASE_IMPEXP __stdcall TSoft::Database::~Database(void)
 {
 Clr();
 strFree(maciez.fAlias);
@@ -167,13 +168,13 @@ strFree(fText);
 }
 //---------------------------------------------------------------------------
 
-void __stdcall TSoft_Database::set_Owner(TSoft_Database *aOwner)
+DATABASE_IMPEXP void __stdcall TSoft::Database::set_Owner(TSoft::Database *aOwner)
 {
 maciez.fOwner = aOwner;
 }
 //---------------------------------------------------------------------------
 
-void __stdcall TSoft_Database::set_Alias(char *aAlias)
+DATABASE_IMPEXP void __stdcall TSoft::Database::set_Alias(char *aAlias)
 {
  if (aAlias==NULL)
 	 {maciez.fAlias_size = 1;
@@ -192,7 +193,7 @@ for (long iT = 0; iT < Count; iT++) {
 }
 //---------------------------------------------------------------------------
 
-void __stdcall TSoft_Database::set_Level(long aLevel)
+DATABASE_IMPEXP void __stdcall TSoft::Database::set_Level(long aLevel)
 {
 maciez.fLevel = aLevel;
 //
@@ -205,13 +206,13 @@ for (long iT = 0; iT < Count; iT++) {
 }
 //---------------------------------------------------------------------------
 
-TSoft_Database::TSoft_Item *__stdcall TSoft_Database::get_Items(long index)
+DATABASE_IMPEXP TSoft::Database::Item *__stdcall TSoft::Database::get_Items(long index)
 {
 return maciez.fItems[index];
 }
 //---------------------------------------------------------------------------
 
-void __stdcall TSoft_Database::set_Items(long aindex, TSoft_Item *aItems)
+DATABASE_IMPEXP void __stdcall TSoft::Database::set_Items(long aindex, Item *aItems)
 {
 if (aItems==NULL)
 	{
@@ -224,18 +225,18 @@ else
 }
 //---------------------------------------------------------------------------
 
-void __stdcall TSoft_Database::set_Count(long aCount)
+DATABASE_IMPEXP void __stdcall TSoft::Database::set_Count(long aCount)
 {
 if (maciez.fCount==aCount)
 	 return;
 if (maciez.fItems==NULL)
-	{maciez.fItems =(TSoft_Item**)LocalAlloc(LPTR,aCount*sizeof(TSoft_Item*));
+	{maciez.fItems =(Item**)LocalAlloc(LPTR,aCount*sizeof(Item*));
 	}
 if (maciez.fCount <aCount)
 	{
-	 maciez.fItems =(TSoft_Item**)LocalReAlloc(maciez.fItems,aCount*sizeof(TSoft_Item*),LMEM_MOVEABLE);
+	 maciez.fItems =(Item**)LocalReAlloc(maciez.fItems,aCount*sizeof(Item*),LMEM_MOVEABLE);
 	 for (long iT = maciez.fCount; iT < aCount; iT++)
-		  {maciez.fItems[iT] = new TSoft_Item();
+		  {maciez.fItems[iT] = new Item();
 			maciez.fItems[iT]->ipos = iT;
 		  }
 	 maciez.fCount =aCount;
@@ -246,7 +247,7 @@ else
 	 for (long iT = aCount; iT < maciez.fCount; iT++)
 		  {delete maciez.fItems[iT];
 		  }
-	 maciez.fItems =(TSoft_Item**)LocalReAlloc(maciez.fItems,aCount*sizeof(TSoft_Item*),LMEM_MOVEABLE);
+	 maciez.fItems =(Item**)LocalReAlloc(maciez.fItems,aCount*sizeof(Item*),LMEM_MOVEABLE);
 	 maciez.fCount =aCount;
 	}
 if (maciez.fCount==0 && maciez.fItems!=NULL)
@@ -256,7 +257,7 @@ if (maciez.fCount==0 && maciez.fItems!=NULL)
 }
 //---------------------------------------------------------------------------
 
-long __stdcall TSoft_Database::Eql(TSoft_Database *aDatabase)
+DATABASE_IMPEXP long __stdcall TSoft::Database::Eql(TSoft::Database *aDatabase)
 {
  if (aDatabase==NULL)
 	 {this->Count = 0;
@@ -272,11 +273,11 @@ else
 }
 //---------------------------------------------------------------------------
 
-long __stdcall TSoft_Database::Cat(TSoft_Database *aDatabase)
+DATABASE_IMPEXP long __stdcall TSoft::Database::Cat(TSoft::Database *aDatabase)
 {
  if (aDatabase==NULL)
 	 {return Count;
-	 } 
+	 }
 else
 	 {long  iT = Count, iX = iT + aDatabase->Count; this->Count = iX;
 	  for (;iT < iX; iT++)
@@ -287,24 +288,24 @@ else
 }
 //---------------------------------------------------------------------------
 
-long __stdcall TSoft_Database::Add(TSoft_Item *aItems)
+long __stdcall TSoft::Database::Add(Item *aItems)
 {
 Count = Count+1; Items[Count-1] = aItems;
 return  Count-1;
 }
 //---------------------------------------------------------------------------
 
-long __stdcall TSoft_Database::Cut(void)
+DATABASE_IMPEXP long __stdcall TSoft::Database::Cut(void)
 {
 	if (Count!=0) Count = Count-1;
 return Count;
 }
 //---------------------------------------------------------------------------
 
-void __stdcall TSoft_Database::Insert(long aindex, TSoft_Item *aItems)
+DATABASE_IMPEXP void __stdcall TSoft::Database::Insert(long aindex, Item *aItems)
 {
 Add(aItems);
-TSoft_Item *iItem = maciez.fItems[Count-1];
+Item *iItem = maciez.fItems[Count-1];
 
 for (long iT = Count-1; iT > aindex; iT--) {
 
@@ -316,9 +317,9 @@ maciez.fItems[aindex]->ipos = aindex;
 }
 //---------------------------------------------------------------------------
 
-void __stdcall TSoft_Database::Delete(long aindex)
+DATABASE_IMPEXP void __stdcall TSoft::Database::Delete(long aindex)
 {
-TSoft_Item *dItem = maciez.fItems[aindex];
+Item *dItem = maciez.fItems[aindex];
 
 for (long iT = aindex; iT < Count-1; iT++) {
 
@@ -331,13 +332,13 @@ Cut();
 }
 //---------------------------------------------------------------------------
 
-void __stdcall TSoft_Database::Clr()
+void __stdcall TSoft::Database::Clr()
 {
 Count = 0;
 }
 //---------------------------------------------------------------------------
 
-long __stdcall TSoft_Database::Find(long aistart, char *aChar)
+DATABASE_IMPEXP long __stdcall TSoft::Database::Find(long aistart, char *aChar)
 {
 for (long iT = aistart; iT < Count; iT++) {
  if (strcmp(maciez.fItems[iT]->text,aChar)==0)
@@ -348,9 +349,9 @@ return -1;
 }
 //---------------------------------------------------------------------------
 
-void __stdcall TSoft_Database::Exchange(long aindex1, long aindex2)
+DATABASE_IMPEXP void __stdcall TSoft::Database::Exchange(long aindex1, long aindex2)
 {
-		TSoft_Item *eItem = maciez.fItems[aindex1];
+		Item *eItem = maciez.fItems[aindex1];
 maciez.fItems[aindex1] = maciez.fItems[aindex2];
 maciez.fItems[aindex1]->ipos = aindex1;
 maciez.fItems[aindex2] = eItem;
@@ -358,7 +359,7 @@ maciez.fItems[aindex2]->ipos = aindex2;
 }
 //---------------------------------------------------------------------------
 
-void __stdcall TSoft_Database::Sort()
+DATABASE_IMPEXP void __stdcall TSoft::Database::Sort()
 {
 for (long index1 = 0; index1 < Count; index1++)
 for (long index2 = index1 + 1; index2 < Count; index2++) {
@@ -369,25 +370,25 @@ for (long index2 = index1 + 1; index2 < Count; index2++) {
 }
 //---------------------------------------------------------------------------
 
-char *__stdcall TSoft_Database::get_Text(long aFormat)
+DATABASE_IMPEXP char *__stdcall TSoft::Database::get_Text(long aFormat)
 {
 strFree(fText);
 return TEXT_FROM_DATA(&fText,this,aFormat);
 }
 //---------------------------------------------------------------------------
 
-void  __stdcall TSoft_Database::set_Text(long aFormat,char *aText)
+DATABASE_IMPEXP void  __stdcall TSoft::Database::set_Text(long aFormat,char *aText)
 {
 DATA_FROM_TEXT(this,aText,aFormat);
 }
 //---------------------------------------------------------------------------
 
-bool __stdcall TSoft_Database::Read(void) {
+DATABASE_IMPEXP bool __stdcall TSoft::Database::Read(void) {
 HANDLE FHand = CreateFile(this->Alias,GENERIC_READ,FILE_SHARE_READ,NULL,OPEN_ALWAYS,FILE_ATTRIBUTE_NORMAL,NULL);
 char emsg[256];
 if (FHand==INVALID_HANDLE_VALUE) {
 return MessageBox(NULL,strAdd(strAdd(strEql(emsg,"Invalid file or path not exists '"),maciez.fAlias),"'"),
-						"TSoft_Database read error",
+						"TSoft::Database read error",
 						MB_OK|MB_ICONERROR);
 }
 unsigned long size = GetFileSize(FHand,NULL);
@@ -401,12 +402,12 @@ return TRUE;
 }
 //---------------------------------------------------------------------------
 
-bool __stdcall TSoft_Database::Post(void) {
+DATABASE_IMPEXP bool __stdcall TSoft::Database::Post(void) {
 HANDLE FHand = CreateFile(this->Alias,GENERIC_WRITE,FILE_SHARE_WRITE,NULL,CREATE_ALWAYS,FILE_ATTRIBUTE_NORMAL,NULL);
 char emsg[256];
 if (FHand==INVALID_HANDLE_VALUE) {
 return MessageBox(NULL,strAdd(strAdd(strEql(emsg,"Invalid file or path not exists '"),this->Alias),"'"),
-						"TSoft_Database post error",
+						"TSoft::Database post error",
 						MB_OK|MB_ICONERROR);
 }
 char *lptemp = this->Text[LINES];
@@ -420,15 +421,16 @@ return TRUE;
 //DODATKOWE FUNKCJE
 //---------------------------------------------------------------------------
 
-TSoft_Database::TSoft_Item *__stdcall ASCHAR(char *atext)
+DATABASE_IMPEXP TSoft::Database::Item *__stdcall ASCHAR(char *atext)
 {
-static TSoft_Database::TSoft_Item xPARAM;
+#pragma warning "This wont work for multithread! Won't fix it OLD.lib is OBSOLETE"
+static TSoft::Database::Item xPARAM;
 xPARAM.text = atext;
 return &xPARAM;
 }
 //---------------------------------------------------------------------------
 
-char *__stdcall TEXT_FROM_DATA(char **aText, TSoft_Database *aDatabase, long aformat) {
+DATABASE_IMPEXP char *__stdcall TEXT_FROM_DATA(char **aText, TSoft::Database *aDatabase, long aformat) {
 char *text = strAlloc(1);
 
  if (aDatabase->Count==0) strEql(text,"");
@@ -478,7 +480,7 @@ return *aText;
 }
 //---------------------------------------------------------------------------
 
-TSoft_Database *__stdcall DATA_FROM_TEXT(TSoft_Database *aData, char *aText, long aformat) {
+DATABASE_IMPEXP TSoft::Database *__stdcall DATA_FROM_TEXT(TSoft::Database *aData, char *aText, long aformat) {
 long pos, pos_chk, pos_end = strLen(aText);
 long sep, tpos, tpos_end = 256;
 char *tText = strAlloc(256);

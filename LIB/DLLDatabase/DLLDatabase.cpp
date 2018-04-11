@@ -20,10 +20,11 @@
 //
 //   If your DLL uses the dynamic version of the RTL, you do not need to
 //   explicitly add MEMMGR.LIB as this will be done implicitly for you
-
+//---------------------------------------------------------------------------
 #pragma argsused
-BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fwdreason, LPVOID lpvReserved)
+int WINAPI DllEntryPoint(HINSTANCE hinst, unsigned long reason, void* lpReserved)
 {
     return 1;
 }
 //---------------------------------------------------------------------------
+ 

@@ -7,8 +7,9 @@
 #include <StdCtrls.hpp>
 #include <Forms.hpp>
 #include <ExtCtrls.hpp>
-#include "..\Packages\exeres.h"
+#include ".\..\..\PACKAGES\exeres.h"
 #include <ComCtrls.hpp>
+#include "EXERES.h"
 //---------------------------------------------------------------------------
 class TInfosForm : public TForm
 {
@@ -28,9 +29,7 @@ __published:	// IDE-managed Components
 	TStaticText *StaticText2;
 	TExeResource *ExeResource1;
 	TStatusBar *StatusBar1;
-	TPanel *Panel1;
 	TButton *Button1;
-	TLabel *Label3;
 	TPanel *Panel2;
 	TImage *Image3;
 	void __fastcall FormShow(TObject *Sender);
@@ -48,7 +47,7 @@ private:	// User declarations
 //---------------------------------------------------------------------------
 public:		// User declarations
 //---------------------------------------------------------------------------
-	int __fastcall ZastopInfo(String DocelKPNazwa,String ZrodlKPNazwa);
+	int __fastcall ZastopInfo(AnsiString DocelKPNazwa,AnsiString ZrodlKPNazwa);
 	    __fastcall TInfosForm(TComponent* Owner);
 //---------------------------------------------------------------------------
 };

@@ -6,7 +6,6 @@
 #include <windows.h>
 #include "TSoft_Koder.h"
 #include "TSoft_Pharser.h"
-#pragma hdrstop
 #include "TSoft_Kop32.h"
 //
 //---------------------------------------------------------------------------
@@ -44,12 +43,12 @@
 		file.src.find.Hand = list_seek_stack->Items[list_seek_stack->Count-1]->data[0];\
 		strEql(patch, list_seek_stack->Items[list_seek_stack->Count-1]->text);
 
-int __stdcall TSoft_Kop32::SeekSrc(char *alpSrc) {
+int __stdcall TSoft::Kop32::SeekSrc(char *alpSrc) {
 char *currentlpStr = stack.Push(0);
 strEql(currentlpStr,alpSrc);
 strFixFilePath(currentlpStr,alpSrc);
 char *templpStr    = stack.Push(0);
-TSoft_Database *list_seek_stack = new TSoft_Database("lprzesz");
+TSoft::Database *list_seek_stack = new TSoft::Database("lprzesz");
 int crt;
 //
 FOnBreak(onSEEKING|isSRC,0);
@@ -126,7 +125,7 @@ return 1;
 }
 //---------------------------------------------------------------------------
 
-int __stdcall TSoft_Kop32::SeekSrcFile(char *alpSrc) {
+int __stdcall TSoft::Kop32::SeekSrcFile(char *alpSrc) {
 char *currentlpStr = stack.Push(0);
 int   crt;
 
@@ -194,7 +193,7 @@ return 1;
 		 list.dst.Main.Items[crt]->data_size[ATTRIB] = 0;\
 		 list.dst.Main.Items[crt]->data_size[SIZE] = 0;\
 		}
-int __stdcall TSoft_Kop32::SeekDst(char *alpDst) {
+int __stdcall TSoft::Kop32::SeekDst(char *alpDst) {
 char *lpSrc     = stack.Push(0);
 char *templpSrc = stack.Push(0);
 strFixFilePath(lpSrc,list.src.Main.Items[list.dst.Main.Count]->text);
