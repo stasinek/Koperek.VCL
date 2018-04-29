@@ -59,7 +59,7 @@
         <ProjectType>CppVCLApplication</ProjectType>
         <UWP_CppLogo150>$(BDS)\bin\Artwork\Windows\UWP\cppreg_UwpDefault_150.png</UWP_CppLogo150>
         <Icon_MainIcon>$(BDS)\bin\cbuilder_PROJECTICON.ico</Icon_MainIcon>
-        <IncludePath>..\..\..\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\;$(IncludePath)</IncludePath>
+        <IncludePath>..\..\..\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\;D:\stasiek\My Projects\OBSOLETE\PACKAGES;$(IncludePath)</IncludePath>
         <UWP_CppLogo44>$(BDS)\bin\Artwork\Windows\UWP\cppreg_UwpDefault_44.png</UWP_CppLogo44>
         <ILINK_LibraryPath>..\..\..\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
         <Multithreaded>true</Multithreaded>
@@ -114,8 +114,6 @@
         <_TCHARMapping>char</_TCHARMapping>
         <VerInfo_MajorVer>3</VerInfo_MajorVer>
         <LinkPackageStatics>dclusr.lib</LinkPackageStatics>
-        <VerInfo_Locale>1033</VerInfo_Locale>
-        <VerInfo_Keys>CompanyName=SSTSOFT;FileDescription=$(MSBuildProjectName);FileVersion=3.0.0.0;InternalName=;LegalCopyright=Stanislaw Stasiak;LegalTrademarks=;OriginalFilename=Panel.VCL;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <LinkPackageImports>rtl.bpi;vcl.bpi;vclx.bpi</LinkPackageImports>
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <AppEnableHighDPI>true</AppEnableHighDPI>

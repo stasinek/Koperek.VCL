@@ -83,11 +83,11 @@ if  (tik % 10) {
 	if (xold!=x && x+1!=0)
 		{
 		xold =x;
-		AdvancedBar3->Position = 1000 - (1/(x+1)) * 1000;
+		AdvancedBar1->Position = 1000 - (1/(x+1)) * 1000;
 		Label3->Caption = "Szybkosc aktualna ~ " + FloatToStrF(x,ffGeneral,2,4) + " x sredniej szybkosci";
 		}
 	if (x==0) {
-		AdvancedBar3->Position = 500;
+		AdvancedBar1->Position = 500;
 		Label3->Caption = "Szybkosc aktualna ~ nie mo¿na jeszcze oszacowac";
 	}
 	}
@@ -140,8 +140,8 @@ if (strcmp(buffer1,AnsiString(this->Label5->Caption.c_str()).c_str())!=0)
 if (Kop->options.Operation==opKODUJ && Kop->progress.dst.all.Read!=0) {
 	double s = float(Kop->progress.src.all.Read)/float(Kop->progress.dst.all.Read);
 	sprintf(buffer4,"Stopieñ kompresji we/wy = %01.2f/1", s);
-	if (s+1!=0) AdvancedBar4->Position = 100 - (1/(s+1)) * 100;
-	else AdvancedBar4->Position = 100;
+	if (s+1!=0) AdvancedBar2->Position = 100 - (1/(s+1)) * 100;
+	else AdvancedBar2->Position = 100;
 	if (strcmp(buffer4,AnsiString(this->Label4->Caption.c_str()).c_str())!=0)
 		this->Label4->Caption = buffer3;
 	}
@@ -149,12 +149,12 @@ else
 if (Kop->options.Operation==opKODUJ && Kop->progress.src.all.Read!=0) {
 	double s = float(Kop->progress.dst.all.Read)/float(Kop->progress.src.all.Read);
 	sprintf(buffer4,"Stopieñ dekompresji wy/wy = %01.2f/1", s);
-	if (s+1!=0) AdvancedBar4->Position = 100 - (1/(s+1)) * 100;
-	else AdvancedBar4->Position = 100;
+	if (s+1!=0) AdvancedBar2->Position = 100 - (1/(s+1)) * 100;
+	else AdvancedBar2->Position = 100;
 	if (strcmp(buffer4,AnsiString(this->Label4->Caption.c_str()).c_str())!=0)
 		this->Label4->Caption = buffer3;
 	}
-else AdvancedBar4->Visible = false;
+else AdvancedBar2->Visible = false;
 //--------------------------
 Application->Title = KoperForm->Caption;
 Application->ProcessMessages();
@@ -417,4 +417,6 @@ delete buffer4;
 
 }
 //---------------------------------------------------------------------------
+
+
 

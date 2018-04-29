@@ -133,3 +133,7 @@ if (ListaForm->ShowModal()==mrYesToAll) { ModalResult=mrYesToAll; Hide(); }
 }
 //---------------------------------------------------------------------------
 
+
+
+
+

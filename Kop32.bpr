@@ -40,7 +40,7 @@
       -I.\LIB\DLLKop32 -src_suffix cpp -boa"/>
     <CFLAG1 value="-O2 -H=$(BCB)\lib\vcl50.csm -Hc -Q -Vx -Ve -xf -xp -VF -C -ff -X- -ps -a8 
       -6 -b -d -k -y -v -vi- -c -tW -tWM"/>
-    <PFLAGS value="-$YD -$W -$R -$Q -$A8 -v -JPHNE -M"/>
+    <PFLAGS value="-$YD -$W -$I- -$A8 -v -JPHNE -M"/>
     <RFLAGS value=""/>
     <AFLAGS value="/ml /w2 /zi"/>
     <LFLAGS value="-D&quot;&quot; -S:0x200000 -aa -Tpe -GD -s -M -v"/>
@@ -67,7 +67,7 @@ Locale=1045
 CodePage=1250
 
 [Version Info Keys]
-CompanyName=SSTSOFT
+CompanyName=TSOFT/ SSTSOFT Stanislaw Stasiak 2000-2018
 FileDescription=
 FileVersion=3.3.1.523
 InternalName=SSTSOFT.KOPEREK
@@ -128,7 +128,7 @@ Item4=_DEBUG
 DebugSourceDirs=$(BCB)\source\vcl
 
 [Parameters]
-RunParams=
+RunParams=/listuj D:\
 HostApplication=
 RemoteHost=
 RemotePath=

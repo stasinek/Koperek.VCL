@@ -1,69 +1,76 @@
 [Closed Files]
-File_0=SourceModule,'D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Operation_frm.cpp',0,1,7,1,20,1,0
-File_1=SourceModule,'D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Quest_frm.dfm',0,1,1,1,1,0,0
-File_2=SourceModule,'C:\Documents and Settings\stasiek.TC12\My Documents\prc++\OBSOLETE\PROGS\Koperek.VCL\quest_frm.dfm',0,1,1,1,1,0,0
-File_3=SourceModule,'C:\Documents and Settings\stasiek.TC12\My Documents\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\main.cpp',0,1,1,1,1,0,0
-File_4=SourceModule,'c:\program files\borland\cbuilder6\include\vcl\Forms.hpp',0,1,608,1,936,0,0
-File_5=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Koperek_VCL\Lista_frm.cpp',0,1,1,1,1,0,0
-File_6=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Koperek_VCL\main.cpp',0,1,1,24,2,0,0
-File_7=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Koperek_VCL\main.h',0,1,1,18,5,0,0
-File_8=SourceModule,'c:\program files\borland\cbuilder6\include\shobjidl.h',0,1,2185,24,2193,0,0
-File_9=SourceModule,'c:\program files\borland\cbuilder6\include\vcl\dstring.h',0,1,1,1,161,0,0
+File_0=SourceModule,'D:\stasiek\My Projects\OBSOLETE\PACKAGES\ADVBAR.CPP',0,1,1,1,1,0,0
+File_1=SourceModule,'D:\stasiek\My Projects\OBSOLETE\PACKAGES\advbar.h',0,1,1,1,7,0,0
+File_2=SourceModule,'C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PACKAGES\ADVBAR.CPP',0,1,1,1,1,0,0
+File_3=SourceModule,'C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Zoom_frm.cpp',0,1,1,72,27,0,0
+File_4=SourceModule,'C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Zeus_frm.cpp',0,1,17,1,45,0,0
+File_5=SourceModule,'C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PACKAGES\SYSTRAY.h',0,1,17,24,20,0,0
+File_6=SourceModule,'C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PACKAGES\SYSTRAY.CPP',0,1,4,5,4,0,0
+File_7=SourceModule,'C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Unit4.cpp',0,1,1,1,1,0,0
+File_8=SourceModule,'C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Tips_frm.cpp',0,1,1,1,1,0,0
+File_9=SourceModule,'C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Size_frm.cpp',0,1,1,1,1,0,0
 
 [Modules]
-Module0=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Quest_frm.cpp
-Module1=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Infos_frm.cpp
-Module2=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Break_frm.cpp
-Module3=D:\stasiek\My Projects\OBSOLETE\FORM_TEMPLATES\About_frm.cpp
-Module4=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Koper_frm.cpp
-Module5=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Haslo_frm.cpp
-Module6=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Lista_frm.cpp
+Module0=C:\OBSOLETE\PACKAGES\BARGRAPH.CPP
+Module1=C:\OBSOLETE\PACKAGES\BARGRAPH.h
+Module2=D:\stasiek\My Projects\OBSOLETE\FORM_TEMPLATES\About_frm.cpp
+Module3=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Break_frm.cpp
+Module4=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Haslo_frm.cpp
+Module5=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Infos_frm.cpp
+Module6=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Koper_frm.cpp
 Module7=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Kop32.bpr
-Module8=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.h
-Module9=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Koperek.VCL\Infos_frm.cpp
-Module10=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Koperek.VCL\Haslo_frm.cpp
-Module11=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Koperek.VCL\Lista_frm.cpp
-Module12=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Koperek.VCL\Break_frm.cpp
-Module13=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Koperek.VCL\Journal_frm.cpp
-Module14=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.cpp
-Module15=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Koperek.VCL\Quest_frm.cpp
-Module16=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Koperek.VCL\Koper_frm.cpp
-Count=17
+Module8=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Lista_frm.cpp
+Module9=C:\OBSOLETE\PACKAGES\ADVBAR.CPP
+Module10=C:\OBSOLETE\PACKAGES\advbar.h
+Module11=c:\program files\borland\cbuilder5\include\vcl\Controls.hpp
+Module12=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.h
+Module13=D:\stasiek\My Projects\OBSOLETE\PROGS\TEST\Test_kontrolek\Unit1.cpp
+Module14=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Quest_frm.cpp
+Module15=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Koperek.VCL\Infos_frm.cpp
+Module16=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Koperek.VCL\Haslo_frm.cpp
+Module17=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Koperek.VCL\Lista_frm.cpp
+Module18=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Koperek.VCL\Break_frm.cpp
+Module19=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Koperek.VCL\Journal_frm.cpp
+Module20=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.cpp
+Module21=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Koperek.VCL\Quest_frm.cpp
+Module22=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Koperek.VCL\Koper_frm.cpp
+Count=23
 EditWindowCount=1
+PackageWindowCount=3
 
-[D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Quest_frm.cpp]
+[C:\OBSOLETE\PACKAGES\BARGRAPH.CPP]
 ModuleType=SourceModule
-FormState=1
-FormOnTop=1
+FormState=0
+FormOnTop=0
 
-[D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Infos_frm.cpp]
+[C:\OBSOLETE\PACKAGES\BARGRAPH.h]
 ModuleType=SourceModule
-FormState=1
-FormOnTop=1
-
-[D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Break_frm.cpp]
-ModuleType=SourceModule
-FormState=1
-FormOnTop=1
+FormState=0
+FormOnTop=0
 
 [D:\stasiek\My Projects\OBSOLETE\FORM_TEMPLATES\About_frm.cpp]
 ModuleType=SourceModule
-FormState=1
-FormOnTop=1
+FormState=0
+FormOnTop=0
 
-[D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Koper_frm.cpp]
+[D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Break_frm.cpp]
 ModuleType=SourceModule
-FormState=1
+FormState=0
 FormOnTop=1
 
 [D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Haslo_frm.cpp]
 ModuleType=SourceModule
-FormState=1
-FormOnTop=1
+FormState=0
+FormOnTop=0
 
-[D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Lista_frm.cpp]
+[D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Infos_frm.cpp]
 ModuleType=SourceModule
-FormState=1
+FormState=0
+FormOnTop=0
+
+[D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Koper_frm.cpp]
+ModuleType=SourceModule
+FormState=0
 FormOnTop=0
 
 [D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Kop32.bpr]
@@ -71,7 +78,37 @@ ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
+[D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Lista_frm.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\OBSOLETE\PACKAGES\ADVBAR.CPP]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\OBSOLETE\PACKAGES\advbar.h]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[c:\program files\borland\cbuilder5\include\vcl\Controls.hpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
 [D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.h]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[D:\stasiek\My Projects\OBSOLETE\PROGS\TEST\Test_kontrolek\Unit1.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Quest_frm.cpp]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
@@ -116,13 +153,25 @@ ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\ProjectGroup1.bpg]
+[c:\program files\borland\cbuilder5\Lib\dclusr50.bpk]
+FormState=0
+FormOnTop=1
+
+[C:\Program Files\Borland\CBuilder5\Projects\ProjectGroup1.bpg]
+FormState=0
+FormOnTop=0
+
+[C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PACKAGES\dclusr50.bpk]
+FormState=0
+FormOnTop=0
+
+[D:\OBSOLETE\PACKAGES\dclusr50.bpk]
 FormState=0
 FormOnTop=0
 
 [EditWindow0]
-ViewCount=18
-CurrentView=7
+ViewCount=24
+CurrentView=19
 View0=0
 View1=1
 View2=2
@@ -141,25 +190,31 @@ View14=14
 View15=15
 View16=16
 View17=17
+View18=18
+View19=19
+View20=20
+View21=21
+View22=22
+View23=23
 MessageView=MessageView@EditWindow0
 Create=1
 Visible=1
 State=2
-Left=150
-Top=137
-Width=1130
+Left=365
+Top=171
+Width=915
 Height=482
-MaxLeft=-4
-MaxTop=100
+MaxLeft=336
+MaxTop=8
 MaxWidth=1288
-MaxHeight=676
+MaxHeight=679
 ClientWidth=1280
-ClientHeight=649
+ClientHeight=652
 LeftPanelSize=0
 RightPanelSize=0
-BottomPanelSize=85
+BottomPanelSize=0
 BottomPanelClients=MessageView@EditWindow0
-BottomPanelData=000004000000000055000000000000000000050000000000000100000000550000000B0000004D65737361676556696577FFFFFFFF
+BottomPanelData=00000400010000000B0000004D657373616765566965770000000000000000000000000000000000FFFFFFFF
 
 [View0]
 Module=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Koperek.VCL\Infos_frm.cpp
@@ -213,86 +268,193 @@ LeftCol=1
 [View7]
 Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Quest_frm.cpp
 CursorX=1
-CursorY=302
-TopLine=301
+CursorY=346
+TopLine=305
 LeftCol=1
 
 [View8]
 Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Koper_frm.cpp
 CursorX=1
-CursorY=1
-TopLine=1
+CursorY=395
+TopLine=392
 LeftCol=1
 
 [View9]
-Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Infos_frm.cpp
-CursorX=1
-CursorY=132
-TopLine=129
+Module=D:\stasiek\My Projects\OBSOLETE\PROGS\TEST\Test_kontrolek\Unit1.cpp
+CursorX=47
+CursorY=22
+TopLine=19
 LeftCol=1
 
 [View10]
-Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Lista_frm.cpp
-CursorX=1
-CursorY=28
-TopLine=27
+Module=C:\OBSOLETE\PACKAGES\ADVBAR.CPP
+CursorX=31
+CursorY=267
+TopLine=241
 LeftCol=1
 
 [View11]
-Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Lista_frm.h
+Module=C:\OBSOLETE\PACKAGES\advbar.h
 CursorX=1
-CursorY=18
+CursorY=7
 TopLine=1
 LeftCol=1
 
 [View12]
+Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Infos_frm.cpp
+CursorX=1
+CursorY=139
+TopLine=138
+LeftCol=1
+
+[View13]
+Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Lista_frm.cpp
+CursorX=1
+CursorY=29
+TopLine=28
+LeftCol=1
+
+[View14]
+Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Lista_frm.h
+CursorX=13
+CursorY=7
+TopLine=1
+LeftCol=1
+
+[View15]
+Module=c:\program files\borland\cbuilder5\include\vcl\Controls.hpp
+CursorX=1
+CursorY=1
+TopLine=121
+LeftCol=1
+
+[View16]
 Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Haslo_frm.cpp
 CursorX=1
 CursorY=1
 TopLine=1
 LeftCol=1
 
-[View13]
+[View17]
 Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Break_frm.cpp
 CursorX=1
 CursorY=1
 TopLine=1
 LeftCol=1
 
-[View14]
+[View18]
 Module=D:\stasiek\My Projects\OBSOLETE\FORM_TEMPLATES\About_frm.cpp
 CursorX=1
-CursorY=1
-TopLine=1
+CursorY=131
+TopLine=128
 LeftCol=1
 
-[View15]
-Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Kop32.cpp
-CursorX=6
+[View19]
+Module=C:\OBSOLETE\PACKAGES\BARGRAPH.CPP
+CursorX=32
+CursorY=457
+TopLine=435
+LeftCol=1
+
+[View20]
+Module=C:\OBSOLETE\PACKAGES\BARGRAPH.h
+CursorX=50
 CursorY=81
-TopLine=65
+TopLine=73
 LeftCol=1
 
-[View16]
+[View21]
+Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Kop32.cpp
+CursorX=18
+CursorY=96
+TopLine=31
+LeftCol=1
+
+[View22]
 Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.cpp
 CursorX=42
 CursorY=372
 TopLine=363
 LeftCol=1
 
-[View17]
+[View23]
 Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.h
 CursorX=12
 CursorY=16
 TopLine=1
 LeftCol=1
 
+[PackageWindow0]
+Create=1
+Visible=1
+State=0
+Left=166
+Top=242
+Width=368
+Height=244
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=360
+ClientHeight=220
+TBDockHeight=244
+LRDockWidth=368
+Dockable=1
+StatusBar=0
+TextLabels=1
+Toolbar=1
+SectionWidth0=150
+SectionWidth1=210
+Module=c:\program files\borland\cbuilder5\Lib\dclusr50.bpk
+
+[PackageWindow1]
+Create=1
+Visible=0
+State=0
+Left=252
+Top=241
+Width=368
+Height=244
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=360
+ClientHeight=220
+TBDockHeight=244
+LRDockWidth=368
+Dockable=1
+StatusBar=0
+TextLabels=1
+Toolbar=1
+SectionWidth0=150
+SectionWidth1=210
+Module=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PACKAGES\dclusr50.bpk
+
+[PackageWindow2]
+Create=1
+Visible=0
+State=0
+Left=252
+Top=241
+Width=368
+Height=244
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=360
+ClientHeight=220
+TBDockHeight=244
+LRDockWidth=368
+Dockable=1
+StatusBar=0
+TextLabels=1
+Toolbar=1
+SectionWidth0=150
+SectionWidth1=210
+Module=D:\OBSOLETE\PACKAGES\dclusr50.bpk
+
 [Watches]
 Count=0
 
 [Breakpoints]
-Count=1
-Breakpoint0='C:\Documents and Settings\stasiek.TC12\My Documents\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.cpp',120,'',0,1,'',1,0,0,'',1,'','',''
+Count=0
 
 [AddressBreakpoints]
 Count=0
@@ -316,8 +478,8 @@ ClientHeight=78
 Create=1
 Visible=0
 State=0
-Left=369
-Top=372
+Left=60
+Top=233
 Width=438
 Height=303
 MaxLeft=-1
@@ -347,7 +509,7 @@ FlagPane=64
 
 [AlignmentPalette]
 Create=1
-Visible=0
+Visible=1
 State=0
 Left=200
 Top=107
@@ -362,8 +524,8 @@ ClientHeight=60
 Create=1
 Visible=1
 State=0
-Left=0
-Top=359
+Left=29
+Top=271
 Width=190
 Height=381
 MaxLeft=-1
@@ -375,24 +537,24 @@ LRDockWidth=190
 Dockable=1
 SplitPos=85
 ArrangeBy=Name
-SelectedItem=Caption
-ExpandedItems=Anchors
-HiddenCategories=
+SelectedItem=
+ExpandedItems=Anchors,Constraints,Font,Font.Style
+HiddenCategories=Legacy
 ShowStatusBar=1
 
 [MessageView@EditWindow0]
 Create=1
-Visible=1
+Visible=0
 State=0
 Left=12
 Top=0
 Width=1268
-Height=85
+Height=52
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=1268
-ClientHeight=85
-TBDockHeight=85
+ClientHeight=52
+TBDockHeight=52
 LRDockWidth=443
 Dockable=1
 

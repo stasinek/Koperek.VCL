@@ -13,22 +13,25 @@ File_10=TSourceModule,'C:\x86_libraries\STK\file\eno\stk_file_lzst_header.cpp',0
 File_11=TSourceModule,'C:\x86_libraries\STK\database\stk_database_items.cpp',0,1,258,1,272,0,0,,
 
 [Modules]
-Module0=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Lista_frm.cpp
-Module1=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\RADKoperek32.cbproj
-Module2=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\main.cpp
-Module3=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Quest_frm.cpp
-Module4=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Koper_frm.cpp
-Module5=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Infos_frm.cpp
-Module6=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\break_frm.cpp
+Module0=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\RADKoperek32.cbproj
+Module1=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\break_frm.cpp
+Module2=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Lista_frm.cpp
+Module3=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\main.cpp
+Module4=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Quest_frm.cpp
+Module5=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Koper_frm.cpp
+Module6=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Infos_frm.cpp
 Module7=default.htm
 Count=8
 EditWindowCount=1
 
-[D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Lista_frm.cpp]
-ModuleType=TSourceModule
-
 [D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\RADKoperek32.cbproj]
 ModuleType=TBaseProject
+
+[D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\break_frm.cpp]
+ModuleType=TSourceModule
+
+[D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Lista_frm.cpp]
+ModuleType=TSourceModule
 
 [D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\main.cpp]
 ModuleType=TSourceModule
@@ -42,15 +45,12 @@ ModuleType=TSourceModule
 [D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Infos_frm.cpp]
 ModuleType=TSourceModule
 
-[D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\break_frm.cpp]
-ModuleType=TSourceModule
-
 [default.htm]
 ModuleType=TURLModule
 
 [EditWindow0]
 ViewCount=8
-CurrentEditView=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Lista_frm.cpp
+CurrentEditView=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\RADKoperek32.cpp
 View0=0
 View1=1
 View2=2
@@ -67,22 +67,22 @@ State=0
 Left=0
 Top=0
 Width=10000
-Height=8290
+Height=8977
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=10000
-ClientHeight=8290
+ClientHeight=8977
 DockedToMainForm=1
 TopPanelSize=0
 LeftPanelSize=1898
 LeftPanelClients=PropertyInspector,DockSite3
-LeftPanelData=00000800010100000000810F000000000000016A070000000000000100000000020A000009000000446F636B53697465330100000000CE1800001100000050726F7065727479496E73706563746F72FFFFFFFF
+LeftPanelData=000008000101000000002615000000000000016A0700000000000001000000005B0E000009000000446F636B53697465330100000000D62100001100000050726F7065727479496E73706563746F72FFFFFFFF
 RightPanelSize=2000
 RightPanelClients=DockSite2,DockSite4
-RightPanelData=00000800010100000000810F00000000000001D00700000000000001000000004E0E000009000000446F636B53697465320100000000CE18000009000000446F636B5369746534FFFFFFFF
-BottomPanelSize=1575
+RightPanelData=00000800010100000000261500000000000001D00700000000000001000000004312000009000000446F636B53697465320100000000D621000009000000446F636B5369746534FFFFFFFF
+BottomPanelSize=0
 BottomPanelClients=DockSite1,MessageView
-BottomPanelData=0000080001020100000009000000446F636B5369746531803E0000000000000227060000000000000100000000803E00000F0000004D65737361676556696577466F726DFFFFFFFF
+BottomPanelData=0000080001020200000009000000446F636B53697465310F0000004D65737361676556696577466F726D1A34000000000000022706000000000000FFFFFFFF
 BottomMiddlePanelSize=0
 BottomMiddlePanelClients=DockSite0
 BottomMiddelPanelData=0000080001020100000009000000446F636B5369746530971D00000000000002EF06000000000000FFFFFFFF
@@ -127,9 +127,9 @@ EditViewName=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Koper_frm.h
 [View4]
 CustomEditViewType=TEditView
 Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\RADKoperek32.cpp
-CursorX=1
-CursorY=73
-TopLine=62
+CursorX=12
+CursorY=26
+TopLine=130
 LeftCol=1
 Elisions=
 Bookmarks=
@@ -172,7 +172,8 @@ EditViewName=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Quest_frm.h
 Count=0
 
 [Breakpoints]
-Count=0
+Count=1
+Breakpoint0='D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\RADKoperek32.cpp',27,'',0,1,'',1,0,0,'',1,'','','',0,''
 
 [EmbarcaderoWin32Debugger_AddressBreakpoints]
 Count=0
@@ -217,7 +218,7 @@ MaxWidth=8930
 MaxHeight=8523
 ClientWidth=10000
 ClientHeight=9754
-BottomPanelSize=8000
+BottomPanelSize=8662
 BottomPanelClients=EditWindow0
 BottomPanelData=0000080000000000000000000000000000000000000000000000000100000000000000000C0000004564697457696E646F775F30FFFFFFFF
 
@@ -230,11 +231,11 @@ State=0
 Left=0
 Top=0
 Width=2000
-Height=3187
+Height=4236
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=2000
-ClientHeight=3187
+ClientHeight=4236
 TBDockHeight=5894
 LRDockWidth=2352
 Dockable=1
@@ -243,18 +244,18 @@ StayOnTop=0
 [MessageView]
 PercentageSizes=1
 Create=1
-Visible=1
+Visible=0
 Docked=1
 State=0
 Left=0
-Top=18
-Width=10000
-Height=1399
+Top=0
+Width=2773
+Height=1425
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=10000
-ClientHeight=1399
-TBDockHeight=1399
+ClientWidth=2773
+ClientHeight=1425
+TBDockHeight=1425
 LRDockWidth=2773
 Dockable=1
 StayOnTop=0
@@ -268,11 +269,11 @@ State=0
 Left=0
 Top=0
 Width=2000
-Height=2552
+Height=3899
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=2000
-ClientHeight=2552
+ClientHeight=3899
 TBDockHeight=7150
 LRDockWidth=2000
 Dockable=1
@@ -323,23 +324,18 @@ Visible=1
 Docked=1
 State=0
 Left=0
-Top=223
+Top=312
 Width=1898
-Height=3692
+Height=4935
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=1898
-ClientHeight=3692
+ClientHeight=4935
 TBDockHeight=9016
 LRDockWidth=1898
 Dockable=1
 StayOnTop=0
 SplitPos=111
-
-[PropInspDesignerSelection]
-ArrangeBy=Name
-SelectedItem=BevelOuter,
-ExpandedItems=Anchors=1,BevelEdges=0,Constraints=0,Font=0,ImageMargins=0,LiveBindings=0,Margins=0,StyleElements=0
 
 [frmDesignPreview]
 PercentageSizes=1
@@ -471,51 +467,13 @@ State=0
 Left=0
 Top=0
 Width=1898
-Height=2370
+Height=3523
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=1898
-ClientHeight=2370
+ClientHeight=3523
 TBDockHeight=3679
 LRDockWidth=1898
-Dockable=1
-StayOnTop=0
-
-[FrmPresentationMainForm]
-PercentageSizes=1
-Create=1
-Visible=0
-Docked=0
-State=0
-Left=0
-Top=0
-Width=3727
-Height=8925
-MaxLeft=-8
-MaxTop=-13
-ClientWidth=3664
-ClientHeight=8575
-TBDockHeight=8925
-LRDockWidth=3727
-Dockable=1
-StayOnTop=0
-
-[FrmWhatsNewMain]
-PercentageSizes=1
-Create=1
-Visible=0
-Docked=0
-State=0
-Left=0
-Top=0
-Width=3359
-Height=6917
-MaxLeft=-8
-MaxTop=-13
-ClientWidth=3297
-ClientHeight=6567
-TBDockHeight=6917
-LRDockWidth=3359
 Dockable=1
 StayOnTop=0
 
@@ -581,11 +539,11 @@ State=0
 Left=0
 Top=18
 Width=2000
-Height=3510
+Height=4560
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=2000
-ClientHeight=3510
+ClientHeight=4560
 TBDockHeight=9016
 LRDockWidth=2000
 Dockable=1
@@ -605,11 +563,11 @@ State=0
 Left=0
 Top=18
 Width=1898
-Height=2370
+Height=3523
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=1898
-ClientHeight=2370
+ClientHeight=3523
 TBDockHeight=9016
 LRDockWidth=1898
 Dockable=1
@@ -627,13 +585,13 @@ Visible=1
 Docked=1
 State=0
 Left=0
-Top=311
+Top=392
 Width=2000
-Height=2552
+Height=3899
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=2000
-ClientHeight=2552
+ClientHeight=3899
 TBDockHeight=9016
 LRDockWidth=2000
 Dockable=1

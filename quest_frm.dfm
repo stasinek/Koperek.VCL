@@ -1,10 +1,10 @@
 object QuestForm: TQuestForm
-  Left = 579
-  Top = 235
+  Left = 231
+  Top = 178
   BorderStyle = bsDialog
   Caption = 'Confirm operation'
-  ClientHeight = 371
-  ClientWidth = 608
+  ClientHeight = 440
+  ClientWidth = 667
   Color = clBtnFace
   DefaultMonitor = dmDesktop
   Font.Charset = ANSI_CHARSET
@@ -24,15 +24,14 @@ object QuestForm: TQuestForm
     Left = 0
     Top = 0
     Width = 137
-    Height = 330
+    Height = 399
     Align = alLeft
     BevelOuter = bvNone
-    Color = clSilver
     TabOrder = 2
     object Image1: TImage
-      Left = 0
+      Left = 4
       Top = 4
-      Width = 134
+      Width = 125
       Height = 313
       AutoSize = True
       DragCursor = crDefault
@@ -47,14 +46,14 @@ object QuestForm: TQuestForm
   end
   object Panel2: TPanel
     Left = 0
-    Top = 330
-    Width = 608
+    Top = 399
+    Width = 667
     Height = 41
     Align = alBottom
     BevelOuter = bvLowered
     TabOrder = 0
     object Button3: TButton
-      Left = 441
+      Left = 500
       Top = 10
       Width = 156
       Height = 23
@@ -65,7 +64,7 @@ object QuestForm: TQuestForm
       TabStop = False
     end
     object Button1: TButton
-      Left = 249
+      Left = 308
       Top = 10
       Width = 80
       Height = 23
@@ -76,7 +75,7 @@ object QuestForm: TQuestForm
       OnClick = Button1Click
     end
     object Button2: TButton
-      Left = 333
+      Left = 392
       Top = 10
       Width = 80
       Height = 23
@@ -90,24 +89,16 @@ object QuestForm: TQuestForm
   object Panel3: TPanel
     Left = 137
     Top = 0
-    Width = 399
-    Height = 330
+    Width = 462
+    Height = 399
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
-    object TBevel
-      Left = 0
-      Top = 53
-      Width = 399
-      Height = 18
-      Align = alClient
-      Shape = bsTopLine
-    end
     object Panel0: TPanel
       Left = 0
       Top = 0
-      Width = 399
-      Height = 53
+      Width = 462
+      Height = 65
       Align = alTop
       BevelOuter = bvNone
       Color = clWhite
@@ -138,8 +129,8 @@ object QuestForm: TQuestForm
     end
     object PageControl1: TPageControl
       Left = 0
-      Top = 71
-      Width = 399
+      Top = 140
+      Width = 462
       Height = 259
       ActivePage = TabSheet1
       Align = alBottom
@@ -360,7 +351,7 @@ object QuestForm: TQuestForm
         object GroupBox1: TGroupBox
           Left = 12
           Top = 4
-          Width = 373
+          Width = 436
           Height = 181
           Anchors = [akLeft, akTop, akRight]
           Caption = 'Metoda kompresji'
@@ -434,18 +425,22 @@ object QuestForm: TQuestForm
     end
   end
   object Panel4: TPanel
-    Left = 536
+    Left = 599
     Top = 0
-    Width = 72
-    Height = 330
+    Width = 68
+    Height = 399
     Align = alRight
     BevelOuter = bvNone
     TabOrder = 3
     object SpeedButton9: TSpeedButton
-      Left = 20
+      Left = 16
       Top = 275
       Width = 41
       Height = 40
+      AllowAllUp = True
+      Constraints.MinHeight = 36
+      Constraints.MinWidth = 36
+      GroupIndex = 8
       Glyph.Data = {
         76020000424D7602000000000000760000002800000020000000200000000100
         0400000000000002000000000000000000001000000000000000FF00FF008080
@@ -467,12 +462,17 @@ object QuestForm: TQuestForm
         2222222221223110000000000012244444444442212311000000000000122222
         2222222221311000000000000012222222222222211100000000000000122222
         2222222221100000000000000011111111111111110000000000}
+      OnClick = SpeedButton9Click
     end
     object SpeedButton5: TSpeedButton
-      Left = 20
+      Left = 16
       Top = 12
       Width = 40
       Height = 40
+      AllowAllUp = True
+      Constraints.MinHeight = 36
+      Constraints.MinWidth = 36
+      GroupIndex = 8
       Glyph.Data = {
         76020000424D7602000000000000760000002800000020000000200000000100
         0400000000000002000000000000000000001000000000000000FF00FF00FF00
@@ -494,12 +494,17 @@ object QuestForm: TQuestForm
         3444120000000000000000134455544134412000000000000000001344444441
         3412000000000000000000134444444131200000000000000000001333333331
         1200000000000000000000111111111120000000000000000000}
+      OnClick = SpeedButton5Click
     end
     object SpeedButton6: TSpeedButton
-      Left = 20
+      Left = 16
       Top = 56
       Width = 40
       Height = 40
+      AllowAllUp = True
+      Constraints.MinHeight = 36
+      Constraints.MinWidth = 36
+      GroupIndex = 8
       Glyph.Data = {
         76020000424D7602000000000000760000002800000020000000200000000100
         0400000000000002000000000000000000001000000000000000FF00FF00FF00
@@ -521,12 +526,17 @@ object QuestForm: TQuestForm
         4441200000000000000001344554441344120000000000000000013444444413
         4120000000000000000001344444441312000000000000000000013333333311
         2000000000000000000001111111111200000000000000000000}
+      OnClick = SpeedButton6Click
     end
     object SpeedButton7: TSpeedButton
-      Left = 20
+      Left = 16
       Top = 188
       Width = 40
       Height = 40
+      AllowAllUp = True
+      Constraints.MinHeight = 36
+      Constraints.MinWidth = 36
+      GroupIndex = 8
       Glyph.Data = {
         76020000424D7602000000000000760000002800000020000000200000000100
         0400000000000002000000000000000000001000000000000000FF00FF000000
@@ -548,12 +558,17 @@ object QuestForm: TQuestForm
         2232233333333120000000000111111111111111111111000000000000000001
         2322331120000000000000000000000122324311200000000000000000000001
         2223223120000000000000000000000111111111000000000000}
+      OnClick = SpeedButton7Click
     end
     object SpeedButton8: TSpeedButton
-      Left = 20
+      Left = 16
       Top = 100
       Width = 40
       Height = 40
+      AllowAllUp = True
+      Constraints.MinHeight = 36
+      Constraints.MinWidth = 36
+      GroupIndex = 8
       Glyph.Data = {
         76020000424D7602000000000000760000002800000020000000200000000100
         0400000000000002000000000000000000001000000000000000FF00FF00FF00
@@ -575,12 +590,17 @@ object QuestForm: TQuestForm
         3444120000000000000000134455544134412000000000000000001344444441
         3412000000000000000000134444444131200000000000000000001333333331
         1200000000000000000000111111111120000000000000000000}
+      OnClick = SpeedButton8Click
     end
     object SpeedButton10: TSpeedButton
-      Left = 20
+      Left = 16
       Top = 144
       Width = 40
       Height = 40
+      AllowAllUp = True
+      Constraints.MinHeight = 36
+      Constraints.MinWidth = 36
+      GroupIndex = 8
       Glyph.Data = {
         76020000424D7602000000000000760000002800000020000000200000000100
         0400000000000002000000000000000000001000000000000000FF00FF000000
@@ -602,12 +622,17 @@ object QuestForm: TQuestForm
         3444120000000000000000134455544134412000000000000000001344444441
         3412000000000000000000134444444131200000000000000000001333333331
         1200000000000000000000111111111120000000000000000000}
+      OnClick = SpeedButton10Click
     end
     object SpeedButton11: TSpeedButton
-      Left = 20
+      Left = 16
       Top = 232
       Width = 41
       Height = 40
+      AllowAllUp = True
+      Constraints.MinHeight = 36
+      Constraints.MinWidth = 36
+      GroupIndex = 8
       Glyph.Data = {
         76020000424D7602000000000000760000002800000020000000200000000100
         0400000000000002000000000000000000001000000000000000FF00FF008080
@@ -629,6 +654,15 @@ object QuestForm: TQuestForm
         3153000000000000000014232323232321530000000000000000144444444444
         4150000000000000000012323232111111000000000000000000012323210000
         0000000000000000000000111110000000000000000000000000}
+      OnClick = SpeedButton11Click
+    end
+    object Bevel1: TBevel
+      Left = 0
+      Top = 0
+      Width = 13
+      Height = 399
+      Align = alLeft
+      Shape = bsLeftLine
     end
   end
   object BrowseDialog1: TBrowseDialog

@@ -1,8 +1,8 @@
 object ListaForm: TListaForm
-  Left = 233
-  Top = 103
-  Width = 728
-  Height = 493
+  Left = -239
+  Top = 20
+  Width = 1292
+  Height = 495
   Caption = 'Lista'
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
@@ -23,19 +23,19 @@ object ListaForm: TListaForm
   end
   object Panel1: TPanel
     Left = 0
-    Top = 401
-    Width = 720
-    Height = 46
+    Top = 398
+    Width = 17690
+    Height = 51
     Align = alBottom
     BevelOuter = bvLowered
     TabOrder = 0
     object Button3: TButton
-      Left = 520
-      Top = 12
+      Left = 17506
+      Top = 13
       Width = 173
       Height = 25
       Anchors = [akRight, akBottom]
-      Caption = 'Return without changes...'
+      Caption = 'Return without &changes...'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -46,12 +46,12 @@ object ListaForm: TListaForm
       OnClick = Button3Click
     end
     object Button2: TButton
-      Left = 439
-      Top = 12
+      Left = 17417
+      Top = 13
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
-      Caption = 'OK'
+      Caption = '&OK'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -66,9 +66,10 @@ object ListaForm: TListaForm
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 720
+    Width = 17690
     Height = 309
     Align = alTop
+    Anchors = [akLeft, akTop, akRight, akBottom]
     BevelInner = bvRaised
     BevelOuter = bvLowered
     BevelWidth = 2
@@ -76,57 +77,57 @@ object ListaForm: TListaForm
     object CheckListBox1: TCheckListBox
       Left = 4
       Top = 4
-      Width = 281
+      Width = 17610
       Height = 301
       Align = alLeft
-      Anchors = [akLeft, akTop, akRight, akBottom]
       ItemHeight = 13
       TabOrder = 0
     end
     object CheckListBox2: TCheckListBox
-      Left = 376
+      Left = 763
       Top = 4
-      Width = 340
+      Width = 17243
       Height = 301
-      Align = alRight
-      Anchors = [akLeft, akTop, akRight, akBottom]
       ItemHeight = 13
       TabOrder = 1
     end
     object Panel4: TPanel
-      Left = 285
+      Left = 17614
       Top = 4
-      Width = 91
+      Width = 72
       Height = 301
       Align = alClient
+      Anchors = []
       BevelOuter = bvNone
+      Constraints.MaxWidth = 72
+      Constraints.MinWidth = 72
       TabOrder = 2
       object SpeedButton5: TSpeedButton
-        Left = 25
-        Top = 212
+        Left = 17
+        Top = 200
         Width = 40
         Height = 38
       end
       object SpeedButton4: TSpeedButton
-        Left = 25
-        Top = 164
+        Left = 17
+        Top = 156
         Width = 40
         Height = 38
       end
       object SpeedButton3: TSpeedButton
-        Left = 25
-        Top = 116
+        Left = 17
+        Top = 112
         Width = 40
         Height = 38
       end
       object SpeedButton2: TSpeedButton
-        Left = 25
+        Left = 17
         Top = 68
         Width = 40
         Height = 38
       end
       object SpeedButton1: TSpeedButton
-        Left = 25
+        Left = 17
         Top = 24
         Width = 40
         Height = 38
@@ -136,10 +137,10 @@ object ListaForm: TListaForm
   object Panel3: TPanel
     Left = 0
     Top = 309
-    Width = 720
-    Height = 92
+    Width = 17690
+    Height = 89
     Align = alClient
-    BevelOuter = bvLowered
+    BevelOuter = bvNone
     TabOrder = 2
     object ComboBox1: TComboBox
       Left = 12
@@ -148,7 +149,9 @@ object ListaForm: TListaForm
       Height = 21
       ItemHeight = 13
       TabOrder = 0
-      Text = 'ComboBox1'
+      Text = '*.*'
+      Items.Strings = (
+        '*.*')
     end
     object FILTRUJ: TButton
       Left = 266
@@ -160,8 +163,8 @@ object ListaForm: TListaForm
     end
   end
   object MainMenu1: TMainMenu
-    Left = 76
-    Top = 373
+    Left = 16
+    Top = 405
     object Export1: TMenuItem
       Caption = 'Source'
     end

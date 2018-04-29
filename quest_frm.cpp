@@ -6,9 +6,6 @@
 #include "main.h"
 //---------------------------------------------------------------------------
 #pragma link "BROWSEDLG"
-#pragma link "BROWSEDLG"
-#pragma link "BROWSEDLG"
-#pragma link "BROWSEDLG"
 #pragma resource "*.dfm"
 //---------------------------------------------------------------------------
 TQuestForm *QuestForm;
@@ -297,6 +294,53 @@ else
 }
 //---------------------------------------------------------------------------
 
+
+
+
+
+
+void __fastcall TQuestForm::SpeedButton8Click(TObject *Sender)
+{
+SpeedButton8->Down = true;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TQuestForm::SpeedButton5Click(TObject *Sender)
+{
+SpeedButton5->Down = true;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TQuestForm::SpeedButton6Click(TObject *Sender)
+{
+SpeedButton6->Down = true;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TQuestForm::SpeedButton10Click(TObject *Sender)
+{
+SpeedButton10->Down = true;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TQuestForm::SpeedButton7Click(TObject *Sender)
+{
+SpeedButton7->Down = true;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TQuestForm::SpeedButton11Click(TObject *Sender)
+{
+SpeedButton11->Down = true;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TQuestForm::SpeedButton9Click(TObject *Sender)
+{
+SpeedButton9->Down = true;
+}
+//---------------------------------------------------------------------------
 
 
 

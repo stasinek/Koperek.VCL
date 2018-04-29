@@ -18,17 +18,23 @@ class THasloForm : public TForm
 {
 __published:
 //----------------------------------------------------------------------------
-	TLabel *Label1;
-	TLabel *Label2;
-	TButton *OKBtn;
-	TButton *CancelBtn;
-	TEdit *Password1;
-	TEdit *Password2;
 //----------------------------------------------------------------------------
-	TLabel *Label3;
-	TImage *Image1;
 	TExeResource *ExeResource1;
+    TPanel *Panel1;
+    TButton *OKBtn;
+    TButton *CancelBtn;
     TLabel *Label4;
+    TPanel *Panel4;
+    TBevel *Bevel1;
+    TPanel *Panel5;
+    TPanel *Panel2;
+    TLabel *Label1;
+    TLabel *Label2;
+    TEdit *Password1;
+    TEdit *Password2;
+    TPanel *Panel3;
+    TLabel *Label3;
+    TImage *Image1;
 	void __fastcall FormShow(TObject *Sender);
 	void __fastcall Password2Change(TObject *Sender);
 	void __fastcall Password1Change(TObject *Sender);
