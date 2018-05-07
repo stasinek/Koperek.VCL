@@ -11,11 +11,16 @@ File_8=SourceModule,'C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\
 File_9=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE\FORM_TEMPLATES\Info_frm.cpp',0,1,119,15,29,1,0
 
 [Modules]
-Module0=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp
-Module1=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.h
-Module2=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.BPR
+Module0=D:\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp
+Module1=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp
+Module2=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.h
 Count=3
 EditWindowCount=1
+
+[D:\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
 
 [D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp]
 ModuleType=SourceModule
@@ -27,12 +32,15 @@ ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.BPR]
-ModuleType=SourceModule
+[C:\Program Files\Borland\CBuilder5\Projects\ProjectGroup1.bpg]
 FormState=0
 FormOnTop=0
 
-[C:\Program Files\Borland\CBuilder5\Projects\ProjectGroup1.bpg]
+[D:\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.BPR]
+FormState=0
+FormOnTop=0
+
+[D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.BPR]
 FormState=0
 FormOnTop=0
 
@@ -63,17 +71,17 @@ BottomPanelClients=MessageView@EditWindow0
 BottomPanelData=000004000000000000000000000000000000000000000000000100000000000000000B0000004D65737361676556696577FFFFFFFF
 
 [View0]
-Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.bpf
-CursorX=1
-CursorY=1
-TopLine=1
+Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp
+CursorX=2
+CursorY=1270
+TopLine=1136
 LeftCol=1
 
 [View1]
-Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp
-CursorX=20
-CursorY=1148
-TopLine=1131
+Module=D:\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp
+CursorX=24
+CursorY=1161
+TopLine=1146
 LeftCol=1
 
 [View2]
