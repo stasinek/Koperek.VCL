@@ -122,49 +122,49 @@ options.Operation = opNULL;
 
 strEql(templp,templpDst);
 strupr(templp);
-if (Pharser(templp,"DELETE",NULL,xpos))
+if (Pharser(templp,"DELETE ",NULL,xpos))
    {options.Operation = opUSUN;
     strDelEnd(templpDst,xpos[0],xpos[3]);
 	goto ExecuteOPTIONS;
    }
 strEql(templp,templpDst);
 strupr(templp);
-if (Pharser(templp,"DECOMPRESS",NULL,xpos))
+if (Pharser(templp,"DECOMPRESS ",NULL,xpos))
    {options.Operation = opDEKODUJ;
     strDelEnd(templpDst,xpos[0],xpos[3]);
 	goto ExecuteOPTIONS;
    }
 strEql(templp,templpDst);
 strupr(templp);
-if (Pharser(templp,"COMPRESS",NULL,xpos))
+if (Pharser(templp,"COMPRESS ",NULL,xpos))
    {options.Operation = opKODUJ;
     strDelEnd(templpDst,xpos[0],xpos[3]);
     goto ExecuteOPTIONS;
    }
 strEql(templp,templpDst);
 strupr(templp);
-if (Pharser(templp,"MOVE",NULL,xpos))
+if (Pharser(templp,"MOVE ",NULL,xpos))
    {options.Operation = opPRZENIES;
     strDelEnd(templpDst,xpos[0],xpos[3]);
     goto ExecuteOPTIONS;
    }
 strEql(templp,templpDst);
 strupr(templp);
-if (Pharser(templp,"COPY",NULL,xpos))
+if (Pharser(templp,"COPY ",NULL,xpos))
    {options.Operation = opKOPIUJ;
     strDelEnd(templpDst,xpos[0],xpos[3]);
     goto ExecuteOPTIONS;
    }
 strEql(templp,templpDst);
 strupr(templp);
-if (Pharser(templp,"LIST",NULL,xpos))
+if (Pharser(templp,"LIST ",NULL,xpos))
    {options.Operation = opLISTUJ;
     strDelEnd(templpDst,xpos[0],xpos[3]);
     goto ExecuteOPTIONS;
    }
 strEql(templp,templpDst);
 strupr(templp);
-if (Pharser(templp,"SELECT",NULL,xpos))
+if (Pharser(templp,"SELECT ",NULL,xpos))
    {options.Operation = opZAZNACZ;
     strDelEnd(templpDst,xpos[0],xpos[3]);
     goto ExecuteOPTIONS;
@@ -207,7 +207,7 @@ options.Masks.Text[COMMA] = "*.*";
 //
 // ARGumenTS
 //
-options.Argts.Text[COMMA] = "#file";
+options.Argts.Text[COMMA] = "#path\#filename.#filextt";
 strEql(templp,templpDst);
 strupr(templp);
 if (Pharser(templp,"LIST",templp,xpos))
@@ -586,16 +586,15 @@ if (options.Operation==opLISTUJ) // zapisanie listy do fileu
 			 strupr(templp);
 		 if (strPos(templp,0,"CLIPBOARD:")>=0 ? ret = OpenClipboard(NULL) : 0)
 			  {
-			  char *tStr = strDup(options.Batch.Text[LINES]);
-			    if (IsClipboardFormatAvailable(CF_TEXT))
-			  	 EmptyClipboard();
+			     char *tStr = strDup(options.Batch.Text[LINES]);
+			     if (IsClipboardFormatAvailable(CF_TEXT)) EmptyClipboard();
 			  	 SetClipboardData(CF_TEXT,tStr);
-			  CloseClipboard();
+			     CloseClipboard();
 			  }
 		  else
 			  {
 			  options.Batch.Alias = list.dst.Init.Items[list.iCur]->text;
-			  ret = options.Batch.Post();
+			  ret = options.Batch.Save();
 			  }
 		  if (ret==false)
 			  {
@@ -767,14 +766,17 @@ for (int iT = 0; iT < options.Argts.Count; iT++)
 	 {
 	 strEql(templpStr1,options.Argts.Items[iT]->text);
 
-	 strExchange(templpStr1,"#dir",
+	 strExchange(templpStr1,"#name",
+					list.src.Main.Items[aindex]->text);
+	 strExchange(templpStr1,"#path",
 					strExtractFilePath(templpStr2,list.src.Main.Items[aindex]->text));
 	 strExchange(templpStr1,"#file",
-					list.src.Main.Items[aindex]->text);
+					strExtractFileName(templpStr2,list.src.Main.Items[aindex]->text));
 	 strExchange(templpStr1,"#size",
 					intToStr(list.src.Main.Items[aindex]->data_size[SIZE]));
 	 strExchange(templpStr1,"#attr",
 					intToStr(list.src.Main.Items[aindex]->data_size[ATTRIB]));
+
 	 options.Batch.Add(ASCHAR(templpStr1));
 	 }
 FOnBreak(onPROGRESS,0);

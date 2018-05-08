@@ -1,5 +1,5 @@
 //---------------------------------------------------------------------------
-//-----------------Stanislaw Stasiak "TSoft_, where?" 2001-2002---------------
+//-----------------Stanislaw Stasiak "SSTSOFT.pl" 2001-2002------------------
 //---------------------------------------------------------------------------
 #ifndef __TSoft_BWTMatrix_HDR__
 #define __TSoft_BWTMatrix_HDR__
@@ -117,7 +117,7 @@ delete indices,F;
 #endif
 //---------------------------------------------------------------------------
 /*
-void __stdcall bitEql_08(void *alpdst,char adst_bit,void *alpsrc,char asrc_bit)
+void __stdcall bitMov_08(void *alpdst,char adst_bit,void *alpsrc,char asrc_bit)
 {
 __asm {
 
@@ -126,31 +126,31 @@ __asm {
   mov  DH,adst_bit
   mov EDI,alpdst
 					
-bitEql08_BIT_XXX:
+bitMov08_BIT_XXX:
   mov  AL,[ESI+0] 		// dana src
   cmp  DL,0
-	jz bitEql08_ESI_01 	// jeden bajt SRC?
+	jz bitMov08_ESI_01 	// jeden bajt SRC?
   mov  AH,[ESI+1]
-bitEql08_ESI_01:
+bitMov08_ESI_01:
   mov  CL,DL
   shr  AX,CL
   and  AX,0x00FF 		// and maska
   mov  CL,DH
   shl  AX,CL  
   cmp  DH,0
-  jnz bitEql08_EDI_CL
+  jnz bitMov08_EDI_CL
   mov [EDI+0],AL
-  jmp bitEql08_BIT_XXX_BREAK
-bitEql08_EDI_CL:
+  jmp bitMov08_BIT_XXX_BREAK
+bitMov08_EDI_CL:
 	or [EDI+0],AL 			// xor dana dst
   mov [EDI+1],AH
-bitEql08_BIT_XXX_BREAK:
-bitEql08_BIT_OK:
+bitMov08_BIT_XXX_BREAK:
+bitMov08_BIT_OK:
 	}
 }
 //---------------------------------------------------------------------------
 
-void __stdcall bitEql_16(void *alpdst,char adst_bit,void *alpsrc,char asrc_bit)
+void __stdcall bitMov_16(void *alpdst,char adst_bit,void *alpsrc,char asrc_bit)
 {
 __asm {
 
@@ -159,34 +159,34 @@ __asm {
   mov  DH,adst_bit
   mov EDI,alpdst
 					
-bitEql16_BIT_XXX:
+bitMov16_BIT_XXX:
   xor EAX,EAX
   mov  AX,[ESI+0] 		// dana src
   cmp  DL,0
-	jz bitEql16_ESI_01 	// jeden bajt SRC?
+	jz bitMov16_ESI_01 	// jeden bajt SRC?
   shl EAX,8
   mov  AL,[ESI+1]
-bitEql16_ESI_01:
+bitMov16_ESI_01:
   mov  CL,DL
   shr EAX,CL
   and EAX,0x0000FFFF 		// and maska
   mov  CL,DH
   shl EAX,CL  
   cmp  DH,0
-  jnz bitEql16_EDI_CL
+  jnz bitMov16_EDI_CL
   mov [EDI+0],AX
-  jmp bitEql16_BIT_XXX_BREAK
-bitEql16_EDI_CL:			
+  jmp bitMov16_BIT_XXX_BREAK
+bitMov16_EDI_CL:			
 	or [EDI+0],AL        // xor dana dst
   shr EAX,8						
   mov [EDI+1],AX
-bitEql16_BIT_XXX_BREAK:
-bitEql16_BIT_OK:
+bitMov16_BIT_XXX_BREAK:
+bitMov16_BIT_OK:
 	}
 }
 //---------------------------------------------------------------------------
 
-void __stdcall bitEql_24(void *alpdst,char adst_bit,void *alpsrc,char asrc_bit)
+void __stdcall bitMov_24(void *alpdst,char adst_bit,void *alpsrc,char asrc_bit)
 {
 __asm {
 
@@ -195,40 +195,40 @@ __asm {
   mov  DH,adst_bit
   mov EDI,alpdst
 					
-bitEql24_BIT_XXX:
+bitMov24_BIT_XXX:
   xor EAX,EAX
   mov  AX,[ESI+0] 		// dana src
   shl EAX,8
   mov  AL,[ESI+2] 		// dana src
   cmp  DL,0
-	jz bitEql24_ESI_01 	// jeden bajt SRC?
+	jz bitMov24_ESI_01 	// jeden bajt SRC?
   shl EAX,8
   mov  AL,[ESI+3]
-bitEql24_ESI_01:
+bitMov24_ESI_01:
   mov  CL,DL
   shr EAX,CL
   and EAX,0x00FFFFFFL 		// and maska
   mov  CL,DH
   shl EAX,CL  
   cmp  DH,0
-  jnz bitEql24_EDI_CL
+  jnz bitMov24_EDI_CL
   mov [EDI+0],AL
   shr EAX,8
   mov [EDI+1],AX
-  jmp bitEql24_BIT_XXX_BREAK
-bitEql24_EDI_CL:			
+  jmp bitMov24_BIT_XXX_BREAK
+bitMov24_EDI_CL:			
 	or [EDI+0],AL        // xor dana dst
   shr EAX,8						
   mov [EDI+1],AL
   shr EAX,8						
   mov [EDI+2],AX
-bitEql24_BIT_XXX_BREAK:
-bitEql24_BIT_OK:
+bitMov24_BIT_XXX_BREAK:
+bitMov24_BIT_OK:
 	}
 }
 //---------------------------------------------------------------------------
 
-void __stdcall bitEql_32(void *alpdst, char adst_bit,void *alpsrc, char asrc_bit)
+void __stdcall bitMov_32(void *alpdst, char adst_bit,void *alpsrc, char asrc_bit)
 {
 __asm {
 
@@ -237,13 +237,13 @@ __asm {
   mov  DH,adst_bit
   mov EDI,alpdst
 					
-bitEql32_BIT_XXX:
+bitMov32_BIT_XXX:
   mov EAX,[ESI+0] 		// dana src
   xor EBX,EBX
   cmp  DL,0
-	jz bitEql32_ESI_01 	// jeden bajt SRC?
+	jz bitMov32_ESI_01 	// jeden bajt SRC?
   mov  BL,[ESI+4]
-bitEql32_ESI_01:
+bitMov32_ESI_01:
   mov  CL,DL
  shrd EAX,EBX,CL
   shr EBX,CL
@@ -251,15 +251,15 @@ bitEql32_ESI_01:
  shld EBX,EAX,CL  
   shl EAX,CL
   cmp  DH,0
-  jnz bitEql32_EDI_CL
+  jnz bitMov32_EDI_CL
   mov [EDI+0],EAX
-  jmp bitEql32_BIT_XXX_BREAK
-bitEql32_EDI_CL:			
+  jmp bitMov32_BIT_XXX_BREAK
+bitMov32_EDI_CL:			
 	or [EDI+0],AL        // xor dana dst
  shrd EAX,EBX,8
   mov [EDI+1],EAX
-bitEql32_BIT_XXX_BREAK:
-bitEql32_BIT_OK:
+bitMov32_BIT_XXX_BREAK:
+bitMov32_BIT_OK:
 	}
 }
 

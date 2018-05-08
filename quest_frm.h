@@ -12,6 +12,7 @@
 #include ".\..\..\PACKAGES\hintbox.h"
 #include <ComCtrls.hpp>
 #include "BROWSEDLG.h"
+#include <Graphics.hpp>
 //---------------------------------------------------------------------------
 class TQuestForm : public TForm
 {
@@ -21,32 +22,6 @@ __published:	// IDE-managed Components
         TLabel *Label5;
         TLabel *Label6;
         TBrowseDialog *BrowseDialog1;
-        TPageControl *PageControl1;
-        TTabSheet *TabSheet1;
-        TTabSheet *TabSheet2;
-        TStaticText *StaticText1;
-        TEdit *Edit2;
-        TStaticText *StaticText2;
-        TEdit *Edit3;
-        TStaticText *StaticText3;
-        TComboBox *SrcListCombo;
-        TStaticText *StaticText4;
-        TComboBox *DstListCombo;
-        TSpeedButton *SpeedButton3;
-        TSpeedButton *SpeedButton4;
-        TSpeedButton *SpeedButton1;
-        TSpeedButton *SpeedButton2;
-        TStaticText *StaticText5;
-        TComboBox *ComboBox1;
-        TGroupBox *GroupBox1;
-        TCheckBox *CheckBox1;
-        TCheckBox *CheckBox2;
-        TCheckBox *CheckBox3;
-        TCheckBox *CheckBox5;
-        TCheckBox *CheckBox4;
-        TCheckBox *CheckBox6;
-        TCheckBox *CheckBox7;
-	    TCheckBox *CheckBox8;
 	    TPanel *Panel1;
 	    TImage *Image1;
 	    TImage *Image2;
@@ -56,14 +31,40 @@ __published:	// IDE-managed Components
 	    TButton *Button2;
         TPanel *Panel3;
         TPanel *Panel4;
-        TSpeedButton *SpeedButton9;
         TSpeedButton *SpeedButton5;
         TSpeedButton *SpeedButton6;
         TSpeedButton *SpeedButton7;
         TSpeedButton *SpeedButton8;
-        TSpeedButton *SpeedButton10;
-        TSpeedButton *SpeedButton11;
+    TSpeedButton *SpeedButton9;
+    TSpeedButton *SpeedButton10;
     TBevel *Bevel1;
+    TPanel *Panel5;
+    TPageControl *PageControl1;
+    TTabSheet *TabSheet1;
+    TSpeedButton *SpeedButton3;
+    TSpeedButton *SpeedButton4;
+    TSpeedButton *SpeedButton1;
+    TSpeedButton *SpeedButton2;
+    TSpeedButton *SpeedButton12;
+    TStaticText *StaticText1;
+    TEdit *Edit2;
+    TStaticText *StaticText2;
+    TEdit *Edit3;
+    TStaticText *StaticText3;
+    TComboBox *SrcListCombo;
+    TStaticText *StaticText4;
+    TComboBox *DstListCombo;
+    TCheckBox *CheckBox8;
+    TTabSheet *TabSheet2;
+    TStaticText *StaticText5;
+    TComboBox *ComboBox1;
+    TCheckBox *CheckBox1;
+    TCheckBox *CheckBox2;
+    TCheckBox *CheckBox3;
+    TCheckBox *CheckBox4;
+    TCheckBox *CheckBox7;
+    TCheckBox *CheckBox6;
+    TCheckBox *CheckBox5;
         void __fastcall Edit3Change(TObject *Sender);
         void __fastcall Edit2Change(TObject *Sender);
         void __fastcall SpeedButton1Click(TObject *Sender);
@@ -84,10 +85,10 @@ __published:	// IDE-managed Components
     void __fastcall SpeedButton8Click(TObject *Sender);
     void __fastcall SpeedButton5Click(TObject *Sender);
     void __fastcall SpeedButton6Click(TObject *Sender);
-    void __fastcall SpeedButton10Click(TObject *Sender);
-    void __fastcall SpeedButton7Click(TObject *Sender);
-    void __fastcall SpeedButton11Click(TObject *Sender);
     void __fastcall SpeedButton9Click(TObject *Sender);
+    void __fastcall SpeedButton7Click(TObject *Sender);
+    void __fastcall SpeedButton13Click(TObject *Sender);
+    void __fastcall SpeedButton10Click(TObject *Sender);
 private:	// User declarations
 //---------------------------------------------------------------------------
 	HINSTANCE hInst;

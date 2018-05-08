@@ -1,5 +1,5 @@
 //---------------------------------------------------------------------------
-//-----------------Stanislaw Stasiak "TSoft"-2001-2002-----------------------
+//-----------------Stanislaw Stasiak "TSoft"-2001-2002--------------------------
 //---------------------------------------------------------------------------
 #ifndef __TSoft_Kop32_HDR__
 #define __TSoft_Kop32_HDR__
@@ -161,7 +161,8 @@ struct __list {
 	int iCur, iInc, iBgn;
 } list;
 //------------------------------------
-KOP_IMPEXP __stdcall Kop32                      (void);
+KOP_IMPEXP __stdcall  Kop32 (void);
+virtual KOP_IMPEXP __stdcall ~Kop32 (void);
 //------------------------------------
 KOP_IMPEXP void  __stdcall SetPassword          (const char *ausrpassword);
 KOP_IMPEXP const char *__stdcall GetPassword    (void);
@@ -198,8 +199,6 @@ int __stdcall (__closure *OnBreak)(int,int);
 int __stdcall DoBreak	(int aCode,int aParam);
 int __stdcall (__closure *OnError)(int,int);
 int __stdcall DoError	(int aCode,int aParam);
-//------------------------------------
-KOP_IMPEXP __stdcall ~Kop32 (void);
 //------------------------------------
 //typedef int __stdcall(__closure *DoX_DEF)(int,int);
 //DoX_DEF OnBreak;

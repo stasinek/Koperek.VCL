@@ -159,7 +159,7 @@ do {
 //----------------------            /* send bits to output and update model */
 Update(axdata_uncoded);
 unsigned long result = code;
-bitEql(alpcode,alpcode_bit,&result,0,bits);
+bitMov(alpcode,alpcode_bit,&result,0,bits);
 return bits;
 }
 //---------------------------------------------------------------------------
@@ -171,7 +171,7 @@ register unsigned long code;
 register unsigned char bits = 0;
 //------------------------------------------
 unsigned long indata;
-bitEql(&indata,0,alpcode,alpcode_bit,24);
+bitMov(&indata,0,alpcode,alpcode_bit,24);
 code =  indata;
 //----------------------            /* travel from leaf to ROOT */
 do {

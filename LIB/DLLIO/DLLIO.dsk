@@ -40,10 +40,6 @@ FormOnTop=0
 FormState=0
 FormOnTop=0
 
-[D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.BPR]
-FormState=0
-FormOnTop=0
-
 [EditWindow0]
 ViewCount=3
 CurrentView=1
@@ -79,9 +75,9 @@ LeftCol=1
 
 [View1]
 Module=D:\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp
-CursorX=24
-CursorY=1161
-TopLine=1146
+CursorX=6
+CursorY=1166
+TopLine=1112
 LeftCol=1
 
 [View2]

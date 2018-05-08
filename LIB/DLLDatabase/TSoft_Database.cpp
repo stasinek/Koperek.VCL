@@ -1,5 +1,5 @@
 //---------------------------------------------------------------------------
-//-----------------Stanislaw Stasiak "TSoft_, where?" 2001-2002---------------
+//-----------------Stanislaw Stasiak "SSTSOFT.pl" 2001-2002------------------
 //---------------------------------------------------------------------------
 #include <windows.h>
 #include "TSoft_Database.h"
@@ -7,7 +7,7 @@
 //---------------------------------------------------------------------------
 //ASCHAR
 //---------------------------------------------------------------------------
-DATABASE_IMPEXP __stdcall TSoft::Database::Item::Item(void)
+__declspec(dllexport) __stdcall TSoft::Database::Item::Item(void)
 {
 maciez.ftext = strAlloc(1);
 maciez.fnode = new TSoft::Database();
@@ -21,7 +21,7 @@ maciez.fipos = 0;
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP __stdcall TSoft::Database::Item::Item(char *atext, TSoft::Database *adatabase, long aipos)
+__declspec(dllexport)  __stdcall TSoft::Database::Item::Item(char *atext, TSoft::Database *adatabase, long aipos)
 {
 maciez.ftext = strAlloc(1);
 maciez.fnode = new TSoft::Database();
@@ -39,19 +39,19 @@ maciez.fipos = aipos;
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP __stdcall TSoft::Database::Item::~Item(void)
+__declspec(dllexport)  __stdcall TSoft::Database::Item::~Item(void)
 {
 delete maciez.fnode; strFree(maciez.ftext);
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP void __stdcall TSoft::Database::Item::set_ipos(long aipos)
+__declspec(dllexport)  void __stdcall TSoft::Database::Item::set_ipos(long aipos)
 {
 maciez.fipos = aipos;
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP void  __stdcall TSoft::Database::Item::set_text_size(long asize)
+__declspec(dllexport)  void  __stdcall TSoft::Database::Item::set_text_size(long asize)
 {
 maciez.ftext_size = asize;
 maciez.ftext = strReAlloc(maciez.ftext,maciez.ftext_size+1);
@@ -59,7 +59,7 @@ maciez.ftext[asize] = '\0';
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP void __stdcall TSoft::Database::Item::set_text(char *atext)
+__declspec(dllexport)  void __stdcall TSoft::Database::Item::set_text(char *atext)
 {
 if (atext==NULL)
 	{
@@ -74,7 +74,7 @@ else
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP void  __stdcall TSoft::Database::Item::set_node(TSoft::Database *anode)
+__declspec(dllexport)  void  __stdcall TSoft::Database::Item::set_node(TSoft::Database *anode)
 {
 if (anode==NULL)
 	{
@@ -87,7 +87,7 @@ else
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP void __stdcall TSoft::Database::Item::Eql(Item *aItems)
+__declspec(dllexport)  void __stdcall TSoft::Database::Item::Eql(Item *aItems)
 {
 if (aItems==NULL)
 	{
@@ -110,7 +110,7 @@ else
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP void __stdcall TSoft::Database::Item::Clr()
+__declspec(dllexport)  void __stdcall TSoft::Database::Item::Clr()
 {
 Eql(NULL);
 }
@@ -118,7 +118,7 @@ Eql(NULL);
 //DATABASE
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP __stdcall TSoft::Database::Database(void)
+__declspec(dllexport)  __stdcall TSoft::Database::Database(void)
 {
 maciez.fLevel = 0;
 maciez.fItems = NULL;
@@ -126,11 +126,11 @@ maciez.fCount = 0;
 maciez.fAlias = strAlloc(1);
 maciez.fOwner = NULL;
 //
-fText = strAlloc(1);
+fText = strAlloc(4000);
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP __stdcall TSoft::Database::Database(TSoft::Database *aOwner)
+__declspec(dllexport)  __stdcall TSoft::Database::Database(TSoft::Database *aOwner)
 {
 maciez.fLevel = 0;
 maciez.fItems = NULL;
@@ -142,11 +142,11 @@ if (aOwner!=NULL)
 	 maciez.fLevel = aOwner->Level+1;
 	 maciez.fAlias = strReDup(maciez.fAlias,aOwner->Alias);
 	}
-fText = strAlloc(1);
+fText = strAlloc(4000);
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP __stdcall TSoft::Database::Database(char *aAlias)
+__declspec(dllexport)  __stdcall TSoft::Database::Database(char *aAlias)
 {
 maciez.fLevel = 0;
 maciez.fItems = NULL;
@@ -156,11 +156,11 @@ maciez.fOwner = NULL;
 if (aAlias!=NULL)
 	{maciez.fAlias = strReDup(maciez.fAlias,aAlias);
 	}
-fText = strAlloc(1);
+fText = strAlloc(4000);
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP __stdcall TSoft::Database::~Database(void)
+__declspec(dllexport)  __stdcall TSoft::Database::~Database(void)
 {
 Clr();
 strFree(maciez.fAlias);
@@ -168,13 +168,13 @@ strFree(fText);
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP void __stdcall TSoft::Database::set_Owner(TSoft::Database *aOwner)
+__declspec(dllexport)  void __stdcall TSoft::Database::set_Owner(TSoft::Database *aOwner)
 {
 maciez.fOwner = aOwner;
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP void __stdcall TSoft::Database::set_Alias(char *aAlias)
+__declspec(dllexport)  void __stdcall TSoft::Database::set_Alias(char *aAlias)
 {
  if (aAlias==NULL)
 	 {maciez.fAlias_size = 1;
@@ -193,7 +193,7 @@ for (long iT = 0; iT < Count; iT++) {
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP void __stdcall TSoft::Database::set_Level(long aLevel)
+__declspec(dllexport)  void __stdcall TSoft::Database::set_Level(long aLevel)
 {
 maciez.fLevel = aLevel;
 //
@@ -206,13 +206,13 @@ for (long iT = 0; iT < Count; iT++) {
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP TSoft::Database::Item *__stdcall TSoft::Database::get_Items(long index)
+__declspec(dllexport)  TSoft::Database::Item *__stdcall TSoft::Database::get_Items(long index)
 {
 return maciez.fItems[index];
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP void __stdcall TSoft::Database::set_Items(long aindex, Item *aItems)
+__declspec(dllexport)  void __stdcall TSoft::Database::set_Items(long aindex, Item *aItems)
 {
 if (aItems==NULL)
 	{
@@ -225,7 +225,7 @@ else
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP void __stdcall TSoft::Database::set_Count(long aCount)
+__declspec(dllexport)  void __stdcall TSoft::Database::set_Count(long aCount)
 {
 if (maciez.fCount==aCount)
 	 return;
@@ -257,7 +257,7 @@ if (maciez.fCount==0 && maciez.fItems!=NULL)
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP long __stdcall TSoft::Database::Eql(TSoft::Database *aDatabase)
+__declspec(dllexport)  long __stdcall TSoft::Database::Eql(TSoft::Database *aDatabase)
 {
  if (aDatabase==NULL)
 	 {this->Count = 0;
@@ -273,7 +273,7 @@ else
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP long __stdcall TSoft::Database::Cat(TSoft::Database *aDatabase)
+__declspec(dllexport)  long __stdcall TSoft::Database::Cat(TSoft::Database *aDatabase)
 {
  if (aDatabase==NULL)
 	 {return Count;
@@ -295,14 +295,14 @@ return  Count-1;
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP long __stdcall TSoft::Database::Cut(void)
+__declspec(dllexport)  long __stdcall TSoft::Database::Cut(void)
 {
 	if (Count!=0) Count = Count-1;
 return Count;
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP void __stdcall TSoft::Database::Insert(long aindex, Item *aItems)
+__declspec(dllexport)  void __stdcall TSoft::Database::Insert(long aindex, Item *aItems)
 {
 Add(aItems);
 Item *iItem = maciez.fItems[Count-1];
@@ -317,7 +317,7 @@ maciez.fItems[aindex]->ipos = aindex;
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP void __stdcall TSoft::Database::Delete(long aindex)
+__declspec(dllexport)  void __stdcall TSoft::Database::Delete(long aindex)
 {
 Item *dItem = maciez.fItems[aindex];
 
@@ -338,7 +338,7 @@ Count = 0;
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP long __stdcall TSoft::Database::Find(long aistart, char *aChar)
+__declspec(dllexport)  long __stdcall TSoft::Database::Find(long aistart, char *aChar)
 {
 for (long iT = aistart; iT < Count; iT++) {
  if (strcmp(maciez.fItems[iT]->text,aChar)==0)
@@ -349,7 +349,7 @@ return -1;
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP void __stdcall TSoft::Database::Exchange(long aindex1, long aindex2)
+__declspec(dllexport)  void __stdcall TSoft::Database::Exchange(long aindex1, long aindex2)
 {
 		Item *eItem = maciez.fItems[aindex1];
 maciez.fItems[aindex1] = maciez.fItems[aindex2];
@@ -359,7 +359,7 @@ maciez.fItems[aindex2]->ipos = aindex2;
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP void __stdcall TSoft::Database::Sort()
+__declspec(dllexport)  void __stdcall TSoft::Database::Sort()
 {
 for (long index1 = 0; index1 < Count; index1++)
 for (long index2 = index1 + 1; index2 < Count; index2++) {
@@ -370,20 +370,20 @@ for (long index2 = index1 + 1; index2 < Count; index2++) {
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP char *__stdcall TSoft::Database::get_Text(long aFormat)
+__declspec(dllexport)  char *__stdcall TSoft::Database::get_Text(long aFormat)
 {
 strFree(fText);
 return TEXT_FROM_DATA(&fText,this,aFormat);
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP void  __stdcall TSoft::Database::set_Text(long aFormat,char *aText)
+__declspec(dllexport)  void  __stdcall TSoft::Database::set_Text(long aFormat,char *aText)
 {
 DATA_FROM_TEXT(this,aText,aFormat);
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP bool __stdcall TSoft::Database::Read(void) {
+__declspec(dllexport)  bool __stdcall TSoft::Database::Read(void) {
 HANDLE FHand = CreateFile(this->Alias,GENERIC_READ,FILE_SHARE_READ,NULL,OPEN_ALWAYS,FILE_ATTRIBUTE_NORMAL,NULL);
 char emsg[256];
 if (FHand==INVALID_HANDLE_VALUE) {
@@ -402,12 +402,12 @@ return TRUE;
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP bool __stdcall TSoft::Database::Post(void) {
+__declspec(dllexport)  bool __stdcall TSoft::Database::Save(void) {
 HANDLE FHand = CreateFile(this->Alias,GENERIC_WRITE,FILE_SHARE_WRITE,NULL,CREATE_ALWAYS,FILE_ATTRIBUTE_NORMAL,NULL);
 char emsg[256];
 if (FHand==INVALID_HANDLE_VALUE) {
 return MessageBox(NULL,strAdd(strAdd(strEql(emsg,"Invalid file or path not exists '"),this->Alias),"'"),
-						"TSoft::Database post error",
+						"TSoft::Database Save error",
 						MB_OK|MB_ICONERROR);
 }
 char *lptemp = this->Text[LINES];
@@ -421,7 +421,7 @@ return TRUE;
 //DODATKOWE FUNKCJE
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP TSoft::Database::Item *__stdcall ASCHAR(char *atext)
+__declspec(dllexport)  TSoft::Database::Item *__stdcall ASCHAR(char *atext)
 {
 #pragma warning "This wont work for multithread! Won't fix it OLD.lib is OBSOLETE"
 static TSoft::Database::Item xPARAM;
@@ -430,7 +430,7 @@ return &xPARAM;
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP char *__stdcall TEXT_FROM_DATA(char **aText, TSoft::Database *aDatabase, long aformat) {
+__declspec(dllexport)  char *__stdcall TEXT_FROM_DATA(char **aText, TSoft::Database *aDatabase, long aformat) {
 char *text = strAlloc(1);
 
  if (aDatabase->Count==0) strEql(text,"");
@@ -475,12 +475,12 @@ for (long tpos = 0, tlen = 1, srclen, iT = 0; ;)
 		  }
 	 }
 }
-		 *aText = text;
+	   *aText = text;
 return *aText;
 }
 //---------------------------------------------------------------------------
 
-DATABASE_IMPEXP TSoft::Database *__stdcall DATA_FROM_TEXT(TSoft::Database *aData, char *aText, long aformat) {
+__declspec(dllexport)  TSoft::Database *__stdcall DATA_FROM_TEXT(TSoft::Database *aData, char *aText, long aformat) {
 long pos, pos_chk, pos_end = strLen(aText);
 long sep, tpos, tpos_end = 256;
 char *tText = strAlloc(256);

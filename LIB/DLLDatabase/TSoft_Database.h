@@ -1,5 +1,5 @@
 //---------------------------------------------------------------------------
-//-----------------Stanislaw Stasiak "TSoft_, where?" 2001-2002---------------
+//-----------------Stanislaw Stasiak "SSTSOFT.pl" 2001-2002------------------
 //---------------------------------------------------------------------------
 #ifndef __TSoft_Database_HDR__
 #define __TSoft_Database_HDR__
@@ -23,6 +23,7 @@ typedef class DATABASE_IMPEXP Item {
 	//------------------------------------
 	struct __maciez {
 		Database::Item *fOwner, *fChild;
+
 		TSoft::Database *fnode;
 		long  fipos;
 		long  fdata_size[8];
@@ -31,11 +32,7 @@ typedef class DATABASE_IMPEXP Item {
 		char *ftext;
 	} maciez;
 	//------------------------------------
-	public:
-	//------------------------------------
-		  __stdcall  Item	(void);
-		  __stdcall  Item	(char *atext, TSoft::Database *adatabase, long aipos);
-	//------------------------------------
+    private:
 	void  __stdcall set_node	  (TSoft::Database *anode);
 	TSoft::Database *__stdcall get_node	(void) {return maciez.fnode;}
 	void  __stdcall set_ipos	  (long  aipos);
@@ -45,55 +42,38 @@ typedef class DATABASE_IMPEXP Item {
 	void  __stdcall set_text	  (char *atext);
 	char *__stdcall get_text	  (void) {return maciez.ftext;}
 	//------------------------------------
-	__declspec(property(get=get_ipos, put=set_ipos)) long ipos;
+	public:
+	//------------------------------------
+		  __stdcall  Item	(void);
+		  __stdcall  Item	(char *atext, TSoft::Database *adatabase, long aipos);
+virtual   __stdcall ~Item	(void);
+	//------------------------------------
+	void __stdcall Eql	(Database::Item *aItems);
+	void __stdcall Clr	(void);
+	//------------------------------------
 	__declspec(property(get=get_node, put=set_node)) TSoft::Database *node;
+	__declspec(property(get=get_ipos, put=set_ipos)) long ipos;
 	__declspec(property(get=get_text_size, put=set_text_size)) long text_size;
 	__declspec(property(get=get_text, put=set_text)) char *text;
 	//------------------------------------
 	long  *data_size;
 	void **data;
 	//------------------------------------
-	void __stdcall Eql	(Database::Item *aItems);
-	void __stdcall Clr	(void);
-	//------------------------------------
-		 __stdcall ~Item	(void);
-	//------------------------------------
 } Item, *lpItem;
-//---------------------------------------------------------------------------
+//------------------------------------
 private:
-//---------------------------------------------------------------------------
+//------------------------------------
 char *fText;
 struct __maciez {
 	TSoft::Database *fOwner, *fChild;
-	char *fAlias;
-	long  fAlias_size;
 	long  fLevel;
-	Database::Item **fItems;
+	long  fAlias_size;
+	char *fAlias;
 	long  fCount;
+	Database::Item **fItems;
 } maciez;
-//---------------------------------------------------------------------------
-public:
-//---------------------------------------------------------------------------
-DATABASE_IMPEXP 	 __stdcall Database(void);
-DATABASE_IMPEXP 	 __stdcall Database(char *aAlias);
-DATABASE_IMPEXP 	 __stdcall Database(TSoft::Database *aOwner);
 //------------------------------------
-DATABASE_IMPEXP long __stdcall Eql	  	(TSoft::Database *aDatabase);
-DATABASE_IMPEXP long __stdcall Cat	  	(TSoft::Database *aDatabase);
-DATABASE_IMPEXP long __stdcall Cut	  	(void);
-DATABASE_IMPEXP void __stdcall Clr	  	(void);
-//------------------------------------
-DATABASE_IMPEXP long __stdcall Add	  	(Database::Item *aItemse);
-DATABASE_IMPEXP void __stdcall Insert	(long aindex, Database::Item *aItems);
-DATABASE_IMPEXP void __stdcall Delete	(long aindex);
-DATABASE_IMPEXP void __stdcall Exchange (long aindex1, long aindex2);
-DATABASE_IMPEXP void __stdcall Sort	 	();
-DATABASE_IMPEXP long __stdcall Find	 	(long aistart, char *aChar);
-//------------------------------------
-DATABASE_IMPEXP bool __stdcall Read	 	(void);
-DATABASE_IMPEXP bool __stdcall Post	 	(void);
-//------------------------------------
-TSoft::Database *__stdcall get_Owner(void) {return maciez.fOwner;}
+TSoft::Database *__stdcall  get_Owner(void) {return maciez.fOwner;}
 void  __stdcall set_Owner	(TSoft::Database *aOwner);
 char *__stdcall get_Alias	() {return maciez.fAlias;}
 void  __stdcall set_Alias	(char *aAlias);
@@ -106,14 +86,37 @@ void  __stdcall set_Items	(long  aindex, Database::Item *aItems);
 char *__stdcall get_Text	(long  aFormat);
 void  __stdcall set_Text	(long  aFormat,char *aText);
 //------------------------------------
-__declspec(property(get=get_Owner,put=set_Owner)) TSoft::Database *Owner;
-__declspec(property(get=get_Alias,put=set_Alias)) char *Alias;
-__declspec(property(get=get_Level,put=set_Level)) long  Level;
-__declspec(property(get=get_Count,put=set_Count)) long  Count;
-__declspec(property(get=get_Items,put=set_Items)) Database::Item *Items[];
-__declspec(property(get=get_Text,put=set_Text))	char *Text[];
+public:
 //------------------------------------
-DATABASE_IMPEXP 	  __stdcall ~Database(void);
+DATABASE_IMPEXP 	 __stdcall  Database(void);
+DATABASE_IMPEXP 	 __stdcall  Database(char *aAlias);
+DATABASE_IMPEXP 	 __stdcall  Database(TSoft::Database *aOwner);
+DATABASE_IMPEXP 	 __stdcall ~Database(void);
+//------------------------------------
+DATABASE_IMPEXP long __stdcall Eql	  	(TSoft::Database *aDatabase);
+DATABASE_IMPEXP long __stdcall Cat	  	(TSoft::Database *aDatabase);
+DATABASE_IMPEXP long __stdcall Cut	  	(void);
+DATABASE_IMPEXP void __stdcall Clr	  	(void);
+//------------------------------------
+DATABASE_IMPEXP long __stdcall Add	  	(Database::Item *aItems);
+DATABASE_IMPEXP void __stdcall Insert	(long aindex, Database::Item *aItems);
+DATABASE_IMPEXP void __stdcall Exchange (long aindex1, long aindex2);
+DATABASE_IMPEXP void __stdcall Delete	(long aindex);
+DATABASE_IMPEXP long __stdcall Find	 	(long aistart, char *aChar);
+DATABASE_IMPEXP void __stdcall Sort	 	();
+//------------------------------------
+DATABASE_IMPEXP bool __stdcall Read	 	(void);
+DATABASE_IMPEXP bool __stdcall Save	 	(void);
+//------------------------------------
+__declspec(property(get=get_Owner,put=set_Owner)) TSoft::Database *Owner;
+__declspec(property(get=get_Level,put=set_Level)) long             Level;
+__declspec(property(get=get_Alias,put=set_Alias)) char            *Alias;
+__declspec(property(get=get_Count,put=set_Count)) long             Count;
+__declspec(property(get=get_Items,put=set_Items)) Database::Item  *Items[];
+//---------------------------------------------------------------------------
+// Text it's serialization element, can set or get database as list or CSV depending index (format)
+//---------------------------------------------------------------------------
+__declspec(property(get=get_Text, put=set_Text))  char            *Text[];
 //---------------------------------------------------------------------------
 };
 //---------------------------------------------------------------------------

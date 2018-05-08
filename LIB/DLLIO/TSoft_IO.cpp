@@ -1,5 +1,5 @@
 //---------------------------------------------------------------------------
-//-----------------Stanislaw Stasiak "TSoft_, where?" 2001-2002---------------
+//-----------------Stanislaw Stasiak "SSTSOFT.pl" 2001-2002------------------
 //---------------------------------------------------------------------------
 #include <windows.h>
 //---------------------------------------------------------------------------
@@ -49,7 +49,7 @@ return strEql(strReAlloc(alpdst,strLen(alpsrc)+1),alpsrc);
 //---------------------------------------------------------------------------
 
 long __stdcall strLen(const char *alpsrc) {
-#if (__BORLANDC__ == 0x551) || defined(_MSC_VER)
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
  __asm {
   mov EDI,alpsrc
   mov ESI,EDI
@@ -131,21 +131,21 @@ return alpdst;
 }
 //---------------------------------------------------------------------------
 
-long __stdcall strPos(const char *alpsrc, long abegin, const char *alpfnd)
+long __stdcall strPos(const char *alpsrc, long a_start, const char *alpfnd)
 {
-long src_size = strLen(alpsrc), fnd_size = strLen(alpfnd);
-#if (__BORLANDC__ == 0x551) || defined(_MSC_VER)
+long a_src_size = strLen(alpsrc), fnd_size = strLen(alpfnd);
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
 //------------------------------------------
  mov EDX,fnd_size
  cmp EDX,0
  jle strPosERROR
 //-----------------
- mov ECX,src_size
+ mov ECX,a_src_size
  cmp ECX,0
  jle strPosERROR
 //-----------------
- mov EBX,abegin
+ mov EBX,a_start
  mov EAX,EBX
  add EAX,EDX
  cmp ECX,EAX
@@ -171,7 +171,7 @@ strPosNEXT:
  inc EBX
  mov EAX,EBX
  add EAX,EDX
- cmp EAX,src_size
+ cmp EAX,a_src_size
   jl strPosDO
  jmp strPosERROR
 //------------------------------------------
@@ -187,20 +187,20 @@ strPosBREAK:
 #else
     if (a_start > a_src_size)
         return -1;
-    register size_t isrc_size  = src_size - abegin;
+    register size_t isrc_size  = a_src_size - a_start;
     register size_t isrc = 0;
     register size_t ifnd_size  = fnd_size;
     register size_t ifnd = 0;
     if (ifnd_size > isrc_size)
         return -1;
     register size_t imax_start = isrc_size - ifnd_size;
-    register char *src = &((char*)alpsrc)[abegin];
+    register char *src = &((char*)alpsrc)[a_start];
     register char *fnd = &((char*)alpfnd)[0];
     for ( ; isrc <= imax_start; isrc++, src = &src[1]) {
         for (;;) {
             if (src[ifnd]!=fnd[ifnd])
                 break;
-            if (++ifnd >= ifnd_size)  return abegin + isrc;
+            if (++ifnd >= ifnd_size)  return a_start + isrc;
         }
     }
     return -1;
@@ -353,7 +353,7 @@ return std::itoa(aint,str,10);
 
 long   __stdcall strToInt(const char *asrc)
 {
-#if (__BORLANDC__ == 0x551) || defined(_MSC_VER)
+#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
 //lenght
  xor EAX,EAX
@@ -531,6 +531,8 @@ __asm {
  cld
  rep STOSB
 }
+#else
+memset(alpdst,aznakb,acount);
 #endif
 }
 //---------------------------------------------------------------------------
@@ -621,6 +623,8 @@ SETEXBIT_32:
 SETEXBIT_32_BREAK:
 SETEXBIT_XX_BREAK:
 }
+#else
+
 #endif
 }
 //---------------------------------------------------------------------------
@@ -703,7 +707,7 @@ return memcmp(alpdst,alpsrc,acount);
 }
 //---------------------------------------------------------------------------
 
-long __stdcall ptrSca(void *alpdst,char aznakb,long acount) {
+unsigned long __stdcall ptrSca(void *alpdst,char aznakb,long acount) {
 #if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
   mov  AL,aznakb
@@ -885,10 +889,121 @@ return -1;
 //---------------------------------------------------------------------------
 //---------------------------------------------------------------------------
 //---------------------------------------------------------------------------
-//---------------------------------------------------------------------------
+
+
+#define PREPARE_FIRST_COPY()                                      \
+    do {                                                          \
+    if (src_len >= (8 - dst_offset_modulo)) {              \
+        *dst     &= reverse_mask[dst_offset_modulo];              \
+        src_len -= 8 - dst_offset_modulo;                  \
+    } else {                                                      \
+        *dst     &= reverse_mask[dst_offset_modulo]               \
+              | reverse_mask_xor[dst_offset_modulo + src_len];    \
+         c       &= reverse_mask[dst_offset_modulo + src_len];    \
+        src_len = 0;                                              \
+    } } while (0)
+
+
+static void bitmove(const unsigned char *src_org, int src_offset, unsigned char *dst_org, int dst_offset,int src_len)
+{
+    static const unsigned char mask[] =
+        { 0x00, 0x01, 0x03, 0x07, 0x0f, 0x1f, 0x3f, 0x7f, 0xff };
+    static const unsigned char reverse_mask[] =
+        { 0x00, 0x80, 0xc0, 0xe0, 0xf0, 0xf8, 0xfc, 0xfe, 0xff };
+    static const unsigned char reverse_mask_xor[] =
+        { 0xff, 0x7f, 0x3f, 0x1f, 0x0f, 0x07, 0x03, 0x01, 0x00 };
+
+    if (src_len) {
+        const unsigned char *src;
+              unsigned char *dst;
+        int                  src_offset_modulo,
+                             dst_offset_modulo;
+
+        src = src_org + (src_offset / 8);
+        dst = dst_org + (dst_offset / 8);
+
+        src_offset_modulo = src_offset % 8;
+        dst_offset_modulo = dst_offset % 8;
+
+        if (src_offset_modulo == dst_offset_modulo) {
+            int              byte_len;
+            int              src_len_modulo;
+            if (src_offset_modulo) {
+                unsigned char   c;
+
+                c = reverse_mask_xor[dst_offset_modulo]     & *src++;
+
+                PREPARE_FIRST_COPY();
+                *dst++ |= c;
+            }
+
+            byte_len = src_len / 8;
+            src_len_modulo = src_len % 8;
+
+            if (byte_len) {
+                memcpy(dst, src, byte_len);
+                src += byte_len;
+                dst += byte_len;
+            }
+            if (src_len_modulo) {
+                *dst     &= reverse_mask_xor[src_len_modulo];
+                *dst |= reverse_mask[src_len_modulo]     & *src;
+            }
+        } else {
+            int             bit_diff_ls,
+                            bit_diff_rs;
+            int             byte_len;
+            int             src_len_modulo;
+            unsigned char   c;
+            /*
+             * Begin: Line things up on destination.
+             */
+            if (src_offset_modulo > dst_offset_modulo) {
+                bit_diff_ls = src_offset_modulo - dst_offset_modulo;
+                bit_diff_rs = 8 - bit_diff_ls;
+
+                c = *src++ << bit_diff_ls;
+                c |= *src >> bit_diff_rs;
+                c     &= reverse_mask_xor[dst_offset_modulo];
+            } else {
+                bit_diff_rs = dst_offset_modulo - src_offset_modulo;
+                bit_diff_ls = 8 - bit_diff_rs;
+
+                c = *src >> bit_diff_rs     &
+                    reverse_mask_xor[dst_offset_modulo];
+            }
+            PREPARE_FIRST_COPY();
+            *dst++ |= c;
+
+            /*
+             * Middle: copy with only shifting the source.
+             */
+            byte_len = src_len / 8;
+
+            while (--byte_len >= 0) {
+                c = *src++ << bit_diff_ls;
+                c |= *src >> bit_diff_rs;
+                *dst++ = c;
+            }
+
+            /*
+             * End: copy the remaing bits;
+             */
+            src_len_modulo = src_len % 8;
+            if (src_len_modulo) {
+                c = *src++ << bit_diff_ls;
+                c |= *src >> bit_diff_rs;
+                c     &= reverse_mask[src_len_modulo];
+
+                *dst     &= reverse_mask_xor[src_len_modulo];
+                *dst |= c;
+            }
+        }
+    }
+}//---------------------------------------------------------------------------
 //---------------------------------------------------------------------------
 
-void __stdcall bitEql(void *alpdst,unsigned char adst_bit,const void *alpsrc,unsigned char asrc_bit,unsigned long abit_num)
+void __stdcall bitMov(void *alpdst,unsigned char adst_bit,const void *alpsrc,unsigned char asrc_bit,unsigned long abit_num)
 {
 #if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
@@ -1012,25 +1127,7 @@ EDI_XX:
 BIT_XX_BREAK:
 }
 #else
-    register size_t bits = abit_num;
-    register char *src = (char*)alpsrc;
-    register unsigned __int8 src_bit = asrc_bit;
-    register char *dst = (char*)alpdst;
-    register unsigned __int8 dst_bit = adst_bit;
-    while (bits>=32) {
-
-        ((__int32*)dst)[0] = (((__int32*)dst)[0] && (0xFFFFFFFFL>>(32-dst_bit))) | ((((__int32*)src)[0]>>src_bit)<<dst_bit) && (0xFFFFFFFFL<<dst_bit);
-        dst = &dst[3];
-        src = &src[3];
-        bits-=24;
-    }
-    while (bits> 0) {
-        dst[0] = (dst[0] && (0xFFL>>dst_bit)) | (((src[0]>>src_bit)<<dst_bit) && (0xFFL<<dst_bit));
-        dst = &dst[1];
-        src = &dst[1];
-        bits-=8;
-    }
-
+bitmove((unsigned char*)alpdst,adst_bit,(unsigned char*)alpsrc,asrc_bit,abit_num);
 #endif
 }
 //---------------------------------------------------------------------------
@@ -1155,116 +1252,3 @@ BITSET_XX_BREAK:
 #endif
 }
 
-
-#define PREPARE_FIRST_COPY()                                      \
-    do {                                                          \
-    if (src_len >= (8 - dst_offset_modulo)) {              \
-        *dst     &= reverse_mask[dst_offset_modulo];              \
-        src_len -= 8 - dst_offset_modulo;                  \
-    } else {                                                      \
-        *dst     &= reverse_mask[dst_offset_modulo]               \
-              | reverse_mask_xor[dst_offset_modulo + src_len];    \
-         c       &= reverse_mask[dst_offset_modulo + src_len];    \
-        src_len = 0;                                              \
-    } } while (0)
-
-
-static void
-bitarray_copy(const unsigned char *src_org, int src_offset, int src_len,
-                    unsigned char *dst_org, int dst_offset)
-{
-    static const unsigned char mask[] =
-        { 0x00, 0x01, 0x03, 0x07, 0x0f, 0x1f, 0x3f, 0x7f, 0xff };
-    static const unsigned char reverse_mask[] =
-        { 0x00, 0x80, 0xc0, 0xe0, 0xf0, 0xf8, 0xfc, 0xfe, 0xff };
-    static const unsigned char reverse_mask_xor[] =
-        { 0xff, 0x7f, 0x3f, 0x1f, 0x0f, 0x07, 0x03, 0x01, 0x00 };
-
-    if (src_len) {
-        const unsigned char *src;
-              unsigned char *dst;
-        int                  src_offset_modulo,
-                             dst_offset_modulo;
-
-        src = src_org + (src_offset / 8);
-        dst = dst_org + (dst_offset / 8);
-
-        src_offset_modulo = src_offset % 8;
-        dst_offset_modulo = dst_offset % 8;
-
-        if (src_offset_modulo == dst_offset_modulo) {
-            int              byte_len;
-            int              src_len_modulo;
-            if (src_offset_modulo) {
-                unsigned char   c;
-
-                c = reverse_mask_xor[dst_offset_modulo]     & *src++;
-
-                PREPARE_FIRST_COPY();
-                *dst++ |= c;
-            }
-
-            byte_len = src_len / 8;
-            src_len_modulo = src_len % 8;
-
-            if (byte_len) {
-                memcpy(dst, src, byte_len);
-                src += byte_len;
-                dst += byte_len;
-            }
-            if (src_len_modulo) {
-                *dst     &= reverse_mask_xor[src_len_modulo];
-                *dst |= reverse_mask[src_len_modulo]     & *src;
-            }
-        } else {
-            int             bit_diff_ls,
-                            bit_diff_rs;
-            int             byte_len;
-            int             src_len_modulo;
-            unsigned char   c;
-            /*
-             * Begin: Line things up on destination.
-             */
-            if (src_offset_modulo > dst_offset_modulo) {
-                bit_diff_ls = src_offset_modulo - dst_offset_modulo;
-                bit_diff_rs = 8 - bit_diff_ls;
-
-                c = *src++ << bit_diff_ls;
-                c |= *src >> bit_diff_rs;
-                c     &= reverse_mask_xor[dst_offset_modulo];
-            } else {
-                bit_diff_rs = dst_offset_modulo - src_offset_modulo;
-                bit_diff_ls = 8 - bit_diff_rs;
-
-                c = *src >> bit_diff_rs     &
-                    reverse_mask_xor[dst_offset_modulo];
-            }
-            PREPARE_FIRST_COPY();
-            *dst++ |= c;
-
-            /*
-             * Middle: copy with only shifting the source.
-             */
-            byte_len = src_len / 8;
-
-            while (--byte_len >= 0) {
-                c = *src++ << bit_diff_ls;
-                c |= *src >> bit_diff_rs;
-                *dst++ = c;
-            }
-
-            /*
-             * End: copy the remaing bits;
-             */
-            src_len_modulo = src_len % 8;
-            if (src_len_modulo) {
-                c = *src++ << bit_diff_ls;
-                c |= *src >> bit_diff_rs;
-                c     &= reverse_mask[src_len_modulo];
-
-                *dst     &= reverse_mask_xor[src_len_modulo];
-                *dst |= c;
-            }
-        }
-    }
-}

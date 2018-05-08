@@ -1,5 +1,5 @@
 //---------------------------------------------------------------------------
-//-----------------Stanislaw Stasiak "TSoft_, where?" 2001-2002---------------
+//-----------------Stanislaw Stasiak "SSTSOFT.pl" 2001-2002------------------
 //---------------------------------------------------------------------------
 #ifndef __TSoft_BinTree_HDR__
 #define __TSoft_BinTree_HDR__
@@ -45,7 +45,7 @@ void __stdcall  Search_dict(void);
 char __stdcall  Optimum_dict_match(unsigned long ahead_length,unsigned long pass_length);
 char __stdcall  Optimum_brun_match(unsigned long ahead_length,unsigned long pass_length);
 //---------------------------------------------------------------------------
-__bitptr_hdrcoder hdrcoder;
+__ptrptr_hdrcoder hdrcoder;
 //---------------------------------------------------------------------------
 };
 //-------------------------------THE END-------------------------------------

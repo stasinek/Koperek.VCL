@@ -172,7 +172,7 @@ for (;;) {
 low = l; high = h; underflow_bits = u;
 Update(symb);
 unsigned long result = code;
-bitEql(alpcode,alpcode_bit,&result,0,bits);
+bitMov(alpcode,alpcode_bit,&result,0,bits);
 return bits;
 }
 //---------------------------------------------------------------------------
@@ -190,7 +190,7 @@ else
     OUT_BIT_1(code,u,bits)
 
 unsigned long result = code;
-bitEql(alpcode,alpcode_bit,&result,0,bits);
+bitMov(alpcode,alpcode_bit,&result,0,bits);
 alpcode_bit += bits;
 alpcode += alpcode_bit>>3;
 alpcode_bit &= (8-1);
@@ -209,7 +209,7 @@ register unsigned long code;
 register unsigned long v = value;
 //------------------
 unsigned long indata;
-bitEql(&indata,0,alpcode,alpcode_bit,32);
+bitMov(&indata,0,alpcode,alpcode_bit,32);
 code =  indata;
 //------------------
 register int i;
@@ -237,7 +237,7 @@ h = l + (r * symb_cumf[symb - 1]) / symb_cumf[0];
 l = l + (r * symb_cumf[symb - 0]) / symb_cumf[0];
 //------------------
 unsigned long indata;
-bitEql(&indata,0,alpcode,alpcode_bit,32);
+bitMov(&indata,0,alpcode,alpcode_bit,32);
 code =  indata;
 //------------------
 for (;;) {

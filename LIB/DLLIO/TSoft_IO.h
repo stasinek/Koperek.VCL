@@ -57,7 +57,7 @@ extern "C" IMPEXP long  __stdcall ptrSca(const void *alpsrc,char  aznakb,long ac
 extern "C" IMPEXP long  __stdcall ptrFndLast(const char *alpsrc,long asrc_begin,long asrc_size,const char *alpfnd,long aco_size);
 extern "C" IMPEXP long  __stdcall ptrFnd(const char *alpsrc,long asrc_begin,long asrc_size,const char *alpfnd,long aco_size);
 //---------------------------------------------------------------------------
-extern "C" IMPEXP void  __stdcall bitEql(void *alpdst,unsigned char abit_dst,const void *alpsrc, unsigned char abit_src,   unsigned long abit_num);
+extern "C" IMPEXP void  __stdcall bitMov(void *alpdst,unsigned char abit_dst,const void *alpsrc, unsigned char abit_src,   unsigned long abit_num);
 extern "C" IMPEXP void  __stdcall bitSet(void *alpdst,const void *alpsrc, unsigned char abit_src,unsigned char asrc_elsize,unsigned long adst_count);
 //---------------------------------------------------------------------------
 #endif
