@@ -623,33 +623,17 @@ strLen	segment virtual
 @strLen	proc	near
 ?live16392@0:
 	?debug L 51
+@21:
 	push      ebp
 	mov       ebp,esp
-	push      esi
-	push      edi
-	?debug L 54
-@21:
-	mov	 EDI,dword ptr [ebp+8]
-	?debug L 55
-	mov	 ESI,EDI
-	?debug L 56
-	mov	 ECX,0FFFFFFFFH
-	?debug L 57
-	xor	 EAX,EAX
-	?debug L 58
-	cld	
-	?debug L 59
-	repnz SCASB	
-	?debug L 60
-	not	 ECX
-	?debug L 61
-	dec	 ECX
-	?debug L 62
-	mov	 EAX,ECX
+	?debug L 65
+	mov       eax,dword ptr [ebp+8]
+	push      eax
+	call      @_strlen
+	pop       ecx
 	?debug L 67
+@23:
 @22:
-	pop       edi
-	pop       esi
 	pop       ebp
 	ret       4
 	?debug L 0
@@ -693,16 +677,11 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dw	0
-?patch26	equ	@22-@strLen+6
+?patch26	equ	@23-@strLen+4
 ?patch27	equ	0
-?patch28	equ	@22-@strLen
+?patch28	equ	@23-@strLen
 	dw	2
 	dw	6
-	dw	8
-	dw	531
-	dw	6
-	dw	65528
-	dw	65535
 $$BSYMS	ends
 _TEXT	segment dword public use32 'CODE'
 strEql	segment virtual
@@ -710,7 +689,7 @@ strEql	segment virtual
 @strEql	proc	near
 ?live16393@0:
 	?debug L 70
-@23:
+@24:
 	push      ebp
 	mov       ebp,esp
 	push      ebx
@@ -731,8 +710,8 @@ strEql	segment virtual
 	mov       eax,ebx
 	?debug L 74
 ?live16393@48: ; 
+@26:
 @25:
-@24:
 	pop       esi
 	pop       ebx
 	pop       ebp
@@ -804,9 +783,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	23
 ?patch35	equ	1
 ?patch34	equ	14
-?patch29	equ	@25-@strEql+6
+?patch29	equ	@26-@strEql+6
 ?patch30	equ	0
-?patch31	equ	@25-@strEql
+?patch31	equ	@26-@strEql
 	dw	2
 	dw	6
 	dw	8
@@ -821,7 +800,7 @@ strMov	segment virtual
 @strMov	proc	near
 ?live16394@0:
 	?debug L 77
-@26:
+@27:
 	push      ebp
 	mov       ebp,esp
 	push      ebx
@@ -842,8 +821,8 @@ strMov	segment virtual
 	mov       eax,ebx
 	?debug L 81
 ?live16394@48: ; 
+@29:
 @28:
-@27:
 	pop       esi
 	pop       ebx
 	pop       ebp
@@ -915,9 +894,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	23
 ?patch42	equ	1
 ?patch41	equ	14
-?patch36	equ	@28-@strMov+6
+?patch36	equ	@29-@strMov+6
 ?patch37	equ	0
-?patch38	equ	@28-@strMov
+?patch38	equ	@29-@strMov
 	dw	2
 	dw	6
 	dw	8
@@ -932,7 +911,7 @@ _TEXT	segment dword public use32 'CODE'
 @@strnEql$qqspcpxcl	proc	near
 ?live16395@0:
 	?debug L 84
-@29:
+@30:
 	push      ebp
 	mov       ebp,esp
 	push      ebx
@@ -949,8 +928,8 @@ _TEXT	segment dword public use32 'CODE'
 	mov       eax,ebx
 	?debug L 88
 ?live16395@48: ; 
+@32:
 @31:
-@30:
 	pop       ebx
 	pop       ebp
 	ret       12
@@ -1035,9 +1014,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dw	0
-?patch43	equ	@31-@@strnEql$qqspcpxcl+5
+?patch43	equ	@32-@@strnEql$qqspcpxcl+5
 ?patch44	equ	0
-?patch45	equ	@31-@@strnEql$qqspcpxcl
+?patch45	equ	@32-@@strnEql$qqspcpxcl
 	dw	2
 	dw	6
 	dw	8
@@ -1052,7 +1031,7 @@ _TEXT	segment dword public use32 'CODE'
 @@strnMov$qqspcpxcl	proc	near
 ?live16396@0:
 	?debug L 91
-@32:
+@33:
 	push      ebp
 	mov       ebp,esp
 	push      ebx
@@ -1069,8 +1048,8 @@ _TEXT	segment dword public use32 'CODE'
 	mov       eax,ebx
 	?debug L 95
 ?live16396@48: ; 
+@35:
 @34:
-@33:
 	pop       ebx
 	pop       ebp
 	ret       12
@@ -1155,9 +1134,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dw	0
-?patch48	equ	@34-@@strnMov$qqspcpxcl+5
+?patch48	equ	@35-@@strnMov$qqspcpxcl+5
 ?patch49	equ	0
-?patch50	equ	@34-@@strnMov$qqspcpxcl
+?patch50	equ	@35-@@strnMov$qqspcpxcl
 	dw	2
 	dw	6
 	dw	8
@@ -1172,7 +1151,7 @@ strAdd	segment virtual
 @strAdd	proc	near
 ?live16397@0:
 	?debug L 98
-@35:
+@36:
 	push      ebp
 	mov       ebp,esp
 	?debug L 100
@@ -1183,8 +1162,8 @@ strAdd	segment virtual
 	call      @_strcat
 	add       esp,8
 	?debug L 101
+@38:
 @37:
-@36:
 	pop       ebp
 	ret       8
 	?debug L 0
@@ -1238,9 +1217,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dw	0
-?patch53	equ	@37-@strAdd+4
+?patch53	equ	@38-@strAdd+4
 ?patch54	equ	0
-?patch55	equ	@37-@strAdd
+?patch55	equ	@38-@strAdd
 	dw	2
 	dw	6
 $$BSYMS	ends
@@ -1250,7 +1229,7 @@ strInsert	segment virtual
 @strInsert	proc	near
 ?live16398@0:
 	?debug L 104
-@38:
+@39:
 	push      ebp
 	mov       ebp,esp
 	push      ecx
@@ -1273,16 +1252,16 @@ strInsert	segment virtual
 	?debug L 107
 ?live16398@32: ; EBX = alpdst, ESI = insertlen, EDI = astart
 	test      esi,esi
-	jne       short @39
+	jne       short @40
 	?debug L 108
 ?live16398@48: ; EBX = alpdst
 	mov       eax,ebx
-	jmp       short @40
+	jmp       short @41
 	?debug L 109
 ?live16398@64: ; EBX = alpdst, ESI = insertlen, EDI = astart
-@39:
+@40:
 	cmp       edi,dword ptr [ebp-4]
-	jge       short @41
+	jge       short @42
 	?debug L 110
 	mov       edx,dword ptr [ebp-4]
 	mov       eax,ebx
@@ -1294,7 +1273,7 @@ strInsert	segment virtual
 	push      eax
 	call      @@strnMov$qqspcpxcl
 	?debug L 112
-@41:
+@42:
 	push      esi
 	mov       edx,dword ptr [ebp+16]
 	push      edx
@@ -1311,8 +1290,8 @@ strInsert	segment virtual
 	mov       eax,ebx
 	?debug L 115
 ?live16398@144: ; 
-@42:
-@40:
+@43:
+@41:
 	pop       edi
 	pop       esi
 	pop       ebx
@@ -1432,9 +1411,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	23
 ?patch64	equ	2
 ?patch63	equ	24
-?patch56	equ	@42-@strInsert+8
+?patch56	equ	@43-@strInsert+8
 ?patch57	equ	0
-?patch58	equ	@42-@strInsert
+?patch58	equ	@43-@strInsert
 	dw	2
 	dw	6
 	dw	8
@@ -1449,7 +1428,7 @@ strDel	segment virtual
 @strDel	proc	near
 ?live16399@0:
 	?debug L 118
-@43:
+@44:
 	push      ebp
 	mov       ebp,esp
 	push      ebx
@@ -1484,8 +1463,8 @@ strDel	segment virtual
 	mov       eax,ebx
 	?debug L 123
 ?live16399@64: ; 
+@46:
 @45:
-@44:
 	pop       edi
 	pop       esi
 	pop       ebx
@@ -1576,9 +1555,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	24
 ?patch73	equ	1
 ?patch72	equ	14
-?patch65	equ	@45-@strDel+7
+?patch65	equ	@46-@strDel+7
 ?patch66	equ	0
-?patch67	equ	@45-@strDel
+?patch67	equ	@46-@strDel
 	dw	2
 	dw	6
 	dw	8
@@ -1593,7 +1572,7 @@ strDelEnd	segment virtual
 @strDelEnd	proc	near
 ?live16400@0:
 	?debug L 126
-@46:
+@47:
 	push      ebp
 	mov       ebp,esp
 	push      ebx
@@ -1627,8 +1606,8 @@ strDelEnd	segment virtual
 	mov       eax,ebx
 	?debug L 131
 ?live16400@64: ; 
+@49:
 @48:
-@47:
 	pop       edi
 	pop       esi
 	pop       ebx
@@ -1722,9 +1701,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	23
 ?patch82	equ	1
 ?patch81	equ	14
-?patch74	equ	@48-@strDelEnd+7
+?patch74	equ	@49-@strDelEnd+7
 ?patch75	equ	0
-?patch76	equ	@48-@strDelEnd
+?patch76	equ	@49-@strDelEnd
 	dw	2
 	dw	6
 	dw	8
@@ -1746,7 +1725,7 @@ strPos	segment virtual
 	push      esi
 	push      edi
 	?debug L 136
-@49:
+@50:
 	mov       eax,dword ptr [ebp+8]
 	push      eax
 	call      @strLen
@@ -1760,13 +1739,13 @@ strPos	segment virtual
 	?debug L 141
 	cmp	 EDX,0
 	?debug L 142
-	jle       @50
+	jle       @51
 	?debug L 144
 	mov	 ECX,dword ptr [ebp-4]
 	?debug L 145
 	cmp	 ECX,0
 	?debug L 146
-	jle       @50
+	jle       @51
 	?debug L 148
 	mov	 EBX,dword ptr [ebp+12]
 	?debug L 149
@@ -1776,11 +1755,11 @@ strPos	segment virtual
 	?debug L 151
 	cmp	 ECX,EAX
 	?debug L 152
-	jl        @50
+	jl        @51
 	?debug L 154
 	dec	 EDX
 	?debug L 156
-@51:
+@52:
 strPosDO:
 	?debug L 158
 	mov	 ESI,dword ptr [ebp+16]
@@ -1791,7 +1770,7 @@ strPosDO:
 	?debug L 161
 	cmp	 AL,[EDI+EBX]
 	?debug L 162
-	jne       short @52
+	jne       short @53
 	?debug L 163
 	add	 EDI,EBX
 	?debug L 164
@@ -1801,9 +1780,9 @@ strPosDO:
 	?debug L 166
 	repe CMPSB	
 	?debug L 167
-	je        @53
+	je        @54
 	?debug L 169
-@52:
+@53:
 strPosNEXT:
 	?debug L 171
 	inc	 EBX
@@ -1814,26 +1793,26 @@ strPosNEXT:
 	?debug L 174
 	cmp	 EAX,dword ptr [ebp-4]
 	?debug L 175
-	jl        @51
+	jl        @52
 	?debug L 176
-	jmp       @50
+	jmp       @51
 	?debug L 178
-@53:
+@54:
 strPosFOUND:
 	?debug L 179
 	mov	 EAX,EBX
 	?debug L 180
-	jmp       @54
+	jmp       @55
 	?debug L 181
-@50:
+@51:
 strPosERROR:
 	?debug L 182
 	mov	 EAX,-1
 	?debug L 184
-@54:
+@55:
 strPosBREAK:
 	?debug L 209
-@55:
+@56:
 	pop       edi
 	pop       esi
 	pop       ebx
@@ -1922,9 +1901,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dw	0
-?patch83	equ	@55-@strPos+9
+?patch83	equ	@56-@strPos+9
 ?patch84	equ	0
-?patch85	equ	@55-@strPos
+?patch85	equ	@56-@strPos
 	dw	2
 	dw	6
 	dw	8
@@ -1939,7 +1918,7 @@ strSub	segment virtual
 @strSub	proc	near
 ?live16402@0:
 	?debug L 212
-@56:
+@57:
 	push      ebp
 	mov       ebp,esp
 	push      ebx
@@ -1961,8 +1940,8 @@ strSub	segment virtual
 	mov       eax,ebx
 	?debug L 217
 ?live16402@64: ; 
+@59:
 @58:
-@57:
 	pop       esi
 	pop       ebx
 	pop       ebp
@@ -2054,9 +2033,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	23
 ?patch92	equ	1
 ?patch91	equ	14
-?patch86	equ	@58-@strSub+6
+?patch86	equ	@59-@strSub+6
 ?patch87	equ	0
-?patch88	equ	@58-@strSub
+?patch88	equ	@59-@strSub
 	dw	2
 	dw	6
 	dw	8
@@ -2071,7 +2050,7 @@ strSubEnd	segment virtual
 @strSubEnd	proc	near
 ?live16403@0:
 	?debug L 220
-@59:
+@60:
 	push      ebp
 	mov       ebp,esp
 	push      ebx
@@ -2100,8 +2079,8 @@ strSubEnd	segment virtual
 	mov       byte ptr [ebx+edi],0
 	?debug L 225
 ?live16403@80: ; 
+@62:
 @61:
-@60:
 	pop       edi
 	pop       esi
 	pop       ebx
@@ -2211,9 +2190,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	24
 ?patch101	equ	2
 ?patch100	equ	24
-?patch93	equ	@61-@strSubEnd+7
+?patch93	equ	@62-@strSubEnd+7
 ?patch94	equ	0
-?patch95	equ	@61-@strSubEnd
+?patch95	equ	@62-@strSubEnd
 	dw	2
 	dw	6
 	dw	8
@@ -2228,7 +2207,7 @@ strDelimiter	segment virtual
 @strDelimiter	proc	near
 ?live16404@0:
 	?debug L 228
-@62:
+@63:
 	push      ebp
 	mov       ebp,esp
 	push      ebx
@@ -2242,9 +2221,9 @@ strDelimiter	segment virtual
 	mov       ebx,dword ptr [ebp+12]
 	?debug L 230
 ?live16404@48: ; EBX = adelimiter
-	jge       short @63
+	jge       short @64
 	?debug L 231
-@64:
+@65:
 	mov       eax,dword ptr [ebp+8]
 	push      eax
 	call      @strLen
@@ -2252,62 +2231,62 @@ strDelimiter	segment virtual
 	mov       edx,dword ptr [ebp+8]
 	add       edx,eax
 	test      eax,eax
-	jl        short @66
+	jl        short @67
 	?debug L 232
 ?live16404@80: ; EAX = pos, EBX = adelimiter, EDX = @temp5
-@65:
+@66:
 	cmp       bl,byte ptr [edx]
-	je        short @68
+	je        short @69
 	?debug L 231
 ?live16404@96: ; EAX = pos
 	dec       eax
 	dec       edx
 	test      eax,eax
-	jge       short @65
+	jge       short @66
 	?debug L 234
 ?live16404@112: ; 
-@66:
+@67:
 	or        eax,-1
-	jmp       short @68
+	jmp       short @69
 	?debug L 235
-@70:
-	jmp       short @71
+@71:
+	jmp       short @72
 	?debug L 237
 ?live16404@144: ; EBX = adelimiter
-@63:
-@72:
+@64:
+@73:
 	xor       edi,edi
 	mov       eax,dword ptr [ebp+8]
 	mov       esi,eax
-	jmp       short @74
+	jmp       short @75
 	?debug L 238
 ?live16404@160: ; EDI = pos, ESI = @temp1, EBX = adelimiter
-@73:
+@74:
 	cmp       bl,byte ptr [esi]
-	jne       short @75
+	jne       short @76
 	?debug L 239
 ?live16404@176: ; EDI = pos
 	mov       eax,edi
-	jmp       short @68
+	jmp       short @69
 	?debug L 237
 ?live16404@192: ; EDI = pos, ESI = @temp1, EBX = adelimiter
-@75:
+@76:
 	inc       edi
 	inc       esi
-@74:
+@75:
 	mov       edx,dword ptr [ebp+8]
 	push      edx
 	call      @strLen
 	cmp       edi,eax
-	jl        short @73
+	jl        short @74
 	?debug L 240
 ?live16404@208: ; 
 	or        eax,-1
 	?debug L 242
-@77:
-@71:
 @78:
-@68:
+@72:
+@79:
+@69:
 	pop       edi
 	pop       esi
 	pop       ebx
@@ -2404,7 +2383,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dd	?patch107
-	df	@64
+	df	@65
 	dw	0
 	dw	0
 	dw	16
@@ -2424,7 +2403,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	17
 ?patch109	equ	1
 ?patch108	equ	14
-?patch107	equ	@70-@64
+?patch107	equ	@71-@65
 	dw	2
 	dw	6
 	dw	24
@@ -2434,7 +2413,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dd	?patch110
-	df	@72
+	df	@73
 	dw	0
 	dw	0
 	dw	16
@@ -2454,12 +2433,12 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	24
 ?patch112	equ	1
 ?patch111	equ	14
-?patch110	equ	@77-@72
+?patch110	equ	@78-@73
 	dw	2
 	dw	6
-?patch102	equ	@78-@strDelimiter+7
+?patch102	equ	@79-@strDelimiter+7
 ?patch103	equ	0
-?patch104	equ	@78-@strDelimiter
+?patch104	equ	@79-@strDelimiter
 	dw	2
 	dw	6
 	dw	8
@@ -2474,7 +2453,7 @@ strExchange	segment virtual
 @strExchange	proc	near
 ?live16405@0:
 	?debug L 245
-@79:
+@80:
 	push      ebp
 	mov       ebp,esp
 	add       esp,-12
@@ -2501,10 +2480,10 @@ strExchange	segment virtual
 	call      @strLen
 	mov       dword ptr [ebp-12],eax
 	cmp       edi,dword ptr [ebp-12]
-	jge       short @81
+	jge       short @82
 	?debug L 249
 ?live16405@64: ; ESI = alpdst, EDI = pos
-@80:
+@81:
 	mov       ecx,dword ptr [ebp+12]
 	push      ecx
 	push      edi
@@ -2512,7 +2491,7 @@ strExchange	segment virtual
 	call      @strPos
 	mov       ebx,eax
 	inc       eax
-	je        short @83
+	je        short @84
 	?debug L 251
 ?live16405@80: ; ESI = alpdst
 	mov       edx,dword ptr [ebp-4]
@@ -2531,16 +2510,16 @@ strExchange	segment virtual
 	mov       edi,dword ptr [ebp-8]
 	add       edi,ebx
 	cmp       edi,dword ptr [ebp-12]
-	jl        short @80
+	jl        short @81
 	?debug L 254
 ?live16405@128: ; ESI = alpdst
-@81:
-@83:
+@82:
+@84:
 	mov       eax,esi
 	?debug L 255
 ?live16405@144: ; 
+@87:
 @86:
-@85:
 	pop       edi
 	pop       esi
 	pop       ebx
@@ -2688,9 +2667,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	24
 ?patch121	equ	1
 ?patch120	equ	14
-?patch113	equ	@86-@strExchange+9
+?patch113	equ	@87-@strExchange+9
 ?patch114	equ	0
-?patch115	equ	@86-@strExchange
+?patch115	equ	@87-@strExchange
 	dw	2
 	dw	6
 	dw	8
@@ -2705,7 +2684,7 @@ strExchangeChar	segment virtual
 @strExchangeChar	proc	near
 ?live16406@0:
 	?debug L 258
-@87:
+@88:
 	push      ebp
 	mov       ebp,esp
 	push      ebx
@@ -2726,29 +2705,29 @@ strExchangeChar	segment virtual
 	mov       edx,eax
 	mov       eax,edi
 	cmp       edx,esi
-	jle       short @89
+	jle       short @90
 	?debug L 262
 ?live16406@64: ; EAX = @temp0, ESI = pos, EDX = lencel, EBX = alpfnd, EDI = alpdst
 	;	
-@88:
+@89:
 	cmp       bl,byte ptr [eax]
-	jne       short @90
+	jne       short @91
 	mov       cl,byte ptr [ebp+16]
 	mov       byte ptr [eax],cl
 	?debug L 260
-@90:
+@91:
 	inc       esi
 	inc       eax
 	cmp       edx,esi
-	jg        short @88
+	jg        short @89
 	?debug L 264
 ?live16406@96: ; EDI = alpdst
-@89:
+@90:
 	mov       eax,edi
 	?debug L 265
 ?live16406@112: ; 
+@94:
 @93:
-@92:
 	pop       edi
 	pop       esi
 	pop       ebx
@@ -2880,9 +2859,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	23
 ?patch132	equ	1
 ?patch131	equ	14
-?patch122	equ	@93-@strExchangeChar+7
+?patch122	equ	@94-@strExchangeChar+7
 ?patch123	equ	0
-?patch124	equ	@93-@strExchangeChar
+?patch124	equ	@94-@strExchangeChar
 	dw	2
 	dw	6
 	dw	8
@@ -2897,7 +2876,7 @@ strExtractFileRoot	segment virtual
 @strExtractFileRoot	proc	near
 ?live16407@0:
 	?debug L 268
-@94:
+@95:
 	push      ebp
 	mov       ebp,esp
 	push      ebx
@@ -2913,19 +2892,19 @@ strExtractFileRoot	segment virtual
 	?debug L 272
 ?live16407@32: ; EBX = alpsrc, ESI = alpdst, EAX = delimiter
 	test      eax,eax
-	jl        short @95
+	jl        short @96
 	?debug L 273
 	push      eax
 	push      0
 	push      ebx
 	push      esi
 	call      @strSubEnd
-	jmp       short @96
+	jmp       short @97
 	?debug L 276
 ?live16407@64: ; EBX = alpsrc, ESI = alpdst
-@95:
+@96:
 	cmp       esi,ebx
-	je        short @97
+	je        short @98
 	?debug L 277
 	push      ebx
 	call      @_strlen
@@ -2935,9 +2914,9 @@ strExtractFileRoot	segment virtual
 	push      ebx
 	push      esi
 	call      @@strnEql$qqspcpxcl
-	jmp       short @96
+	jmp       short @97
 	?debug L 280
-@97:
+@98:
 	push      ebx
 	call      @strLen
 	mov       byte ptr [esi+eax],0
@@ -2946,8 +2925,8 @@ strExtractFileRoot	segment virtual
 	mov       eax,esi
 	?debug L 283
 ?live16407@128: ; 
-@99:
-@96:
+@100:
+@97:
 	pop       esi
 	pop       ebx
 	pop       ebp
@@ -3048,9 +3027,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	17
 ?patch141	equ	1
 ?patch140	equ	14
-?patch133	equ	@99-@strExtractFileRoot+6
+?patch133	equ	@100-@strExtractFileRoot+6
 ?patch134	equ	0
-?patch135	equ	@99-@strExtractFileRoot
+?patch135	equ	@100-@strExtractFileRoot
 	dw	2
 	dw	6
 	dw	8
@@ -3065,7 +3044,7 @@ strExtractFilePath	segment virtual
 @strExtractFilePath	proc	near
 ?live16408@0:
 	?debug L 286
-@100:
+@101:
 	push      ebp
 	mov       ebp,esp
 	push      ebx
@@ -3081,19 +3060,19 @@ strExtractFilePath	segment virtual
 	?debug L 290
 ?live16408@32: ; EBX = alpsrc, ESI = alpdst, EAX = delimiter
 	test      eax,eax
-	jl        short @101
+	jl        short @102
 	?debug L 291
 	push      eax
 	push      0
 	push      ebx
 	push      esi
 	call      @strSubEnd
-	jmp       short @102
+	jmp       short @103
 	?debug L 294
 ?live16408@64: ; EBX = alpsrc, ESI = alpdst
-@101:
+@102:
 	cmp       esi,ebx
-	je        short @103
+	je        short @104
 	?debug L 295
 	push      ebx
 	call      @_strlen
@@ -3103,9 +3082,9 @@ strExtractFilePath	segment virtual
 	push      ebx
 	push      esi
 	call      @@strnEql$qqspcpxcl
-	jmp       short @102
+	jmp       short @103
 	?debug L 298
-@103:
+@104:
 	push      ebx
 	call      @strLen
 	mov       byte ptr [esi+eax],0
@@ -3114,8 +3093,8 @@ strExtractFilePath	segment virtual
 	mov       eax,esi
 	?debug L 301
 ?live16408@128: ; 
-@105:
-@102:
+@106:
+@103:
 	pop       esi
 	pop       ebx
 	pop       ebp
@@ -3216,9 +3195,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	17
 ?patch150	equ	1
 ?patch149	equ	14
-?patch142	equ	@105-@strExtractFilePath+6
+?patch142	equ	@106-@strExtractFilePath+6
 ?patch143	equ	0
-?patch144	equ	@105-@strExtractFilePath
+?patch144	equ	@106-@strExtractFilePath
 	dw	2
 	dw	6
 	dw	8
@@ -3233,7 +3212,7 @@ strExtractFileName	segment virtual
 @strExtractFileName	proc	near
 ?live16409@0:
 	?debug L 304
-@106:
+@107:
 	push      ebp
 	mov       ebp,esp
 	push      ebx
@@ -3251,7 +3230,7 @@ strExtractFileName	segment virtual
 	?debug L 308
 ?live16409@32: ; EBX = alpsrc, ESI = alpdst, EDI = delimiter
 	test      edi,edi
-	jl        short @107
+	jl        short @108
 	?debug L 309
 	push      ebx
 	call      @_strlen
@@ -3262,12 +3241,12 @@ strExtractFileName	segment virtual
 	push      ebx
 	push      esi
 	call      @strSubEnd
-	jmp       short @108
+	jmp       short @109
 	?debug L 312
 ?live16409@64: ; EBX = alpsrc, ESI = alpdst
-@107:
+@108:
 	cmp       esi,ebx
-	je        short @109
+	je        short @110
 	?debug L 313
 	push      ebx
 	call      @_strlen
@@ -3277,9 +3256,9 @@ strExtractFileName	segment virtual
 	push      ebx
 	push      esi
 	call      @@strnEql$qqspcpxcl
-	jmp       short @108
+	jmp       short @109
 	?debug L 316
-@109:
+@110:
 	push      ebx
 	call      @strLen
 	mov       byte ptr [esi+eax],0
@@ -3288,8 +3267,8 @@ strExtractFileName	segment virtual
 	mov       eax,esi
 	?debug L 319
 ?live16409@128: ; 
-@111:
-@108:
+@112:
+@109:
 	pop       edi
 	pop       esi
 	pop       ebx
@@ -3391,9 +3370,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	24
 ?patch159	equ	1
 ?patch158	equ	14
-?patch151	equ	@111-@strExtractFileName+7
+?patch151	equ	@112-@strExtractFileName+7
 ?patch152	equ	0
-?patch153	equ	@111-@strExtractFileName
+?patch153	equ	@112-@strExtractFileName
 	dw	2
 	dw	6
 	dw	8
@@ -3408,7 +3387,7 @@ strFixFilePath	segment virtual
 @strFixFilePath	proc	near
 ?live16410@0:
 	?debug L 322
-@112:
+@113:
 	push      ebp
 	mov       ebp,esp
 	push      ebx
@@ -3425,22 +3404,22 @@ strFixFilePath	segment virtual
 	?debug L 326
 ?live16410@32: ; EBX = alpdst, ESI = lensrc, EDI = alpsrc
 	test      esi,esi
-	jne       short @113
+	jne       short @114
 	?debug L 327
 ?live16410@48: ; EBX = alpdst
 	mov       byte ptr [ebx],0
 	?debug L 328
 	mov       eax,ebx
-	jmp       short @114
+	jmp       short @115
 	?debug L 331
 ?live16410@80: ; EBX = alpdst, ESI = lensrc, EDI = alpsrc
-@113:
+@114:
 	movsx     edx,byte ptr [edi+esi-1]
 	cmp       edx,92
-	jne       short @115
+	jne       short @116
 	?debug L 332
 	cmp       ebx,edi
-	je        short @116
+	je        short @117
 	?debug L 333
 	lea       ecx,dword ptr [esi-1]
 	push      ecx
@@ -3449,17 +3428,17 @@ strFixFilePath	segment virtual
 	call      @@strnEql$qqspcpxcl
 	?debug L 334
 ?live16410@128: ; EBX = alpdst, ESI = lensrc
-@116:
+@117:
 	mov       byte ptr [ebx+esi-1],0
 	?debug L 335
 ?live16410@144: ; EBX = alpdst
 	mov       eax,ebx
-	jmp       short @114
+	jmp       short @115
 	?debug L 338
 ?live16410@160: ; EBX = alpdst, ESI = lensrc, EDI = alpsrc
-@115:
+@116:
 	cmp       ebx,edi
-	je        short @117
+	je        short @118
 	?debug L 339
 	push      esi
 	push      edi
@@ -3467,15 +3446,15 @@ strFixFilePath	segment virtual
 	call      @@strnEql$qqspcpxcl
 	?debug L 340
 ?live16410@192: ; EBX = alpdst, ESI = lensrc
-@117:
+@118:
 	mov       byte ptr [ebx+esi],0
 	?debug L 341
 ?live16410@208: ; EBX = alpdst
 	mov       eax,ebx
 	?debug L 343
 ?live16410@224: ; 
-@119:
-@114:
+@120:
+@115:
 	pop       edi
 	pop       esi
 	pop       ebx
@@ -3585,9 +3564,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	23
 ?patch168	equ	3
 ?patch167	equ	34
-?patch160	equ	@119-@strFixFilePath+7
+?patch160	equ	@120-@strFixFilePath+7
 ?patch161	equ	0
-?patch162	equ	@119-@strFixFilePath
+?patch162	equ	@120-@strFixFilePath
 	dw	2
 	dw	6
 	dw	8
@@ -3597,7 +3576,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	65535
 $$BSYMS	ends
 _BSS	segment dword public use32 'BSS'
-$ipjgdcka	label	byte
+$mjigdfia	label	byte
 	db	32	dup(?)
 _BSS	ends
 _TEXT	segment dword public use32 'CODE'
@@ -3606,19 +3585,19 @@ intToStr	segment virtual
 @intToStr	proc	near
 ?live16411@0:
 	?debug L 347
-@120:
+@121:
 	push      ebp
 	mov       ebp,esp
 	?debug L 350
 	push      10
-	push      offset $ipjgdcka
+	push      offset $mjigdfia
 	mov       eax,dword ptr [ebp+8]
 	push      eax
 	call      @_itoa
 	add       esp,12
 	?debug L 351
+@123:
 @122:
-@121:
 	pop       ebp
 	ret       4
 	?debug L 0
@@ -3666,7 +3645,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	22
 	dw	513
-	df	$ipjgdcka
+	df	$mjigdfia
 	dw	0
 	dw	4152
 	dw	0
@@ -3674,9 +3653,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dw	0
-?patch169	equ	@122-@intToStr+4
+?patch169	equ	@123-@intToStr+4
 ?patch170	equ	0
-?patch171	equ	@122-@intToStr
+?patch171	equ	@123-@intToStr
 	dw	2
 	dw	6
 $$BSYMS	ends
@@ -3686,101 +3665,17 @@ strToInt	segment virtual
 @strToInt	proc	near
 ?live16412@0:
 	?debug L 354
+@124:
 	push      ebp
 	mov       ebp,esp
-	push      ebx
-	push      esi
-	push      edi
-	?debug L 359
-@123:
-	xor	 EAX,EAX
-	?debug L 360
-	xor	 EBX,EBX
-	?debug L 361
-	xor	 ESI,ESI
-	?debug L 362
-	mov	 EDI,alpsrc
-	?debug L 364
-	mov	 AL,' '
-	?debug L 365
-	repe SCASB	
-	?debug L 366
-	je        @124
-	?debug L 367
-	dec	 EDI
-	?debug L 369
-strToIntPLUS:
-	?debug L 370
-	mov	 AL,'+'
-	?debug L 371
-	cmp	 AL,[EDI]
-	?debug L 372
-	jne       short @125
-	?debug L 373
-	inc	 EDI
-	?debug L 374
-@125:
-strToIntSIGN:
-	?debug L 375
-	mov	 AL,'-'
-	?debug L 376
-	cmp	 AL,[EDI]
-	?debug L 377
-	jne       short @126
-	?debug L 378
-	inc	 EDI
-	?debug L 379
-	not	 ESI
-	?debug L 381
-@126:
-strToIntLOOP:
-	?debug L 382
-	mov	 AL,[EDI]
-	?debug L 383
-	cmp	 AL,'0'
-	?debug L 384
-	jl        @124
-	?debug L 385
-	cmp	 AL,'9'
-	?debug L 386
-	ja        @124
-	?debug L 387
-	sub	 AL,'0'
-	?debug L 389
-	push	 EAX
-	?debug L 390
-	mov	 EAX,10
-	?debug L 391
-	mul	 EBX
-	?debug L 392
-	mov	 EBX,EAX
-	?debug L 393
-	pop	 EAX
-	?debug L 394
-	add	 EBX,EAX
-	?debug L 395
-	inc	 EDI
-	?debug L 396
-	jmp       @126
-	?debug L 398
-@124:
-strToIntX:
-	?debug L 399
-	test	 ESI,ESI
-	?debug L 400
-	je        short @127
-	?debug L 401
-	neg	 EBX
-	?debug L 402
-@127:
-strToIntRET:
-	?debug L 403
-	mov	 EAX,EBX
+	?debug L 406
+	mov       eax,dword ptr [ebp+8]
+	push      eax
+	call      @_atol
+	pop       ecx
 	?debug L 408
-@128:
-	pop       edi
-	pop       esi
-	pop       ebx
+@126:
+@125:
 	pop       ebp
 	ret       4
 	?debug L 0
@@ -3826,16 +3721,11 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dw	0
-?patch172	equ	@128-@strToInt+7
+?patch172	equ	@126-@strToInt+4
 ?patch173	equ	0
-?patch174	equ	@128-@strToInt
+?patch174	equ	@126-@strToInt
 	dw	2
 	dw	6
-	dw	8
-	dw	531
-	dw	7
-	dw	65524
-	dw	65535
 $$BSYMS	ends
 _TEXT	segment dword public use32 'CODE'
 ptrAlloc	segment virtual
@@ -3843,7 +3733,7 @@ ptrAlloc	segment virtual
 @ptrAlloc	proc	near
 ?live16413@0:
 	?debug L 411
-@129:
+@127:
 	push      ebp
 	mov       ebp,esp
 	?debug L 413
@@ -3852,8 +3742,8 @@ ptrAlloc	segment virtual
 	push      64
 	call      @LocalAlloc
 	?debug L 414
-@131:
-@130:
+@129:
+@128:
 	pop       ebp
 	ret       4
 	?debug L 0
@@ -3899,9 +3789,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dw	0
-?patch175	equ	@131-@ptrAlloc+4
+?patch175	equ	@129-@ptrAlloc+4
 ?patch176	equ	0
-?patch177	equ	@131-@ptrAlloc
+?patch177	equ	@129-@ptrAlloc
 	dw	2
 	dw	6
 $$BSYMS	ends
@@ -3911,7 +3801,7 @@ ptrReAlloc	segment virtual
 @ptrReAlloc	proc	near
 ?live16414@0:
 	?debug L 417
-@132:
+@130:
 	push      ebp
 	mov       ebp,esp
 	?debug L 419
@@ -3922,8 +3812,8 @@ ptrReAlloc	segment virtual
 	push      edx
 	call      @LocalReAlloc
 	?debug L 420
-@134:
-@133:
+@132:
+@131:
 	pop       ebp
 	ret       8
 	?debug L 0
@@ -3981,9 +3871,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dw	0
-?patch178	equ	@134-@ptrReAlloc+4
+?patch178	equ	@132-@ptrReAlloc+4
 ?patch179	equ	0
-?patch180	equ	@134-@ptrReAlloc
+?patch180	equ	@132-@ptrReAlloc
 	dw	2
 	dw	6
 $$BSYMS	ends
@@ -3993,7 +3883,7 @@ ptrFree	segment virtual
 @ptrFree	proc	near
 ?live16415@0:
 	?debug L 423
-@135:
+@133:
 	push      ebp
 	mov       ebp,esp
 	?debug L 425
@@ -4001,7 +3891,7 @@ ptrFree	segment virtual
 	push      eax
 	call      @LocalFree
 	?debug L 426
-@136:
+@134:
 	pop       ebp
 	ret       4
 	?debug L 0
@@ -4046,9 +3936,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dw	0
-?patch181	equ	@136-@ptrFree+4
+?patch181	equ	@134-@ptrFree+4
 ?patch182	equ	0
-?patch183	equ	@136-@ptrFree
+?patch183	equ	@134-@ptrFree
 	dw	2
 	dw	6
 $$BSYMS	ends
@@ -4058,7 +3948,7 @@ ptrEql	segment virtual
 @ptrEql	proc	near
 ?live16416@0:
 	?debug L 429
-@137:
+@135:
 	push      ebp
 	mov       ebp,esp
 	?debug L 444
@@ -4071,7 +3961,7 @@ ptrEql	segment virtual
 	call      @_memmove
 	add       esp,12
 	?debug L 446
-@138:
+@136:
 	pop       ebp
 	ret       12
 	?debug L 0
@@ -4135,9 +4025,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dw	0
-?patch184	equ	@138-@ptrEql+4
+?patch184	equ	@136-@ptrEql+4
 ?patch185	equ	0
-?patch186	equ	@138-@ptrEql
+?patch186	equ	@136-@ptrEql
 	dw	2
 	dw	6
 $$BSYMS	ends
@@ -4147,7 +4037,7 @@ ptrRev	segment virtual
 @ptrRev	proc	near
 ?live16417@0:
 	?debug L 449
-@139:
+@137:
 	push      ebp
 	mov       ebp,esp
 	push      ecx
@@ -4171,9 +4061,9 @@ ptrRev	segment virtual
 ?live16417@80: ; EAX = r_src_start, EDX = r_src_end, ECX = r_dst_start, ESI = r_dst_end
 	;	
 	cmp       edx,eax
-	jbe       short @141
+	jbe       short @139
 	?debug L 476
-@140:
+@138:
 	mov       bl,byte ptr [eax]
 	?debug L 475
 	inc       eax
@@ -4193,11 +4083,11 @@ ptrRev	segment virtual
 	?debug L 475
 	dec       esi
 	cmp       edx,eax
-	ja        short @140
+	ja        short @138
 	?debug L 481
 ?live16417@240: ; 
+@139:
 @141:
-@143:
 	pop       esi
 	pop       ebx
 	pop       ecx
@@ -4350,9 +4240,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	17
 ?patch199	equ	1
 ?patch198	equ	14
-?patch187	equ	@143-@ptrRev+7
+?patch187	equ	@141-@ptrRev+7
 ?patch188	equ	0
-?patch189	equ	@143-@ptrRev
+?patch189	equ	@141-@ptrRev
 	dw	2
 	dw	6
 	dw	8
@@ -4367,7 +4257,7 @@ ptrMov	segment virtual
 @ptrMov	proc	near
 ?live16418@0:
 	?debug L 484
-@144:
+@142:
 	push      ebp
 	mov       ebp,esp
 	?debug L 520
@@ -4380,7 +4270,7 @@ ptrMov	segment virtual
 	call      @_memmove
 	add       esp,12
 	?debug L 522
-@145:
+@143:
 	pop       ebp
 	ret       12
 	?debug L 0
@@ -4444,9 +4334,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dw	0
-?patch200	equ	@145-@ptrMov+4
+?patch200	equ	@143-@ptrMov+4
 ?patch201	equ	0
-?patch202	equ	@145-@ptrMov
+?patch202	equ	@143-@ptrMov
 	dw	2
 	dw	6
 $$BSYMS	ends
@@ -4456,11 +4346,11 @@ ptrSet	segment virtual
 @ptrSet	proc	near
 ?live16419@0:
 	?debug L 525
-@146:
+@144:
 	push      ebp
 	mov       ebp,esp
 	?debug L 535
-@147:
+@145:
 	pop       ebp
 	ret       12
 	?debug L 0
@@ -4524,9 +4414,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dw	0
-?patch203	equ	@147-@ptrSet+4
+?patch203	equ	@145-@ptrSet+4
 ?patch204	equ	0
-?patch205	equ	@147-@ptrSet
+?patch205	equ	@145-@ptrSet
 	dw	2
 	dw	6
 $$BSYMS	ends
@@ -4536,11 +4426,11 @@ ptrSetEx	segment virtual
 @ptrSetEx	proc	near
 ?live16420@0:
 	?debug L 538
-@148:
+@146:
 	push      ebp
 	mov       ebp,esp
 	?debug L 625
-@149:
+@147:
 	pop       ebp
 	ret       16
 	?debug L 0
@@ -4616,9 +4506,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dw	0
-?patch206	equ	@149-@ptrSetEx+4
+?patch206	equ	@147-@ptrSetEx+4
 ?patch207	equ	0
-?patch208	equ	@149-@ptrSetEx
+?patch208	equ	@147-@ptrSetEx
 	dw	2
 	dw	6
 $$BSYMS	ends
@@ -4628,7 +4518,7 @@ ptrShl	segment virtual
 @ptrShl	proc	near
 ?live16421@0:
 	?debug L 628
-@150:
+@148:
 	push      ebp
 	mov       ebp,esp
 	mov       eax,dword ptr [ebp+8]
@@ -4644,7 +4534,7 @@ ptrShl	segment virtual
 	add       esp,12
 	?debug L 646
 ?live16421@32: ; 
-@151:
+@149:
 	pop       ebp
 	ret       8
 	?debug L 0
@@ -4706,9 +4596,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dw	0
-?patch209	equ	@151-@ptrShl+4
+?patch209	equ	@149-@ptrShl+4
 ?patch210	equ	0
-?patch211	equ	@151-@ptrShl
+?patch211	equ	@149-@ptrShl
 	dw	2
 	dw	6
 $$BSYMS	ends
@@ -4718,7 +4608,7 @@ ptrShr	segment virtual
 @ptrShr	proc	near
 ?live16422@0:
 	?debug L 649
-@152:
+@150:
 	push      ebp
 	mov       ebp,esp
 	mov       eax,dword ptr [ebp+8]
@@ -4734,7 +4624,7 @@ ptrShr	segment virtual
 	add       esp,12
 	?debug L 672
 ?live16422@32: ; 
-@153:
+@151:
 	pop       ebp
 	ret       8
 	?debug L 0
@@ -4796,9 +4686,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dw	0
-?patch214	equ	@153-@ptrShr+4
+?patch214	equ	@151-@ptrShr+4
 ?patch215	equ	0
-?patch216	equ	@153-@ptrShr
+?patch216	equ	@151-@ptrShr
 	dw	2
 	dw	6
 $$BSYMS	ends
@@ -4808,7 +4698,7 @@ ptrCmp	segment virtual
 @ptrCmp	proc	near
 ?live16423@0:
 	?debug L 675
-@154:
+@152:
 	push      ebp
 	mov       ebp,esp
 	?debug L 701
@@ -4821,8 +4711,8 @@ ptrCmp	segment virtual
 	call      @_memcmp
 	add       esp,12
 	?debug L 703
-@156:
-@155:
+@154:
+@153:
 	pop       ebp
 	ret       12
 	?debug L 0
@@ -4886,9 +4776,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dw	0
-?patch219	equ	@156-@ptrCmp+4
+?patch219	equ	@154-@ptrCmp+4
 ?patch220	equ	0
-?patch221	equ	@156-@ptrCmp
+?patch221	equ	@154-@ptrCmp
 	dw	2
 	dw	6
 $$BSYMS	ends
@@ -4898,7 +4788,7 @@ _TEXT	segment dword public use32 'CODE'
 @@ptrSca$qqspvcl	proc	near
 ?live16424@0:
 	?debug L 706
-@157:
+@155:
 	push      ebp
 	mov       ebp,esp
 	push      ebx
@@ -4915,8 +4805,8 @@ _TEXT	segment dword public use32 'CODE'
 	sub       eax,ebx
 	?debug L 727
 ?live16424@32: ; 
-@159:
-@158:
+@157:
+@156:
 	pop       ebx
 	pop       ebp
 	ret       12
@@ -4998,9 +4888,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dw	0
-?patch222	equ	@159-@@ptrSca$qqspvcl+5
+?patch222	equ	@157-@@ptrSca$qqspvcl+5
 ?patch223	equ	0
-?patch224	equ	@159-@@ptrSca$qqspvcl
+?patch224	equ	@157-@@ptrSca$qqspvcl
 	dw	2
 	dw	6
 	dw	8
@@ -5015,7 +4905,7 @@ ptrChr	segment virtual
 @ptrChr	proc	near
 ?live16425@0:
 	?debug L 730
-@160:
+@158:
 	push      ebp
 	mov       ebp,esp
 	push      ebx
@@ -5032,8 +4922,8 @@ ptrChr	segment virtual
 	sub       eax,ebx
 	?debug L 751
 ?live16425@32: ; 
-@162:
-@161:
+@160:
+@159:
 	pop       ebx
 	pop       ebp
 	ret       12
@@ -5106,9 +4996,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dw	0
-?patch227	equ	@162-@ptrChr+5
+?patch227	equ	@160-@ptrChr+5
 ?patch228	equ	0
-?patch229	equ	@162-@ptrChr
+?patch229	equ	@160-@ptrChr
 	dw	2
 	dw	6
 	dw	8
@@ -5119,22 +5009,22 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 $$BSYMS	ends
 _BSS	segment dword public use32 'BSS'
 	align	4
-$ijkgdcka	label	dword
+$mdjgdfia	label	dword
 	db	4	dup(?)
 _BSS	ends
 _DATA	segment dword public use32 'DATA'
 	align	4
-$ankgdcka	label	dword
-	dd	$ijkgdcka
+$ehjgdfia	label	dword
+	dd	$mdjgdfia
 _DATA	ends
 _BSS	segment dword public use32 'BSS'
-$ialgdcka	label	byte
+$mkjgdfia	label	byte
 	db	256	dup(?)
 _BSS	ends
 _DATA	segment dword public use32 'DATA'
 	align	4
-$aelgdcka	label	dword
-	dd	$ialgdcka
+$eojgdfia	label	dword
+	dd	$mkjgdfia
 _DATA	ends
 _TEXT	segment dword public use32 'CODE'
 ptrFndLast	segment virtual
@@ -5142,16 +5032,16 @@ ptrFndLast	segment virtual
 @ptrFndLast	proc	near
 ?live16426@0:
 	?debug L 754
-@163:
+@161:
 	push      ebp
 	mov       ebp,esp
 	push      ebx
 	push      esi
 	push      edi
-	mov       ebx,offset $ialgdcka
+	mov       ebx,offset $mkjgdfia
 	mov       esi,dword ptr [ebp+24]
 	?debug L 756
-?live16426@16: ; ESI = aco_size, EAX = asrc_size, EDI = alpfnd, EBX = &$ialgdcka
+?live16426@16: ; ESI = aco_size, EAX = asrc_size, EDI = alpfnd, EBX = &$mkjgdfia
 	;	
 	mov       edx,dword ptr [ebp+12]
 	add       edx,esi
@@ -5159,89 +5049,89 @@ ptrFndLast	segment virtual
 ?live16426@32: ; 
 	mov       eax,dword ptr [ebp+16]
 	?debug L 756
-?live16426@48: ; ESI = aco_size, EAX = asrc_size, EDI = alpfnd, EBX = &$ialgdcka
+?live16426@48: ; ESI = aco_size, EAX = asrc_size, EDI = alpfnd, EBX = &$mkjgdfia
 	;	
 	cmp       eax,edx
 	?debug L 754
 ?live16426@64: ; 
 	mov       edi,dword ptr [ebp+20]
 	?debug L 756
-?live16426@80: ; ESI = aco_size, EAX = asrc_size, EDI = alpfnd, EBX = &$ialgdcka
+?live16426@80: ; ESI = aco_size, EAX = asrc_size, EDI = alpfnd, EBX = &$mkjgdfia
 	;	
-	jl        short @165
+	jl        short @163
 	test      esi,esi
-	jle       short @165
+	jle       short @163
 	test      eax,eax
-	jg        short @164
+	jg        short @162
 	?debug L 757
 ?live16426@96: ; 
-@165:
+@163:
 	or        eax,-1
-	jmp       short @166
+	jmp       short @164
 	?debug L 761
-?live16426@112: ; ESI = aco_size, EDI = alpfnd, EBX = &$ialgdcka
-@164:
+?live16426@112: ; ESI = aco_size, EDI = alpfnd, EBX = &$mkjgdfia
+@162:
 	cmp       esi,255
-	jle       short @167
+	jle       short @165
 	?debug L 762
-?live16426@128: ; EDI = alpfnd, EBX = &$ialgdcka
+?live16426@128: ; EDI = alpfnd, EBX = &$mkjgdfia
 	push      255
 	push      0
 	push      ebx
 	call      @ptrSet
 	?debug L 763
-@168:
+@166:
 	mov       eax,254
 	lea       edx,dword ptr [edi+254]
 	?debug L 764
-?live16426@160: ; EAX = i, EDX = @temp3, EBX = &$ialgdcka
-@169:
+?live16426@160: ; EAX = i, EDX = @temp3, EBX = &$mkjgdfia
+@167:
 	movsx     ecx,byte ptr [edx]
 	mov       byte ptr [ebx+ecx],al
 	?debug L 763
 	dec       eax
 	dec       edx
 	test      eax,eax
-	jge       short @169
+	jge       short @167
 	?debug L 766
 ?live16426@192: ; 
-@172:
-	jmp       short @173
+@170:
+	jmp       short @171
 	?debug L 768
-?live16426@208: ; ESI = aco_size, EDI = alpfnd, EBX = &$ialgdcka
-@167:
+?live16426@208: ; ESI = aco_size, EDI = alpfnd, EBX = &$mkjgdfia
+@165:
 	push      esi
 	push      0
 	push      ebx
 	call      @ptrSet
 	?debug L 769
-@174:
+@172:
 	lea       eax,dword ptr [esi-1]
 	lea       edx,dword ptr [edi+eax]
 	test      eax,eax
-	jl        short @176
+	jl        short @174
 	?debug L 770
-?live16426@240: ; EAX = i, EDX = @temp1, EBX = &$ialgdcka
-@175:
+?live16426@240: ; EAX = i, EDX = @temp1, EBX = &$mkjgdfia
+@173:
 	movsx     ecx,byte ptr [edx]
 	mov       byte ptr [ebx+ecx],al
 	?debug L 769
 	dec       eax
 	dec       edx
 	test      eax,eax
-	jge       short @175
+	jge       short @173
 	?debug L 813
 ?live16426@272: ; 
+@174:
 @176:
-@178:
-@173:
-	mov       eax,dword ptr [$ijkgdcka]
-	jmp       short @166
+@171:
+	mov       eax,dword ptr [$mdjgdfia]
+	jmp       short @164
 	?debug L 815
 	or        eax,-1
 	?debug L 816
-@179:
-@166:
+@177:
+@164:
 	pop       edi
 	pop       esi
 	pop       ebx
@@ -5388,7 +5278,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 ?patch239	equ	54
 	dw	22
 	dw	513
-	df	$aelgdcka
+	df	$eojgdfia
 	dw	0
 	dw	1056
 	dw	0
@@ -5398,7 +5288,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	22
 	dw	513
-	df	$ialgdcka
+	df	$mkjgdfia
 	dw	0
 	dw	4185
 	dw	0
@@ -5408,7 +5298,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	22
 	dw	513
-	df	$ankgdcka
+	df	$ehjgdfia
 	dw	0
 	dw	1042
 	dw	0
@@ -5418,7 +5308,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	22
 	dw	513
-	df	$ijkgdcka
+	df	$mdjgdfia
 	dw	0
 	dw	18
 	dw	0
@@ -5433,7 +5323,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dd	?patch241
-	df	@168
+	df	@166
 	dw	0
 	dw	0
 	dw	16
@@ -5453,7 +5343,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	17
 ?patch243	equ	1
 ?patch242	equ	14
-?patch241	equ	@172-@168
+?patch241	equ	@170-@166
 	dw	2
 	dw	6
 	dw	24
@@ -5463,7 +5353,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dd	?patch244
-	df	@174
+	df	@172
 	dw	0
 	dw	0
 	dw	16
@@ -5483,12 +5373,12 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	17
 ?patch246	equ	1
 ?patch245	equ	14
-?patch244	equ	@178-@174
+?patch244	equ	@176-@172
 	dw	2
 	dw	6
-?patch232	equ	@179-@ptrFndLast+7
+?patch232	equ	@177-@ptrFndLast+7
 ?patch233	equ	0
-?patch234	equ	@179-@ptrFndLast
+?patch234	equ	@177-@ptrFndLast
 	dw	2
 	dw	6
 	dw	8
@@ -5499,22 +5389,22 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 $$BSYMS	ends
 _BSS	segment dword public use32 'BSS'
 	align	4
-$ihlgdcka	label	dword
+$mbkgdfia	label	dword
 	db	4	dup(?)
 _BSS	ends
 _DATA	segment dword public use32 'DATA'
 	align	4
-$allgdcka	label	dword
-	dd	$ihlgdcka
+$efkgdfia	label	dword
+	dd	$mbkgdfia
 _DATA	ends
 _BSS	segment dword public use32 'BSS'
-$iolgdcka	label	byte
+$mikgdfia	label	byte
 	db	256	dup(?)
 _BSS	ends
 _DATA	segment dword public use32 'DATA'
 	align	4
-$acmgdcka	label	dword
-	dd	$iolgdcka
+$emkgdfia	label	dword
+	dd	$mikgdfia
 _DATA	ends
 _TEXT	segment dword public use32 'CODE'
 ptrFnd	segment virtual
@@ -5522,7 +5412,7 @@ ptrFnd	segment virtual
 @ptrFnd	proc	near
 ?live16427@0:
 	?debug L 819
-@180:
+@178:
 	push      ebp
 	mov       ebp,esp
 	push      ebx
@@ -5539,37 +5429,37 @@ ptrFnd	segment virtual
 	?debug L 821
 ?live16427@48: ; EBX = aco_size, EAX = asrc_size
 	cmp       eax,edx
-	jl        short @182
+	jl        short @180
 	test      ebx,ebx
-	jle       short @182
+	jle       short @180
 	test      eax,eax
-	jg        short @181
+	jg        short @179
 	?debug L 822
 ?live16427@64: ; 
-@182:
+@180:
 	or        eax,-1
-	jmp       short @183
+	jmp       short @181
 	?debug L 826
 ?live16427@80: ; EBX = aco_size
-@181:
+@179:
 	cmp       ebx,255
-	jle       short @184
+	jle       short @182
 	?debug L 827
 	push      255
 	push      0
-	push      offset $iolgdcka
+	push      offset $mikgdfia
 	call      @ptrSet
 	?debug L 828
-@185:
+@183:
 	lea       eax,dword ptr [ebx-256]
 	mov       edx,dword ptr [ebp+20]
 	add       edx,eax
 	cmp       ebx,eax
 	mov       esi,256
-	jle       short @190
+	jle       short @188
 	?debug L 829
 ?live16427@128: ; EBX = aco_size, EAX = i, EDX = @temp5, ESI = ic
-@186:
+@184:
 	movsx     edi,byte ptr [edx]
 	mov       ecx,esi
 	?debug L 828
@@ -5580,31 +5470,31 @@ ptrFnd	segment virtual
 	inc       edx
 	inc       eax
 	?debug L 829
-	mov       byte ptr [edi+$iolgdcka],cl
+	mov       byte ptr [edi+$mikgdfia],cl
 	?debug L 828
 	cmp       ebx,eax
-	jg        short @186
+	jg        short @184
 	?debug L 831
 ?live16427@224: ; 
-@189:
-	jmp       short @190
+@187:
+	jmp       short @188
 	?debug L 833
 ?live16427@240: ; EBX = aco_size
-@184:
+@182:
 	push      ebx
 	push      0
-	push      offset $iolgdcka
+	push      offset $mikgdfia
 	call      @ptrSet
 	?debug L 834
-@191:
+@189:
 	xor       esi,esi
 	mov       edx,ebx
 	mov       eax,dword ptr [ebp+20]
 	cmp       ebx,esi
-	jle       short @193
+	jle       short @191
 	?debug L 835
 ?live16427@272: ; EBX = aco_size, EAX = @temp1, EDX = ic, ESI = i
-@192:
+@190:
 	movsx     edi,byte ptr [eax]
 	mov       ecx,edx
 	?debug L 834
@@ -5615,22 +5505,22 @@ ptrFnd	segment virtual
 	inc       eax
 	inc       esi
 	?debug L 835
-	mov       byte ptr [edi+$iolgdcka],cl
+	mov       byte ptr [edi+$mikgdfia],cl
 	?debug L 834
 	cmp       ebx,esi
-	jg        short @192
+	jg        short @190
 	?debug L 881
 ?live16427@368: ; 
+@191:
 @193:
-@195:
-@190:
-	mov       eax,dword ptr [$ihlgdcka]
-	jmp       short @183
+@188:
+	mov       eax,dword ptr [$mbkgdfia]
+	jmp       short @181
 	?debug L 883
 	or        eax,-1
 	?debug L 884
-@196:
-@183:
+@194:
+@181:
 	pop       edi
 	pop       esi
 	pop       ebx
@@ -5747,7 +5637,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 ?patch252	equ	44
 	dw	22
 	dw	513
-	df	$acmgdcka
+	df	$emkgdfia
 	dw	0
 	dw	1056
 	dw	0
@@ -5757,7 +5647,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	22
 	dw	513
-	df	$iolgdcka
+	df	$mikgdfia
 	dw	0
 	dw	4188
 	dw	0
@@ -5767,7 +5657,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	22
 	dw	513
-	df	$allgdcka
+	df	$efkgdfia
 	dw	0
 	dw	1042
 	dw	0
@@ -5777,7 +5667,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	22
 	dw	513
-	df	$ihlgdcka
+	df	$mbkgdfia
 	dw	0
 	dw	18
 	dw	0
@@ -5792,7 +5682,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dd	?patch254
-	df	@185
+	df	@183
 	dw	0
 	dw	0
 	dw	16
@@ -5829,7 +5719,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	17
 ?patch258	equ	1
 ?patch257	equ	14
-?patch254	equ	@189-@185
+?patch254	equ	@187-@183
 	dw	2
 	dw	6
 	dw	24
@@ -5839,7 +5729,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dd	?patch259
-	df	@191
+	df	@189
 	dw	0
 	dw	0
 	dw	16
@@ -5876,12 +5766,12 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	23
 ?patch263	equ	1
 ?patch262	equ	14
-?patch259	equ	@195-@191
+?patch259	equ	@193-@189
 	dw	2
 	dw	6
-?patch247	equ	@196-@ptrFnd+7
+?patch247	equ	@194-@ptrFnd+7
 ?patch248	equ	0
-?patch249	equ	@196-@ptrFnd
+?patch249	equ	@194-@ptrFnd
 	dw	2
 	dw	6
 	dw	8
@@ -5896,7 +5786,7 @@ bitEql	segment virtual
 @bitEql	proc	near
 ?live16428@0:
 	?debug L 891
-@197:
+@195:
 	push      ebp
 	mov       ebp,esp
 	add       esp,-8
@@ -5920,11 +5810,11 @@ bitEql	segment virtual
 	?debug L 1020
 ?live16428@96: ; EAX = dst, EDX = dst_bit, ESI = src
 	cmp       dword ptr [ebp-4],32
-	jb        short @199
+	jb        short @197
 	?debug L 1022
-@198:
+@196:
 	cmp       dword ptr [eax],0
-	je        short @205
+	je        short @203
 	xor       ecx,ecx
 	mov       cl,dl
 	push      ecx
@@ -5934,31 +5824,31 @@ bitEql	segment virtual
 	or        ebx,-1
 	shr       ebx,cl
 	test      bl,bl
-	jne       short @203
-@205:
-	xor       ebx,ebx
-	jmp       short @204
+	jne       short @201
 @203:
+	xor       ebx,ebx
+	jmp       short @202
+@201:
 	mov       ebx,1
-@204:
+@202:
 	mov       cl,byte ptr [ebp-5]
 	mov       edi,dword ptr [esi]
 	sar       edi,cl
 	mov       ecx,edx
 	shl       edi,cl
 	or        ebx,edi
-	je        short @202
+	je        short @200
 	mov       ecx,edx
 	or        ebx,-1
 	shl       ebx,cl
 	test      ebx,ebx
-	jne       short @200
-@202:
-	xor       ecx,ecx
-	jmp       short @201
+	jne       short @198
 @200:
+	xor       ecx,ecx
+	jmp       short @199
+@198:
 	mov       ecx,1
-@201:
+@199:
 	mov       dword ptr [eax],ecx
 	?debug L 1023
 	add       eax,3
@@ -5968,44 +5858,44 @@ bitEql	segment virtual
 	sub       dword ptr [ebp-4],24
 	?debug L 1020
 	cmp       dword ptr [ebp-4],32
-	jae       short @198
+	jae       short @196
 	?debug L 1027
-@199:
+@197:
 	cmp       dword ptr [ebp-4],0
-	jbe       short @207
+	jbe       short @205
 	?debug L 1028
-@206:
+@204:
 	cmp       byte ptr [eax],0
-	je        short @210
+	je        short @208
 	mov       ecx,edx
 	mov       ebx,255
 	sar       ebx,cl
 	test      bl,bl
-	jne       short @208
-@210:
-	xor       ebx,ebx
-	jmp       short @209
+	jne       short @206
 @208:
+	xor       ebx,ebx
+	jmp       short @207
+@206:
 	mov       ebx,1
-@209:
+@207:
 	mov       cl,byte ptr [ebp-5]
 	movsx     esi,byte ptr [esi]
 	sar       esi,cl
 	mov       ecx,edx
 	shl       esi,cl
 	test      esi,esi
-	je        short @213
+	je        short @211
 	mov       ecx,edx
 	mov       esi,255
 	shl       esi,cl
 	test      esi,esi
-	jne       short @211
-@213:
-	xor       ecx,ecx
-	jmp       short @212
+	jne       short @209
 @211:
+	xor       ecx,ecx
+	jmp       short @210
+@209:
 	mov       ecx,1
-@212:
+@210:
 	or        bl,cl
 	mov       byte ptr [eax],bl
 	?debug L 1029
@@ -6021,11 +5911,11 @@ bitEql	segment virtual
 	lea       esi,dword ptr [eax+1]
 	?debug L 1027
 ?live16428@288: ; EAX = dst, EDX = dst_bit, ESI = src
-	ja        short @206
+	ja        short @204
 	?debug L 1035
 ?live16428@304: ; 
-@207:
-@214:
+@205:
+@212:
 	pop       edi
 	pop       esi
 	pop       ebx
@@ -6191,9 +6081,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dw	0
-?patch264	equ	@214-@bitEql+9
+?patch264	equ	@212-@bitEql+9
 ?patch265	equ	0
-?patch266	equ	@214-@bitEql
+?patch266	equ	@212-@bitEql
 	dw	2
 	dw	6
 	dw	8
@@ -6208,7 +6098,7 @@ bitSet	segment virtual
 @bitSet	proc	near
 ?live16429@0:
 	?debug L 1038
-@215:
+@213:
 	push      ebp
 	mov       ebp,esp
 	add       esp,-8
@@ -6233,47 +6123,47 @@ bitSet	segment virtual
 	mov       dl,byte ptr [ebp+16]
 	?debug L 1146
 ?live16429@96: ; EAX = dst, EDX = dst_bit, ECX = src
-	jbe       short @217
+	jbe       short @215
 	?debug L 1147
-@216:
+@214:
 	xor       esi,esi
-	jmp       short @219
+	jmp       short @217
 	?debug L 1148
 ?live16429@128: ; EAX = dst, ESI = zr, EDX = dst_bit, ECX = src
-@218:
+@216:
 	movsx     ecx,byte ptr [ecx+esi]
 	mov       dword ptr [ebp-8],ecx
 	?debug L 1149
 ?live16429@144: ; EAX = dst, ESI = zr, EDX = dst_bit
 	cmp       byte ptr [eax],0
-	je        short @222
+	je        short @220
 	mov       ecx,edx
 	mov       ebx,255
 	sar       ebx,cl
 	test      bl,bl
-	jne       short @220
-@222:
-	xor       ebx,ebx
-	jmp       short @221
+	jne       short @218
 @220:
+	xor       ebx,ebx
+	jmp       short @219
+@218:
 	mov       ebx,1
-@221:
+@219:
 	mov       ecx,edx
 	mov       edi,dword ptr [ebp-8]
 	shl       edi,cl
 	test      edi,edi
-	je        short @225
+	je        short @223
 	mov       ecx,edx
 	mov       edi,255
 	shl       edi,cl
 	test      edi,edi
-	jne       short @223
-@225:
-	xor       ecx,ecx
-	jmp       short @224
+	jne       short @221
 @223:
+	xor       ecx,ecx
+	jmp       short @222
+@221:
 	mov       ecx,1
-@224:
+@222:
 	or        bl,cl
 	mov       byte ptr [eax],bl
 	?debug L 1150
@@ -6285,19 +6175,19 @@ bitSet	segment virtual
 	?debug L 1151
 ?live16429@192: ; EAX = dst, ESI = zr, EDX = dst_bit
 	lea       ecx,dword ptr [eax+1]
-@219:
+@217:
 	xor       ebx,ebx
 	mov       bl,byte ptr [ebp+20]
 	cmp       esi,ebx
-	jl        short @218
+	jl        short @216
 	?debug L 1146
 ?live16429@208: ; EAX = dst, EDX = dst_bit, ECX = src
 	cmp       dword ptr [ebp-4],0
-	ja        short @216
+	ja        short @214
 	?debug L 1156
 ?live16429@224: ; 
-@217:
-@228:
+@215:
+@226:
 	pop       edi
 	pop       esi
 	pop       ebx
@@ -6489,9 +6379,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dw	0
-?patch273	equ	@228-@bitSet+9
+?patch273	equ	@226-@bitSet+9
 ?patch274	equ	0
-?patch275	equ	@228-@bitSet
+?patch275	equ	@226-@bitSet
 	dw	2
 	dw	6
 	dw	8
@@ -6501,7 +6391,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	65535
 $$BSYMS	ends
 _DATA	segment dword public use32 'DATA'
-$ammgdcka	label	byte
+$eglgdfia	label	byte
 	db	0
 	db	1
 	db	3
@@ -6511,7 +6401,7 @@ $ammgdcka	label	byte
 	db	63
 	db	127
 	db	255
-$ipmgdcka	label	byte
+$mjlgdfia	label	byte
 	db	0
 	db	128
 	db	192
@@ -6521,7 +6411,7 @@ $ipmgdcka	label	byte
 	db	252
 	db	254
 	db	255
-$adngdcka	label	byte
+$enlgdfia	label	byte
 	db	255
 	db	127
 	db	63
@@ -6534,310 +6424,310 @@ $adngdcka	label	byte
 _DATA	ends
 _TEXT	segment dword public use32 'CODE'
 	align	4
-@bitarray_copy$qqspxuciipuci	proc	near
-@@bitarray_copy$qqspxuciipuci equ @bitarray_copy$qqspxuciipuci
+@bitmove$qqspxucipucii	proc	near
+@@bitmove$qqspxucipucii equ @bitmove$qqspxucipucii
 ?live1@0:
-	?debug L 1173
-@229:
+	?debug L 1172
+@227:
 	push      ebp
 	mov       ebp,esp
 	add       esp,-12
 	push      ebx
 	push      esi
 	push      edi
-	mov       edx,dword ptr [ebp+24]
+	mov       edx,dword ptr [ebp+20]
 	mov       eax,dword ptr [ebp+12]
-	?debug L 1183
+	?debug L 1181
 ?live1@16: ; EAX = src_offset, EDX = dst_offset
-	cmp       dword ptr [ebp+16],0
-	je        @231
-	?debug L 1189
-@232:
+	cmp       dword ptr [ebp+24],0
+	je        @229
+	?debug L 1187
+@230:
 	mov       ebx,eax
 	test      ebx,ebx
-	jns       short @233
+	jns       short @231
 	add       ebx,7
-@233:
+@231:
 	sar       ebx,3
 	add       ebx,dword ptr [ebp+8]
-	?debug L 1190
+	?debug L 1188
 ?live1@48: ; EBX = src, EAX = src_offset, EDX = dst_offset
 	mov       esi,edx
 	test      esi,esi
-	jns       short @234
+	jns       short @232
 	add       esi,7
-@234:
+@232:
 	sar       esi,3
-	add       esi,dword ptr [ebp+20]
-	?debug L 1192
+	add       esi,dword ptr [ebp+16]
+	?debug L 1190
 ?live1@64: ; EBX = src, ESI = dst, EAX = src_offset, EDX = dst_offset
 	and       eax,-2147483641
-	jns       short @235
+	jns       short @233
 	dec       eax
 	or        eax,-8
 	inc       eax
-	?debug L 1193
+	?debug L 1191
 ?live1@80: ; EBX = src, ESI = dst, EAX = src_offset_modulo, EDX = dst_offset
 	;	
-@235:
+@233:
 	mov       edi,edx
 	and       edi,-2147483641
-	jns       short @236
+	jns       short @234
 	dec       edi
 	or        edi,-8
 	inc       edi
-	?debug L 1195
+	?debug L 1193
 ?live1@96: ; EBX = src, ESI = dst, EDI = dst_offset_modulo, EAX = src_offset_modulo
 	;	
-@236:
+@234:
 	cmp       edi,eax
-	jne       @238
-	?debug L 1198
-@239:
+	jne       @236
+	?debug L 1196
+@237:
 	test      eax,eax
-	je        short @241
-	?debug L 1201
+	je        short @239
+	?debug L 1199
 ?live1@128: ; EBX = src, ESI = dst, EDI = dst_offset_modulo
-@242:
-	mov       al,byte ptr [edi+$adngdcka]
-	?debug L 1203
+@240:
+	mov       al,byte ptr [edi+$enlgdfia]
+	?debug L 1201
 ?live1@144: ; EBX = src, ESI = dst, EDI = dst_offset_modulo, EAX = c
 	mov       edx,8
-	?debug L 1201
+	?debug L 1199
 ?live1@160: ; EBX = src, ESI = dst, EDI = dst_offset_modulo
 	and       al,byte ptr [ebx]
 	inc       ebx
-	?debug L 1203
+	?debug L 1201
 ?live1@176: ; EBX = src, ESI = dst, EDI = dst_offset_modulo, EAX = c
 	sub       edx,edi
-	cmp       edx,dword ptr [ebp+16]
-	jg        short @243
-	mov       cl,byte ptr [edi+$ipmgdcka]
+	cmp       edx,dword ptr [ebp+24]
+	jg        short @241
+	mov       cl,byte ptr [edi+$mjlgdfia]
 	and       byte ptr [esi],cl
-	sub       dword ptr [ebp+16],edx
-	jmp       short @244
-@243:
-	lea       edx,dword ptr [edi+$adngdcka]
-	mov       ecx,dword ptr [ebp+16]
+	sub       dword ptr [ebp+24],edx
+	jmp       short @242
+@241:
+	lea       edx,dword ptr [edi+$enlgdfia]
+	mov       ecx,dword ptr [ebp+24]
 	mov       dl,byte ptr [edx+ecx]
-	or        dl,byte ptr [edi+$ipmgdcka]
+	or        dl,byte ptr [edi+$mjlgdfia]
 	and       byte ptr [esi],dl
-	lea       ecx,dword ptr [edi+$ipmgdcka]
-	mov       edx,dword ptr [ebp+16]
+	lea       ecx,dword ptr [edi+$mjlgdfia]
+	mov       edx,dword ptr [ebp+24]
 	and       al,byte ptr [ecx+edx]
 	xor       ecx,ecx
-	mov       dword ptr [ebp+16],ecx
-	?debug L 1204
+	mov       dword ptr [ebp+24],ecx
+	?debug L 1202
 ?live1@192: ; EBX = src, ESI = dst, EAX = c
-@244:
+@242:
 	or        byte ptr [esi],al
 	inc       esi
-	?debug L 1207
+	?debug L 1205
 ?live1@208: ; EBX = src, ESI = dst
-@245:
-@241:
-	mov       edi,dword ptr [ebp+16]
+@243:
+@239:
+	mov       edi,dword ptr [ebp+24]
 	test      edi,edi
-	jns       short @246
+	jns       short @244
 	add       edi,7
-@246:
+@244:
 	sar       edi,3
-	?debug L 1208
+	?debug L 1206
 ?live1@224: ; EBX = src, ESI = dst, EDI = byte_len
-	mov       eax,dword ptr [ebp+16]
+	mov       eax,dword ptr [ebp+24]
 	and       eax,-2147483641
-	jns       short @247
+	jns       short @245
 	dec       eax
 	or        eax,-8
 	inc       eax
-@247:
+@245:
 	mov       dword ptr [ebp-4],eax
-	?debug L 1210
+	?debug L 1208
 	test      edi,edi
-	je        short @248
-	?debug L 1211
+	je        short @246
+	?debug L 1209
 	push      edi
 	push      ebx
 	push      esi
 	call      @_memcpy
 	add       esp,12
-	?debug L 1212
+	?debug L 1210
 	add       ebx,edi
-	?debug L 1213
+	?debug L 1211
 	add       esi,edi
-	?debug L 1215
+	?debug L 1213
 ?live1@304: ; EBX = src, ESI = dst
-@248:
+@246:
 	cmp       dword ptr [ebp-4],0
-	je        @251
-	?debug L 1216
+	je        @249
+	?debug L 1214
 	mov       edx,dword ptr [ebp-4]
-	mov       cl,byte ptr [edx+$adngdcka]
+	mov       cl,byte ptr [edx+$enlgdfia]
 	and       byte ptr [esi],cl
-	?debug L 1217
+	?debug L 1215
 	mov       eax,dword ptr [ebp-4]
-	mov       dl,byte ptr [eax+$ipmgdcka]
+	mov       dl,byte ptr [eax+$mjlgdfia]
 	and       dl,byte ptr [ebx]
 	or        byte ptr [esi],dl
-	?debug L 1219
+	?debug L 1217
 ?live1@352: ; 
-@250:
-	jmp       @251
-	?debug L 1228
+@248:
+	jmp       @249
+	?debug L 1226
 ?live1@368: ; EBX = src, ESI = dst, EDI = dst_offset_modulo, EAX = src_offset_modulo
 	;	
-@238:
-@252:
+@236:
+@250:
 	cmp       edi,eax
-	jge       short @253
-	?debug L 1229
+	jge       short @251
+	?debug L 1227
 	sub       eax,edi
 	mov       dword ptr [ebp-8],eax
-	?debug L 1230
+	?debug L 1228
 ?live1@400: ; EBX = src, ESI = dst, EDI = dst_offset_modulo
 	mov       ecx,8
 	sub       ecx,dword ptr [ebp-8]
 	mov       dword ptr [ebp-12],ecx
-	?debug L 1232
+	?debug L 1230
 	mov       ecx,dword ptr [ebp-8]
 	mov       al,byte ptr [ebx]
 	shl       al,cl
 	inc       ebx
-	?debug L 1233
+	?debug L 1231
 ?live1@432: ; EBX = src, ESI = dst, EAX = c, EDI = dst_offset_modulo
 	mov       ecx,dword ptr [ebp-12]
 	xor       edx,edx
 	mov       dl,byte ptr [ebx]
 	sar       edx,cl
 	or        al,dl
+	?debug L 1232
+	and       al,byte ptr [edi+$enlgdfia]
+	?debug L 1233
+	jmp       short @252
 	?debug L 1234
-	and       al,byte ptr [edi+$adngdcka]
-	?debug L 1235
-	jmp       short @254
-	?debug L 1236
 ?live1@480: ; EBX = src, ESI = dst, EDI = dst_offset_modulo, EAX = src_offset_modulo
 	;	
-@253:
+@251:
 	mov       edx,edi
 	sub       edx,eax
-	?debug L 1237
+	?debug L 1235
 ?live1@496: ; EBX = src, ESI = dst, EDI = dst_offset_modulo
 	mov       eax,8
-	?debug L 1236
+	?debug L 1234
 ?live1@512: ; EBX = src, ESI = dst, EDI = dst_offset_modulo, EAX = src_offset_modulo
 	;	
 	mov       dword ptr [ebp-12],edx
-	?debug L 1237
+	?debug L 1235
 ?live1@528: ; EBX = src, ESI = dst, EDI = dst_offset_modulo
 	sub       eax,dword ptr [ebp-12]
 	mov       dword ptr [ebp-8],eax
-	?debug L 1239
+	?debug L 1237
 	xor       eax,eax
 	mov       al,byte ptr [ebx]
 	mov       ecx,dword ptr [ebp-12]
 	sar       eax,cl
-	and       al,byte ptr [edi+$adngdcka]
-	?debug L 1242
+	and       al,byte ptr [edi+$enlgdfia]
+	?debug L 1240
 ?live1@560: ; EBX = src, ESI = dst, EAX = c, EDI = dst_offset_modulo
-@254:
+@252:
 	mov       edx,8
 	sub       edx,edi
-	cmp       edx,dword ptr [ebp+16]
-	jg        short @255
-	mov       cl,byte ptr [edi+$ipmgdcka]
+	cmp       edx,dword ptr [ebp+24]
+	jg        short @253
+	mov       cl,byte ptr [edi+$mjlgdfia]
 	and       byte ptr [esi],cl
-	sub       dword ptr [ebp+16],edx
-	jmp       short @256
-@255:
-	lea       edx,dword ptr [edi+$adngdcka]
-	mov       ecx,dword ptr [ebp+16]
+	sub       dword ptr [ebp+24],edx
+	jmp       short @254
+@253:
+	lea       edx,dword ptr [edi+$enlgdfia]
+	mov       ecx,dword ptr [ebp+24]
 	mov       dl,byte ptr [edx+ecx]
-	or        dl,byte ptr [edi+$ipmgdcka]
+	or        dl,byte ptr [edi+$mjlgdfia]
 	and       byte ptr [esi],dl
-	lea       ecx,dword ptr [edi+$ipmgdcka]
-	mov       edx,dword ptr [ebp+16]
+	lea       ecx,dword ptr [edi+$mjlgdfia]
+	mov       edx,dword ptr [ebp+24]
 	and       al,byte ptr [ecx+edx]
 	xor       ecx,ecx
-	mov       dword ptr [ebp+16],ecx
-	?debug L 1243
+	mov       dword ptr [ebp+24],ecx
+	?debug L 1241
 ?live1@576: ; EBX = src, ESI = dst, EAX = c
-@256:
+@254:
 	or        byte ptr [esi],al
 	inc       esi
-	?debug L 1248
+	?debug L 1246
 ?live1@592: ; EBX = src, ESI = dst
-	mov       edi,dword ptr [ebp+16]
+	mov       edi,dword ptr [ebp+24]
 	test      edi,edi
-	jns       short @257
+	jns       short @255
 	add       edi,7
-@257:
+@255:
 	sar       edi,3
-	jmp       short @259
-	?debug L 1251
+	jmp       short @257
+	?debug L 1249
 ?live1@608: ; EBX = src, ESI = dst, EDI = byte_len
-@258:
+@256:
 	mov       ecx,dword ptr [ebp-8]
 	mov       al,byte ptr [ebx]
 	shl       al,cl
 	inc       ebx
-	?debug L 1252
+	?debug L 1250
 ?live1@624: ; EBX = src, ESI = dst, EAX = c, EDI = byte_len
 	mov       ecx,dword ptr [ebp-12]
 	xor       edx,edx
 	mov       dl,byte ptr [ebx]
 	sar       edx,cl
 	or        al,dl
-	?debug L 1253
+	?debug L 1251
 	mov       byte ptr [esi],al
 	inc       esi
-	?debug L 1250
+	?debug L 1248
 ?live1@656: ; EBX = src, ESI = dst, EDI = byte_len
-@259:
+@257:
 	dec       edi
-	jns       short @258
-	?debug L 1259
+	jns       short @256
+	?debug L 1257
 ?live1@672: ; EBX = src, ESI = dst
-	mov       edi,dword ptr [ebp+16]
+	mov       edi,dword ptr [ebp+24]
 	and       edi,-2147483641
-	jns       short @260
+	jns       short @258
 	dec       edi
 	or        edi,-8
 	inc       edi
-	?debug L 1260
+	?debug L 1258
 ?live1@688: ; EBX = src, ESI = dst, EDI = src_len_modulo
-@260:
+@258:
 	test      edi,edi
-	je        short @261
-	?debug L 1261
+	je        short @259
+	?debug L 1259
 	mov       ecx,dword ptr [ebp-8]
 	mov       al,byte ptr [ebx]
 	shl       al,cl
 	inc       ebx
-	?debug L 1262
+	?debug L 1260
 ?live1@720: ; EBX = src, ESI = dst, EAX = c, EDI = src_len_modulo
 	xor       edx,edx
 	mov       ecx,dword ptr [ebp-12]
 	mov       dl,byte ptr [ebx]
 	sar       edx,cl
 	or        al,dl
-	?debug L 1265
-?live1@736: ; ESI = dst, EAX = c, EDI = src_len_modulo
-	mov       dl,byte ptr [edi+$adngdcka]
 	?debug L 1263
-	and       al,byte ptr [edi+$ipmgdcka]
-	?debug L 1265
+?live1@736: ; ESI = dst, EAX = c, EDI = src_len_modulo
+	mov       dl,byte ptr [edi+$enlgdfia]
+	?debug L 1261
+	and       al,byte ptr [edi+$mjlgdfia]
+	?debug L 1263
 	and       byte ptr [esi],dl
-	?debug L 1266
+	?debug L 1264
 ?live1@784: ; ESI = dst, EAX = c
 	or        byte ptr [esi],al
-	?debug L 1270
+	?debug L 1268
 ?live1@800: ; 
+@259:
+@260:
+@249:
 @261:
+@229:
 @262:
-@251:
-@263:
-@231:
-@264:
 	pop       edi
 	pop       esi
 	pop       ebx
@@ -6845,7 +6735,7 @@ _TEXT	segment dword public use32 'CODE'
 	pop       ebp
 	ret       20
 	?debug L 0
-@bitarray_copy$qqspxuciipuci	endp
+@bitmove$qqspxucipucii	endp
 _TEXT	ends
 $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	46
@@ -6859,7 +6749,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dd	?patch284
 	dd	?patch285
 	dd	?patch286
-	df	@bitarray_copy$qqspxuciipuci
+	df	@bitmove$qqspxucipucii
 	dw	0
 	dw	4193
 	dw	0
@@ -6890,7 +6780,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	?patch287
 	dw	529
 	dw	?patch288
-	dd	?live1@16-@bitarray_copy$qqspxuciipuci
+	dd	?live1@16-@bitmove$qqspxucipucii
 	dd	?live1@80-?live1@16
 	dw	17
 ?patch288	equ	1
@@ -6899,7 +6789,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	512
 	dw	16
 	dw	0
-	dw	116
+	dw	1056
 	dw	0
 	dw	214
 	dw	0
@@ -6909,12 +6799,20 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	512
 	dw	20
 	dw	0
-	dw	1056
+	dw	116
 	dw	0
 	dw	215
 	dw	0
 	dw	0
 	dw	0
+	dw	?patch289
+	dw	529
+	dw	?patch290
+	dd	?live1@16-@bitmove$qqspxucipucii
+	dd	?live1@96-?live1@16
+	dw	19
+?patch290	equ	1
+?patch289	equ	14
 	dw	18
 	dw	512
 	dw	24
@@ -6925,17 +6823,9 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dw	0
-	dw	?patch289
-	dw	529
-	dw	?patch290
-	dd	?live1@16-@bitarray_copy$qqspxuciipuci
-	dd	?live1@96-?live1@16
-	dw	19
-?patch290	equ	1
-?patch289	equ	14
 	dw	22
 	dw	513
-	df	$adngdcka
+	df	$enlgdfia
 	dw	0
 	dw	4197
 	dw	0
@@ -6945,7 +6835,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	22
 	dw	513
-	df	$ipmgdcka
+	df	$mjlgdfia
 	dw	0
 	dw	4199
 	dw	0
@@ -6955,7 +6845,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	22
 	dw	513
-	df	$ammgdcka
+	df	$eglgdfia
 	dw	0
 	dw	4201
 	dw	0
@@ -6970,7 +6860,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dd	?patch291
-	df	@232
+	df	@230
 	dw	0
 	dw	0
 	dw	16
@@ -6985,10 +6875,10 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	?patch292
 	dw	529
 	dw	?patch293
-	dd	?live1@96-@bitarray_copy$qqspxuciipuci
+	dd	?live1@96-@bitmove$qqspxucipucii
 	dd	?live1@192-?live1@96
 	dw	24
-	dd	?live1@368-@bitarray_copy$qqspxuciipuci
+	dd	?live1@368-@bitmove$qqspxucipucii
 	dd	?live1@576-?live1@368
 	dw	24
 ?patch293	equ	2
@@ -7005,16 +6895,16 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	?patch294
 	dw	529
 	dw	?patch295
-	dd	?live1@80-@bitarray_copy$qqspxuciipuci
+	dd	?live1@80-@bitmove$qqspxucipucii
 	dd	?live1@128-?live1@80
 	dw	17
-	dd	?live1@368-@bitarray_copy$qqspxuciipuci
+	dd	?live1@368-@bitmove$qqspxucipucii
 	dd	?live1@400-?live1@368
 	dw	17
-	dd	?live1@480-@bitarray_copy$qqspxuciipuci
+	dd	?live1@480-@bitmove$qqspxucipucii
 	dd	?live1@496-?live1@480
 	dw	17
-	dd	?live1@512-@bitarray_copy$qqspxuciipuci
+	dd	?live1@512-@bitmove$qqspxucipucii
 	dd	?live1@528-?live1@512
 	dw	17
 ?patch295	equ	4
@@ -7031,10 +6921,10 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	?patch296
 	dw	529
 	dw	?patch297
-	dd	?live1@64-@bitarray_copy$qqspxuciipuci
+	dd	?live1@64-@bitmove$qqspxucipucii
 	dd	?live1@352-?live1@64
 	dw	23
-	dd	?live1@368-@bitarray_copy$qqspxuciipuci
+	dd	?live1@368-@bitmove$qqspxucipucii
 	dd	?live1@800-?live1@368
 	dw	23
 ?patch297	equ	2
@@ -7051,10 +6941,10 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	?patch298
 	dw	529
 	dw	?patch299
-	dd	?live1@48-@bitarray_copy$qqspxuciipuci
+	dd	?live1@48-@bitmove$qqspxucipucii
 	dd	?live1@352-?live1@48
 	dw	20
-	dd	?live1@368-@bitarray_copy$qqspxuciipuci
+	dd	?live1@368-@bitmove$qqspxucipucii
 	dd	?live1@736-?live1@368
 	dw	20
 ?patch299	equ	2
@@ -7066,7 +6956,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dd	?patch300
-	df	@239
+	df	@237
 	dw	0
 	dw	0
 	dw	18
@@ -7091,7 +6981,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	?patch301
 	dw	529
 	dw	?patch302
-	dd	?live1@224-@bitarray_copy$qqspxuciipuci
+	dd	?live1@224-@bitmove$qqspxucipucii
 	dd	?live1@304-?live1@224
 	dw	24
 ?patch302	equ	1
@@ -7103,7 +6993,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dd	?patch303
-	df	@242
+	df	@240
 	dw	0
 	dw	0
 	dw	16
@@ -7118,18 +7008,18 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	?patch304
 	dw	529
 	dw	?patch305
-	dd	?live1@144-@bitarray_copy$qqspxuciipuci
+	dd	?live1@144-@bitmove$qqspxucipucii
 	dd	?live1@160-?live1@144
 	dw	1
-	dd	?live1@176-@bitarray_copy$qqspxuciipuci
+	dd	?live1@176-@bitmove$qqspxucipucii
 	dd	?live1@208-?live1@176
 	dw	1
 ?patch305	equ	2
 ?patch304	equ	24
-?patch303	equ	@245-@242
+?patch303	equ	@243-@240
 	dw	2
 	dw	6
-?patch300	equ	@250-@239
+?patch300	equ	@248-@237
 	dw	2
 	dw	6
 	dw	24
@@ -7139,7 +7029,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dd	?patch306
-	df	@252
+	df	@250
 	dw	0
 	dw	0
 	dw	16
@@ -7154,16 +7044,16 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	?patch307
 	dw	529
 	dw	?patch308
-	dd	?live1@432-@bitarray_copy$qqspxuciipuci
+	dd	?live1@432-@bitmove$qqspxucipucii
 	dd	?live1@480-?live1@432
 	dw	1
-	dd	?live1@560-@bitarray_copy$qqspxuciipuci
+	dd	?live1@560-@bitmove$qqspxucipucii
 	dd	?live1@592-?live1@560
 	dw	1
-	dd	?live1@624-@bitarray_copy$qqspxuciipuci
+	dd	?live1@624-@bitmove$qqspxucipucii
 	dd	?live1@656-?live1@624
 	dw	1
-	dd	?live1@720-@bitarray_copy$qqspxuciipuci
+	dd	?live1@720-@bitmove$qqspxucipucii
 	dd	?live1@800-?live1@720
 	dw	1
 ?patch308	equ	4
@@ -7180,7 +7070,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	?patch309
 	dw	529
 	dw	?patch310
-	dd	?live1@688-@bitarray_copy$qqspxuciipuci
+	dd	?live1@688-@bitmove$qqspxucipucii
 	dd	?live1@784-?live1@688
 	dw	24
 ?patch310	equ	1
@@ -7197,7 +7087,7 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	?patch311
 	dw	529
 	dw	?patch312
-	dd	?live1@608-@bitarray_copy$qqspxuciipuci
+	dd	?live1@608-@bitmove$qqspxucipucii
 	dd	?live1@672-?live1@608
 	dw	24
 ?patch312	equ	1
@@ -7222,15 +7112,15 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 	dw	0
 	dw	0
 	dw	0
-?patch306	equ	@262-@252
+?patch306	equ	@260-@250
 	dw	2
 	dw	6
-?patch291	equ	@263-@232
+?patch291	equ	@261-@230
 	dw	2
 	dw	6
-?patch284	equ	@264-@bitarray_copy$qqspxuciipuci+9
+?patch284	equ	@262-@bitmove$qqspxucipucii+9
 ?patch285	equ	0
-?patch286	equ	@264-@bitarray_copy$qqspxuciipuci
+?patch286	equ	@262-@bitmove$qqspxucipucii
 	dw	2
 	dw	6
 	dw	8
@@ -7241,68 +7131,28 @@ $$BSYMS	segment byte public use32 'DEBSYM'
 $$BSYMS	ends
 _TEXT	segment dword public use32 'CODE'
 _TEXT	ends
- ?debug  C A0020008737472416C6C6F63000000
 @LocalAlloc equ LocalAlloc
  extrn   LocalAlloc:near
- ?debug  C A002000A737472416C6C6F634578000000
- ?debug  C A002000673747245716C000000
- ?debug  C A002000A7374725265416C6C6F63000000
 @LocalReAlloc equ LocalReAlloc
  extrn   LocalReAlloc:near
- ?debug  C A002000C7374725265416C6C6F634578000000
- ?debug  C A002000773747246726565000000
 @LocalFree equ LocalFree
  extrn   LocalFree:near
- ?debug  C A0020006737472447570000000
- ?debug  C A00200067374724C656E000000
- ?debug  C A00200087374725265447570000000
- ?debug  C A002000670747245716C000000
- ?debug  C A00200067374724D6F76000000
- ?debug  C A00200067074724D6F76000000
- ?debug  C A0020006737472416464000000
-@_strcat equ _strcat
- extrn   _strcat:near
- ?debug  C A0020009737472496E73657274000000
 @_strlen equ _strlen
  extrn   _strlen:near
- ?debug  C A002000673747244656C000000
- ?debug  C A002000973747244656C456E64000000
- ?debug  C A0020006737472506F73000000
- ?debug  C A0020006737472537562000000
- ?debug  C A0020009737472537562456E64000000
- ?debug  C A002000C73747244656C696D69746572000000
- ?debug  C A002000B73747245786368616E6765000000
- ?debug  C A002000F73747245786368616E676543686172000000
- ?debug  C A00200127374724578747261637446696C65526F6F74000000
- ?debug  C A00200127374724578747261637446696C6550617468000000
- ?debug  C A00200127374724578747261637446696C654E616D65000000
- ?debug  C A002000E73747246697846696C6550617468000000
- ?debug  C A0020008696E74546F537472000000
+@_strcat equ _strcat
+ extrn   _strcat:near
 @_itoa equ _itoa
  extrn   _itoa:near
- ?debug  C A0020008737472546F496E74000000
- ?debug  C A0020008707472416C6C6F63000000
- ?debug  C A002000A7074725265416C6C6F63000000
- ?debug  C A002000770747246726565000000
+@_atol equ _atol
+ extrn   _atol:near
 @_memmove equ _memmove
  extrn   _memmove:near
- ?debug  C A0020006707472526576000000
- ?debug  C A0020006707472536574000000
- ?debug  C A00200087074725365744578000000
- ?debug  C A002000670747253686C000000
- ?debug  C A0020006707472536872000000
- ?debug  C A0020006707472436D70000000
 @_memcmp equ _memcmp
  extrn   _memcmp:near
 @@std@memchr$qpviui equ @std@memchr$qpviui
  extrn   @std@memchr$qpviui:near
- ?debug  C A0020006707472436872000000
 @@std@memchr$qpxviui equ @std@memchr$qpxviui
  extrn   @std@memchr$qpxviui:near
- ?debug  C A002000A707472466E644C617374000000
- ?debug  C A0020006707472466E64000000
- ?debug  C A002000662697445716C000000
- ?debug  C A0020006626974536574000000
 @_memcpy equ _memcpy
  extrn   _memcpy:near
  ?debug  C 9F757569642E6C6962
@@ -7949,8 +7799,8 @@ $$BTYPES	segment byte public use32 'DEBTYP'
 	db        0,0,32,0,0,0,34,0,0,0,14,0,8,0,3,0
 	db        0,0,7,0,5,0,100,16,0,0,8,0,2,0,10,0
 	db        99,16,0,0,8,0,1,0,1,0,32,0,0,0,24,0
-	db        1,2,5,0,98,16,0,0,116,0,0,0,116,0,0,0
-	db        32,4,0,0,116,0,0,0,8,0,1,0,1,0,102,16
+	db        1,2,5,0,98,16,0,0,116,0,0,0,32,4,0,0
+	db        116,0,0,0,116,0,0,0,8,0,1,0,1,0,102,16
 	db        0,0,18,0,3,0,32,0,0,0,17,0,0,0,0,0
 	db        0,0,9,0,9,0,8,0,1,0,1,0,104,16,0,0
 	db        18,0,3,0,32,0,0,0,17,0,0,0,0,0,0,0
@@ -7962,22 +7812,24 @@ $$BTYPES	segment byte public use32 'DEBTYP'
 	db        16,0,1,2,3,0,3,4,0,0,34,0,0,0,117,0
 	db        0,0,14,0,8,0,3,4,0,0,7,0,1,0,112,16
 	db        0,0,8,0,1,2,1,0,3,4,0,0,14,0,8,0
-	db        112,4,0,0,0,0,2,0,114,16,0,0,12,0,1,2
-	db        2,0,112,4,0,0,3,16,0,0,14,0,8,0,117,0
-	db        0,0,0,0,1,0,116,16,0,0,8,0,1,2,1,0
+	db        117,0,0,0,0,0,1,0,114,16,0,0,8,0,1,2
+	db        1,0,3,16,0,0,14,0,8,0,112,4,0,0,0,0
+	db        2,0,116,16,0,0,12,0,1,2,2,0,112,4,0,0
 	db        3,16,0,0,14,0,8,0,112,4,0,0,0,0,3,0
 	db        118,16,0,0,16,0,1,2,3,0,116,0,0,0,112,4
-	db        0,0,116,0,0,0,14,0,8,0,3,4,0,0,0,0
-	db        3,0,120,16,0,0,16,0,1,2,3,0,3,4,0,0
-	db        66,16,0,0,117,0,0,0,14,0,8,0,116,0,0,0
-	db        0,0,3,0,122,16,0,0,16,0,1,2,3,0,66,16
-	db        0,0,66,16,0,0,117,0,0,0,14,0,8,0,3,4
-	db        0,0,0,0,3,0,124,16,0,0,16,0,1,2,3,0
-	db        3,4,0,0,116,0,0,0,117,0,0,0,14,0,8,0
-	db        66,16,0,0,0,0,3,0,126,16,0,0,16,0,1,2
-	db        3,0,66,16,0,0,116,0,0,0,117,0,0,0,14,0
-	db        8,0,3,4,0,0,0,0,3,0,128,16,0,0,16,0
-	db        1,2,3,0,3,4,0,0,66,16,0,0,117,0,0,0
+	db        0,0,116,0,0,0,14,0,8,0,18,0,0,0,0,0
+	db        1,0,120,16,0,0,8,0,1,2,1,0,3,16,0,0
+	db        14,0,8,0,3,4,0,0,0,0,3,0,122,16,0,0
+	db        16,0,1,2,3,0,3,4,0,0,66,16,0,0,117,0
+	db        0,0,14,0,8,0,116,0,0,0,0,0,3,0,124,16
+	db        0,0,16,0,1,2,3,0,66,16,0,0,66,16,0,0
+	db        117,0,0,0,14,0,8,0,3,4,0,0,0,0,3,0
+	db        126,16,0,0,16,0,1,2,3,0,3,4,0,0,116,0
+	db        0,0,117,0,0,0,14,0,8,0,66,16,0,0,0,0
+	db        3,0,128,16,0,0,16,0,1,2,3,0,66,16,0,0
+	db        116,0,0,0,117,0,0,0,14,0,8,0,3,4,0,0
+	db        0,0,3,0,130,16,0,0,16,0,1,2,3,0,3,4
+	db        0,0,66,16,0,0,117,0,0,0
 $$BTYPES	ends
 $$BNAMES	segment byte public use32 'DEBNAM'
 	db	8,'strAlloc'
@@ -8190,12 +8042,12 @@ $$BNAMES	segment byte public use32 'DEBNAM'
 	db	7,'dst_bit'
 	db	3,'src'
 	db	4,'bits'
-	db	13,'bitarray_copy'
+	db	7,'bitmove'
 	db	7,'src_org'
 	db	10,'src_offset'
-	db	7,'src_len'
 	db	7,'dst_org'
 	db	10,'dst_offset'
+	db	7,'src_len'
 	db	16,'reverse_mask_xor'
 	db	12,'reverse_mask'
 	db	4,'mask'
@@ -8547,5 +8399,5 @@ $$BNAMES	ends
 	?debug	D "C:\PROGRAM FILES\BORLAND\CBUILDER5\INCLUDE\_stddef.h" 10305 12288
 	?debug	D "C:\PROGRAM FILES\BORLAND\CBUILDER5\INCLUDE\mem.h" 10503 12320
 	?debug	D "C:\PROGRAM FILES\BORLAND\CBUILDER5\INCLUDE\WINDOWS.H" 10305 12288
-	?debug	D "D:\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp" 19623 31324
+	?debug	D "D:\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp" 19624 28422
 	end

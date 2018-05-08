@@ -9,8 +9,7 @@
 //---------------------------------------------------------------------------
 extern "C" {
 //---------------------------------------------------------------------------
-__declspec(dllexport) class __bitptr_hdrcoder {
-public:
+__declspec(dllexport) struct __ptrptr_hdrcoder {
 __declspec(dllexport) unsigned char __stdcall   Code_ptrBrun(DWORD *alpcode,DWORD axdata_uncoded_elsize,DWORD axdata_uncoded_counte);
 __declspec(dllexport) unsigned char __stdcall DeCode_ptrBrun(DWORD *alpdata_uncoded_elsize,DWORD *alpdata_uncoded_counte,DWORD *alpcode);
 __declspec(dllexport) unsigned char __stdcall  Price_ptrBrun(DWORD axdata_uncoded_elsize,DWORD axdata_uncoded_counte);
@@ -22,8 +21,7 @@ __declspec(dllexport) unsigned char __stdcall DeCode_ptrPass(DWORD *alpdata_unco
 __declspec(dllexport) unsigned char __stdcall  Price_ptrPass(DWORD axdata_uncoded_length);
 };
 //---------------------------------------------------------------------------
-__declspec(dllexport) class __ptrptr_hdrcoder {
-public:
+__declspec(dllexport) struct __bitptr_hdrcoder {
 __declspec(dllexport) unsigned char __stdcall   Code_ptrBrun(DWORD *alpcode,DWORD axdata_uncoded_elsize,DWORD axdata_uncoded_counte);
 __declspec(dllexport) unsigned char __stdcall DeCode_ptrBrun(DWORD *alpdata_uncoded_elsize,DWORD *alpdata_uncoded_counte,DWORD *alpcode);
 __declspec(dllexport) unsigned char __stdcall  Price_ptrBrun(DWORD axdata_uncoded_elsize,DWORD axdata_uncoded_counte);

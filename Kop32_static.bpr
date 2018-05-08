@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="Kop32_static.exe"/>
+    <OBJFILES value="Kop32_static.obj Koper_frm.obj Break_frm.obj Haslo_frm.obj Infos_frm.obj 
+      Journal_frm.obj Lista_frm.obj Quest_frm.obj 
+      ..\..\FORM_TEMPLATES\About_frm.obj LIB\DLLIO\TSoft_IO.obj 
+      LIB\DLLDatabase\TSoft_Database.obj LIB\DLLKop32\TSoft_Ari.obj 
+      LIB\DLLKop32\TSoft_BinTree.obj LIB\DLLKop32\TSoft_BWTMatrix.obj 
+      LIB\DLLKop32\TSoft_HDR.obj LIB\DLLKop32\TSoft_Huff.obj 
+      LIB\DLLKop32\TSoft_Koder.obj LIB\DLLKop32\TSoft_Kop32.obj 
+      LIB\DLLKop32\TSoft_Mtf.obj LIB\DLLKop32\TSoft_Pharser.obj 
+      LIB\DLLKop32\TSoft_Seeker.obj LIB\DLLKop32\TSoft_Stack.obj 
+      LIB\DLLKop32\DLLKop32.obj"/>
+    <RESFILES value="Kop32.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) Koper_frm.dfm Break_frm.dfm Haslo_frm.dfm Infos_frm.dfm 
+      Journal_frm.dfm Lista_frm.dfm Quest_frm.dfm 
+      ..\..\FORM_TEMPLATES\About_frm.dfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value="dclusr50.lib Vclx50.lib Vcl50.lib vclx.lib dclusr50.lib vcl.lib"/>
+    <SPARELIBS value="vcl.lib dclusr50.lib vclx.lib Vcl50.lib Vclx50.lib dclusr50.lib"/>
+    <PACKAGES value="Vcl50.bpi Vclx50.bpi bcbsmp50.bpi dclocx50.bpi bcb2kaxserver50.bpi 
+      dclusr50.bpi"/>
+    <PATHCPP value=".;..\..\FORM_TEMPLATES;LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="NO_WIN32_LEAN_AND_MEAN;_DEBUG"/>
+    <SYSDEFINES value="NO_STRICT"/>
+    <MAINSOURCE value="Kop32_static.cpp"/>
+    <INCLUDEPATH value="..\..;..;LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;&quot;C:\Program Files\Borland\CBuilder6\Projects\&quot;;..\..\form_templates;..\..\forms;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages"/>
+    <LIBPATH value="..\..\FORM_TEMPLATES;..\..;..;&quot;C:\Program Files\Borland\CBuilder6\Projects\&quot;;..\forms;LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\forms;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;LIB"/>
+    <WARNINGS value="-w-par"/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I..\..\forms -I$(BCB)\include -I$(BCB)\include\vcl -I..\..\Packages 
+      -I.\LIB\DLLKop32 -src_suffix cpp -boa"/>
+    <CFLAG1 value="-O2 -H=$(BCB)\lib\vcl50.csm -Hc -Q -Vx -Ve -xf -xp -VF -C -ff -X- -ps -a8 
+      -6 -b -d -k -y -v -vi- -c -tW -tWM"/>
+    <PFLAGS value="-$YD -$W -$I- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/ml /w2 /zi"/>
+    <LFLAGS value="-D&quot;&quot; -S:0x200000 -aa -Tpe -GD -s -M -v"/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mt.lib"/>
+  </LINKER>
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=3
+MinorVer=3
+Release=1
+Build=523
+Debug=0
+PreRelease=1
+Special=0
+Private=0
+DLL=0
+Locale=1045
+CodePage=1250
+
+[Version Info Keys]
+CompanyName=TSOFT/ SSTSOFT Stanislaw Stasiak 2000-2018
+FileDescription=
+FileVersion=3.3.1.523
+InternalName=SSTSOFT.KOPEREK
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=Kop32_static.exe
+ProductName=
+ProductVersion=1.0.0.0
+Comments=sstsoft@wp.pl
+
+[HistoryLists\hlIncludePath]
+Count=14
+Item0=..\..;..;LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;C:\Program Files\Borland\CBuilder6\Projects\;..\..\form_templates;..\..\forms;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages
+Item1=..\..;..\;LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;C:\Program Files\Borland\CBuilder6\Projects\;..\..\form_templates;..\..\forms;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages
+Item2=LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;C:\Program Files\Borland\CBuilder6\Projects\;..\..\form_templates;..\..\forms;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages
+Item3=.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;C:\Program Files\Borland\CBuilder6\Projects;..\..\form_templates;..\..\forms;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages
+Item4=.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;C:\Program Files\Borland\CBuilder6\Projects;..\..\form_templates;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;..\..\forms;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages
+Item5=C:\Program Files\Borland\CBuilder6\Projects;..\..\form_templates;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;..\..\forms;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages
+Item6=C:\Program Files\Borland\CBuilder6\Projects;..\..\FORM_TEMPLATES;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;..\..\FORM_TEMPLATES;$(BCB)\include;$(BCB)\include\vcl;..\Packages
+Item7=..\..\FORM_TEMPLATES;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;..\..\FORM_TEMPLATES;$(BCB)\include;$(BCB)\include\vcl;..\Packages
+Item8=..\..\FORM_TEMPLATES;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;..\..\FORM_TEMPLATES;$(BCB)\include;$(BCB)\include\vcl;..\Packages;.\LIB\DLLKop32
+Item9=..\..\FORM_TEMPLATES;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;..\..\FORM_TEMPLATES;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages;.\LIB\DLLKop32
+Item10=.\LIB\DLLIO;..\..\FORM_TEMPLATES;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages;.\LIB\DLLKop32
+Item11=..\..\FORM_TEMPLATES;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages;.\LIB\DLLKop32
+Item12=..\..\FORM_TEMPLATES;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages;.\LIB
+Item13=..\..\FORM_TEMPLATES;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=14
+Item0=..\..\FORM_TEMPLATES;..\..;..;C:\Program Files\Borland\CBuilder6\Projects\;..\forms;LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\forms;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;LIB
+Item1=..\..\FORM_TEMPLATES;..\..;..\;C:\Program Files\Borland\CBuilder6\Projects\;..\forms;LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\forms;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;LIB
+Item2=C:\Program Files\Borland\CBuilder6\Projects\;..\forms;LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\forms;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;LIB
+Item3=C:\Program Files\Borland\CBuilder6\Projects;..\forms;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\forms;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;.\LIB
+Item4=C:\Program Files\Borland\CBuilder6\Projects;..\forms;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;.\LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\forms;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;.\LIB
+Item5=C:\Program Files\Borland\CBuilder6\Projects;..\..\FORM_TEMPLATES;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;.\LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\FORM_TEMPLATES;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;.\LIB
+Item6=C:\Program Files\Borland\CBuilder6\Projects;..\..\FORM_TEMPLATES;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;.\LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\FORM_TEMPLATES;$(BCB)\lib\obj;$(BCB)\lib;..\Packages;.\LIB
+Item7=..\..\FORM_TEMPLATES;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;.\LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\FORM_TEMPLATES;$(BCB)\lib\obj;$(BCB)\lib;..\Packages;.\LIB
+Item8=..\..\FORM_TEMPLATES;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;.\LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\FORM_TEMPLATES;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;.\LIB
+Item9=.\LIB\DLLIO;.\LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\FORM_TEMPLATES;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;.\LIB
+Item10=.\LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\FORM_TEMPLATES;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;.\LIB
+Item11=$(BCB)\Projects\Lib;..\..\FORM_TEMPLATES;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;.\LIB
+Item12=..\..\FORM_TEMPLATES;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;.\LIB
+Item13=..\..\FORM_TEMPLATES;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=5
+Item0=NO_WIN32_LEAN_AND_MEAN;_DEBUG
+Item1=WIN32_LEAN_AND_MEAN;_DEBUG
+Item2=WIN32_LEAN_AND_MEAN
+Item3=_DEBUG;WIN32_LEAN_AND_MEAN
+Item4=_DEBUG
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=/list D:\
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=1
+LinkDebugVcl=1
+  </IDEOPTIONS>
+</PROJECT>

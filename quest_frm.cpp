@@ -58,50 +58,24 @@ Edit3->Text = Kop->options.Masks.Text[COMMA];
 
 switch (Kop->options.Operation) {
 case opKOPIUJ:
-   Image2->Picture->Icon->Handle = LoadIcon(hInst,"MAINICON");
-   QuestForm->Caption = "Confirm copying...";
+    SpeedButton5Click(this);
 break;
 case opPRZENIES:
-   Image2->Picture->Icon->Handle = LoadIcon(hInst,"MAINICON2");
-   QuestForm->Caption = "Confirm moveing...";
-break;
-case opUSUN:
-   Image2->Picture->Icon->Handle = LoadIcon(hInst,"MAINICON3");
-   QuestForm->Caption = "Confirm deletion...";
+    SpeedButton6Click(this);
 break;
 case opKODUJ:
-   Image2->Picture->Icon->Handle = LoadIcon(hInst,"MAINICON4");
-   QuestForm->Caption = "Confirm compression...";
+    SpeedButton8Click(this);
 break;
 case opDEKODUJ:
-   Image2->Picture->Icon->Handle = LoadIcon(hInst,"MAINICON5");
-   QuestForm->Caption = "Confirm decompression...";
+    SpeedButton9Click(this);
+break;
+case opUSUN:
+    SpeedButton7Click(this);
 break;
 case opLISTUJ:
-   Image2->Picture->Icon->Handle = LoadIcon(hInst,"MAINICON8");
-   QuestForm->Caption = "Confirm listing...";
+    SpeedButton10Click(this);
 break;
 }
-if (Kop->options.Operation==opKODUJ)
-   {PageControl1->ActivePageIndex = 0;
-    TabSheet2->TabVisible = true;
-    Button2->Caption = "&Next >";
-    Button2->ModalResult = mrNone;
-    CheckBox1->Checked = (Kop->options.Methods & mtXOR)!=0;
-    CheckBox2->Checked = (Kop->options.Methods & mtSXQ)!=0;
-    CheckBox3->Checked = (Kop->options.Methods & mtLZS)!=0;
-    CheckBox4->Checked = (Kop->options.Methods & mtBWT)!=0;
-    CheckBox5->Checked = (Kop->options.Methods & mtMTF)!=0;
-    CheckBox6->Checked = (Kop->options.Methods & mtHUF)!=0;
-    CheckBox7->Checked = (Kop->options.Methods & mtARI)!=0;
-   }
-else
-   {PageControl1->ActivePageIndex = 0;
-    TabSheet2->TabVisible = false;
-    Button2->Caption = "&OK";
-    Button2->ModalResult = mrYes;
-   }
-
 if (!this->Visible) return ShowModal();
 else return mrNo;
 }
@@ -294,53 +268,105 @@ else
 }
 //---------------------------------------------------------------------------
 
-
-
-
-
-
-void __fastcall TQuestForm::SpeedButton8Click(TObject *Sender)
-{
-SpeedButton8->Down = true;
-}
-//---------------------------------------------------------------------------
-
 void __fastcall TQuestForm::SpeedButton5Click(TObject *Sender)
 {
-SpeedButton5->Down = true;
+   Image2->Picture->Icon->Handle = LoadIcon(hInst,"MAINICON");
+   QuestForm->Caption = "Confirm file COPY...";
+   SpeedButton5->Down = true;
+   SpeedButton12->Enabled = false; Edit2->Enabled = false;
+   TabSheet2->TabVisible = false;
+   Button2->ModalResult = mrYes;
+   Button2->Caption = "&OK";
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TQuestForm::SpeedButton6Click(TObject *Sender)
 {
-SpeedButton6->Down = true;
-
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TQuestForm::SpeedButton10Click(TObject *Sender)
-{
-SpeedButton10->Down = true;
+   Image2->Picture->Icon->Handle = LoadIcon(hInst,"MAINICON2");
+   QuestForm->Caption = "Confirm file MOVE...";
+   SpeedButton6->Down = true;
+   SpeedButton12->Enabled = false; Edit2->Enabled = false;
+   TabSheet2->TabVisible = false;
+   Button2->ModalResult = mrYes;
+   Button2->Caption = "&OK";
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TQuestForm::SpeedButton7Click(TObject *Sender)
 {
-SpeedButton7->Down = true;
+   Image2->Picture->Icon->Handle = LoadIcon(hInst,"MAINICON3");
+   QuestForm->Caption = "Confirm file DELETION...";
+   SpeedButton7->Down = true;
+   SpeedButton12->Enabled = false; Edit2->Enabled = false;
+   TabSheet2->TabVisible = false;
+   Button2->ModalResult = mrYes;
+   Button2->Caption = "&OK";
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TQuestForm::SpeedButton11Click(TObject *Sender)
+void __fastcall TQuestForm::SpeedButton8Click(TObject *Sender)
 {
-SpeedButton11->Down = true;
+   Image2->Picture->Icon->Handle = LoadIcon(hInst,"MAINICON4");
+   QuestForm->Caption = "Confirm Compression... (.eno)";
+   SpeedButton8->Down = true;
+   SpeedButton12->Enabled = false; Edit2->Enabled = false;
+   TabSheet2->TabVisible = true;
+   if (Kop->options.Operation==opKODUJ) {
+    CheckBox1->Checked = (Kop->options.Methods & mtXOR)!=0;
+    CheckBox2->Checked = (Kop->options.Methods & mtSXQ)!=0;
+    CheckBox3->Checked = (Kop->options.Methods & mtLZS)!=0;
+    CheckBox4->Checked = (Kop->options.Methods & mtBWT)!=0;
+    CheckBox5->Checked = (Kop->options.Methods & mtMTF)!=0;
+    CheckBox6->Checked = (Kop->options.Methods & mtHUF)!=0;
+    CheckBox7->Checked = (Kop->options.Methods & mtARI)!=0;
+   }
+   else {
+       CheckBox1->Checked = false;
+       CheckBox2->Checked = false;
+       CheckBox3->Checked = true;
+       CheckBox4->Checked = false;
+       CheckBox5->Checked = false;
+       CheckBox6->Checked = true;
+       CheckBox7->Checked = false;
+       Kop->options.Operation==opKODUJ;
+       Kop->options.Methods = mtLZS | mtHUF;
+   }
+   Button2->ModalResult = mrNone;
+   Button2->Caption = "&Next >";
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TQuestForm::SpeedButton9Click(TObject *Sender)
 {
-SpeedButton9->Down = true;
+   Image2->Picture->Icon->Handle = LoadIcon(hInst,"MAINICON5");
+   QuestForm->Caption = "Confirm Decompression...";
+   SpeedButton9->Down = true;
+   SpeedButton12->Enabled = false; Edit2->Enabled = false;
+   TabSheet2->TabVisible = false;
+   Kop->options.Operation==opDEKODUJ;
+   Button2->ModalResult = mrYes;
+   Button2->Caption = "&OK";
 }
 //---------------------------------------------------------------------------
+
+void __fastcall TQuestForm::SpeedButton13Click(TObject *Sender)
+{
+//SpeedButton11->Down = true;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TQuestForm::SpeedButton10Click(TObject *Sender)
+{
+   Image2->Picture->Icon->Handle = LoadIcon(hInst,"MAINICON8");
+   QuestForm->Caption = "Confirm listing...";
+   SpeedButton10->Down = true;
+   SpeedButton12->Enabled = true;
+   Edit2->Enabled = true;
+   Button2->ModalResult = mrYes;
+   Button2->Caption = "&OK";
+}
+//---------------------------------------------------------------------------
+
 
 
 

@@ -4,6 +4,73 @@
 #include <windows.h>
 #include "TSoft_HDR.h"
 //---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+
+unsigned char __stdcall __ptrptr_hdrcoder::Price_ptrPass(DWORD axdata_uncoded_length)
+{
+return 1;
+}
+//---------------------------------------------------------------------------
+
+unsigned char __stdcall __ptrptr_hdrcoder::Code_ptrPass(DWORD *alpcode,DWORD axdata_uncoded_length)
+{
+((BYTE*)alpcode)[0] = ((axdata_uncoded_length-1)<<2) | XPASS_CODE;
+return 1;
+}
+//---------------------------------------------------------------------------
+
+unsigned char __stdcall __ptrptr_hdrcoder::DeCode_ptrPass(DWORD *alpdata_uncoded_length,DWORD *alpcode)
+{
+alpdata_uncoded_length[0] = (((BYTE*)alpcode)[0]>>2) & 0x3F + 1;
+return 1;
+}
+//---------------------------------------------------------------------------
+
+unsigned char __stdcall __ptrptr_hdrcoder::Price_ptrBrun(DWORD axdata_uncoded_elsize,DWORD axdata_uncoded_counte)
+{
+return 2;
+}
+//---------------------------------------------------------------------------
+
+unsigned char __stdcall __ptrptr_hdrcoder::Code_ptrBrun(DWORD *alpcode,DWORD axdata_uncoded_elsize,DWORD axdata_uncoded_counte)
+{
+((WORD*)alpcode)[0] = ((axdata_uncoded_elsize-1)<<8) | ((axdata_uncoded_counte-1)<<2) | XBRUN_CODE;
+return 2;
+}
+//---------------------------------------------------------------------------
+
+unsigned char __stdcall __ptrptr_hdrcoder::DeCode_ptrBrun(DWORD *alpdata_uncoded_elsize,DWORD *alpdata_uncoded_counte,DWORD *alpcode)
+{
+alpdata_uncoded_counte[0] = (((WORD*)alpcode)[0]>>2) & 0x3F + 1;
+alpdata_uncoded_elsize[0] = (((WORD*)alpcode)[0]>>8) & 0x03 + 1;
+return 2;
+}
+//---------------------------------------------------------------------------
+
+unsigned char __stdcall __ptrptr_hdrcoder::Price_ptrDict(DWORD axdata_uncoded_offset,DWORD axdata_uncoded_length)
+{
+return 3;
+}
+//---------------------------------------------------------------------------
+
+unsigned char __stdcall __ptrptr_hdrcoder::Code_ptrDict(DWORD *alpcode,DWORD axdata_uncoded_offset,DWORD axdata_uncoded_length)
+{
+((DWORD*)alpcode)[0] = ((axdata_uncoded_offset-1)<<8) | ((axdata_uncoded_length-1)<<2) | XDICT_CODE;
+return 3;
+}
+//---------------------------------------------------------------------------
+
+unsigned char __stdcall __ptrptr_hdrcoder::DeCode_ptrDict(DWORD *alpdata_uncoded_offset,DWORD *alpdata_uncoded_length,DWORD *alpcode)
+{
+alpdata_uncoded_length[0] = (((DWORD*)alpcode)[0]>>2) & 0x3F   + 1;
+alpdata_uncoded_offset[0] = (((DWORD*)alpcode)[0]>>8) & 0xFFFF + 1;
+return 3;
+}
+//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+// OLD BIT HEADERS Borland C++ 5 Professional/6 Personal, MSVC++
+//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
 
 unsigned char __stdcall __bitptr_hdrcoder::Price_ptrPass(DWORD axdata_uncoded_length)
 {
@@ -380,70 +447,7 @@ asm { add  AL,AH                   		}
 }
 //---------------------------------------------------------------------------
 //---------------------------------------------------------------------------
-//---------------------------------------------------------------------------
-//---------------------------------------------------------------------------
-//---------------------------------------------------------------------------
-
-unsigned char __stdcall __ptrptr_hdrcoder::Price_ptrPass(DWORD axdata_uncoded_length)
-{
-return 1;
-}
-//---------------------------------------------------------------------------
-
-unsigned char __stdcall __ptrptr_hdrcoder::Code_ptrPass(DWORD *alpcode,DWORD axdata_uncoded_length)
-{
-((BYTE*)alpcode)[0] = ((axdata_uncoded_length-1)<<2) | XPASS_CODE;
-return 1;
-}
-//---------------------------------------------------------------------------
-
-unsigned char __stdcall __ptrptr_hdrcoder::DeCode_ptrPass(DWORD *alpdata_uncoded_length,DWORD *alpcode)
-{
-alpdata_uncoded_length[0] = (((BYTE*)alpcode)[0]>>2) & 0x3F + 1;
-return 1;
-}
-//---------------------------------------------------------------------------
-
-unsigned char __stdcall __ptrptr_hdrcoder::Price_ptrBrun(DWORD axdata_uncoded_elsize,DWORD axdata_uncoded_counte)
-{
-return 2;
-}
-//---------------------------------------------------------------------------
-
-unsigned char __stdcall __ptrptr_hdrcoder::Code_ptrBrun(DWORD *alpcode,DWORD axdata_uncoded_elsize,DWORD axdata_uncoded_counte)
-{
-((WORD*)alpcode)[0] = ((axdata_uncoded_elsize-1)<<8) | ((axdata_uncoded_counte-1)<<2) | XBRUN_CODE;
-return 2;
-}
-//---------------------------------------------------------------------------
-
-unsigned char __stdcall __ptrptr_hdrcoder::DeCode_ptrBrun(DWORD *alpdata_uncoded_elsize,DWORD *alpdata_uncoded_counte,DWORD *alpcode)
-{
-alpdata_uncoded_counte[0] = (((WORD*)alpcode)[0]>>2) & 0x3F + 1;
-alpdata_uncoded_elsize[0] = (((WORD*)alpcode)[0]>>8) & 0x03 + 1;
-return 2;
-}
-//---------------------------------------------------------------------------
-
-unsigned char __stdcall __ptrptr_hdrcoder::Price_ptrDict(DWORD axdata_uncoded_offset,DWORD axdata_uncoded_length)
-{
-return 3;
-}
-//---------------------------------------------------------------------------
-
-unsigned char __stdcall __ptrptr_hdrcoder::Code_ptrDict(DWORD *alpcode,DWORD axdata_uncoded_offset,DWORD axdata_uncoded_length)
-{
-((DWORD*)alpcode)[0] = ((axdata_uncoded_offset-1)<<8) | ((axdata_uncoded_length-1)<<2) | XDICT_CODE;
-return 3;
-}
-//---------------------------------------------------------------------------
-
-unsigned char __stdcall __ptrptr_hdrcoder::DeCode_ptrDict(DWORD *alpdata_uncoded_offset,DWORD *alpdata_uncoded_length,DWORD *alpcode)
-{
-alpdata_uncoded_length[0] = (((DWORD*)alpcode)[0]>>2) & 0x3F   + 1;
-alpdata_uncoded_offset[0] = (((DWORD*)alpcode)[0]>>8) & 0xFFFF + 1;
-return 3;
-}
+// OLD BIT HEADERS
 //---------------------------------------------------------------------------
 //---------------------------------------------------------------------------
 

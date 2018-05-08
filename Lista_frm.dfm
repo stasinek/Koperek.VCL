@@ -1,10 +1,14 @@
 object ListaForm: TListaForm
-  Left = -239
-  Top = 20
-  Width = 1292
+  Left = 176
+  Top = 109
+  Width = 916
   Height = 495
   Caption = 'Lista'
   Color = clBtnFace
+  Constraints.MaxHeight = 600
+  Constraints.MaxWidth = 990
+  Constraints.MinHeight = 400
+  Constraints.MinWidth = 640
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -24,13 +28,13 @@ object ListaForm: TListaForm
   object Panel1: TPanel
     Left = 0
     Top = 398
-    Width = 17690
+    Width = 908
     Height = 51
     Align = alBottom
     BevelOuter = bvLowered
     TabOrder = 0
     object Button3: TButton
-      Left = 17506
+      Left = 17130
       Top = 13
       Width = 173
       Height = 25
@@ -46,7 +50,7 @@ object ListaForm: TListaForm
       OnClick = Button3Click
     end
     object Button2: TButton
-      Left = 17417
+      Left = 17041
       Top = 13
       Width = 75
       Height = 25
@@ -66,28 +70,30 @@ object ListaForm: TListaForm
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 17690
+    Width = 908
     Height = 309
     Align = alTop
-    Anchors = [akLeft, akTop, akRight, akBottom]
     BevelInner = bvRaised
     BevelOuter = bvLowered
     BevelWidth = 2
     TabOrder = 1
     object CheckListBox1: TCheckListBox
-      Left = 4
+      Left = 34
       Top = 4
-      Width = 17610
+      Width = 400
       Height = 301
       Align = alLeft
+      Constraints.MinWidth = 100
       ItemHeight = 13
       TabOrder = 0
     end
     object CheckListBox2: TCheckListBox
-      Left = 763
+      Left = 474
       Top = 4
-      Width = 17243
+      Width = 400
       Height = 301
+      Align = alRight
+      Constraints.MinWidth = 100
       ItemHeight = 13
       TabOrder = 1
     end
@@ -96,8 +102,6 @@ object ListaForm: TListaForm
       Top = 4
       Width = 72
       Height = 301
-      Align = alClient
-      Anchors = []
       BevelOuter = bvNone
       Constraints.MaxWidth = 72
       Constraints.MinWidth = 72
@@ -133,11 +137,41 @@ object ListaForm: TListaForm
         Height = 38
       end
     end
+    object Panel5: TPanel
+      Left = 434
+      Top = 4
+      Width = 40
+      Height = 301
+      Align = alClient
+      BevelOuter = bvLowered
+      Constraints.MinWidth = 40
+      TabOrder = 3
+    end
+    object Panel6: TPanel
+      Left = 4
+      Top = 4
+      Width = 30
+      Height = 301
+      Align = alLeft
+      BevelOuter = bvNone
+      Constraints.MinWidth = 30
+      TabOrder = 4
+    end
+    object Panel7: TPanel
+      Left = 874
+      Top = 4
+      Width = 30
+      Height = 301
+      Align = alRight
+      BevelOuter = bvNone
+      Constraints.MinWidth = 30
+      TabOrder = 5
+    end
   end
   object Panel3: TPanel
     Left = 0
     Top = 309
-    Width = 17690
+    Width = 908
     Height = 89
     Align = alClient
     BevelOuter = bvNone

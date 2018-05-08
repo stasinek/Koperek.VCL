@@ -122,49 +122,49 @@ options.Operation = opNULL;
 
 strEql(templp,templpDst);
 strupr(templp);
-if (Pharser(templp,"DELETE",NULL,xpos))
+if (Pharser(templp,"DELETE ",NULL,xpos))
    {options.Operation = opUSUN;
     strDelEnd(templpDst,xpos[0],xpos[3]);
 	goto ExecuteOPTIONS;
    }
 strEql(templp,templpDst);
 strupr(templp);
-if (Pharser(templp,"DECOMPRESS",NULL,xpos))
+if (Pharser(templp,"DECOMPRESS ",NULL,xpos))
    {options.Operation = opDEKODUJ;
     strDelEnd(templpDst,xpos[0],xpos[3]);
 	goto ExecuteOPTIONS;
    }
 strEql(templp,templpDst);
 strupr(templp);
-if (Pharser(templp,"COMPRESS",NULL,xpos))
+if (Pharser(templp,"COMPRESS ",NULL,xpos))
    {options.Operation = opKODUJ;
     strDelEnd(templpDst,xpos[0],xpos[3]);
     goto ExecuteOPTIONS;
    }
 strEql(templp,templpDst);
 strupr(templp);
-if (Pharser(templp,"MOVE",NULL,xpos))
+if (Pharser(templp,"MOVE ",NULL,xpos))
    {options.Operation = opPRZENIES;
     strDelEnd(templpDst,xpos[0],xpos[3]);
     goto ExecuteOPTIONS;
    }
 strEql(templp,templpDst);
 strupr(templp);
-if (Pharser(templp,"COPY",NULL,xpos))
+if (Pharser(templp,"COPY ",NULL,xpos))
    {options.Operation = opKOPIUJ;
     strDelEnd(templpDst,xpos[0],xpos[3]);
     goto ExecuteOPTIONS;
    }
 strEql(templp,templpDst);
 strupr(templp);
-if (Pharser(templp,"LIST",NULL,xpos))
+if (Pharser(templp,"LIST ",NULL,xpos))
    {options.Operation = opLISTUJ;
     strDelEnd(templpDst,xpos[0],xpos[3]);
     goto ExecuteOPTIONS;
    }
 strEql(templp,templpDst);
 strupr(templp);
-if (Pharser(templp,"SELECT",NULL,xpos))
+if (Pharser(templp,"SELECT ",NULL,xpos))
    {options.Operation = opZAZNACZ;
     strDelEnd(templpDst,xpos[0],xpos[3]);
     goto ExecuteOPTIONS;

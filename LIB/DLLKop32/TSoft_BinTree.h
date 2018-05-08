@@ -45,7 +45,7 @@ void __stdcall  Search_dict(void);
 char __stdcall  Optimum_dict_match(unsigned long ahead_length,unsigned long pass_length);
 char __stdcall  Optimum_brun_match(unsigned long ahead_length,unsigned long pass_length);
 //---------------------------------------------------------------------------
-__bitptr_hdrcoder hdrcoder;
+__ptrptr_hdrcoder hdrcoder;
 //---------------------------------------------------------------------------
 };
 //-------------------------------THE END-------------------------------------

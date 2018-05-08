@@ -40,6 +40,9 @@ __published:	// IDE-managed Components
     TMenuItem *Export1;
     TMenuItem *Right1;
     TMenuItem *Help1;
+    TPanel *Panel5;
+    TPanel *Panel6;
+    TPanel *Panel7;
 	void __fastcall Button2Click(TObject *Sender);
 	void __fastcall Button3Click(TObject *Sender);
 private:	// User declarations
