@@ -55,7 +55,7 @@ ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[D:\OBSOLETE\PROGS\Koperek.VCL\ProjectGroup1.bpg]
+[C:\Program Files\Borland\CBuilder5\Projects\ProjectGroup1.bpg]
 FormState=0
 FormOnTop=0
 
@@ -75,14 +75,14 @@ Visible=1
 State=2
 Left=200
 Top=126
-Width=870
+Width=1080
 Height=502
 MaxLeft=-4
-MaxTop=101
+MaxTop=97
 MaxWidth=1288
-MaxHeight=675
+MaxHeight=679
 ClientWidth=1280
-ClientHeight=648
+ClientHeight=652
 LeftPanelSize=0
 RightPanelSize=0
 BottomPanelSize=52
@@ -158,8 +158,8 @@ Left=0
 Top=0
 Width=1280
 Height=105
-MaxLeft=-1
-MaxTop=-1
+MaxLeft=-4
+MaxTop=-4
 MaxWidth=1288
 MaxHeight=105
 ClientWidth=1280
