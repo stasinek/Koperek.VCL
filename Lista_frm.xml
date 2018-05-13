@@ -2,17 +2,22 @@
  <guiObject>
   <name>ListaForm</name>
   <class>TListaForm</class>
-  <Left>174</Left>
-  <Top>107</Top>
-  <Width>696</Width>
-  <Height>493</Height>
+  <Left>176</Left>
+  <Top>109</Top>
+  <Width>916</Width>
+  <Height>495</Height>
   <Caption>'Lista'</Caption>
   <Color>clBtnFace</Color>
-  <Font.Charset>DEFAULT_CHARSET</Font.Charset>
+  <Constraints.MaxHeight>600</Constraints.MaxHeight>
+  <Constraints.MaxWidth>990</Constraints.MaxWidth>
+  <Constraints.MinHeight>400</Constraints.MinHeight>
+  <Constraints.MinWidth>640</Constraints.MinWidth>
+  <Font.Charset>ANSI_CHARSET</Font.Charset>
   <Font.Color>clWindowText</Font.Color>
   <Font.Height>-11</Font.Height>
-  <Font.Name>'Default'</Font.Name>
+  <Font.Name>'Tahoma'</Font.Name>
   <Font.Style>[]</Font.Style>
+  <Menu>MainMenu1</Menu>
   <OldCreateOrder>False</OldCreateOrder>
   <PixelsPerInch>96</PixelsPerInch>
   <TextHeight>13</TextHeight>
@@ -26,109 +31,233 @@
    <Caption>'Files list of requested operation:'</Caption>
   </guiObject>
   <guiObject>
-   <name>CheckListBox1</name>
-   <class>TCheckListBox</class>
-   <Left>4</Left>
-   <Top>36</Top>
-   <Width>281</Width>
-   <Height>293</Height>
-   <ItemHeight>13</ItemHeight>
+   <name>Panel1</name>
+   <class>TPanel</class>
+   <Left>0</Left>
+   <Top>398</Top>
+   <Width>908</Width>
+   <Height>51</Height>
+   <Align>alBottom</Align>
+   <BevelOuter>bvLowered</BevelOuter>
    <TabOrder>0</TabOrder>
+   <guiObject>
+    <name>Button3</name>
+    <class>TButton</class>
+    <Left>17130</Left>
+    <Top>13</Top>
+    <Width>173</Width>
+    <Height>25</Height>
+    <Anchors>[akRight, akBottom]</Anchors>
+    <Caption>'Return without &amp;changes...'</Caption>
+    <Font.Charset>ANSI_CHARSET</Font.Charset>
+    <Font.Color>clWindowText</Font.Color>
+    <Font.Height>-11</Font.Height>
+    <Font.Name>'Tahoma'</Font.Name>
+    <Font.Style>[fsBold]</Font.Style>
+    <ParentFont>False</ParentFont>
+    <TabOrder>0</TabOrder>
+    <OnClick>Button3Click</OnClick>
+   </guiObject>
+   <guiObject>
+    <name>Button2</name>
+    <class>TButton</class>
+    <Left>17041</Left>
+    <Top>13</Top>
+    <Width>75</Width>
+    <Height>25</Height>
+    <Anchors>[akRight, akBottom]</Anchors>
+    <Caption>'&amp;OK'</Caption>
+    <Font.Charset>ANSI_CHARSET</Font.Charset>
+    <Font.Color>clWindowText</Font.Color>
+    <Font.Height>-11</Font.Height>
+    <Font.Name>'Tahoma'</Font.Name>
+    <Font.Style>[]</Font.Style>
+    <ModalResult>10</ModalResult>
+    <ParentFont>False</ParentFont>
+    <TabOrder>1</TabOrder>
+    <OnClick>Button2Click</OnClick>
+   </guiObject>
   </guiObject>
   <guiObject>
-   <name>FilterComboBox1</name>
-   <class>TFilterComboBox</class>
-   <Left>428</Left>
-   <Top>348</Top>
-   <Width>145</Width>
-   <Height>21</Height>
+   <name>Panel2</name>
+   <class>TPanel</class>
+   <Left>0</Left>
+   <Top>0</Top>
+   <Width>908</Width>
+   <Height>309</Height>
+   <Align>alTop</Align>
+   <BevelInner>bvRaised</BevelInner>
+   <BevelOuter>bvLowered</BevelOuter>
+   <BevelWidth>2</BevelWidth>
    <TabOrder>1</TabOrder>
+   <guiObject>
+    <name>CheckListBox1</name>
+    <class>TCheckListBox</class>
+    <Left>34</Left>
+    <Top>4</Top>
+    <Width>400</Width>
+    <Height>301</Height>
+    <Align>alLeft</Align>
+    <Constraints.MinWidth>100</Constraints.MinWidth>
+    <ItemHeight>13</ItemHeight>
+    <TabOrder>0</TabOrder>
+   </guiObject>
+   <guiObject>
+    <name>CheckListBox2</name>
+    <class>TCheckListBox</class>
+    <Left>474</Left>
+    <Top>4</Top>
+    <Width>400</Width>
+    <Height>301</Height>
+    <Align>alRight</Align>
+    <Constraints.MinWidth>100</Constraints.MinWidth>
+    <ItemHeight>13</ItemHeight>
+    <TabOrder>1</TabOrder>
+   </guiObject>
+   <guiObject>
+    <name>Panel4</name>
+    <class>TPanel</class>
+    <Left>17614</Left>
+    <Top>4</Top>
+    <Width>72</Width>
+    <Height>301</Height>
+    <BevelOuter>bvNone</BevelOuter>
+    <Constraints.MaxWidth>72</Constraints.MaxWidth>
+    <Constraints.MinWidth>72</Constraints.MinWidth>
+    <TabOrder>2</TabOrder>
+    <guiObject>
+     <name>SpeedButton5</name>
+     <class>TSpeedButton</class>
+     <Left>17</Left>
+     <Top>200</Top>
+     <Width>40</Width>
+     <Height>38</Height>
+    </guiObject>
+    <guiObject>
+     <name>SpeedButton4</name>
+     <class>TSpeedButton</class>
+     <Left>17</Left>
+     <Top>156</Top>
+     <Width>40</Width>
+     <Height>38</Height>
+    </guiObject>
+    <guiObject>
+     <name>SpeedButton3</name>
+     <class>TSpeedButton</class>
+     <Left>17</Left>
+     <Top>112</Top>
+     <Width>40</Width>
+     <Height>38</Height>
+    </guiObject>
+    <guiObject>
+     <name>SpeedButton2</name>
+     <class>TSpeedButton</class>
+     <Left>17</Left>
+     <Top>68</Top>
+     <Width>40</Width>
+     <Height>38</Height>
+    </guiObject>
+    <guiObject>
+     <name>SpeedButton1</name>
+     <class>TSpeedButton</class>
+     <Left>17</Left>
+     <Top>24</Top>
+     <Width>40</Width>
+     <Height>38</Height>
+    </guiObject>
+   </guiObject>
+   <guiObject>
+    <name>Panel5</name>
+    <class>TPanel</class>
+    <Left>434</Left>
+    <Top>4</Top>
+    <Width>40</Width>
+    <Height>301</Height>
+    <Align>alClient</Align>
+    <BevelOuter>bvLowered</BevelOuter>
+    <Constraints.MinWidth>40</Constraints.MinWidth>
+    <TabOrder>3</TabOrder>
+   </guiObject>
+   <guiObject>
+    <name>Panel6</name>
+    <class>TPanel</class>
+    <Left>4</Left>
+    <Top>4</Top>
+    <Width>30</Width>
+    <Height>301</Height>
+    <Align>alLeft</Align>
+    <BevelOuter>bvNone</BevelOuter>
+    <Constraints.MinWidth>30</Constraints.MinWidth>
+    <TabOrder>4</TabOrder>
+   </guiObject>
+   <guiObject>
+    <name>Panel7</name>
+    <class>TPanel</class>
+    <Left>874</Left>
+    <Top>4</Top>
+    <Width>30</Width>
+    <Height>301</Height>
+    <Align>alRight</Align>
+    <BevelOuter>bvNone</BevelOuter>
+    <Constraints.MinWidth>30</Constraints.MinWidth>
+    <TabOrder>5</TabOrder>
+   </guiObject>
   </guiObject>
   <guiObject>
-   <name>FILTRUJ</name>
-   <class>TButton</class>
-   <Left>580</Left>
-   <Top>348</Top>
-   <Width>103</Width>
-   <Height>21</Height>
-   <Caption>'SET THIS FILTER'</Caption>
+   <name>Panel3</name>
+   <class>TPanel</class>
+   <Left>0</Left>
+   <Top>309</Top>
+   <Width>908</Width>
+   <Height>89</Height>
+   <Align>alClient</Align>
+   <BevelOuter>bvNone</BevelOuter>
    <TabOrder>2</TabOrder>
+   <guiObject>
+    <name>ComboBox1</name>
+    <class>TComboBox</class>
+    <Left>12</Left>
+    <Top>27</Top>
+    <Width>237</Width>
+    <Height>21</Height>
+    <ItemHeight>13</ItemHeight>
+    <TabOrder>0</TabOrder>
+    <Text>'*.*'</Text>
+    <Items.Strings>
+     <item>*.*</item>
+    </Items.Strings>
+   </guiObject>
+   <guiObject>
+    <name>FILTRUJ</name>
+    <class>TButton</class>
+    <Left>266</Left>
+    <Top>28</Top>
+    <Width>103</Width>
+    <Height>21</Height>
+    <Caption>'SET THIS FILTER'</Caption>
+    <TabOrder>1</TabOrder>
+   </guiObject>
   </guiObject>
   <guiObject>
-   <name>Button2</name>
-   <class>TButton</class>
-   <Left>428</Left>
-   <Top>432</Top>
-   <Width>75</Width>
-   <Height>25</Height>
-   <Caption>'OK'</Caption>
-   <Font.Charset>DEFAULT_CHARSET</Font.Charset>
-   <Font.Color>clWindowText</Font.Color>
-   <Font.Height>-11</Font.Height>
-   <Font.Name>'Default'</Font.Name>
-   <Font.Style>[]</Font.Style>
-   <ModalResult>10</ModalResult>
-   <ParentFont>False</ParentFont>
-   <TabOrder>3</TabOrder>
-   <OnClick>Button2Click</OnClick>
-  </guiObject>
-  <guiObject>
-   <name>Button3</name>
-   <class>TButton</class>
-   <Left>508</Left>
-   <Top>432</Top>
-   <Width>173</Width>
-   <Height>25</Height>
-   <Caption>'Return without changes...'</Caption>
-   <Font.Charset>DEFAULT_CHARSET</Font.Charset>
-   <Font.Color>clWindowText</Font.Color>
-   <Font.Height>-11</Font.Height>
-   <Font.Name>'MS Sans Serif'</Font.Name>
-   <Font.Style>[fsBold]</Font.Style>
-   <ParentFont>False</ParentFont>
-   <TabOrder>4</TabOrder>
-   <OnClick>Button3Click</OnClick>
-  </guiObject>
-  <guiObject>
-   <name>GroupBox1</name>
-   <class>TGroupBox</class>
-   <Left>4</Left>
-   <Top>340</Top>
-   <Width>381</Width>
-   <Height>117</Height>
-   <Caption>'Comparision details'</Caption>
-   <TabOrder>5</TabOrder>
-  </guiObject>
-  <guiObject>
-   <name>CheckListBox2</name>
-   <class>TCheckListBox</class>
-   <Left>392</Left>
-   <Top>36</Top>
-   <Width>289</Width>
-   <Height>293</Height>
-   <ItemHeight>13</ItemHeight>
-   <TabOrder>6</TabOrder>
-  </guiObject>
-  <guiObject>
-   <name>ValueListEditor1</name>
-   <class>TValueListEditor</class>
-   <Left>292</Left>
-   <Top>36</Top>
-   <Width>93</Width>
-   <Height>293</Height>
-   <ScrollBars>ssVertical</ScrollBars>
-   <Strings.Strings>
-    <item>z=do</item>
-   </Strings.Strings>
-   <TabOrder>7</TabOrder>
-   <TitleCaptions.Strings>
-    <item>&lt;</item>
-    <item>></item>
-   </TitleCaptions.Strings>
-   <ColWidths>
-    <item>33</item>
-    <item>54</item>
-   </ColWidths>
+   <name>MainMenu1</name>
+   <class>TMainMenu</class>
+   <Left>16</Left>
+   <Top>405</Top>
+   <guiObject>
+    <name>Export1</name>
+    <class>TMenuItem</class>
+    <Caption>'Source'</Caption>
+   </guiObject>
+   <guiObject>
+    <name>Right1</name>
+    <class>TMenuItem</class>
+    <Caption>'Destination'</Caption>
+   </guiObject>
+   <guiObject>
+    <name>Help1</name>
+    <class>TMenuItem</class>
+    <Caption>'HELP'</Caption>
+   </guiObject>
   </guiObject>
  </guiObject>
 </guiRoot>

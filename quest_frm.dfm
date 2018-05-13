@@ -3,12 +3,12 @@ object QuestForm: TQuestForm
   Top = 134
   BorderStyle = bsDialog
   Caption = 'Confirm operation'
-  ClientHeight = 453
+  ClientHeight = 393
   ClientWidth = 632
   Color = clBtnFace
-  Constraints.MaxHeight = 480
+  Constraints.MaxHeight = 420
   Constraints.MaxWidth = 640
-  Constraints.MinHeight = 480
+  Constraints.MinHeight = 420
   Constraints.MinWidth = 640
   DefaultMonitor = dmDesktop
   Font.Charset = ANSI_CHARSET
@@ -28,7 +28,7 @@ object QuestForm: TQuestForm
     Left = 0
     Top = 0
     Width = 157
-    Height = 412
+    Height = 352
     Align = alLeft
     BevelOuter = bvNone
     Color = clBlack
@@ -1192,7 +1192,7 @@ object QuestForm: TQuestForm
   end
   object Panel2: TPanel
     Left = 0
-    Top = 412
+    Top = 352
     Width = 632
     Height = 41
     Align = alBottom
@@ -1236,7 +1236,7 @@ object QuestForm: TQuestForm
     Left = 157
     Top = 0
     Width = 407
-    Height = 412
+    Height = 352
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
@@ -1275,7 +1275,7 @@ object QuestForm: TQuestForm
     end
     object Panel5: TPanel
       Left = 0
-      Top = 112
+      Top = 52
       Width = 407
       Height = 300
       Align = alBottom
@@ -1618,7 +1618,7 @@ object QuestForm: TQuestForm
     Left = 564
     Top = 0
     Width = 68
-    Height = 412
+    Height = 352
     Align = alRight
     BevelOuter = bvNone
     TabOrder = 3
@@ -1818,7 +1818,7 @@ object QuestForm: TQuestForm
       Left = 0
       Top = 0
       Width = 9
-      Height = 412
+      Height = 352
       Align = alLeft
       Shape = bsLeftLine
     end

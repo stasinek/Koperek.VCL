@@ -7,132 +7,117 @@
   produced executable.
 */
 
-#define Sysconst_SShortDayNameSun 65328
-#define Sysconst_SShortDayNameMon 65329
-#define Sysconst_SShortDayNameTue 65330
-#define Sysconst_SShortDayNameWed 65331
-#define Sysconst_SShortDayNameThu 65332
-#define Sysconst_SShortDayNameFri 65333
-#define Sysconst_SShortDayNameSat 65334
-#define Sysconst_SLongDayNameSun 65335
-#define Sysconst_SLongDayNameMon 65336
-#define Sysconst_SLongDayNameTue 65337
-#define Sysconst_SLongDayNameWed 65338
-#define Sysconst_SLongDayNameThu 65339
-#define Sysconst_SLongDayNameFri 65340
-#define Sysconst_SLongDayNameSat 65341
-#define Sysconst_SShortMonthNameSep 65344
-#define Sysconst_SShortMonthNameOct 65345
-#define Sysconst_SShortMonthNameNov 65346
-#define Sysconst_SShortMonthNameDec 65347
-#define Sysconst_SLongMonthNameJan 65348
-#define Sysconst_SLongMonthNameFeb 65349
-#define Sysconst_SLongMonthNameMar 65350
-#define Sysconst_SLongMonthNameApr 65351
-#define Sysconst_SLongMonthNameMay 65352
-#define Sysconst_SLongMonthNameJun 65353
-#define Sysconst_SLongMonthNameJul 65354
-#define Sysconst_SLongMonthNameAug 65355
-#define Sysconst_SLongMonthNameSep 65356
-#define Sysconst_SLongMonthNameOct 65357
-#define Sysconst_SLongMonthNameNov 65358
-#define Sysconst_SLongMonthNameDec 65359
-#define Sysconst_SAssertionFailed 65360
-#define Sysconst_SIntfCastError 65361
-#define Sysconst_SSafecallException 65362
-#define Sysconst_SAssertError 65363
-#define Sysconst_SAbstractError 65364
-#define Sysconst_SModuleAccessViolation 65365
-#define Sysconst_SWin32Error 65366
-#define Sysconst_SUnkWin32Error 65367
-#define Sysconst_SShortMonthNameJan 65368
-#define Sysconst_SShortMonthNameFeb 65369
-#define Sysconst_SShortMonthNameMar 65370
-#define Sysconst_SShortMonthNameApr 65371
-#define Sysconst_SShortMonthNameMay 65372
-#define Sysconst_SShortMonthNameJun 65373
-#define Sysconst_SShortMonthNameJul 65374
-#define Sysconst_SShortMonthNameAug 65375
-#define Sysconst_SStackOverflow 65376
-#define Sysconst_SControlC 65377
-#define Sysconst_SPrivilege 65378
-#define Sysconst_SException 65379
-#define Sysconst_SExceptTitle 65380
-#define Sysconst_SInvalidFormat 65381
-#define Sysconst_SArgumentMissing 65382
-#define Sysconst_SInvalidVarCast 65383
-#define Sysconst_SInvalidVarOp 65384
-#define Sysconst_SDispatchError 65385
-#define Sysconst_SReadAccess 65386
-#define Sysconst_SWriteAccess 65387
-#define Sysconst_SVarArrayCreate 65388
-#define Sysconst_SVarNotArray 65389
-#define Sysconst_SVarArrayBounds 65390
-#define Sysconst_SExternalException 65391
-#define Sysconst_SInvalidFilename 65392
-#define Sysconst_STooManyOpenFiles 65393
-#define Sysconst_SAccessDenied 65394
-#define Sysconst_SEndOfFile 65395
-#define Sysconst_SDiskFull 65396
-#define Sysconst_SInvalidInput 65397
-#define Sysconst_SDivByZero 65398
-#define Sysconst_SRangeError 65399
-#define Sysconst_SIntOverflow 65400
-#define Sysconst_SInvalidOp 65401
-#define Sysconst_SZeroDivide 65402
-#define Sysconst_SOverflow 65403
-#define Sysconst_SUnderflow 65404
-#define Sysconst_SInvalidPointer 65405
-#define Sysconst_SInvalidCast 65406
-#define Sysconst_SAccessViolation 65407
-#define Consts_SDockZoneNotFound 65408
-#define Consts_SDockZoneHasNoCtl 65409
-#define Consts_SDuplicateItem 65410
-#define Comstrs_sTabFailClear 65411
-#define Comstrs_sTabFailDelete 65412
-#define Comstrs_sTabFailRetrieve 65413
-#define Comstrs_sTabFailGetObject 65414
-#define Comstrs_sTabFailSet 65415
-#define Comstrs_sTabFailSetObject 65416
-#define Comstrs_sTabMustBeMultiLine 65417
-#define Comstrs_sInsertError 65418
-#define Comstrs_sPageIndexError 65419
-#define Sysconst_SInvalidInteger 65420
-#define Sysconst_SOutOfMemory 65421
-#define Sysconst_SInOutError 65422
-#define Sysconst_SFileNotFound 65423
-#define Consts_SmkcLeft 65424
-#define Consts_SmkcUp 65425
-#define Consts_SmkcRight 65426
-#define Consts_SmkcDown 65427
-#define Consts_SmkcIns 65428
-#define Consts_SmkcDel 65429
-#define Consts_SmkcShift 65430
-#define Consts_SmkcCtrl 65431
-#define Consts_SmkcAlt 65432
-#define Consts_SInsertLineError 65433
-#define Consts_SIconToClipboard 65434
-#define Consts_SInvalidMemoSize 65435
-#define Consts_SBitsIndexError 65436
-#define Consts_SDuplicateMenus 65437
-#define Consts_SDockedCtlNeedsName 65438
-#define Consts_SDockTreeRemoveError 65439
-#define Consts_SMsgDlgHelp 65440
-#define Consts_SMsgDlgAbort 65441
-#define Consts_SMsgDlgRetry 65442
-#define Consts_SMsgDlgIgnore 65443
-#define Consts_SMsgDlgAll 65444
-#define Consts_SMsgDlgNoToAll 65445
-#define Consts_SMsgDlgYesToAll 65446
-#define Consts_SmkcBkSp 65447
-#define Consts_SmkcTab 65448
-#define Consts_SmkcEsc 65449
-#define Consts_SmkcEnter 65450
-#define Consts_SmkcSpace 65451
-#define Consts_SmkcPgUp 65452
-#define Consts_SmkcPgDn 65453
-#define Consts_SmkcEnd 65454
-#define Consts_SmkcHome 65455
+#define Sysconst_SLongMonthNameDec 65344
+#define Sysconst_SShortDayNameSun 65345
+#define Sysconst_SShortDayNameMon 65346
+#define Sysconst_SShortDayNameTue 65347
+#define Sysconst_SShortDayNameWed 65348
+#define Sysconst_SShortDayNameThu 65349
+#define Sysconst_SShortDayNameFri 65350
+#define Sysconst_SShortDayNameSat 65351
+#define Sysconst_SLongDayNameSun 65352
+#define Sysconst_SLongDayNameMon 65353
+#define Sysconst_SLongDayNameTue 65354
+#define Sysconst_SLongDayNameWed 65355
+#define Sysconst_SLongDayNameThu 65356
+#define Sysconst_SLongDayNameFri 65357
+#define Sysconst_SLongDayNameSat 65358
+#define Sysconst_SShortMonthNameAug 65360
+#define Sysconst_SShortMonthNameSep 65361
+#define Sysconst_SShortMonthNameOct 65362
+#define Sysconst_SShortMonthNameNov 65363
+#define Sysconst_SShortMonthNameDec 65364
+#define Sysconst_SLongMonthNameJan 65365
+#define Sysconst_SLongMonthNameFeb 65366
+#define Sysconst_SLongMonthNameMar 65367
+#define Sysconst_SLongMonthNameApr 65368
+#define Sysconst_SLongMonthNameMay 65369
+#define Sysconst_SLongMonthNameJun 65370
+#define Sysconst_SLongMonthNameJul 65371
+#define Sysconst_SLongMonthNameAug 65372
+#define Sysconst_SLongMonthNameSep 65373
+#define Sysconst_SLongMonthNameOct 65374
+#define Sysconst_SLongMonthNameNov 65375
+#define Sysconst_SExternalException 65376
+#define Sysconst_SAssertionFailed 65377
+#define Sysconst_SIntfCastError 65378
+#define Sysconst_SSafecallException 65379
+#define Sysconst_SAssertError 65380
+#define Sysconst_SAbstractError 65381
+#define Sysconst_SModuleAccessViolation 65382
+#define Sysconst_SWin32Error 65383
+#define Sysconst_SUnkWin32Error 65384
+#define Sysconst_SShortMonthNameJan 65385
+#define Sysconst_SShortMonthNameFeb 65386
+#define Sysconst_SShortMonthNameMar 65387
+#define Sysconst_SShortMonthNameApr 65388
+#define Sysconst_SShortMonthNameMay 65389
+#define Sysconst_SShortMonthNameJun 65390
+#define Sysconst_SShortMonthNameJul 65391
+#define Sysconst_SAccessViolation 65392
+#define Sysconst_SStackOverflow 65393
+#define Sysconst_SControlC 65394
+#define Sysconst_SPrivilege 65395
+#define Sysconst_SException 65396
+#define Sysconst_SExceptTitle 65397
+#define Sysconst_SInvalidFormat 65398
+#define Sysconst_SArgumentMissing 65399
+#define Sysconst_SInvalidVarCast 65400
+#define Sysconst_SInvalidVarOp 65401
+#define Sysconst_SDispatchError 65402
+#define Sysconst_SReadAccess 65403
+#define Sysconst_SWriteAccess 65404
+#define Sysconst_SVarArrayCreate 65405
+#define Sysconst_SVarNotArray 65406
+#define Sysconst_SVarArrayBounds 65407
+#define Sysconst_SFileNotFound 65408
+#define Sysconst_SInvalidFilename 65409
+#define Sysconst_STooManyOpenFiles 65410
+#define Sysconst_SAccessDenied 65411
+#define Sysconst_SEndOfFile 65412
+#define Sysconst_SDiskFull 65413
+#define Sysconst_SInvalidInput 65414
+#define Sysconst_SDivByZero 65415
+#define Sysconst_SRangeError 65416
+#define Sysconst_SIntOverflow 65417
+#define Sysconst_SInvalidOp 65418
+#define Sysconst_SZeroDivide 65419
+#define Sysconst_SOverflow 65420
+#define Sysconst_SUnderflow 65421
+#define Sysconst_SInvalidPointer 65422
+#define Sysconst_SInvalidCast 65423
+#define Consts_SDockTreeRemoveError 65424
+#define Consts_SDockZoneNotFound 65425
+#define Consts_SDockZoneHasNoCtl 65426
+#define Consts_SDuplicateItem 65427
+#define Comstrs_sTabFailClear 65428
+#define Comstrs_sTabFailDelete 65429
+#define Comstrs_sTabFailRetrieve 65430
+#define Comstrs_sTabFailGetObject 65431
+#define Comstrs_sTabFailSet 65432
+#define Comstrs_sTabFailSetObject 65433
+#define Comstrs_sTabMustBeMultiLine 65434
+#define Comstrs_sInsertError 65435
+#define Comstrs_sPageIndexError 65436
+#define Sysconst_SInvalidInteger 65437
+#define Sysconst_SOutOfMemory 65438
+#define Sysconst_SInOutError 65439
+#define Consts_SmkcHome 65440
+#define Consts_SmkcLeft 65441
+#define Consts_SmkcUp 65442
+#define Consts_SmkcRight 65443
+#define Consts_SmkcDown 65444
+#define Consts_SmkcIns 65445
+#define Consts_SmkcDel 65446
+#define Consts_SmkcShift 65447
+#define Consts_SmkcCtrl 65448
+#define Consts_SmkcAlt 65449
+#define Consts_SInsertLineError 65450
+#define Consts_SIconToClipboard 65451
+#define Consts_SInvalidMemoSize 65452
+#define Consts_SBitsIndexError 65453
+#define Consts_SDuplicateMenus 65454
+#define Consts_SDockedCtlNeedsName 65455
 #define Consts_SAbortButton 65456
 #define Consts_SAllButton 65457
 #define Consts_SCannotDragForm 65458
@@ -141,14 +126,14 @@
 #define Consts_SVIcons 65461
 #define Consts_SVBitmaps 65462
 #define Consts_SInvalidProperty 65463
-#define Consts_SMsgDlgWarning 65464
-#define Consts_SMsgDlgError 65465
-#define Consts_SMsgDlgInformation 65466
-#define Consts_SMsgDlgConfirm 65467
-#define Consts_SMsgDlgYes 65468
-#define Consts_SMsgDlgNo 65469
-#define Consts_SMsgDlgOK 65470
-#define Consts_SMsgDlgCancel 65471
+#define Consts_SmkcBkSp 65464
+#define Consts_SmkcTab 65465
+#define Consts_SmkcEsc 65466
+#define Consts_SmkcEnter 65467
+#define Consts_SmkcSpace 65468
+#define Consts_SmkcPgUp 65469
+#define Consts_SmkcPgDn 65470
+#define Consts_SmkcEnd 65471
 #define Consts_SMenuReinserted 65472
 #define Consts_SMenuNotFound 65473
 #define Consts_SNoTimers 65474
@@ -215,6 +200,7 @@
 #define Consts_SInvalidTabPosition 65535
 STRINGTABLE
 BEGIN
+	Sysconst_SLongMonthNameDec,	"December"
 	Sysconst_SShortDayNameSun,	"Sun"
 	Sysconst_SShortDayNameMon,	"Mon"
 	Sysconst_SShortDayNameTue,	"Tue"
@@ -229,6 +215,7 @@ BEGIN
 	Sysconst_SLongDayNameThu,	"Thursday"
 	Sysconst_SLongDayNameFri,	"Friday"
 	Sysconst_SLongDayNameSat,	"Saturday"
+	Sysconst_SShortMonthNameAug,	"Aug"
 	Sysconst_SShortMonthNameSep,	"Sep"
 	Sysconst_SShortMonthNameOct,	"Oct"
 	Sysconst_SShortMonthNameNov,	"Nov"
@@ -244,7 +231,7 @@ BEGIN
 	Sysconst_SLongMonthNameSep,	"September"
 	Sysconst_SLongMonthNameOct,	"October"
 	Sysconst_SLongMonthNameNov,	"November"
-	Sysconst_SLongMonthNameDec,	"December"
+	Sysconst_SExternalException,	"External exception %x"
 	Sysconst_SAssertionFailed,	"Assertion failed"
 	Sysconst_SIntfCastError,	"Interface not supported"
 	Sysconst_SSafecallException,	"Exception in safecall method"
@@ -260,7 +247,7 @@ BEGIN
 	Sysconst_SShortMonthNameMay,	"May"
 	Sysconst_SShortMonthNameJun,	"Jun"
 	Sysconst_SShortMonthNameJul,	"Jul"
-	Sysconst_SShortMonthNameAug,	"Aug"
+	Sysconst_SAccessViolation,	"Access violation at address %p. %s of address %p"
 	Sysconst_SStackOverflow,	"Stack overflow"
 	Sysconst_SControlC,	"Control-C hit"
 	Sysconst_SPrivilege,	"Privileged instruction"
@@ -276,7 +263,7 @@ BEGIN
 	Sysconst_SVarArrayCreate,	"Error creating variant array"
 	Sysconst_SVarNotArray,	"Variant is not an array"
 	Sysconst_SVarArrayBounds,	"Variant array index out of bounds"
-	Sysconst_SExternalException,	"External exception %x"
+	Sysconst_SFileNotFound,	"File not found"
 	Sysconst_SInvalidFilename,	"Invalid filename"
 	Sysconst_STooManyOpenFiles,	"Too many open files"
 	Sysconst_SAccessDenied,	"File access denied"
@@ -292,7 +279,7 @@ BEGIN
 	Sysconst_SUnderflow,	"Floating point underflow"
 	Sysconst_SInvalidPointer,	"Invalid pointer operation"
 	Sysconst_SInvalidCast,	"Invalid class typecast"
-	Sysconst_SAccessViolation,	"Access violation at address %p. %s of address %p"
+	Consts_SDockTreeRemoveError,	"Error removing control from dock tree"
 	Consts_SDockZoneNotFound,	" - Dock zone not found"
 	Consts_SDockZoneHasNoCtl,	" - Dock zone has no control"
 	Consts_SDuplicateItem,	"List does not allow duplicates ($0%x)"
@@ -308,7 +295,7 @@ BEGIN
 	Sysconst_SInvalidInteger,	"'%s' is not a valid integer value"
 	Sysconst_SOutOfMemory,	"Out of memory"
 	Sysconst_SInOutError,	"I/O error %d"
-	Sysconst_SFileNotFound,	"File not found"
+	Consts_SmkcHome,	"Home"
 	Consts_SmkcLeft,	"Left"
 	Consts_SmkcUp,	"Up"
 	Consts_SmkcRight,	"Right"
@@ -324,23 +311,6 @@ BEGIN
 	Consts_SBitsIndexError,	"Bits index out of range"
 	Consts_SDuplicateMenus,	"Menu '%s' is already being used by another form"
 	Consts_SDockedCtlNeedsName,	"Docked control must have a name"
-	Consts_SDockTreeRemoveError,	"Error removing control from dock tree"
-	Consts_SMsgDlgHelp,	"&Help"
-	Consts_SMsgDlgAbort,	"&Abort"
-	Consts_SMsgDlgRetry,	"&Retry"
-	Consts_SMsgDlgIgnore,	"&Ignore"
-	Consts_SMsgDlgAll,	"&All"
-	Consts_SMsgDlgNoToAll,	"N&o to All"
-	Consts_SMsgDlgYesToAll,	"Yes to &All"
-	Consts_SmkcBkSp,	"BkSp"
-	Consts_SmkcTab,	"Tab"
-	Consts_SmkcEsc,	"Esc"
-	Consts_SmkcEnter,	"Enter"
-	Consts_SmkcSpace,	"Space"
-	Consts_SmkcPgUp,	"PgUp"
-	Consts_SmkcPgDn,	"PgDn"
-	Consts_SmkcEnd,	"End"
-	Consts_SmkcHome,	"Home"
 	Consts_SAbortButton,	"Abort"
 	Consts_SAllButton,	"&All"
 	Consts_SCannotDragForm,	"Cannot drag a form"
@@ -349,14 +319,14 @@ BEGIN
 	Consts_SVIcons,	"Icons"
 	Consts_SVBitmaps,	"Bitmaps"
 	Consts_SInvalidProperty,	"Invalid property value"
-	Consts_SMsgDlgWarning,	"Warning"
-	Consts_SMsgDlgError,	"Error"
-	Consts_SMsgDlgInformation,	"Information"
-	Consts_SMsgDlgConfirm,	"Confirm"
-	Consts_SMsgDlgYes,	"&Yes"
-	Consts_SMsgDlgNo,	"&No"
-	Consts_SMsgDlgOK,	"OK"
-	Consts_SMsgDlgCancel,	"Cancel"
+	Consts_SmkcBkSp,	"BkSp"
+	Consts_SmkcTab,	"Tab"
+	Consts_SmkcEsc,	"Esc"
+	Consts_SmkcEnter,	"Enter"
+	Consts_SmkcSpace,	"Space"
+	Consts_SmkcPgUp,	"PgUp"
+	Consts_SmkcPgDn,	"PgDn"
+	Consts_SmkcEnd,	"End"
 	Consts_SMenuReinserted,	"Menu inserted twice"
 	Consts_SMenuNotFound,	"Sub-menu is not in menu"
 	Consts_SNoTimers,	"Not enough timers available"

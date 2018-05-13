@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>KoperForm</class>
+ <widget class="QWidget" name="KoperForm">
+  <property name="geometry">
+   <rect>
+    <x>210</x>
+    <y>147</y>
+    <width>577</width>
+    <height>293</height>
+   </rect>
+  </property>
+  <property name="toolTip">
+   <string></string>
+  </property>
+  <property name="windowTitle">
+   <string>sstsoft->Koperek - please wait...</string>
+  </property>
+  <widget class="QFrame" name="AdvancedBar2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>268</y>
+     <width>577</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Panel2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>196</y>
+     <width>577</width>
+     <height>72</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string></string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="alignment">
+    <enum>Qt::AlignCenter</enum>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+   <widget class="QPushButton" name="SpeedButton4">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>12</y>
+      <width>95</width>
+      <height>48</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>FILE LIST</string>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <property name="toolTip">
+     <string></string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SpeedButton3">
+    <property name="geometry">
+     <rect>
+      <x>112</x>
+      <y>12</y>
+      <width>45</width>
+      <height>48</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>+</string>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <property name="toolTip">
+     <string></string>
+    </property>
+    <property name="palette">
+     <palette>
+      <active>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </active>
+      <inactive>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </inactive>
+      <disabled>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </disabled>
+     </palette>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SpeedButton1">
+    <property name="geometry">
+     <rect>
+      <x>468</x>
+      <y>12</y>
+      <width>45</width>
+      <height>48</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string></string>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <property name="toolTip">
+     <string>Na chwile odpocznij</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SpeedButton2">
+    <property name="geometry">
+     <rect>
+      <x>516</x>
+      <y>12</y>
+      <width>49</width>
+      <height>48</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string></string>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <property name="toolTip">
+     <string>Przerwij</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SpeedButton5">
+    <property name="geometry">
+     <rect>
+      <x>412</x>
+      <y>12</y>
+      <width>45</width>
+      <height>48</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string></string>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <property name="toolTip">
+     <string>Set speed limits</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="Panel3">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>185</width>
+     <height>196</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string></string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="alignment">
+    <enum>Qt::AlignCenter</enum>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <widget class="QFrame" name="AdvancedBar1">
+    <property name="geometry">
+     <rect>
+      <x>64</x>
+      <y>8</y>
+      <width>41</width>
+      <height>177</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+   </widget>
+   <widget class="QFrame" name="AdvancedBar3">
+    <property name="geometry">
+     <rect>
+      <x>116</x>
+      <y>8</y>
+      <width>41</width>
+      <height>177</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+   </widget>
+   <widget class="QFrame" name="AdvancedBar4">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>8</y>
+      <width>41</width>
+      <height>177</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+   </widget>
+   <widget class="QFrame" name="Bevel1">
+    <property name="frameShape">
+     <enum>QFrame::VLine</enum>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>135</x>
+      <y>0</y>
+      <width>100</width>
+      <height>196</height>
+     </rect>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="toolTip">
+     <string></string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="Panel1">
+   <property name="geometry">
+    <rect>
+     <x>185</x>
+     <y>0</y>
+     <width>392</width>
+     <height>196</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string></string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="alignment">
+    <enum>Qt::AlignCenter</enum>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <widget class="QLabel" name="Panel4">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>392</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string></string>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <enum>Qt::AlignCenter</enum>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="toolTip">
+     <string></string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <widget class="QFrame" name="AdvancedBar5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>372</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+    </widget>
+    <widget class="QFrame" name="AdvancedBar6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>35</y>
+       <width>372</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label1">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>112</y>
+       <width>372</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Averange speed is 0 B/s, 0 files/s</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string></string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>63</y>
+       <width>372</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Time left 0 sekund since 0 seconds</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string></string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>142</y>
+       <width>372</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Actual speed ~ </string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string></string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>178</y>
+       <width>372</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>File name</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string></string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>83</y>
+       <width>372</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Left x.xx MB and xxxx files.</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string></string>
+     </property>
+    </widget>
+    <widget class="QFrame" name="Bevel2">
+     <property name="frameShape">
+      <enum>QFrame::HLine</enum>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>158</y>
+       <width>372</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="toolTip">
+      <string></string>
+     </property>
+    </widget>
+    <widget class="QFrame" name="Bevel3">
+     <property name="frameShape">
+      <enum>QFrame::HLine</enum>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>122</y>
+       <width>372</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="toolTip">
+      <string></string>
+     </property>
+    </widget>
+    <widget class="QFrame" name="Bevel4">
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>96</y>
+       <width>372</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="toolTip">
+      <string></string>
+     </property>
+    </widget>
+    <widget class="QFrame" name="Bevel5">
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>163</y>
+       <width>372</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="toolTip">
+      <string></string>
+     </property>
+    </widget>
+    <widget class="QFrame" name="Bevel6">
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>29</y>
+       <width>372</width>
+       <height>6</height>
+      </rect>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="toolTip">
+      <string></string>
+     </property>
+    </widget>
+    <widget class="QFrame" name="Bevel7">
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>55</y>
+       <width>372</width>
+       <height>8</height>
+      </rect>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="toolTip">
+      <string></string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="Timer1">
+   <property name="geometry">
+    <rect>
+     <x>208</x>
+     <y>209</y>
+     <width>15</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+  </widget>
+  <widget class="QFrame" name="SysTray1">
+   <property name="geometry">
+    <rect>
+     <x>256</x>
+     <y>208</y>
+     <width>15</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+  </widget>
+ </widget>
+</ui>

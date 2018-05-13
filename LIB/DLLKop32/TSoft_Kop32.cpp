@@ -207,7 +207,7 @@ options.Masks.Text[COMMA] = "*.*";
 //
 // ARGumenTS
 //
-options.Argts.Text[COMMA] = "#path\#filename.#filextt";
+options.Argts.Text[COMMA] = "%name%";
 strEql(templp,templpDst);
 strupr(templp);
 if (Pharser(templp,"LIST",templp,xpos))
@@ -743,6 +743,9 @@ FOnBreak(anaction|isDIRECTORY|onPROGRESS,0);
 	}
 else
 	{
+//TODO: If source direcotry is hardlink, need to createdirectory without_ex set attributes manualy
+// or ask user what to do because otherwise it would fail to open source, destination files same time for read and write
+
 	if (CreateDirectoryEx(list.src.Main.Items[aindex]->text, list.dst.Main.Items[aindex]->text,NULL)==false)
 		{Skip(aindex,false);
 		 return 0;
@@ -766,15 +769,17 @@ for (int iT = 0; iT < options.Argts.Count; iT++)
 	 {
 	 strEql(templpStr1,options.Argts.Items[iT]->text);
 
-	 strExchange(templpStr1,"#name",
+	 strExchange(templpStr1,"%filename%",
 					list.src.Main.Items[aindex]->text);
-	 strExchange(templpStr1,"#path",
+	 strExchange(templpStr1,"%path%",
 					strExtractFilePath(templpStr2,list.src.Main.Items[aindex]->text));
-	 strExchange(templpStr1,"#file",
+	 strExchange(templpStr1,"%file%",
 					strExtractFileName(templpStr2,list.src.Main.Items[aindex]->text));
-	 strExchange(templpStr1,"#size",
+	 strExchange(templpStr1,"%extt%",
+					strExtractFileExtt(templpStr2,list.src.Main.Items[aindex]->text));
+	 strExchange(templpStr1,"%size%",
 					intToStr(list.src.Main.Items[aindex]->data_size[SIZE]));
-	 strExchange(templpStr1,"#attr",
+	 strExchange(templpStr1,"%attr%",
 					intToStr(list.src.Main.Items[aindex]->data_size[ATTRIB]));
 
 	 options.Batch.Add(ASCHAR(templpStr1));

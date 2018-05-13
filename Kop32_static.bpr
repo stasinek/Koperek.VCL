@@ -133,7 +133,7 @@ Item4=_DEBUG
 DebugSourceDirs=$(BCB)\source\vcl
 
 [Parameters]
-RunParams=/list D:\lista.txt
+RunParams=/LIST D:\LISTA.TXT
 HostApplication=
 RemoteHost=
 RemotePath=

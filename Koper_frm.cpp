@@ -84,44 +84,44 @@ if  (tik % 10) {
 		{
 		xold =x;
 		AdvancedBar1->Position = 1000 - (1/(x+1)) * 1000;
-		Label3->Caption = "Szybkosc aktualna ~ " + FloatToStrF(x,ffGeneral,2,4) + " x sredniej szybkosci";
+		Label3->Caption = "Actual speed ~ " + FloatToStrF(x,ffGeneral,2,4) + " x averange speed";
 		}
 	if (x==0) {
 		AdvancedBar1->Position = 500;
-		Label3->Caption = "Szybkosc aktualna ~ nie mo¿na jeszcze oszacowac";
+		Label3->Caption = "Actual speed ~ impossible to calulate.";
 	}
 	}
 if (MineloCzas > 0 && MineloCzas/1000!=0)
-   {sprintf(buffer1,"Szybkoœæ ~ %s/s",
+   {sprintf(buffer1,"Speed ~ %s/s",
 		GetBajtText(__int64(MineloBajt)/(MineloCzas/1000)));
    }
 else
-   {sprintf(buffer1,"Szybkoœæ ~ 0,00 B/s");
+   {sprintf(buffer1,"Speed ~ 0,00 B/s");
    }
 if (ZostaloCzas < 60000)
-   {sprintf(buffer2,"pozosta³o %d sekund",
+   {sprintf(buffer2,"seconds %d left",
 		int(ZostaloCzas/1000)%60);
    }
 else
 if (ZostaloCzas < 3600000)
-   {sprintf(buffer2,"pozosta³o %d minut i %d sekund",
+   {sprintf(buffer2,"minutes %d and %d seconds left",
 		int(ZostaloCzas/1000/60), int(ZostaloCzas/1000)%60);
    }
 else
-   {sprintf(buffer2,"pozosta³o %d godzin i %d minut",
+   {sprintf(buffer2,"hours %d and %d minutes left",
 		int(ZostaloCzas/1000/3600), int(ZostaloCzas/1000/60)%60);
    }
 if (MineloCzas < 60000)
-   {sprintf(buffer3,"Operuje od %d sekund",
+   {sprintf(buffer3,"Working since %d seconds",
 		int(MineloCzas/1000)%60);
    }
 else
 if (MineloCzas < 3600000)
-   {sprintf(buffer3,"Operuje od %d minut i %d sekund",
+   {sprintf(buffer3,"Working since %d minutes a and %d seconds",
 		int(MineloCzas/1000/60), int(MineloCzas)%60);
    }
 else
-   {sprintf(buffer3,"Operuje od %d godzin i %d minut",
+   {sprintf(buffer3,"Working since %d hours and %d minutes",
 		int(MineloCzas/1000/3600), int((MineloCzas/1000)/60)%60);
    }
 strcpy(buffer4,buffer3);
@@ -133,13 +133,13 @@ if (strcmp(buffer1,AnsiString(this->Label1->Caption.c_str()).c_str())!=0)
 if (strcmp(buffer4,AnsiString(this->Label2->Caption.c_str()).c_str())!=0)
 	this->Label2->Caption = buffer4;
 
-sprintf(buffer1,"W Ÿródle jest jeszcze do przetworzenia %d plików, w sumie %s",(Kop->list.src.Main.Count-(Kop->list.iCur-Kop->list.iBgn)),GetBajtText(Kop->progress.src.all.Size-Kop->progress.src.all.Read));
+sprintf(buffer1,"There is %d files left, in sum %s",(Kop->list.src.Main.Count-(Kop->list.iCur-Kop->list.iBgn)),GetBajtText(Kop->progress.src.all.Size-Kop->progress.src.all.Read));
 if (strcmp(buffer1,AnsiString(this->Label5->Caption.c_str()).c_str())!=0)
 	Label5->Caption = buffer1;
 
 if (Kop->options.Operation==opKODUJ && Kop->progress.dst.all.Read!=0) {
 	double s = float(Kop->progress.src.all.Read)/float(Kop->progress.dst.all.Read);
-	sprintf(buffer4,"Stopieñ kompresji we/wy = %01.2f/1", s);
+	sprintf(buffer4,"Compression ratio = %01.2f/1", s);
 	if (s+1!=0) AdvancedBar2->Position = 100 - (1/(s+1)) * 100;
 	else AdvancedBar2->Position = 100;
 	if (strcmp(buffer4,AnsiString(this->Label4->Caption.c_str()).c_str())!=0)
@@ -148,7 +148,7 @@ if (Kop->options.Operation==opKODUJ && Kop->progress.dst.all.Read!=0) {
 else
 if (Kop->options.Operation==opKODUJ && Kop->progress.src.all.Read!=0) {
 	double s = float(Kop->progress.dst.all.Read)/float(Kop->progress.src.all.Read);
-	sprintf(buffer4,"Stopieñ dekompresji wy/wy = %01.2f/1", s);
+	sprintf(buffer4,"Decompression ratio = %01.2f/1", s);
 	if (s+1!=0) AdvancedBar2->Position = 100 - (1/(s+1)) * 100;
 	else AdvancedBar2->Position = 100;
 	if (strcmp(buffer4,AnsiString(this->Label4->Caption.c_str()).c_str())!=0)
@@ -190,8 +190,8 @@ if (BreakCode&opSEEKPROGRESS)
 		BreakForm->Label2->Caption = temp0;
 		}
 	}
-	BreakForm->Label3->Caption = "W Ÿródle jest " + (AnsiString)Kop->list.src.Main.Count + " plików o rozmiarze " + GetBajtText(Kop->progress.src.all.Size);
-	if (Kop->list.dst.Main.Count!=0 && Kop->progress.dst.all.Size!=0) BreakForm->Label4->Caption = "W katalogach docelowych jest " + (AnsiString)Kop->list.dst.Main.Count + " plików o rozmiarze " + GetBajtText(Kop->progress.dst.all.Size);
+	BreakForm->Label3->Caption = "There is " + (AnsiString)Kop->list.src.Main.Count + " files, total size " + GetBajtText(Kop->progress.src.all.Size);
+	if (Kop->list.dst.Main.Count!=0 && Kop->progress.dst.all.Size!=0) BreakForm->Label4->Caption = "In destination dir. " + (AnsiString)Kop->list.dst.Main.Count + " files, total size " + GetBajtText(Kop->progress.dst.all.Size);
 	KoperForm->Label5->Caption = BreakForm->Label3->Caption;
    }
 if (BreakCode&onPROGRESS)
@@ -212,8 +212,8 @@ if (BreakCode&onPROGRESS)
 	AdvancedBar6->Position = 0;
    }
 if (BreakCode&opKOPIUJ)
-   {if (BreakCode&isDIRECTORY) strcpy(lpcaption,"KOPIUJÊ katalog ");
-	else strcpy(lpcaption,"KOPIUJÊ plik ");
+   {if (BreakCode&isDIRECTORY) strcpy(lpcaption,"COPY Dir. ");
+	else strcpy(lpcaption,"COPY file ");
 	if (Kop->list.src.Main.Count!=0 && Kop->list.src.Main.Count!=0)
 	sprintf(temp4,"'%s' do '%s'",strExtractFileName(temp1,Kop->list.src.Main.Items[Kop->list.iCur]->text),strExtractFileName(temp2,strExtractFilePath(temp3,Kop->list.dst.Main.Items[Kop->list.iCur]->text)));
 	strcat(lpcaption,temp4);
@@ -221,8 +221,8 @@ if (BreakCode&opKOPIUJ)
    }
 else
 if (BreakCode&opPRZENIES)
-   {if (BreakCode&isDIRECTORY) strcpy(lpcaption,"PRZENOSZÊ katalog ");
-	else strcpy(lpcaption,"KOPIUJÊ plik ");
+   {if (BreakCode&isDIRECTORY) strcpy(lpcaption,"MOVE dir. ");
+	else strcpy(lpcaption,"MOVE plik ");
 	if (Kop->list.src.Main.Count!=0 && Kop->list.src.Main.Count!=0)
 	sprintf(temp4,"'%s' do '%s'",strExtractFileName(temp1,Kop->list.src.Main.Items[Kop->list.iCur]->text),strExtractFileName(temp2,strExtractFilePath(temp3,Kop->list.dst.Main.Items[Kop->list.iCur]->text)));
 	strcat(lpcaption,temp4);
@@ -230,8 +230,8 @@ if (BreakCode&opPRZENIES)
    }
 else
 if (BreakCode&opKODUJ)
-   {if (BreakCode&isDIRECTORY) strcpy(lpcaption,"KOMPRESUJE katalog ");
-	else strcpy(lpcaption,"KOMPRESUJE plik ");
+   {if (BreakCode&isDIRECTORY) strcpy(lpcaption,"COMPRESS dir. ");
+	else strcpy(lpcaption,"COMPRESS File ");
 	if (Kop->list.src.Main.Count!=0 && Kop->list.src.Main.Count!=0)
 	sprintf(temp4,"'%s' do '%s'",strExtractFileName(temp1,Kop->list.src.Main.Items[Kop->list.iCur]->text),strExtractFileName(temp2,strExtractFilePath(temp3,Kop->list.dst.Main.Items[Kop->list.iCur]->text)));
 	strcat(lpcaption,temp4);
@@ -239,8 +239,8 @@ if (BreakCode&opKODUJ)
    }
 else
 if (BreakCode&opDEKODUJ)
-   {if (BreakCode&isDIRECTORY) strcpy(lpcaption,"DEKOMPRESUJE katalog ");
-	else strcpy(lpcaption,"DEKOMPRESUJE plik ");
+   {if (BreakCode&isDIRECTORY) strcpy(lpcaption,"DECODE dir. ");
+	else strcpy(lpcaption,"DECODE file ");
 	if (Kop->list.src.Main.Count!=0 && Kop->list.src.Main.Count!=0)
 	sprintf(temp4,"'%s' do '%s'",strExtractFileName(temp1,Kop->list.src.Main.Items[Kop->list.iCur]->text),strExtractFileName(temp2,strExtractFilePath(temp3,Kop->list.dst.Main.Items[Kop->list.iCur]->text)));
 	strcat(lpcaption,temp4);
@@ -248,8 +248,8 @@ if (BreakCode&opDEKODUJ)
    }
 else
 if (BreakCode&opUSUN)
-   {if (BreakCode&isDIRECTORY) strcpy(lpcaption,"USUWAM katalog ");
-	else strcpy(lpcaption,"USUWAM plik ");
+   {if (BreakCode&isDIRECTORY) strcpy(lpcaption,"DELETE dir. ");
+	else strcpy(lpcaption,"DELETE file ");
 	if (Kop->list.src.Main.Count!=0)
 	sprintf(temp4,"'%s' z '%s'",strExtractFileName(temp1,Kop->list.src.Main.Items[Kop->list.iCur]->text),strExtractFileName(temp2,strExtractFilePath(temp3,Kop->list.src.Main.Items[Kop->list.iCur]->text)));
 	strcat(lpcaption,temp4);
@@ -269,7 +269,7 @@ else
 if (BreakCode&onIO)
    {
 	if (Kop->options.Operation==opLISTUJ)
-	   {Application->Title = "Listujê pliki...";
+	   {Application->Title = "Listing files...";
 		BreakForm->Label1->Caption = Application->Title;
 		Application->ProcessMessages();
 		return mrNo;
