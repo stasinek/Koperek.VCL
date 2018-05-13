@@ -207,7 +207,7 @@ options.Masks.Text[COMMA] = "*.*";
 //
 // ARGumenTS
 //
-options.Argts.Text[COMMA] = "#file";
+options.Argts.Text[COMMA] = "%file%";
 strEql(templp,templpDst);
 strupr(templp);
 if (Pharser(templp,"LISTUJ",templp,xpos))
@@ -770,7 +770,7 @@ for (int iT = 0; iT < options.Argts.Count; iT++)
 
 	 strExchange(templpStr1,"#dir",
 					strExtractFilePath(templpStr2,list.src.Main.Items[aindex]->text));
-	 strExchange(templpStr1,"#file",
+	 strExchange(templpStr1,"%file%",
 					list.src.Main.Items[aindex]->text);
 	 strExchange(templpStr1,"#size",
 					intToStr(list.src.Main.Items[aindex]->data_size[SIZE]));

@@ -31,6 +31,7 @@ extern "C" IMPEXP long  __stdcall strDelimiter(const char *alpsrc,char delimiter
 extern "C" IMPEXP char *__stdcall strExtractFileRoot(char *alpdst,const char *alpsrc);
 extern "C" IMPEXP char *__stdcall strExtractFilePath(char *alpdst,const char *alpsrc);
 extern "C" IMPEXP char *__stdcall strExtractFileName(char *alpdst,const char *alpsrc);
+extern "C" IMPEXP char *__stdcall strExtractFileExtt(char *alpdst,const char *alpsrc);
 //---------------------------------------------------------------------------
 extern "C" IMPEXP char *__stdcall strFixFilePath(char *alpdst, const char *alpsrc);
 //---------------------------------------------------------------------------

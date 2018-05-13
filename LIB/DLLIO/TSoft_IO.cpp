@@ -267,79 +267,133 @@ return alpdst;
 
 char *__stdcall strExtractFileRoot(char *alpdst,const char *alpsrc)
 {
-int delimiter = strDelimiter(alpsrc,'\\',+1);
-
-if (delimiter>=0)
-	{return strSubEnd(alpdst,alpsrc,0,delimiter);
-	}
-else
-if ((long)alpdst!=(long)alpsrc)
-	{return (char*)strnEql(alpdst,alpsrc,strlen(alpsrc)+1);
-	}
-else
-	{alpdst[strLen(alpsrc)]='\0';
-	 return alpdst;
-	}
-}
-//---------------------------------------------------------------------------
-
-char *__stdcall strExtractFilePath(char *alpdst,const char *alpsrc)
-{
-int delimiter = strDelimiter(alpsrc,'\\',-1);
-
-if (delimiter>=0)
-	{return strSubEnd(alpdst,alpsrc,0,delimiter);
-	}
-else
-if ((long)alpdst!=(long)alpsrc)
-	{return (char*)strnEql(alpdst,alpsrc,strlen(alpsrc)+1);
-	}
-else
-	{alpdst[strLen(alpsrc)]='\0';
-	 return alpdst;
-	}
-}
-//---------------------------------------------------------------------------
-
-char *__stdcall strExtractFileName(char *alpdst,const char *alpsrc)
-{
-long delimiter = strDelimiter(alpsrc, '\\',-1);
-
-if (delimiter>=0)
-	{return strSubEnd(alpdst,alpsrc,delimiter+1, strlen(alpsrc));
-	}
-else
-if ((long)alpdst!=(long)alpsrc)
-	{return (char*)strnEql(alpdst,alpsrc,strlen(alpsrc)+1);
-	}
-else
-	{alpdst[strLen(alpsrc)]='\0';
-	 return alpdst;
-	}
- }
-//---------------------------------------------------------------------------
-
-char *__stdcall strFixFilePath(char *alpdst,const char *alpsrc)
-{
-long lensrc = strlen(alpsrc);
+long lensrc = strlen(alpsrc), b = 0, delimiter;
 
 if (lensrc==0)
 	{alpdst[0]='\0';
 	 return alpdst;
 	}
-else
-if (alpsrc[lensrc-1]=='\\')
-	{if ((long)alpdst!=(long)alpsrc)
-		strnEql(alpdst,alpsrc,lensrc-1);
-	 alpdst[lensrc-1]='\0';
+while (b < lensrc ? alpsrc[b]=='\"' || alpsrc[b]==' ' : false)
+{   b++;
+}
+delimiter = lensrc;
+
+while (delimiter < lensrc ? alpsrc[delimiter]!='\\' : false)
+{   delimiter++;
+}
+
+if (delimiter > b)
+	{ptrMov(alpdst,&alpsrc[b],delimiter-b);
+    }
+alpdst[delimiter-b]='\0';
+return alpdst;
+}
+//---------------------------------------------------------------------------
+
+char *__stdcall strExtractFilePath(char *alpdst,const char *alpsrc)
+{
+long lensrc = strlen(alpsrc), e = lensrc, b = 0, delimiter;
+
+if (lensrc==0)
+	{alpdst[0]='\0';
 	 return alpdst;
 	}
-else
-	{if ((long)alpdst!=(long)alpsrc)
-		strnEql(alpdst,alpsrc,lensrc);
-	 alpdst[lensrc]='\0';
+while (e > 0 ? alpsrc[e-1]=='\"' || alpsrc[e-1]=='\\' || alpsrc[e-1]==' ' : false)
+{   e--;
+}
+while (b < e ? alpsrc[b]=='\"' || alpsrc[b]==' ' : false)
+{   b++;
+}
+delimiter = e;
+
+while (delimiter > 0 ? alpsrc[delimiter]!='\\' : false)
+{   delimiter--;
+}
+
+if (delimiter-b>0)
+	{ptrMov((void*)alpdst,(void*)&alpsrc[b],delimiter-b);
+    }
+alpdst[delimiter-b]='\0';
+return alpdst;
+}
+//---------------------------------------------------------------------------
+
+char *__stdcall strExtractFileName(char *alpdst,const char *alpsrc)
+{
+long lensrc = strlen(alpsrc), e = lensrc, b = 0, delimiter;
+
+if (lensrc==0)
+	{alpdst[0]='\0';
 	 return alpdst;
 	}
+while (e > 0 ? alpsrc[e-1]=='\"' || alpsrc[e-1]=='\\' || alpsrc[e-1]==' ' : false)
+{   e--;
+}
+while (b < e ? alpsrc[b]=='\"' || alpsrc[b]==' ' : false)
+{   b++;
+}
+delimiter = e;
+
+while (delimiter > 0 ? alpsrc[delimiter-1]!='\\' : false)
+{   delimiter--;
+}
+
+if (e-delimiter>0)
+	{ptrMov((void*)alpdst,(void*)&alpsrc[delimiter],e-delimiter);
+    }
+alpdst[e-delimiter]='\0';
+return alpdst;
+ }
+//---------------------------------------------------------------------------
+
+char *__stdcall strExtractFileExtt(char *alpdst,const char *alpsrc)
+{
+long lensrc = strlen(alpsrc), e = lensrc, b = 0, delimiter;
+
+if (lensrc==0)
+	{alpdst[0]='\0';
+	 return alpdst;
+	}
+while (e > 0 ? alpsrc[e-1]=='\"' || alpsrc[e-1]=='\\' || alpsrc[e-1]==' ' : false)
+{   e--;
+}
+while (b < e ? alpsrc[b]=='\"' || alpsrc[b]==' ' : false)
+{   b++;
+}
+delimiter = e;
+
+while (delimiter > 0 ? alpsrc[delimiter-1]!='\\' && alpsrc[delimiter-1]!='.'  : false)
+{   delimiter--;
+}
+if (alpsrc[delimiter]=='\\') {
+    alpdst[0]='\0';
+    return alpdst;
+}
+
+if (e-delimiter>0)
+	{ptrMov((void*)alpdst,(void*)&alpsrc[delimiter],e-delimiter);
+    }
+alpdst[e-delimiter]='\0';
+return alpdst;
+ }
+//---------------------------------------------------------------------------
+
+char *__stdcall strFixFilePath(char *alpdst,const char *alpsrc)
+{
+long lensrc = strlen(alpsrc), e = lensrc, b = 0;
+
+if (lensrc==0)
+	{alpdst[0]='\0';
+	 return alpdst;
+	}
+while (e > 0 ? alpsrc[e-1]=='\"' || alpsrc[e-1]=='\\' || alpsrc[e-1]==' ' : false)
+{   e--;
+}
+while (b < e ? alpsrc[b]=='\"' || alpsrc[b]==' ' : false)
+{   b++;
+}
+if (e-b > 0) strnMov(alpdst,&alpsrc[b],e-b);
+alpdst[e-b]='\0'; return alpdst;
 }
 //---------------------------------------------------------------------------
 #include <stdlib.h>

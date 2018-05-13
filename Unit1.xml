@@ -1,0 +1,30 @@
+<guiRoot>
+ <guiObject>
+  <name>Form1</name>
+  <class>TForm1</class>
+  <Left>0</Left>
+  <Top>0</Top>
+  <Caption>'Form1'</Caption>
+  <ClientHeight>223</ClientHeight>
+  <ClientWidth>426</ClientWidth>
+  <Color>clBtnFace</Color>
+  <Font.Charset>DEFAULT_CHARSET</Font.Charset>
+  <Font.Color>clWindowText</Font.Color>
+  <Font.Height>-11</Font.Height>
+  <Font.Name>'Tahoma'</Font.Name>
+  <Font.Style>[]</Font.Style>
+  <OldCreateOrder>False</OldCreateOrder>
+  <PixelsPerInch>96</PixelsPerInch>
+  <TextHeight>13</TextHeight>
+  <guiObject>
+   <name>CheckListBox1</name>
+   <class>TCheckListBox</class>
+   <Left>104</Left>
+   <Top>76</Top>
+   <Width>121</Width>
+   <Height>97</Height>
+   <ItemHeight>13</ItemHeight>
+   <TabOrder>0</TabOrder>
+  </guiObject>
+ </guiObject>
+</guiRoot>
