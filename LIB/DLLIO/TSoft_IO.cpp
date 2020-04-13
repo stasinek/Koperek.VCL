@@ -283,7 +283,7 @@ while (delimiter < lensrc ? alpsrc[delimiter]!='\\' : false)
 }
 
 if (delimiter > b)
-	{ptrMov(alpdst,&alpsrc[b],delimiter-b);
+	{ptrMov(alpdst,&alpsrc[b],delimiter-b+1);
     }
 alpdst[delimiter-b]='\0';
 return alpdst;
@@ -311,7 +311,7 @@ while (delimiter > 0 ? alpsrc[delimiter]!='\\' : false)
 }
 
 if (delimiter-b>0)
-	{ptrMov((void*)alpdst,(void*)&alpsrc[b],delimiter-b);
+	{ptrMov((void*)alpdst,(void*)&alpsrc[b],delimiter-b+1);
     }
 alpdst[delimiter-b]='\0';
 return alpdst;
@@ -339,7 +339,7 @@ while (delimiter > 0 ? alpsrc[delimiter-1]!='\\' : false)
 }
 
 if (e-delimiter>0)
-	{ptrMov((void*)alpdst,(void*)&alpsrc[delimiter],e-delimiter);
+	{ptrMov((void*)alpdst,(void*)&alpsrc[delimiter],e-delimiter+1);
     }
 alpdst[e-delimiter]='\0';
 return alpdst;
@@ -371,7 +371,7 @@ if (alpsrc[delimiter]=='\\') {
 }
 
 if (e-delimiter>0)
-	{ptrMov((void*)alpdst,(void*)&alpsrc[delimiter],e-delimiter);
+	{ptrMov((void*)alpdst,(void*)&alpsrc[delimiter],e-delimiter+1);
     }
 alpdst[e-delimiter]='\0';
 return alpdst;

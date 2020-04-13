@@ -4,9 +4,9 @@
 //---------------------------------------------------------------------------
 #include "main.h"
 //---------------------------------------------------------------------------
+USEFORM("Haslo_frm.cpp", HasloForm);
 USEFORM("Koper_frm.cpp", KoperForm);
 USEFORM("Break_frm.cpp", BreakForm);
-USEFORM("Haslo_frm.cpp", HasloForm);
 USEFORM("Infos_frm.cpp", InfosForm);
 USEFORM("Journal_frm.cpp", JournalForm);
 USEFORM("Lista_frm.cpp", ListaForm);
@@ -14,8 +14,8 @@ USEFORM("Quest_frm.cpp", QuestForm);
 USEFORM("..\..\FORM_TEMPLATES\About_frm.cpp", AboutForm);
 USERES("Kop32.res");
 USELIB("LIB\DLLKop32\DLLKop32.lib");
-USELIB("C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.LIB");
-USELIB("C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.lib");
+USELIB("LIB\DLLIO\DLLIO.LIB");
+USELIB("LIB\DLLDatabase\DLLDatabase.lib");
 //---------------------------------------------------------------------------
 #include "Break_frm.h"
 #include "Infos_frm.h"
@@ -44,14 +44,13 @@ strcpy(commandSrc,"");
 	Application->Initialize();
 	Application->Title = "SSTSOFT.Koperek-VCL";
     Application->CreateForm(__classid(TBreakForm), &BreakForm);
-    Application->CreateForm(__classid(THasloForm), &HasloForm);
-    Application->CreateForm(__classid(TInfosForm), &InfosForm);
-    Application->CreateForm(__classid(TJournalForm), &JournalForm);
-    Application->CreateForm(__classid(TKoperForm), &KoperForm);
-    Application->CreateForm(__classid(TListaForm), &ListaForm);
-    Application->CreateForm(__classid(TQuestForm), &QuestForm);
-    Application->CreateForm(__classid(TAboutForm), &AboutForm);
-    Application->ShowMainForm = false;
+                 Application->CreateForm(__classid(TInfosForm), &InfosForm);
+                 Application->CreateForm(__classid(TJournalForm), &JournalForm);
+                 Application->CreateForm(__classid(TKoperForm), &KoperForm);
+                 Application->CreateForm(__classid(TListaForm), &ListaForm);
+                 Application->CreateForm(__classid(TQuestForm), &QuestForm);
+                 Application->CreateForm(__classid(TAboutForm), &AboutForm);
+                 Application->ShowMainForm = false;
 
 if (strstr(temp,"/SELECT")!=NULL)
     Application->Icon->Handle = LoadIcon(hApp,"MAINICON6");

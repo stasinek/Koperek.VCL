@@ -14,7 +14,7 @@
       LIB\DLLKop32\TSoft_Mtf.obj LIB\DLLKop32\TSoft_Pharser.obj 
       LIB\DLLKop32\TSoft_Seeker.obj LIB\DLLKop32\TSoft_Stack.obj 
       LIB\DLLKop32\DLLKop32.obj"/>
-    <RESFILES value="Kop32.res"/>
+    <RESFILES value="Kop32_static.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
     <DEFFILE value=""/>
@@ -22,8 +22,8 @@
       Journal_frm.dfm Lista_frm.dfm Quest_frm.dfm 
       ..\..\FORM_TEMPLATES\About_frm.dfm"/>
     <LIBFILES value=""/>
-    <LIBRARIES value="dclusr50.lib Vclx50.lib Vcl50.lib vclx.lib dclusr50.lib vcl.lib"/>
-    <SPARELIBS value="vcl.lib dclusr50.lib vclx.lib Vcl50.lib Vclx50.lib dclusr50.lib"/>
+    <LIBRARIES value="dclusr50.lib Vclx50.lib Vcl50.lib dclusr50.lib vcl.lib"/>
+    <SPARELIBS value="vcl.lib dclusr50.lib Vcl50.lib Vclx50.lib dclusr50.lib"/>
     <PACKAGES value="Vcl50.bpi Vclx50.bpi bcbsmp50.bpi dclocx50.bpi bcb2kaxserver50.bpi 
       dclusr50.bpi"/>
     <PATHCPP value=".;..\..\FORM_TEMPLATES;LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32"/>
@@ -33,7 +33,7 @@
     <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
     <RELEASELIBPATH value="$(BCB)\lib\release"/>
     <LINKER value="ilink32"/>
-    <USERDEFINES value="NO_WIN32_LEAN_AND_MEAN;_DEBUG"/>
+    <USERDEFINES value="NO_WIN32_LEAN_AND_MEAN"/>
     <SYSDEFINES value="NO_STRICT"/>
     <MAINSOURCE value="Kop32_static.cpp"/>
     <INCLUDEPATH value="..\..;..;LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;&quot;C:\Program Files\Borland\CBuilder6\Projects\&quot;;..\..\form_templates;..\..\forms;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages"/>
@@ -41,13 +41,15 @@
     <WARNINGS value="-w-par"/>
   </MACROS>
   <OPTIONS>
-    <IDLCFLAGS value="-I..\..\forms -I$(BCB)\include -I$(BCB)\include\vcl -I..\..\Packages 
-      -I.\LIB\DLLKop32 -src_suffix cpp -boa"/>
+    <IDLCFLAGS value="-I..\.. -I.. -ILIB\DLLIO -ILIB\DLLDatabase -ILIB\DLLKop32 
+      -I&quot;C:\Program Files\Borland\CBuilder6\Projects\.&quot; -I..\..\form_templates 
+      -I..\..\forms -I$(BCB)\include -I$(BCB)\include\vcl -I..\..\Packages 
+      -src_suffix cpp -DNO_WIN32_LEAN_AND_MEAN -boa"/>
     <CFLAG1 value="-O2 -H=$(BCB)\lib\vcl50.csm -Hc -Q -Vx -Ve -xf -xp -VF -C -ff -X- -ps -a8 
-      -6 -b -d -k -y -v -vi- -c -tW -tWM"/>
-    <PFLAGS value="-$YD -$W -$I- -$A8 -v -JPHNE -M"/>
+      -6 -b -d -k- -y -v -vi- -c -tW -tWM"/>
+    <PFLAGS value="-$Y+ -$T -$R -$Q -$B -$A8 -v -JPHNE -M"/>
     <RFLAGS value=""/>
-    <AFLAGS value="/ml /w2 /zi"/>
+    <AFLAGS value="/ml /w2 /zn"/>
     <LFLAGS value="-D&quot;&quot; -S:0x200000 -aa -Tpe -GD -s -M -v"/>
   </OPTIONS>
   <LINKER>
@@ -57,7 +59,7 @@
   </LINKER>
   <IDEOPTIONS>
 [Version Info]
-IncludeVerInfo=0
+IncludeVerInfo=1
 AutoIncBuild=0
 MajorVer=3
 MinorVer=3
@@ -122,12 +124,13 @@ Count=1
 Item0=$(BCB)\source\vcl
 
 [HistoryLists\hlConditionals]
-Count=5
-Item0=NO_WIN32_LEAN_AND_MEAN;_DEBUG
-Item1=WIN32_LEAN_AND_MEAN;_DEBUG
-Item2=WIN32_LEAN_AND_MEAN
-Item3=_DEBUG;WIN32_LEAN_AND_MEAN
-Item4=_DEBUG
+Count=6
+Item0=NO_WIN32_LEAN_AND_MEAN
+Item1=NO_WIN32_LEAN_AND_MEAN;_DEBUG
+Item2=WIN32_LEAN_AND_MEAN;_DEBUG
+Item3=WIN32_LEAN_AND_MEAN
+Item4=_DEBUG;WIN32_LEAN_AND_MEAN
+Item5=_DEBUG
 
 [Debugging]
 DebugSourceDirs=$(BCB)\source\vcl

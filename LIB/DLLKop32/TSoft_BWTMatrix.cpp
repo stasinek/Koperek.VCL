@@ -2,6 +2,7 @@
 #include <windows.h>
 #include "..\DLLIO\TSoft_IO.h"
 #include "TSoft_BWTMatrix.h"
+#pragma hdrstop
 //---------------------------------------------------------------------------
 
 __stdcall TSoft_BWTMatrix::TSoft_BWTMatrix(unsigned long ablock)
@@ -227,4 +228,5 @@ delete indices,F;
 }
 */
 //-------------------------------THE END-------------------------------------
+
 

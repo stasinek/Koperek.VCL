@@ -1,21 +1,3 @@
-# dclusr50.VCL
-
-
-Put into ./SRC/OBSOLETE/PACKAGES
-
-Applications (.VCL) into ./SRC/OBSOLETE/PROG/Application.VCL
-
-Forms -> ./SRC/OBSOLETE/PROG/FORM_TEMPLATES/
-
-Libraries -> ./SRC/X86_LIBRARIES/
-Classes.h -> ./SRC/X86_WIN32_CLASSES/
-
-
-First - compile/install controls then compile application
-
-
-# Koperek_VCL
-
 ""C:\Koperek" /o... /bufor{1024} /argts{blabla;#file;#size;#attr;#path} /maska{*.txt,*.blabla,jeszcze.blabla} /kopiuj /przenies /usun /koduj /dekoduj /listuj /break{q} "c:\Katalog docelowy"" 
 
 /kopiuj

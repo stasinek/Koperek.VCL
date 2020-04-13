@@ -4,21 +4,20 @@
   <MACROS>
     <VERSION value="BCB.06.00"/>
     <PROJECT value="Kop32.exe"/>
-    <OBJFILES value="Kop32.obj Koper_frm.obj Break_frm.obj Haslo_frm.obj Infos_frm.obj 
+    <OBJFILES value="Kop32.obj Haslo_frm.obj Koper_frm.obj Break_frm.obj Infos_frm.obj 
       Journal_frm.obj Lista_frm.obj Quest_frm.obj 
       ..\..\FORM_TEMPLATES\About_frm.obj"/>
     <RESFILES value="Kop32.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
     <DEFFILE value=""/>
-    <RESDEPEN value="$(RESFILES) Koper_frm.dfm Break_frm.dfm Haslo_frm.dfm Infos_frm.dfm 
+    <RESDEPEN value="$(RESFILES) Haslo_frm.dfm Koper_frm.dfm Break_frm.dfm Infos_frm.dfm 
       Journal_frm.dfm Lista_frm.dfm Quest_frm.dfm 
       ..\..\FORM_TEMPLATES\About_frm.dfm"/>
-    <LIBFILES value="LIB\DLLKop32\DLLKop32.lib 
-      &quot;C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.LIB&quot; 
-      &quot;C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.lib&quot;"/>
-    <LIBRARIES value="dclusr50.lib Vclx50.lib Vcl50.lib vclx.lib dclusr50.lib vcl.lib"/>
-    <SPARELIBS value="vcl.lib dclusr50.lib vclx.lib Vcl50.lib Vclx50.lib dclusr50.lib"/>
+    <LIBFILES value="LIB\DLLKop32\DLLKop32.lib LIB\DLLIO\DLLIO.LIB 
+      LIB\DLLDatabase\DLLDatabase.lib"/>
+    <LIBRARIES value="dclusr50.lib Vclx50.lib Vcl50.lib dclusr50.lib vcl.lib"/>
+    <SPARELIBS value="vcl.lib dclusr50.lib Vcl50.lib Vclx50.lib dclusr50.lib"/>
     <PACKAGES value="Vcl50.bpi Vclx50.bpi bcbsmp50.bpi dclocx50.bpi bcb2kaxserver50.bpi 
       dclusr50.bpi"/>
     <PATHCPP value=".;..\..\FORM_TEMPLATES"/>

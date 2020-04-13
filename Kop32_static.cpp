@@ -12,7 +12,6 @@ USEFORM("Journal_frm.cpp", JournalForm);
 USEFORM("Lista_frm.cpp", ListaForm);
 USEFORM("Quest_frm.cpp", QuestForm);
 USEFORM("..\..\FORM_TEMPLATES\About_frm.cpp", AboutForm);
-USERES("Kop32.res");
 USEUNIT("LIB\DLLIO\TSoft_IO.cpp");
 USEUNIT("LIB\DLLDatabase\TSoft_Database.cpp");
 USEUNIT("LIB\DLLKop32\TSoft_Ari.Cpp");
@@ -27,6 +26,7 @@ USEUNIT("LIB\DLLKop32\TSoft_Pharser.cpp");
 USEUNIT("LIB\DLLKop32\TSoft_Seeker.cpp");
 USEUNIT("LIB\DLLKop32\TSoft_Stack.cpp");
 USEUNIT("LIB\DLLKop32\DLLKop32.cpp");
+USERES("Kop32_static.res");
 //---------------------------------------------------------------------------
 #include "Break_frm.h"
 #include "Infos_frm.h"
@@ -62,14 +62,14 @@ strcpy(commandDst,temp);
 	     Application->Initialize();
 	     Application->Title = "SSTSOFT.Koperek-VCL";
          Application->CreateForm(__classid(TBreakForm), &BreakForm);
-         Application->CreateForm(__classid(THasloForm), &HasloForm);
-         Application->CreateForm(__classid(TInfosForm), &InfosForm);
-         Application->CreateForm(__classid(TJournalForm), &JournalForm);
-         Application->CreateForm(__classid(TKoperForm), &KoperForm);
-         Application->CreateForm(__classid(TListaForm), &ListaForm);
-         Application->CreateForm(__classid(TQuestForm), &QuestForm);
-         Application->CreateForm(__classid(TAboutForm), &AboutForm);
-         Application->ShowMainForm = false;
+                 Application->CreateForm(__classid(THasloForm), &HasloForm);
+                 Application->CreateForm(__classid(TInfosForm), &InfosForm);
+                 Application->CreateForm(__classid(TJournalForm), &JournalForm);
+                 Application->CreateForm(__classid(TKoperForm), &KoperForm);
+                 Application->CreateForm(__classid(TListaForm), &ListaForm);
+                 Application->CreateForm(__classid(TQuestForm), &QuestForm);
+                 Application->CreateForm(__classid(TAboutForm), &AboutForm);
+                 Application->ShowMainForm = false;
 
 if (strstr(temp,"/SELECT ")!=NULL)
     Application->Icon->Handle = LoadIcon(hApp,"MAINICON6");
