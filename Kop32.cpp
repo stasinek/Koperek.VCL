@@ -44,13 +44,14 @@ strcpy(commandSrc,"");
 	Application->Initialize();
 	Application->Title = "SSTSOFT.Koperek-VCL";
     Application->CreateForm(__classid(TBreakForm), &BreakForm);
-                 Application->CreateForm(__classid(TInfosForm), &InfosForm);
-                 Application->CreateForm(__classid(TJournalForm), &JournalForm);
-                 Application->CreateForm(__classid(TKoperForm), &KoperForm);
-                 Application->CreateForm(__classid(TListaForm), &ListaForm);
-                 Application->CreateForm(__classid(TQuestForm), &QuestForm);
-                 Application->CreateForm(__classid(TAboutForm), &AboutForm);
-                 Application->ShowMainForm = false;
+         Application->CreateForm(__classid(TInfosForm), &InfosForm);
+         Application->CreateForm(__classid(TJournalForm), &JournalForm);
+         Application->CreateForm(__classid(TKoperForm), &KoperForm);
+         Application->CreateForm(__classid(TListaForm), &ListaForm);
+         Application->CreateForm(__classid(TQuestForm), &QuestForm);
+         Application->CreateForm(__classid(TAboutForm), &AboutForm);
+         Application->CreateForm(__classid(THasloForm), &HasloForm);
+         Application->ShowMainForm = false;
 
 if (strstr(temp,"/SELECT")!=NULL)
     Application->Icon->Handle = LoadIcon(hApp,"MAINICON6");

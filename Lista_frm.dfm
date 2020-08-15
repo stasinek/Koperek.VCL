@@ -1,6 +1,6 @@
 object ListaForm: TListaForm
-  Left = 176
-  Top = 109
+  Left = 30
+  Top = 94
   Width = 916
   Height = 495
   Caption = 'Lista'
@@ -178,7 +178,7 @@ object ListaForm: TListaForm
     TabOrder = 2
     object ComboBox1: TComboBox
       Left = 12
-      Top = 27
+      Top = 51
       Width = 237
       Height = 21
       ItemHeight = 13
@@ -189,7 +189,7 @@ object ListaForm: TListaForm
     end
     object FILTRUJ: TButton
       Left = 266
-      Top = 28
+      Top = 52
       Width = 103
       Height = 21
       Caption = 'SET THIS FILTER'

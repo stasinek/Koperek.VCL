@@ -35,8 +35,10 @@
     <WARNINGS value="-w-par"/>
   </MACROS>
   <OPTIONS>
-    <IDLCFLAGS value="-I..\..\forms -I$(BCB)\include -I$(BCB)\include\vcl -I..\..\Packages 
-      -I.\LIB\DLLKop32 -src_suffix cpp -boa"/>
+    <IDLCFLAGS value="-I..\.. -I.. -ILIB\DLLIO -ILIB\DLLDatabase -ILIB\DLLKop32 
+      -I&quot;C:\Program Files\Borland\CBuilder6\Projects\.&quot; -I..\..\form_templates 
+      -I..\..\forms -I$(BCB)\include -I$(BCB)\include\vcl -I..\..\Packages 
+      -src_suffix cpp -DNO_WIN32_LEAN_AND_MEAN -D_DEBUG -boa"/>
     <CFLAG1 value="-O2 -H=$(BCB)\lib\vcl50.csm -Hc -Q -Vx -Ve -xf -xp -VF -C -ff -X- -ps -a8 
       -6 -b -d -k -y -v -vi- -c -tW -tWM"/>
     <PFLAGS value="-$YD -$W -$I- -$A8 -v -JPHNE -M"/>
@@ -136,5 +138,16 @@ RemoteDebug=0
 [Compiler]
 ShowInfoMsgs=1
 LinkDebugVcl=1
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
   </IDEOPTIONS>
 </PROJECT>
