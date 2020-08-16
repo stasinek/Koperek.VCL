@@ -4,21 +4,20 @@
   <MACROS>
     <VERSION value="BCB.06.00"/>
     <PROJECT value="Kop32_static.exe"/>
-    <OBJFILES value="Kop32_static.obj Koper_frm.obj Break_frm.obj Haslo_frm.obj Infos_frm.obj 
-      Journal_frm.obj Lista_frm.obj Quest_frm.obj 
+    <OBJFILES value="Kop32_static.obj Kop32_common.obj Haslo_frm.obj Koper_frm.obj 
+      Break_frm.obj Infos_frm.obj Journal_frm.obj Lista_frm.obj Quest_frm.obj 
       ..\..\FORM_TEMPLATES\About_frm.obj LIB\DLLIO\TSoft_IO.obj 
       LIB\DLLDatabase\TSoft_Database.obj LIB\DLLKop32\TSoft_Ari.obj 
       LIB\DLLKop32\TSoft_BinTree.obj LIB\DLLKop32\TSoft_BWTMatrix.obj 
       LIB\DLLKop32\TSoft_HDR.obj LIB\DLLKop32\TSoft_Huff.obj 
       LIB\DLLKop32\TSoft_Koder.obj LIB\DLLKop32\TSoft_Kop32.obj 
       LIB\DLLKop32\TSoft_Mtf.obj LIB\DLLKop32\TSoft_Pharser.obj 
-      LIB\DLLKop32\TSoft_Seeker.obj LIB\DLLKop32\TSoft_Stack.obj 
-      LIB\DLLKop32\DLLKop32.obj"/>
+      LIB\DLLKop32\TSoft_Seeker.obj LIB\DLLKop32\TSoft_Stack.obj"/>
     <RESFILES value="Kop32_static.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
     <DEFFILE value=""/>
-    <RESDEPEN value="$(RESFILES) Koper_frm.dfm Break_frm.dfm Haslo_frm.dfm Infos_frm.dfm 
+    <RESDEPEN value="$(RESFILES) Haslo_frm.dfm Koper_frm.dfm Break_frm.dfm Infos_frm.dfm 
       Journal_frm.dfm Lista_frm.dfm Quest_frm.dfm 
       ..\..\FORM_TEMPLATES\About_frm.dfm"/>
     <LIBFILES value=""/>
@@ -33,7 +32,7 @@
     <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
     <RELEASELIBPATH value="$(BCB)\lib\release"/>
     <LINKER value="ilink32"/>
-    <USERDEFINES value="NO_WIN32_LEAN_AND_MEAN"/>
+    <USERDEFINES value="NO_WIN32_LEAN_AND_MEAN;STATIC"/>
     <SYSDEFINES value="NO_STRICT"/>
     <MAINSOURCE value="Kop32_static.cpp"/>
     <INCLUDEPATH value="..\..;..;LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;&quot;C:\Program Files\Borland\CBuilder6\Projects\&quot;;..\..\form_templates;..\..\forms;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages"/>
@@ -44,12 +43,12 @@
     <IDLCFLAGS value="-I..\.. -I.. -ILIB\DLLIO -ILIB\DLLDatabase -ILIB\DLLKop32 
       -I&quot;C:\Program Files\Borland\CBuilder6\Projects\.&quot; -I..\..\form_templates 
       -I..\..\forms -I$(BCB)\include -I$(BCB)\include\vcl -I..\..\Packages 
-      -src_suffix cpp -DNO_WIN32_LEAN_AND_MEAN -boa"/>
+      -src_suffix cpp -DNO_WIN32_LEAN_AND_MEAN -DSTATIC -boa"/>
     <CFLAG1 value="-O2 -H=$(BCB)\lib\vcl50.csm -Hc -Q -Vx -Ve -xf -xp -VF -C -ff -X- -ps -a8 
       -6 -b -d -k- -y -v -vi- -c -tW -tWM"/>
     <PFLAGS value="-$Y+ -$T -$R -$Q -$B -$A8 -v -JPHNE -M"/>
     <RFLAGS value=""/>
-    <AFLAGS value="/ml /w2 /zn"/>
+    <AFLAGS value="/ml /w2 /zi"/>
     <LFLAGS value="-D&quot;&quot; -S:0x200000 -aa -Tpe -GD -s -M -v"/>
   </OPTIONS>
   <LINKER>
@@ -80,7 +79,7 @@ FileVersion=3.3.1.523
 InternalName=SSTSOFT.KOPEREK
 LegalCopyright=
 LegalTrademarks=
-OriginalFilename=Kop32_static.exe
+OriginalFilename=Kop32.exe
 ProductName=
 ProductVersion=1.0.0.0
 Comments=sstsoft@wp.pl
@@ -124,13 +123,14 @@ Count=1
 Item0=$(BCB)\source\vcl
 
 [HistoryLists\hlConditionals]
-Count=6
-Item0=NO_WIN32_LEAN_AND_MEAN
-Item1=NO_WIN32_LEAN_AND_MEAN;_DEBUG
-Item2=WIN32_LEAN_AND_MEAN;_DEBUG
-Item3=WIN32_LEAN_AND_MEAN
-Item4=_DEBUG;WIN32_LEAN_AND_MEAN
-Item5=_DEBUG
+Count=7
+Item0=NO_WIN32_LEAN_AND_MEAN;STATIC
+Item1=NO_WIN32_LEAN_AND_MEAN
+Item2=NO_WIN32_LEAN_AND_MEAN;_DEBUG
+Item3=WIN32_LEAN_AND_MEAN;_DEBUG
+Item4=WIN32_LEAN_AND_MEAN
+Item5=_DEBUG;WIN32_LEAN_AND_MEAN
+Item6=_DEBUG
 
 [Debugging]
 DebugSourceDirs=$(BCB)\source\vcl
@@ -145,5 +145,16 @@ RemoteDebug=0
 [Compiler]
 ShowInfoMsgs=1
 LinkDebugVcl=1
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
   </IDEOPTIONS>
 </PROJECT>

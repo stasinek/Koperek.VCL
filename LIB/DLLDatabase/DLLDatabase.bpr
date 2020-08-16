@@ -6,6 +6,8 @@
     <PROJECT value="DLLDatabase.dll"/>
     <OBJFILES value="DLLDatabase.obj TSoft_Database.obj ..\DLLIO\DLLIO.obj"/>
     <RESFILES value=""/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
     <DEFFILE value=""/>
     <RESDEPEN value="$(RESFILES)"/>
     <LIBFILES value="..\DLLIO\DLLIO.LIB"/>

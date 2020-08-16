@@ -48,7 +48,7 @@ typedef class DATABASE_IMPEXP Item {
 		  __stdcall  Item	(char *atext, TSoft::Database *adatabase, long aipos);
 virtual   __stdcall ~Item	(void);
 	//------------------------------------
-	void __stdcall Eql	(Database::Item *aItems);
+	void __stdcall Mov	(Database::Item *aItems);
 	void __stdcall Clr	(void);
 	//------------------------------------
 	__declspec(property(get=get_node, put=set_node)) TSoft::Database *node;
@@ -93,7 +93,7 @@ DATABASE_IMPEXP 	 __stdcall  Database(char *aAlias);
 DATABASE_IMPEXP 	 __stdcall  Database(TSoft::Database *aOwner);
 DATABASE_IMPEXP 	 __stdcall ~Database(void);
 //------------------------------------
-DATABASE_IMPEXP long __stdcall Eql	  	(TSoft::Database *aDatabase);
+DATABASE_IMPEXP long __stdcall Mov	  	(TSoft::Database *aDatabase);
 DATABASE_IMPEXP long __stdcall Cat	  	(TSoft::Database *aDatabase);
 DATABASE_IMPEXP long __stdcall Cut	  	(void);
 DATABASE_IMPEXP void __stdcall Clr	  	(void);

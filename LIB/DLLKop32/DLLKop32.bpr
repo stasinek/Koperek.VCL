@@ -9,10 +9,10 @@
       TSoft_Stack.obj TSoft_Pharser.obj TSoft_BinTree.obj"/>
     <RESFILES value="DLLKop32.res"/>
     <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
     <DEFFILE value=""/>
     <RESDEPEN value="$(RESFILES)"/>
-    <LIBFILES value="&quot;C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.lib&quot; 
-      &quot;C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.LIB&quot;"/>
+    <LIBFILES value="..\DLLDatabase\DLLDatabase.lib ..\DLLIO\DLLIO.LIB"/>
     <LIBRARIES value=""/>
     <SPARELIBS value=""/>
     <PACKAGES value="USRPKG.bpi"/>
@@ -32,6 +32,8 @@
     <WARNOPTSTR value=""/>
   </MACROS>
   <OPTIONS>
+    <IDLCFLAGS value="-I..\DLLIO -I..\DLLI -I..\DLLDatabase -I.. -I$(BCB)\include -src_suffix 
+      cpp -DBUILD_KOPDLL -boa"/>
     <CFLAG1 value="-WD -O2 -H=c:\PROGRA~1\borland\CBUILD~1\lib\vcl35.csm -Hc -Q -w -xf -xp 
       -Tkh30000 -VF -C -ff -X- -ps -a8 -6 -b -d -k -y -v -vi- -c -tWD -tWM"/>
     <CFLAG2 value=""/>
@@ -54,7 +56,7 @@ AutoIncBuild=1
 MajorVer=3
 MinorVer=0
 Release=1
-Build=51
+Build=53
 Debug=0
 PreRelease=0
 Special=0
@@ -66,7 +68,7 @@ CodePage=1250
 [Version Info Keys]
 CompanyName=TSOFT
 FileDescription=DLL (GUI)
-FileVersion=3.0.1.51
+FileVersion=3.0.1.53
 InternalName=
 LegalCopyright=
 LegalTrademarks=
@@ -112,5 +114,16 @@ RemoteDebug=0
 [Compiler]
 ShowInfoMsgs=1
 LinkDebugVcl=1
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
   </IDEOPTIONS>
 </PROJECT>

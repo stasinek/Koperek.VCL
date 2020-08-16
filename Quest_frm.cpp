@@ -246,7 +246,7 @@ void __fastcall TQuestForm::ComboBox1Change(TObject *Sender)
 {
 Kop->options.Dict = ComboBox1->Text.ToIntDef(256);
 if (Kop->options.Dict > 65536 || Kop->options.Dict < 64)
-   {Kop->options.Dict = 256;
+   {Kop->options.Dict = 4096;
     ComboBox1->Text = Kop->options.Dict;
    }
 }
@@ -373,6 +373,7 @@ void __fastcall TQuestForm::SpeedButton10Click(TObject *Sender)
    Button2->Caption = "&OK";
 }
 //---------------------------------------------------------------------------
+
 
 
 

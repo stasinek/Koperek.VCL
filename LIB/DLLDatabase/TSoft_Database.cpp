@@ -34,7 +34,7 @@ for (long i = 0; i < 8; i++)
  if (atext!=NULL)
 	  maciez.ftext = strReDup(maciez.ftext,atext);
  if (adatabase!=NULL)
-	  maciez.fnode->Eql(adatabase);
+	  maciez.fnode->Mov(adatabase);
 maciez.fipos = aipos;
 }
 //---------------------------------------------------------------------------
@@ -78,16 +78,16 @@ __declspec(dllexport)  void  __stdcall TSoft::Database::Item::set_node(TSoft::Da
 {
 if (anode==NULL)
 	{
-	anode->Eql(NULL); //EQL database a nie item
+	anode->Mov(NULL); //EQL database a nie item
 	}
 else
 	{
-	anode->Eql(anode);
+	anode->Mov(anode);
 	}
 }
 //---------------------------------------------------------------------------
 
-__declspec(dllexport)  void __stdcall TSoft::Database::Item::Eql(Item *aItems)
+__declspec(dllexport)  void __stdcall TSoft::Database::Item::Mov(Item *aItems)
 {
 if (aItems==NULL)
 	{
@@ -112,7 +112,7 @@ else
 
 __declspec(dllexport)  void __stdcall TSoft::Database::Item::Clr()
 {
-Eql(NULL);
+Mov(NULL);
 }
 //---------------------------------------------------------------------------
 //DATABASE
@@ -216,11 +216,11 @@ __declspec(dllexport)  void __stdcall TSoft::Database::set_Items(long aindex, It
 {
 if (aItems==NULL)
 	{
-	 maciez.fItems[aindex]->Eql(NULL);
+	 maciez.fItems[aindex]->Mov(NULL);
 	}
 else
 	{
-	 maciez.fItems[aindex]->Eql(aItems);
+	 maciez.fItems[aindex]->Mov(aItems);
 	}
 }
 //---------------------------------------------------------------------------
@@ -257,7 +257,7 @@ if (maciez.fCount==0 && maciez.fItems!=NULL)
 }
 //---------------------------------------------------------------------------
 
-__declspec(dllexport)  long __stdcall TSoft::Database::Eql(TSoft::Database *aDatabase)
+__declspec(dllexport)  long __stdcall TSoft::Database::Mov(TSoft::Database *aDatabase)
 {
  if (aDatabase==NULL)
 	 {this->Count = 0;
@@ -387,7 +387,7 @@ __declspec(dllexport)  bool __stdcall TSoft::Database::Read(void) {
 HANDLE FHand = CreateFile(this->Alias,GENERIC_READ,FILE_SHARE_READ,NULL,OPEN_ALWAYS,FILE_ATTRIBUTE_NORMAL,NULL);
 char emsg[256];
 if (FHand==INVALID_HANDLE_VALUE) {
-return MessageBox(NULL,strAdd(strAdd(strEql(emsg,"Invalid file or path not exists '"),maciez.fAlias),"'"),
+return MessageBox(NULL,strAdd(strAdd(strMov(emsg,"Invalid file or path not exists '"),maciez.fAlias),"'"),
 						"TSoft::Database read error",
 						MB_OK|MB_ICONERROR);
 }
@@ -406,7 +406,7 @@ __declspec(dllexport)  bool __stdcall TSoft::Database::Save(void) {
 HANDLE FHand = CreateFile(this->Alias,GENERIC_WRITE,FILE_SHARE_WRITE,NULL,CREATE_ALWAYS,FILE_ATTRIBUTE_NORMAL,NULL);
 char emsg[256];
 if (FHand==INVALID_HANDLE_VALUE) {
-return MessageBox(NULL,strAdd(strAdd(strEql(emsg,"Invalid file or path not exists '"),this->Alias),"'"),
+return MessageBox(NULL,strAdd(strAdd(strMov(emsg,"Invalid file or path not exists '"),this->Alias),"'"),
 						"TSoft::Database Save error",
 						MB_OK|MB_ICONERROR);
 }
@@ -433,7 +433,7 @@ return &xPARAM;
 __declspec(dllexport)  char *__stdcall TEXT_FROM_DATA(char **aText, TSoft::Database *aDatabase, long aformat) {
 char *text = strAlloc(1);
 
- if (aDatabase->Count==0) strEql(text,"");
+ if (aDatabase->Count==0) strMov(text,"");
 else
  if (aformat==COMMA) {
 for (long tpos = 0, tlen = 1, srclen, iT = 0; ;)
@@ -442,11 +442,11 @@ for (long tpos = 0, tlen = 1, srclen, iT = 0; ;)
 	  if (tpos+1+srclen+3+1 >= tlen)
 		  {text = strReAlloc(text,tlen = tpos+srclen+256);
 		  }
-	  ptrEql((char*)((long)text+tpos), "\"", 1);
+	  ptrMov((char*)((long)text+tpos), "\"", 1);
 	  tpos += 1;
-	  ptrEql((char*)((long)text+tpos), aDatabase->Items[iT]->text, srclen);
+	  ptrMov((char*)((long)text+tpos), aDatabase->Items[iT]->text, srclen);
 	  tpos += srclen;
-	  ptrEql((char*)((long)text+tpos), "\", ", 3);
+	  ptrMov((char*)((long)text+tpos), "\", ", 3);
 	  tpos += 3;
 	  if (++iT>=aDatabase->Count) // ucinam 2
 		  {
@@ -464,9 +464,9 @@ for (long tpos = 0, tlen = 1, srclen, iT = 0; ;)
 	  if (tpos+srclen+2+1 >= tlen)
 		  {text = strReAlloc(text,tlen = tpos+srclen+256);
 		  }
-	  ptrEql((char*)((long)text+tpos), aDatabase->Items[iT]->text, srclen);
+	  ptrMov((char*)((long)text+tpos), aDatabase->Items[iT]->text, srclen);
 	  tpos += srclen;
-	  ptrEql((char*)((long)text+tpos), "\r\n", 2);
+	  ptrMov((char*)((long)text+tpos), "\r\n", 2);
 	  tpos += 2;
 	  if (++iT>=aDatabase->Count) // ucinam 2
 		  {text[tpos-2] = '\0';
@@ -533,7 +533,7 @@ for (pos = 0; pos < pos_end; pos = pos_chk)
 		if (pos_chk-pos+1 >= tpos_end)
 			{tText = strReAlloc(tText, tpos_end+=256);
 			}
-	  ptrEql(tText, (char*)((long)aText + pos), pos_chk - pos);
+	  ptrMov(tText, (char*)((long)aText + pos), pos_chk - pos);
 	  tText[pos_chk - pos] = '\0';
 	  aData->Add(ASCHAR(tText));
 

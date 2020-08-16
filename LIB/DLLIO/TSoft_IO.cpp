@@ -14,7 +14,7 @@ return (char*)LocalAlloc(LPTR,alength);
 
 char *__stdcall strAllocEx(long alength, const char *alpsrc)
 {
-return strEql(strAlloc(alength),alpsrc);
+return strMov(strAlloc(alength),alpsrc);
 }
 //---------------------------------------------------------------------------
 
@@ -26,7 +26,7 @@ return (char*)LocalReAlloc(alpdst,alength,LMEM_MOVEABLE);
 
 char *__stdcall strReAllocEx(char *alpdst, long alength, const char *alpsrc)
 {
-return strEql(strReAlloc(alpdst,alength),alpsrc);
+return strMov(strReAlloc(alpdst,alength),alpsrc);
 }
 //---------------------------------------------------------------------------
 
@@ -38,13 +38,13 @@ LocalFree(alpdst);
 
 char *__stdcall strDup(const char *alpdst)
 {
-return strEql(strAlloc(strLen(alpdst)+1),alpdst);
+return strMov(strAlloc(strLen(alpdst)+1),alpdst);
 }
 //---------------------------------------------------------------------------
 
 char *__stdcall strReDup(char *alpdst, const char *alpsrc)
 {
-return strEql(strReAlloc(alpdst,strLen(alpsrc)+1),alpsrc);
+return strMov(strReAlloc(alpdst,strLen(alpsrc)+1),alpsrc);
 }
 //---------------------------------------------------------------------------
 
@@ -67,23 +67,9 @@ return strlen(alpsrc);
 }
 //---------------------------------------------------------------------------
 
-char *__stdcall strEql(char *alpdst,const char *alpsrc)
-{
-ptrEql(alpdst,alpsrc,strLen(alpsrc)+1);
-return alpdst;
-}
-//---------------------------------------------------------------------------
-
 char *__stdcall strMov(char *alpdst,const char *alpsrc)
 {
 ptrMov(alpdst,alpsrc,strLen(alpsrc)+1);
-return alpdst;
-}
-//---------------------------------------------------------------------------
-
-char *__stdcall strnEql(char *alpdst,const char *alpsrc,long alength)
-{
-ptrEql(alpdst,alpsrc,alength);
 return alpdst;
 }
 //---------------------------------------------------------------------------
@@ -117,7 +103,7 @@ return alpdst;
 
 char *__stdcall strDel(char *alpdst, long astart, long alength)
 {
-strnEql((char*)((long)alpdst+astart),(char*)((long)alpdst+astart+alength),strLen(alpdst)-astart-alength);
+strnMov((char*)((long)alpdst+astart),(char*)((long)alpdst+astart+alength),strLen(alpdst)-astart-alength);
 alpdst[strlen(alpdst)-alength] = 0;
 return alpdst;
 }
@@ -125,7 +111,7 @@ return alpdst;
 
 char *__stdcall strDelEnd(char *alpdst, long astart, long aend)
 {
-strnEql((char*)((long)alpdst+astart),(char*)((long)alpdst+aend),strLen(alpdst)-aend);
+strnMov((char*)((long)alpdst+astart),(char*)((long)alpdst+aend),strLen(alpdst)-aend);
 alpdst[strlen(alpdst)-(aend-astart)] = 0;
 return alpdst;
 }
@@ -211,7 +197,7 @@ strPosBREAK:
 
 char *__stdcall strSub(char *alpdst,const char *alpsrc, long astart, long alength)
 {
-strnEql(alpdst,(char*)((long)alpsrc+astart),alength);
+strnMov(alpdst,(char*)((long)alpsrc+astart),alength);
 alpdst[alength] = 0;
 return alpdst;
 }
@@ -219,7 +205,7 @@ return alpdst;
 
 char *__stdcall strSubEnd(char *alpdst,const char *alpsrc, long astart, long aend)
 {
-strnEql(alpdst,(char*)((long)alpsrc+astart),aend-astart);
+strnMov(alpdst,(char*)((long)alpsrc+astart),aend-astart);
 alpdst[aend-astart] = 0;
 return alpdst;
 }
@@ -480,26 +466,6 @@ LocalFree(alpdst);
 }
 //---------------------------------------------------------------------------
 
-void __stdcall ptrEql(void *alpdst,const void *alpsrc,long acount) {
-#if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
-__asm {
- mov ESI,alpsrc
- mov EDI,alpdst
- mov ECX,acount
- mov EAX,ECX
- shr ECX,2
- cld
- rep MOVSD
- mov ECX,EAX
- and ECX,3
- rep MOVSB
-	}
-#else
-memmove(alpdst,alpsrc,acount);
-#endif
-}
-//---------------------------------------------------------------------------
-
 void __stdcall ptrRev(void *alpdst,const void *alpsrc,long acount) {
 #if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
@@ -544,8 +510,7 @@ __asm {
  mov EAX,ECX
  cmp EDI,ESI
  jb  ptrMovINC
- jz  ptrMovX
-
+ jz  ptrMovEXIT
 ptrMovDEC:
  lea ESI,[ESI+ECX-1]
  lea EDI,[EDI+ECX-1]
@@ -558,8 +523,7 @@ ptrMovDEC:
  sub EDI,3
  rep MOVSD
  cld
- jmp ptrMovX
-
+ jmp ptrMovEXIT
 ptrMovINC:
  shr ECX,2
  cld
@@ -567,8 +531,7 @@ ptrMovINC:
  mov ECX,EAX
  and ECX,3
  rep MOVSB
-
-ptrMovX:
+ptrMovEXIT:
 	}
 #else
 memmove(alpdst,alpsrc,acount);
@@ -958,7 +921,7 @@ return -1;
     } } while (0)
 
 
-static void bitmove(const unsigned char *src_org, int src_offset, unsigned char *dst_org, int dst_offset,int src_len)
+static void bitmov_helper(const unsigned char *src_org, int src_offset, unsigned char *dst_org, int dst_offset,int src_len)
 {
     static const unsigned char mask[] =
         { 0x00, 0x01, 0x03, 0x07, 0x0f, 0x1f, 0x3f, 0x7f, 0xff };
@@ -1054,7 +1017,7 @@ static void bitmove(const unsigned char *src_org, int src_offset, unsigned char 
             }
         }
     }
-}//---------------------------------------------------------------------------
+}
 //---------------------------------------------------------------------------
 
 void __stdcall bitMov(void *alpdst,unsigned char adst_bit,const void *alpsrc,unsigned char asrc_bit,unsigned long abit_num)
@@ -1181,7 +1144,7 @@ EDI_XX:
 BIT_XX_BREAK:
 }
 #else
-bitmove((unsigned char*)alpdst,adst_bit,(unsigned char*)alpsrc,asrc_bit,abit_num);
+bitmov_helper((unsigned char*)alpdst,adst_bit,(unsigned char*)alpsrc,asrc_bit,abit_num);
 #endif
 }
 //---------------------------------------------------------------------------

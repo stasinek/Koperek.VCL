@@ -1472,6 +1472,7 @@ object QuestForm: TQuestForm
             Top = 188
             Width = 305
             Height = 17
+            Anchors = [akLeft, akBottom]
             Caption = 'Don'#39't overwrite destination files with same date and size'
             Enabled = False
             Font.Charset = EASTEUROPE_CHARSET
@@ -1791,6 +1792,7 @@ object QuestForm: TQuestForm
       Constraints.MinHeight = 36
       Constraints.MinWidth = 36
       GroupIndex = 8
+      Down = True
       Glyph.Data = {
         76020000424D7602000000000000760000002800000020000000200000000100
         0400000000000002000000000000000000001000000000000000FF00FF008080

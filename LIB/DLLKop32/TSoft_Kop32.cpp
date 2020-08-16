@@ -65,9 +65,14 @@ Clr();
 }
 //---------------------------------------------------------------------------
 
+__stdcall TSoft::Kop32::~Kop32(void) {
+Clr();
+}
+//---------------------------------------------------------------------------
+
 void  __stdcall TSoft::Kop32::SetPassword(const char *ausrpassword) {
-strEql(password.FUsr,ausrpassword);
-strEql(password.FEnc,ausrpassword); password.FSize = strLen(ausrpassword);
+strMov(password.FUsr,ausrpassword);
+strMov(password.FEnc,ausrpassword); password.FSize = strLen(ausrpassword);
 
 int  pos;  __int64 kod = 0;
 for (pos = password.FSize-1; pos!=-1; pos--)
@@ -94,7 +99,7 @@ return password.FSize;
 void __stdcall TSoft::Kop32::Clr(void) {
 ptrSet(&progress,sizeof(progress),NULL);
 ptrSet(&options, sizeof(options), NULL);
-ptrSet(&file,	  sizeof(file), 	 NULL);
+ptrSet(&file, sizeof(file),	NULL);
 ptrSet(&password,sizeof(password),NULL);
 
 list.src.Init.Clr();
@@ -110,9 +115,9 @@ options.Argts.Clr();
 
 int __stdcall TSoft::Kop32::Execute(const char *AlpDst, const char *AlpSrc) {
 char  *templpDst = stack.Push(STACKSTR+strLen(AlpDst));
-strEql(templpDst,AlpDst);
+strMov(templpDst,AlpDst);
 char  *templpSrc = stack.Push(STACKSTR+strLen(AlpSrc));
-strEql(templpSrc,AlpSrc);
+strMov(templpSrc,AlpSrc);
 char  *templp    = stack.Push(STACKSTR+strLen(AlpDst)+strLen(AlpSrc));
 
 int xpos[4];
@@ -120,49 +125,49 @@ int i,z,d,ret,blad;
 Clr(); // czyszczenie list
 options.Operation = opNULL;
 
-strEql(templp,templpDst);
+strMov(templp,templpDst);
 strupr(templp);
 if (Pharser(templp,"DELETE ",NULL,xpos))
    {options.Operation = opUSUN;
     strDelEnd(templpDst,xpos[0],xpos[3]);
 	goto ExecuteOPTIONS;
    }
-strEql(templp,templpDst);
+strMov(templp,templpDst);
 strupr(templp);
 if (Pharser(templp,"DECOMPRESS ",NULL,xpos))
    {options.Operation = opDEKODUJ;
     strDelEnd(templpDst,xpos[0],xpos[3]);
 	goto ExecuteOPTIONS;
    }
-strEql(templp,templpDst);
+strMov(templp,templpDst);
 strupr(templp);
 if (Pharser(templp,"COMPRESS ",NULL,xpos))
    {options.Operation = opKODUJ;
     strDelEnd(templpDst,xpos[0],xpos[3]);
     goto ExecuteOPTIONS;
    }
-strEql(templp,templpDst);
+strMov(templp,templpDst);
 strupr(templp);
 if (Pharser(templp,"MOVE ",NULL,xpos))
    {options.Operation = opPRZENIES;
     strDelEnd(templpDst,xpos[0],xpos[3]);
     goto ExecuteOPTIONS;
    }
-strEql(templp,templpDst);
+strMov(templp,templpDst);
 strupr(templp);
 if (Pharser(templp,"COPY ",NULL,xpos))
    {options.Operation = opKOPIUJ;
     strDelEnd(templpDst,xpos[0],xpos[3]);
     goto ExecuteOPTIONS;
    }
-strEql(templp,templpDst);
+strMov(templp,templpDst);
 strupr(templp);
 if (Pharser(templp,"LIST ",NULL,xpos))
    {options.Operation = opLISTUJ;
     strDelEnd(templpDst,xpos[0],xpos[3]);
     goto ExecuteOPTIONS;
    }
-strEql(templp,templpDst);
+strMov(templp,templpDst);
 strupr(templp);
 if (Pharser(templp,"SELECT ",NULL,xpos))
    {options.Operation = opZAZNACZ;
@@ -174,7 +179,7 @@ ExecuteOPTIONS:
 // break
 //
 options.Break = anQUEST;
-strEql(templp,templpDst);
+strMov(templp,templpDst);
 strupr(templp);
 if (Pharser(templp,"BREAK",templp,xpos))
    {if (templp[0]=='T') options.Break = anALL;
@@ -186,7 +191,7 @@ if (Pharser(templp,"BREAK",templp,xpos))
 // error
 //
 options.Error = anQUEST;
-strEql(templp,templpDst);
+strMov(templp,templpDst);
 strupr(templp);
 if (Pharser(templp,"ERROR",templp,xpos))
    {if (templp[0]=='T') options.Error = anALL;
@@ -198,7 +203,7 @@ if (Pharser(templp,"ERROR",templp,xpos))
 // maska
 //
 options.Masks.Text[COMMA] = "*.*";
-    strEql(templp,templpDst);
+    strMov(templp,templpDst);
     strupr(templp);
     if (Pharser(templp,"COMMA",templp,xpos))
 	   {options.Masks.Text[COMMA] = templp;
@@ -208,7 +213,7 @@ options.Masks.Text[COMMA] = "*.*";
 // ARGumenTS
 //
 options.Argts.Text[COMMA] = "%name%";
-strEql(templp,templpDst);
+strMov(templp,templpDst);
 strupr(templp);
 if (Pharser(templp,"LIST",templp,xpos))
    {options.Argts.Text[COMMA] = templp;
@@ -218,7 +223,7 @@ if (Pharser(templp,"LIST",templp,xpos))
 // password
 //
 SetPassword("");
-strEql(templp,templpDst);
+strMov(templp,templpDst);
 strupr(templp);
 if (Pharser(templp,"PASSWORD",templp,xpos))
    {SetPassword(templp);
@@ -228,7 +233,7 @@ if (Pharser(templp,"PASSWORD",templp,xpos))
 // cutend
 //
 options.Cut = MAXLONG;
-strEql(templp,templpDst);
+strMov(templp,templpDst);
 strupr(templp);
 if (Pharser(templp,"CUT",templp,xpos))
    {options.Cut = strToInt(templp);
@@ -238,14 +243,14 @@ if (Pharser(templp,"CUT",templp,xpos))
 // CACHE
 //
 options.Cached = true;
-strEql(templp,templpDst);
+strMov(templp,templpDst);
 strupr(templp);
 if (Pharser(templp,"FLUSH",NULL,xpos))
    {options.Cached = false;
     strDelEnd(templpDst,xpos[0],xpos[3]);
    }
 options.Block = 64 * 1024;
-strEql(templp,templpDst);
+strMov(templp,templpDst);
 strupr(templp);
 if (Pharser(templp,"BUFFER",templp,xpos))
    {options.Block = strToInt(templp) * 1024;
@@ -260,7 +265,7 @@ if (Pharser(templp,"BUFFER",templp,xpos))
 // DICT
 //
 options.Dict = 4096;
-strEql(templp,templpDst);
+strMov(templp,templpDst);
 strupr(templp);
 if (Pharser(templp,"DICT",templp,xpos))
    {options.Dict = strToInt(templp);
@@ -275,7 +280,7 @@ if (Pharser(templp,"DICT",templp,xpos))
 // methods
 //
 options.Methods = mtDEFAULT;
-strEql(templp,templpDst);
+strMov(templp,templpDst);
 strupr(templp);
 if (Pharser(templp,"METHODS",templp,xpos))
    {options.Methods  = 0x00000000;
@@ -333,7 +338,7 @@ for (i = LPreDst->Count-1; i!=-1;i--)
 
 if (options.Operation==opZAZNACZ)
    {
-	list.src.Init.Eql(LPreDst);
+	list.src.Init.Mov(LPreDst);
 	if (list.src.Init.Count==0)
 	options.Operation =opNULL;
 	list.dst.Init.Clr();
@@ -341,17 +346,17 @@ if (options.Operation==opZAZNACZ)
 else
 if (options.Operation==opUSUN)
    {
-	list.src.Init.Eql(LPreDst);
+	list.src.Init.Mov(LPreDst);
 	if (list.src.Init.Count==0)
 	options.Operation =opNULL;
 	list.dst.Init.Clr();
    }
 else
    {
-	list.src.Init.Eql(LPreSrc);
+	list.src.Init.Mov(LPreSrc);
 	if (list.src.Init.Count==0)
 	options.Operation = opNULL;
-	list.dst.Init.Eql(LPreDst);
+	list.dst.Init.Mov(LPreDst);
 	if (list.dst.Init.Count==0)
 	options.Operation = opNULL;
    }
@@ -582,7 +587,7 @@ if (options.Operation==opLISTUJ) // zapisanie listy do fileu
    {
 	for (list.iCur = 0; options.Stop==0 && list.iCur < list.dst.Init.Count; list.iCur++)
 		{
-			 strEql(templp, list.dst.Init.Items[list.iCur]->text);
+			 strMov(templp, list.dst.Init.Items[list.iCur]->text);
 			 strupr(templp);
 		 if (strPos(templp,0,"CLIPBOARD:")>=0 ? ret = OpenClipboard(NULL) : 0)
 			  {
@@ -631,7 +636,7 @@ options.Stop = true;
 
 int __stdcall TSoft::Kop32::Skip(int aindex, bool an_all_not_one) {
 char  *templpSrc = stack.Push(0);
-strEql(templpSrc,list.src.Main.Items[aindex]->text);
+strMov(templpSrc,list.src.Main.Items[aindex]->text);
 int crt;
 
  if (an_all_not_one==true)
@@ -649,7 +654,7 @@ stack.Pop(1,true);
 return 1;
 }
 char  *templpDst = stack.Push(0);
-strEql(templpDst,list.dst.Main.Items[aindex]->text);
+strMov(templpDst,list.dst.Main.Items[aindex]->text);
 
  if (an_all_not_one==true)
 	 {strExtractFilePath(templpDst,templpDst);
@@ -767,7 +772,7 @@ templpStr2 = stack.Push(0);
 
 for (int iT = 0; iT < options.Argts.Count; iT++)
 	 {
-	 strEql(templpStr1,options.Argts.Items[iT]->text);
+	 strMov(templpStr1,options.Argts.Items[iT]->text);
 
 	 strExchange(templpStr1,"%filename%",
 					list.src.Main.Items[aindex]->text);
@@ -962,7 +967,7 @@ FOnBreak(anaction|isFILE|onPROGRESS,0);
 			}
 		hdr.sig  = HEADER_SIG;
 		hdr.size = file.src.Size;
-		ptrEql(file.dst.buffer.Lptr,(void*)&hdr,sizeof(__header));
+		ptrMov(file.dst.buffer.Lptr,(void*)&hdr,sizeof(__header));
 		file.dst.Read += sizeof(__header);
 		if (options.Cached==0)
 		FlushViewOfFile(file.dst.buffer.Lptr,sizeof(__block_header));
@@ -988,7 +993,7 @@ progress.dst.all.Read += sizeof(__header);
 		if (file.src.buffer.Lptr==NULL)
 			{goto ProcedeERRORIO;
 			}
-		ptrEql((void*)&hdr,file.src.buffer.Lptr,sizeof(__header));
+		ptrMov((void*)&hdr,file.src.buffer.Lptr,sizeof(__header));
 		file.src.Read += sizeof(__header);
 		UnmapViewOfFile(file.src.buffer.Lptr);
 		CloseHandle(file.src.HandMap);
@@ -1091,7 +1096,7 @@ mem_write_index = mem_read_index;
 			{goto ProcedeERRORIO;
 			}
 		file.dst.buffer.Lptr =(void*)((ULONG)file.dst.buffer.Lptr + file.dst.buffer.Offset);
-		ptrEql(file.dst.buffer.Lptr, mem_buffer[mem_read_index].Lptr,mem_buffer[mem_read_index].Size);
+		ptrMov(file.dst.buffer.Lptr, mem_buffer[mem_read_index].Lptr,mem_buffer[mem_read_index].Size);
 		file.dst.Read += file.dst.buffer.Size;
 		ptrFree(mem_buffer[mem_read_index].Lptr);
 		if (options.Cached==0)
@@ -1121,7 +1126,7 @@ else
 			}
 		file.src.buffer.Lptr =(void*)((ULONG)file.src.buffer.Lptr + file.src.buffer.Offset);
 		mem_buffer[mem_read_index].Lptr = ptrAlloc(file.src.buffer.Size+1);
-		ptrEql(mem_buffer[mem_read_index].Lptr,file.src.buffer.Lptr,file.src.buffer.Size);
+		ptrMov(mem_buffer[mem_read_index].Lptr,file.src.buffer.Lptr,file.src.buffer.Size);
 		mem_buffer[mem_read_index].Size = file.src.buffer.Size;
 		file.src.Read += file.src.buffer.Size;
 		UnmapViewOfFile((void*)((ULONG)file.src.buffer.Lptr - file.src.buffer.Offset));
@@ -1201,9 +1206,9 @@ else
 			 {b_hdr.size[i] =mem_buffer[i].Size;
 			 }
 		b_hdr.range = file.src.Read;
-		ptrEql((void*)file.dst.buffer.Lptr,(void*)&b_hdr,sizeof(__block_header));
+		ptrMov((void*)file.dst.buffer.Lptr,(void*)&b_hdr,sizeof(__block_header));
 		file.dst.Read += sizeof(__block_header);
-		ptrEql((void*)((ULONG)file.dst.buffer.Lptr+sizeof(__block_header)),mem_buffer[mem_read_index].Lptr,mem_buffer[mem_read_index].Size);
+		ptrMov((void*)((ULONG)file.dst.buffer.Lptr+sizeof(__block_header)),mem_buffer[mem_read_index].Lptr,mem_buffer[mem_read_index].Size);
 		file.dst.Read += file.dst.buffer.Size;
 		ptrFree(mem_buffer[mem_read_index].Lptr);
 		if (options.Cached==0)
@@ -1231,7 +1236,7 @@ else
 		file.src.buffer.Lptr = MapViewOfFile(file.src.HandMap, FILE_MAP_READ, 0,
 														 file.src.Read - file.src.buffer.Offset,sizeof(__block_header) + file.src.buffer.Offset);
 		file.src.buffer.Lptr =(void*)((ULONG)file.src.buffer.Lptr + file.src.buffer.Offset);
-		ptrEql((void*)&b_hdr,file.src.buffer.Lptr,sizeof(__block_header));
+		ptrMov((void*)&b_hdr,file.src.buffer.Lptr,sizeof(__block_header));
 		file.src.Read += sizeof(__block_header);
 		mem_count=1;
 		//
@@ -1263,7 +1268,7 @@ else
 			}
 		file.src.buffer.Lptr =(void*)((ULONG)file.src.buffer.Lptr + file.src.buffer.Offset);
 		mem_buffer[mem_read_index].Lptr = ptrAlloc(mem_buffer[mem_read_index].Size+1);
-		ptrEql(mem_buffer[mem_read_index].Lptr,file.src.buffer.Lptr,file.src.buffer.Size);
+		ptrMov(mem_buffer[mem_read_index].Lptr,file.src.buffer.Lptr,file.src.buffer.Size);
 		file.src.Read += file.src.buffer.Size;
 		UnmapViewOfFile((void*)((ULONG)file.src.buffer.Lptr - file.src.buffer.Offset));
 
@@ -1320,7 +1325,7 @@ else
 			{goto ProcedeERRORIO;
 			}
 		file.dst.buffer.Lptr =(void*)((ULONG)file.dst.buffer.Lptr + file.dst.buffer.Offset);
-		ptrEql(file.dst.buffer.Lptr,mem_buffer[mem_read_index].Lptr,mem_buffer[mem_read_index].Size);
+		ptrMov(file.dst.buffer.Lptr,mem_buffer[mem_read_index].Lptr,mem_buffer[mem_read_index].Size);
 		ptrFree(mem_buffer[mem_read_index].Lptr);
 		if (options.Cached==0)
 		FlushViewOfFile(file.dst.buffer.Lptr,file.dst.buffer.Size);
@@ -1475,7 +1480,7 @@ int __stdcall TSoft::Kop32::DoBreak(int aCode,int aParam) {
 static char lpmsgText[128];
 
 if (options.Operation==opLISTUJ) {
-strEql(lpmsgText,options.Masks.Text[COMMA]);
+strMov(lpmsgText,options.Masks.Text[COMMA]);
 strAdd(lpmsgText," from \"");
 strAdd(lpmsgText,list.src.Init.Text[LINES]);
 strAdd(lpmsgText,"\" to file \"");
@@ -1484,13 +1489,13 @@ strAdd(lpmsgText,"\"");
 }
 else
 if (options.Operation==opUSUN) {
-strEql(lpmsgText,options.Masks.Text[COMMA]);
+strMov(lpmsgText,options.Masks.Text[COMMA]);
 strAdd(lpmsgText," from \"");
 strAdd(lpmsgText,list.src.Init.Text[LINES]);
 strAdd(lpmsgText,"\"");
 }
 else {
-strEql(lpmsgText,options.Masks.Text[COMMA]);
+strMov(lpmsgText,options.Masks.Text[COMMA]);
 strAdd(lpmsgText," form \"");
 strAdd(lpmsgText,list.src.Init.Text[LINES]);
 strAdd(lpmsgText,"\" to \"");
@@ -1537,10 +1542,5 @@ return MessageBox(NULL,lpmsgText,
 break;
 }
 return mrNo;
-}
-//---------------------------------------------------------------------------
-
-__stdcall TSoft::Kop32::~Kop32(void) {
-Clr();
 }
 //---------------------------------------------------------------------------

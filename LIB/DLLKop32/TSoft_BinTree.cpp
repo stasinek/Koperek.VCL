@@ -79,7 +79,7 @@ brun_elsize = 0;
 //------------------------------------------
 ring_insert = find_max_offset-find_max_length;
 ring_delete = 0;
-ptrEql((char*)&ring_ptr[find_max_offset-find_max_length],aptr,find_max_length);
+ptrMov((char*)&ring_ptr[find_max_offset-find_max_length],aptr,find_max_length);
 //------------------------------------------
 register int  i;
 for (i = find_max_offset+HASH_SIZE;;)

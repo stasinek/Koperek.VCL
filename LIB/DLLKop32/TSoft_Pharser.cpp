@@ -11,7 +11,7 @@ bool __stdcall Pharser(char *lpsrc, char *lpparameter, char *lpdst, __int32 *lpi
 char   tmpch[32];
 __int32 init, bgn, end, exit, srclen = strLen(lpsrc), paralen = strLen(lpparameter);
 tmpch[0] = PHARSEPARATOR;
-ptrEql(&(tmpch[1]),lpparameter,paralen+1);
+ptrMov(&(tmpch[1]),lpparameter,paralen+1);
 
 //----------------
     init = strPos(lpsrc,0,tmpch);
@@ -53,7 +53,7 @@ if (end==-1) {
    }
 //----------------
     exit = end + 1;
-    if (lpdst!=NULL){ ptrEql(lpdst,&(lpsrc[bgn]),end-bgn); lpdst[end-bgn] = '\0'; }
+    if (lpdst!=NULL){ ptrMov(lpdst,&(lpsrc[bgn]),end-bgn); lpdst[end-bgn] = '\0'; }
     if (lpint!=NULL){
         lpint[0]=init;
         lpint[1]=bgn;

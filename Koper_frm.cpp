@@ -30,8 +30,8 @@ TKoperForm *KoperForm;
 __fastcall TKoperForm::TKoperForm(TComponent* Owner)
 	: TForm(Owner)
 {
-temp0 = new char[10240];
 lpcaption = new char[255];
+temp0 = new char[10240];
 temp1 = new char[255];
 temp2 = new char[255];
 temp3 = new char[255];
@@ -162,10 +162,14 @@ Application->ProcessMessages();
 //----------------------------------------------------------------------------
 
 int __stdcall TKoperForm::DoBreak(__int32 BreakCode,__int32 BreakButton) {
+//static int ProgressDir = 1;
 
 if (BreakCode&opSEEKPROGRESS)
    {
-	BreakForm->AdvancedBar1->Position = (BreakForm->AdvancedBar1->Position +1) % 1000;
+//	if (BreakForm->AdvancedBar1->Position >= 100 ) ProgressDir = -1;
+//	else if (BreakForm->AdvancedBar1->Position == 0) ProgressDir = 1;
+//    BreakForm->AdvancedBar1->Position = (BreakForm->AdvancedBar1->Position + ProgressDir);
+
 	if (BreakCode&isSRC) {
 	if (Kop->list.src.Main.Count>0) {
 		strExtractFilePath(temp0,Kop->list.src.Main.Items[Kop->list.src.Main.Count-1]->text);
@@ -414,9 +418,14 @@ delete buffer1;
 delete buffer2;
 delete buffer3;
 delete buffer4;
-
 }
 //---------------------------------------------------------------------------
 
 
+
+void __fastcall TKoperForm::SpeedButton5Click(TObject *Sender)
+{
+// Resource limiter (inteligent pause)    
+}
+//---------------------------------------------------------------------------
 

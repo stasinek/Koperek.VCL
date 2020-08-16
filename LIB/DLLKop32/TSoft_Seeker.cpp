@@ -41,11 +41,11 @@
 
 #define SEEKSRC_STACK_POP(patch)\
 		file.src.find.Hand = list_seek_stack->Items[list_seek_stack->Count-1]->data[0];\
-		strEql(patch, list_seek_stack->Items[list_seek_stack->Count-1]->text);
+		strMov(patch, list_seek_stack->Items[list_seek_stack->Count-1]->text);
 
 int __stdcall TSoft::Kop32::SeekSrc(char *alpSrc) {
 char *currentlpStr = stack.Push(0);
-strEql(currentlpStr,alpSrc);
+strMov(currentlpStr,alpSrc);
 strFixFilePath(currentlpStr,alpSrc);
 char *templpStr    = stack.Push(0);
 TSoft::Database *list_seek_stack = new TSoft::Database("lprzesz");
@@ -76,7 +76,7 @@ for (;options.Stop==0;) {
         FOnBreak(opSEEKPROGRESS|isSRC,0);
 	SEEKSRC_FIND_ADD_TO_LIST(currentlpStr,file.dst.find.Next);
 	SeekSrcFile(currentlpStr); // szukaj w katalogu
-	strEql(templpStr,currentlpStr);
+	strMov(templpStr,currentlpStr);
 	strAdd(templpStr,"\\*.*");
 	SEEKSRC_FIND_FIRST(templpStr);
 	SEEKSRC_STACK_PUSH(currentlpStr);
@@ -133,7 +133,7 @@ FOnBreak(opSEEKPROGRESS|isSRC,0);
 for (int iMaska = 0; iMaska < options.Masks.Count && options.Stop==0; iMaska++) {
 
 // szukaj plikow o "kolejnych maskach"
-	strEql(currentlpStr,alpSrc);
+	strMov(currentlpStr,alpSrc);
 	strAdd(currentlpStr, "\\");
 	strAdd(currentlpStr,options.Masks.Items[iMaska]->text);
 	SEEKSRC_FIND_FIRST(currentlpStr);
@@ -149,7 +149,7 @@ for (;options.Stop==0;) {
 	else
 	if ((file.src.find.Data.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)==0)
 		{
-		strEql(currentlpStr,alpSrc);
+		strMov(currentlpStr,alpSrc);
 		strAdd(currentlpStr, "\\");
 		strAdd(currentlpStr,file.src.find.Data.cFileName);
 		SEEKSRC_FIND_ADD_TO_LIST(currentlpStr,file.dst.find.Next);
@@ -222,9 +222,9 @@ if (strLen(lpSrc) > 3)
 	}
 if (options.Operation!=opKODUJ && options.Operation!=opDEKODUJ)
 	{
-	 strEql(templpSrc,lpSrc);
+	 strMov(templpSrc,lpSrc);
 	 strupr(templpSrc);
-	 strEql(templpDst,lpDst);
+	 strMov(templpDst,lpDst);
 	 strupr(templpDst);
 
 	 if (strcmp(templpSrc,templpDst)==0)
@@ -257,7 +257,7 @@ for (int  srclen_old = strLen(lpSrc), dstlen_old = strLen(lpDst); list.dst.Main.
 	 {
          FOnBreak(opSEEKPROGRESS|isDST,0);
 	 // ustawiam now¹ nazwê najpierw kopiujê star¹ pierwotn¹
-	 strEql(templpStr, lpDst);
+	 strMov(templpStr, lpDst);
 	 strAdd(templpStr, (char*)((int)list.src.Main.Items[list.dst.Main.Count]->text + srclen_old));
 	 // preparuj nazwê dla kodowania lub dekodowania
 	 if (options.Operation==opKODUJ)

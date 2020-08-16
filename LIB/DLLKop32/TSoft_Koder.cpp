@@ -318,7 +318,7 @@ LZS_SAVE_PASS:
 
 #define SAVE_PASS()                                                                     \
 	ptrd+=tree.hdrcoder.Code_ptrPass((DWORD*)ptrd,pass_text_length);	                \
-	ptrEql((char*)ptrd,(char*)pass_text_ptr,pass_text_length);			                \
+	ptrMov((char*)ptrd,(char*)pass_text_ptr,pass_text_length);			                \
 	ptrd+=pass_text_length;
 
 	SAVE_PASS();
@@ -341,7 +341,7 @@ LZS_SAVE_BRUN:
 	}
 #define SAVE_BRUN()                                                                     \
     ptrd+=tree.hdrcoder.Code_ptrBrun((DWORD*)ptrd,tree.brun_elsize,tree.brun_counte);   \
-    ptrEql((char*)ptrd,(char*)ptrs,tree.brun_elsize);                                   \
+    ptrMov((char*)ptrd,(char*)ptrs,tree.brun_elsize);                                   \
     ptrd+=tree.brun_elsize;
 
 	SAVE_BRUN();
@@ -423,7 +423,7 @@ for (;ptrd < ptrd_end;) {
 LZS_LOAD_PASS_STANDARD:
 //------------------------------------------
 	 ptrs+= hdrcoder.DeCode_ptrPass(&cnt,(DWORD*)ptrs);
-     ptrEql((void*)ptrd,(void*)ptrs,cnt);
+     ptrMov((void*)ptrd,(void*)ptrs,cnt);
      ptrs+= cnt;
      ptrd+= cnt;
 	 /*for (; cnt!=0; cnt--) {
@@ -436,7 +436,7 @@ LZS_LOAD_PASS_STANDARD:
 LZS_LOAD_DICT_STANDARD:
 //------------------------------------------
 	 ptrs+= hdrcoder.DeCode_ptrDict(&ofs,&cnt,(DWORD*)ptrs);
-	 ptrEql((char*)ptrd,(unsigned char*)(ptrd-ofs),cnt);
+	 ptrMov((char*)ptrd,(unsigned char*)(ptrd-ofs),cnt);
 	 ptrd+= cnt;
 	 continue;
 //------------------------------------------
@@ -889,6 +889,6 @@ void __stdcall UnCompress_BWT(void *alpDst, unsigned long acount, void *alpSrc)
 unsigned long ptrs     = (unsigned long)alpSrc;
 unsigned long ptrd     = (unsigned long)alpDst;
 unsigned long ptrd_end = (unsigned long)alpDst + acount;
-ptrEql(alpDst,alpSrc,acount - 2*acount/(1024) - 2);
+ptrMov(alpDst,alpSrc,acount - 2*acount/(1024) - 2);
 }
 //-------------------------------THE END-------------------------------------

@@ -26,7 +26,7 @@ unsigned long  idx_end;
 	// reverse copying BARBAKAN->>NAKABRAB for unsigned long suffix sorting
 ptrRev(matrix_ptr,alpSrc,row_max);
 	// NAKABRAB->NAKABRABNAKABRAB
-ptrEql(matrix_ptr+row_max,matrix_ptr,row_max);
+ptrMov(matrix_ptr+row_max,matrix_ptr,row_max);
 	// matrix_row_ptr addresing
 //------------------------------------------
 	 idx = (DWORD)matrix_idx_ptr;

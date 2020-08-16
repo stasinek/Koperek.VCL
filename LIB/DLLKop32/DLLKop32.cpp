@@ -1,7 +1,8 @@
 //---------------------------------------------------------------------------
 #include <windows.h>
-#pragma hdrstop
 #include <condefs.h>
+#pragma hdrstop
+//---------------------------------------------------------------------------
 #include "TSoft_Kop32.h"
 //---------------------------------------------------------------------------
 //   Important note about DLL memory management when your DLL uses the
@@ -43,20 +44,17 @@ USEUNIT("TSoft_Seeker.cpp");
 USEUNIT("TSoft_Stack.cpp");
 USEUNIT("TSoft_Pharser.cpp");
 USEUNIT("TSoft_BinTree.cpp");
-USELIB("C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.lib");
-USELIB("C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.LIB");
+USELIB("..\..\LIB\DLLDatabase\DLLDatabase.lib");
+USELIB("..\..\LIB\DLLIO\DLLIO.LIB");
 //---------------------------------------------------------------------------
 __declspec(dllexport) TSoft::Kop32 *Kop;
 //---------------------------------------------------------------------------
 
 int WINAPI DllEntryPoint(HINSTANCE, unsigned long reason, void*)
 {
-if (reason==DLL_PROCESS_ATTACH)
-    Kop = new TSoft::Kop32;
-if (reason==DLL_PROCESS_DETACH)
-    delete Kop;
-
-    return 1;
+if (reason==DLL_PROCESS_ATTACH) Kop = new TSoft::Kop32;
+if (reason==DLL_PROCESS_DETACH) delete Kop;
+return 1;
 }
 //---------------------------------------------------------------------------
 

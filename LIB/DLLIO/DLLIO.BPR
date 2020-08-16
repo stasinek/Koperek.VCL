@@ -6,6 +6,8 @@
     <PROJECT value="DLLIO.dll"/>
     <OBJFILES value="DLLIO.obj TSoft_IO.obj"/>
     <RESFILES value="DLLIO.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
     <DEFFILE value=""/>
     <RESDEPEN value="$(RESFILES)"/>
     <LIBFILES value=""/>

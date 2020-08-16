@@ -1,6 +1,7 @@
 //---------------------------------------------------------------------------
-
 #include <windows.h>
+//---------------------------------------------------------------------------
+#include "TSoft_IO.h"
 //---------------------------------------------------------------------------
 //   Important note about DLL memory management when your DLL uses the
 //   static version of the RunTime Library:
@@ -21,11 +22,10 @@
 //   If your DLL uses the dynamic version of the RTL, you do not need to
 //   explicitly add MEMMGR.LIB as this will be done implicitly for you
 //---------------------------------------------------------------------------
-
 #pragma argsused
 int WINAPI DllEntryPoint(HINSTANCE hinst, unsigned long reason, void* lpReserved)
 {
-        return 1;
+return 1;
 }
 //---------------------------------------------------------------------------
  

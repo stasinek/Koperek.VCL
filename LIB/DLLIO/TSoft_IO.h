@@ -11,7 +11,6 @@ extern "C" IMPEXP char *__stdcall strReAllocEx(char *alpdst, long alength, const
 extern "C" IMPEXP char *__stdcall strReDup(char *alpdst, const char *alpsrc);
 extern "C" IMPEXP void  __stdcall strFree(char *alpdst);
 //---------------------------------------------------------------------------
-extern "C" IMPEXP char *__stdcall strEql(char *alpdst, const char *alpsrc);
 extern "C" IMPEXP char *__stdcall strMov(char *alpdst, const char *alpsrc);
 extern "C" IMPEXP long  __stdcall strLen(const char *alpsrc);
 //---------------------------------------------------------------------------
@@ -42,7 +41,6 @@ extern "C" IMPEXP void *__stdcall ptrAlloc(long acount);
 extern "C" IMPEXP void *__stdcall ptrReAlloc(void *alpdst,long acount);
 extern "C" IMPEXP void  __stdcall ptrFree(void *alpdst);
 //---------------------------------------------------------------------------
-extern "C" IMPEXP void  __stdcall ptrEql(void *alpdst,const void *alpsrc,long acount);
 extern "C" IMPEXP void  __stdcall ptrMov(void *alpdst,const void *alpsrc,long acount);
 //---------------------------------------------------------------------------
 extern "C" IMPEXP void  __stdcall ptrShr(void *alpdst,long  acount);

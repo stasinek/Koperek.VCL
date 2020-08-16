@@ -1,6 +1,6 @@
 object KoperForm: TKoperForm
-  Left = 210
-  Top = 147
+  Left = 33
+  Top = 202
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsDialog
   Caption = 'sstsoft->Koperek - please wait...'
@@ -227,7 +227,7 @@ object KoperForm: TKoperForm
       ParentShowHint = False
       ShowHint = True
       Spacing = 0
-      OnClick = SpeedButton1Click
+      OnClick = SpeedButton5Click
     end
   end
   object Panel3: TPanel
