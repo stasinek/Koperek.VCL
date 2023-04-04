@@ -55,9 +55,7 @@ LocalFree(symb_cumf);
 
 void __stdcall TSoft_Ari::Initialize()
 {
-//------------------
 low = 0, high = Q4, value = 0, underflow_bits = 0;
-//------------------
 register unsigned long c, i, f;
 //------------------
 f = 0;
@@ -77,9 +75,7 @@ symb_freq[0] = 0;
 
 void __stdcall TSoft_Ari::Update(unsigned long axdata_uncoded)
 {
-//------------------
 register unsigned long symb = axdata_uncoded;
-//------------------
 register unsigned long i, f;
 //------------------
 if (symb_cumf[0] >= MAX_CUMF) {
@@ -178,10 +174,8 @@ return bits;
 
 unsigned char __stdcall TSoft_Ari::Flush_Encoder(unsigned long *alpcode, unsigned char alpcode_bit)
 {
-//------------------
 register unsigned char bits = 0;
 register unsigned long code = 0;
-//------------------
 register unsigned char u = ++underflow_bits;
 
 if (low < Q1) OUT_BIT_0(code,u,bits)
@@ -204,7 +198,6 @@ Initialize();
 //------------------
 register unsigned char bits = 0;
 register unsigned long code;
-//------------------
 register unsigned long v = value;
 //------------------
 unsigned long indata;

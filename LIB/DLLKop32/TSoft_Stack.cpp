@@ -6,37 +6,36 @@
 #include "TSoft_Stack.h"
 //---------------------------------------------------------------------------
 
-__stdcall __stack::__stack()
+__stdcall __stack::__stack() : Fcnt(0)
 {
-for (Fcnt = STACKCNT-1;;Fcnt--) {
-
+for (Fcnt = STACKCNT-1;;Fcnt--)
+    {
 	Fsize[Fcnt] = STACKSTR;
 	Flptr[Fcnt] = strAlloc(STACKSTR);
-	if (Fcnt==0)
-			break;
-}
+    if (Fcnt == 0) break;
+    }
 }
 //---------------------------------------------------------------------------
 
 void __stdcall __stack::Pop(int Acnt, bool Arealloc)
 {
-for (;Acnt!=0;Acnt--) {
-
+for (;Acnt!=0;Acnt--)
+    {
 	if (Arealloc==true)
-		{Fsize[Fcnt] = STACKSTR;
+		{
+         Fsize[Fcnt] = STACKSTR;
 		 Flptr[Fcnt] = strReAlloc(Flptr[Fcnt],STACKSTR);
 		}
-	if (Fcnt==0) 
-		 Fcnt =STACKCNT-1;
+	if (Fcnt == 0) Fcnt =STACKCNT-1;
 	else
 		 Fcnt--;
-}
+    }
 }
 //---------------------------------------------------------------------------
 
 char *__stdcall __stack::Push(int Asize)
 {
-if (Fcnt>=STACKCNT-1) Fcnt =0;
+if (Fcnt>=STACKCNT-1) Fcnt = 0;
 else
 	Fcnt++;
 
@@ -50,9 +49,9 @@ return Flptr[Fcnt];
 
 __stdcall __stack::~__stack()
 {
-for (Fcnt = STACKCNT-1;;Fcnt--) {
- if (Flptr[Fcnt]!=NULL) strFree(Flptr[Fcnt]);
- if (Fcnt==0) break;
-}
+for (Fcnt = 0; Fcnt < STACKCNT;Fcnt++)
+    {
+    if (Flptr[Fcnt]!=NULL) strFree(Flptr[Fcnt]);
+    }
 }
 //---------------------------------------------------------------------------

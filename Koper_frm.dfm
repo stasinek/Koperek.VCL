@@ -1,10 +1,10 @@
-object KoperForm: TKoperForm
-  Left = 33
-  Top = 202
+object Koper_form: TKoper_form
+  Left = 196
+  Top = 139
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsDialog
   Caption = 'sstsoft->Koperek - please wait...'
-  ClientHeight = 293
+  ClientHeight = 397
   ClientWidth = 577
   Color = clBtnFace
   Constraints.MinHeight = 320
@@ -23,25 +23,9 @@ object KoperForm: TKoperForm
   OnDestroy = FormDestroy
   PixelsPerInch = 96
   TextHeight = 13
-  object AdvancedBar2: TAdvancedBar
-    Left = 0
-    Top = 268
-    Width = 577
-    Height = 25
-    Align = alBottom
-    BorderKind = bNone
-    TextBackColor = clHighlight
-    ParentFont = False
-    Font.Charset = EASTEUROPE_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    TextSuffix = '%'
-  end
   object Panel2: TPanel
     Left = 0
-    Top = 196
+    Top = 325
     Width = 577
     Height = 72
     Align = alBottom
@@ -91,7 +75,6 @@ object KoperForm: TKoperForm
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
-      OnClick = SpeedButton3Click
     end
     object SpeedButton1: TSpeedButton
       Left = 468
@@ -234,48 +217,48 @@ object KoperForm: TKoperForm
     Left = 0
     Top = 0
     Width = 185
-    Height = 196
+    Height = 325
     Align = alLeft
     BevelOuter = bvNone
     TabOrder = 1
-    object AdvancedBar1: TAdvancedBar
-      Left = 64
-      Top = 8
-      Width = 41
-      Height = 177
-      TextBackColor = clHighlight
-      TextSuffix = '%'
-    end
-    object AdvancedBar3: TAdvancedBar
-      Left = 116
-      Top = 8
-      Width = 41
-      Height = 177
-      TextBackColor = clHighlight
-      TextSuffix = '%'
-    end
-    object AdvancedBar4: TAdvancedBar
-      Left = 12
-      Top = 8
-      Width = 41
-      Height = 177
-      TextBackColor = clHighlight
-      TextSuffix = '%'
-    end
     object Bevel1: TBevel
       Left = 135
       Top = 0
       Width = 50
-      Height = 196
+      Height = 325
       Align = alRight
       Shape = bsRightLine
+    end
+    object AdvancedBar3: TAdvancedBar
+      Left = 28
+      Top = 48
+      Width = 100
+      Height = 20
+      TextBackColor = clHighlight
+      TextSuffix = '%'
+    end
+    object AdvancedBar4: TAdvancedBar
+      Left = 48
+      Top = 92
+      Width = 100
+      Height = 20
+      TextBackColor = clHighlight
+      TextSuffix = '%'
+    end
+    object AdvancedBar5: TAdvancedBar
+      Left = 68
+      Top = 144
+      Width = 100
+      Height = 20
+      TextBackColor = clHighlight
+      TextSuffix = '%'
     end
   end
   object Panel1: TPanel
     Left = 185
     Top = 0
     Width = 392
-    Height = 196
+    Height = 325
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 2
@@ -283,34 +266,14 @@ object KoperForm: TKoperForm
       Left = 0
       Top = 0
       Width = 392
-      Height = 201
+      Height = 313
       Align = alTop
       BevelOuter = bvNone
       BorderWidth = 10
       TabOrder = 0
-      object AdvancedBar5: TAdvancedBar
-        Left = 10
-        Top = 10
-        Width = 372
-        Height = 19
-        Align = alTop
-        TextBackColor = clHighlight
-        TextSuffix = '%'
-        BarForeColor = clRed
-      end
-      object AdvancedBar6: TAdvancedBar
-        Left = 10
-        Top = 35
-        Width = 372
-        Height = 20
-        Align = alTop
-        TextBackColor = clHighlight
-        TextSuffix = '%'
-        BarForeColor = clLime
-      end
       object Label1: TLabel
         Left = 10
-        Top = 112
+        Top = 73
         Width = 372
         Height = 20
         Align = alTop
@@ -323,7 +286,7 @@ object KoperForm: TKoperForm
       end
       object Label2: TLabel
         Left = 10
-        Top = 63
+        Top = 24
         Width = 372
         Height = 20
         Align = alTop
@@ -342,7 +305,7 @@ object KoperForm: TKoperForm
       end
       object Label3: TLabel
         Left = 10
-        Top = 142
+        Top = 103
         Width = 372
         Height = 20
         Align = alTop
@@ -353,7 +316,7 @@ object KoperForm: TKoperForm
       end
       object Label4: TLabel
         Left = 10
-        Top = 178
+        Top = 290
         Width = 372
         Height = 13
         Align = alBottom
@@ -369,7 +332,7 @@ object KoperForm: TKoperForm
       end
       object Label5: TLabel
         Left = 10
-        Top = 83
+        Top = 44
         Width = 372
         Height = 13
         Align = alTop
@@ -377,7 +340,7 @@ object KoperForm: TKoperForm
       end
       object Bevel2: TBevel
         Left = 10
-        Top = 158
+        Top = 270
         Width = 372
         Height = 5
         Align = alBottom
@@ -385,7 +348,7 @@ object KoperForm: TKoperForm
       end
       object Bevel3: TBevel
         Left = 10
-        Top = 132
+        Top = 93
         Width = 372
         Height = 10
         Align = alTop
@@ -393,7 +356,7 @@ object KoperForm: TKoperForm
       end
       object Bevel4: TBevel
         Left = 10
-        Top = 96
+        Top = 57
         Width = 372
         Height = 16
         Align = alTop
@@ -401,7 +364,7 @@ object KoperForm: TKoperForm
       end
       object Bevel5: TBevel
         Left = 10
-        Top = 163
+        Top = 275
         Width = 372
         Height = 15
         Align = alBottom
@@ -409,7 +372,7 @@ object KoperForm: TKoperForm
       end
       object Bevel6: TBevel
         Left = 10
-        Top = 29
+        Top = 10
         Width = 372
         Height = 6
         Align = alTop
@@ -417,11 +380,35 @@ object KoperForm: TKoperForm
       end
       object Bevel7: TBevel
         Left = 10
-        Top = 55
+        Top = 16
         Width = 372
         Height = 8
         Align = alTop
         Shape = bsSpacer
+      end
+      object AdvancedBar1: TAdvancedBar
+        Left = 12
+        Top = 56
+        Width = 369
+        Height = 20
+        TextBackColor = clHighlight
+        TextSuffix = '%'
+      end
+      object AdvancedBar2: TAdvancedBar
+        Left = 12
+        Top = 128
+        Width = 369
+        Height = 20
+        TextBackColor = clHighlight
+        TextSuffix = '%'
+      end
+      object AdvancedBar6: TAdvancedBar
+        Left = 12
+        Top = 168
+        Width = 369
+        Height = 20
+        TextBackColor = clHighlight
+        TextSuffix = '%'
       end
     end
   end
@@ -429,12 +416,12 @@ object KoperForm: TKoperForm
     Enabled = False
     Interval = 220
     OnTimer = Timer1Timer
-    Left = 208
-    Top = 209
+    Left = 180
+    Top = 341
   end
   object SysTray1: TSysTray
-    Hint = '???'#0'?'#0#0#0'?'
-    Left = 256
-    Top = 208
+    Hint = 'Some Hint'
+    Left = 224
+    Top = 341
   end
 end

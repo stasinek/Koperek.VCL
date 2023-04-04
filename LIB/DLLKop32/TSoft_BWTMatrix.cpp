@@ -113,18 +113,16 @@ unsigned long *idx_ptr = matrix_idx_ptr;
 unsigned long  cmp;
 //------------------------------------------
 for (row = row_bgn; row <= row_end; row++) {
-//------------------------------------------
-for (row_cmp = row, cmp =*((DWORD*)(ptr+idx_ptr[row])), row_fnd = row; ++row_fnd <= row_end;) // find first lower
- if (cmp >*((DWORD*)(ptr+idx_ptr[row_fnd])))
-	 {cmp =*((DWORD*)(ptr+idx_ptr[row_fnd]));
-	  row_cmp =row_fnd;
-	 }
- if (row_cmp!=row)
-	 {cmp = idx_ptr[row];
+    for (row_cmp = row, cmp =*((DWORD*)(ptr+idx_ptr[row])), row_fnd = row; ++row_fnd <= row_end;) // find first lower
+    if (cmp >*((DWORD*)(ptr+idx_ptr[row_fnd])))
+	   {cmp =*((DWORD*)(ptr+idx_ptr[row_fnd]));
+	    row_cmp =row_fnd;
+       }
+    if (row_cmp!=row)
+	   {cmp = idx_ptr[row];
 			  idx_ptr[row] = idx_ptr[row_cmp];
 								  idx_ptr[row_cmp] = cmp;
-	 }
-//------------------------------------------
+	   }
 }
 //------------------------------------------
 }
@@ -139,15 +137,15 @@ unsigned long  cmp;
 //------------------------------------------
 for (row = row_bgn; row <= row_end;) {
 //------------------------------------------
-for (row_cmp = row, cmp =*((DWORD*)(ptr+idx_ptr[row])); ++row <= row_end;)
- if (cmp!=*((DWORD*)(ptr+idx_ptr[row])))
-	 {break;
-	 }
- if (row-1 > row_cmp)
-	 {
-	  alist_bgn[list_count] = row_cmp;
-	  alist_end[list_count] = row-1;
-	  list_count++;
+    for (row_cmp = row, cmp =*((DWORD*)(ptr+idx_ptr[row])); ++row <= row_end;)
+    if (cmp!=*((DWORD*)(ptr+idx_ptr[row])))
+	    {break;
+	    }
+    if (row-1 > row_cmp)
+	    {
+	    alist_bgn[list_count] = row_cmp;
+	    alist_end[list_count] = row-1;
+	    list_count++;
 	 }
 //------------------------------------------
 }

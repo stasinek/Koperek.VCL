@@ -12,7 +12,7 @@
 #include "EXERES.h"
 #include <Buttons.hpp>
 //---------------------------------------------------------------------------
-class TInfosForm : public TForm
+class TInfos_form : public TForm
 {
 //---------------------------------------------------------------------------
 __published:	// IDE-managed Components
@@ -20,7 +20,6 @@ __published:	// IDE-managed Components
 	TExeResource *ExeResource1;
 	TStatusBar *StatusBar1;
     TPanel *Panel1;
-    TButton *Button1;
     TButton *Tak;
     TButton *Ignore;
     TButton *Nie;
@@ -53,7 +52,6 @@ __published:	// IDE-managed Components
 
 
 	void __fastcall FormCreate(TObject *Sender);
-	void __fastcall Button1Click(TObject *Sender);
 private:	// User declarations
 //---------------------------------------------------------------------------
     int time;
@@ -62,10 +60,10 @@ private:	// User declarations
 public:		// User declarations
 //---------------------------------------------------------------------------
 	int __fastcall ZastopInfo(AnsiString DocelKPNazwa,AnsiString ZrodlKPNazwa);
-	    __fastcall TInfosForm(TComponent* Owner);
+	    __fastcall TInfos_form(TComponent* Owner);
 //---------------------------------------------------------------------------
 };
 //---------------------------------------------------------------------------
-extern PACKAGE TInfosForm *InfosForm;
+extern PACKAGE TInfos_form *Infos_form;
 //---------------------------------------------------------------------------
 #endif

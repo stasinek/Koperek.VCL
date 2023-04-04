@@ -1,4 +1,4 @@
-object HasloForm: THasloForm
+object Haslo_form: THaslo_form
   Left = 430
   Top = 241
   BorderStyle = bsDialog

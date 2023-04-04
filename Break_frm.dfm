@@ -1,6 +1,6 @@
-object BreakForm: TBreakForm
-  Left = 498
-  Top = 364
+object Break_form: TBreak_form
+  Left = 184
+  Top = 169
   BorderIcons = []
   BorderStyle = bsDialog
   Caption = 'Koperek'
@@ -20,7 +20,7 @@ object BreakForm: TBreakForm
     Left = 8
     Top = 8
     Width = 107
-    Height = 14
+    Height = 13
     Caption = 'Searching for files..'
     Font.Charset = EASTEUROPE_CHARSET
     Font.Color = clWindowText
@@ -29,19 +29,10 @@ object BreakForm: TBreakForm
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object AdvancedBar1: TAdvancedBar
-    Left = 0
-    Top = 87
-    Width = 529
-    Height = 20
-    Align = alBottom
-    TextBackColor = clHighlight
-    TextSuffix = '%'
-  end
   object Label2: TLabel
     Left = 8
     Top = 28
-    Width = 5
+    Width = 3
     Height = 13
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -218,5 +209,13 @@ object BreakForm: TBreakForm
     NumGlyphs = 2
     ParentFont = False
     OnClick = SpeedButton3Click
+  end
+  object AdvancedBar1: TAdvancedBar
+    Left = 8
+    Top = 84
+    Width = 513
+    Height = 20
+    TextBackColor = clHighlight
+    TextSuffix = '%'
   end
 end

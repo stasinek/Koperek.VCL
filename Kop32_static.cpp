@@ -1,14 +1,14 @@
 //---------------------------------------------------------------------------
 #include "Kop32_common.h"
+//---------------------------------------------------------------------------
 USEUNIT("Kop32_common.cpp");
-USEFORM("Haslo_frm.cpp", HasloForm);
-USEFORM("Koper_frm.cpp", KoperForm);
-USEFORM("Break_frm.cpp", BreakForm);
-USEFORM("Infos_frm.cpp", InfosForm);
-USEFORM("Journal_frm.cpp", JournalForm);
-USEFORM("Lista_frm.cpp", ListaForm);
-USEFORM("Quest_frm.cpp", QuestForm);
-USEFORM("..\..\FORM_TEMPLATES\About_frm.cpp", AboutForm);
+USEFORM("Haslo_frm.cpp", Haslo_form);
+USEFORM("Koper_frm.cpp", Koper_form);
+USEFORM("Break_frm.cpp", Break_form);
+USEFORM("Infos_frm.cpp", Infos_form);
+USEFORM("Journal_frm.cpp", Journal_form);
+USEFORM("Quest_frm.cpp", Quest_form);
+USEFORM("..\..\FORM_TEMPLATES\About_frm.cpp", About_form);
 USEUNIT("LIB\DLLIO\TSoft_IO.cpp");
 USEUNIT("LIB\DLLDatabase\TSoft_Database.cpp");
 USEUNIT("LIB\DLLKop32\TSoft_Ari.Cpp");

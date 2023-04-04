@@ -1,6 +1,6 @@
-object QuestForm: TQuestForm
-  Left = 271
-  Top = 134
+object Quest_form: TQuest_form
+  Left = 145
+  Top = 176
   BorderStyle = bsDialog
   Caption = 'Confirm operation'
   ClientHeight = 393
@@ -1287,7 +1287,7 @@ object QuestForm: TQuestForm
         Top = 31
         Width = 387
         Height = 259
-        ActivePage = TabSheet1
+        ActivePage = TabSheet3
         Align = alBottom
         Style = tsFlatButtons
         TabOrder = 0
@@ -1611,6 +1611,10 @@ object QuestForm: TQuestForm
             TabOrder = 8
             OnClick = CheckBox5Click
           end
+        end
+        object TabSheet3: TTabSheet
+          Caption = 'Output options...'
+          ImageIndex = 2
         end
       end
     end

@@ -20,7 +20,7 @@ private:
 	KOP_IMPEXP 	  __stdcall  __stack();
 	KOP_IMPEXP char *__stdcall Push (int Asize);
 	KOP_IMPEXP void  __stdcall Pop  (int Acnt, bool Arealloc);
-	KOP_IMPEXP 	  __stdcall ~__stack();
+	virtual KOP_IMPEXP 	  __stdcall ~__stack();
 };
 //---------------------------------------------------------------------------
 #endif

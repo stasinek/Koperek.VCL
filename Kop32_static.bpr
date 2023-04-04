@@ -5,7 +5,7 @@
     <VERSION value="BCB.06.00"/>
     <PROJECT value="Kop32_static.exe"/>
     <OBJFILES value="Kop32_static.obj Kop32_common.obj Haslo_frm.obj Koper_frm.obj 
-      Break_frm.obj Infos_frm.obj Journal_frm.obj Lista_frm.obj Quest_frm.obj 
+      Break_frm.obj Infos_frm.obj Journal_frm.obj Quest_frm.obj 
       ..\..\FORM_TEMPLATES\About_frm.obj LIB\DLLIO\TSoft_IO.obj 
       LIB\DLLDatabase\TSoft_Database.obj LIB\DLLKop32\TSoft_Ari.obj 
       LIB\DLLKop32\TSoft_BinTree.obj LIB\DLLKop32\TSoft_BWTMatrix.obj 
@@ -18,8 +18,7 @@
     <IDLGENFILES value=""/>
     <DEFFILE value=""/>
     <RESDEPEN value="$(RESFILES) Haslo_frm.dfm Koper_frm.dfm Break_frm.dfm Infos_frm.dfm 
-      Journal_frm.dfm Lista_frm.dfm Quest_frm.dfm 
-      ..\..\FORM_TEMPLATES\About_frm.dfm"/>
+      Journal_frm.dfm Quest_frm.dfm ..\..\FORM_TEMPLATES\About_frm.dfm"/>
     <LIBFILES value=""/>
     <LIBRARIES value="dclusr50.lib Vclx50.lib Vcl50.lib dclusr50.lib vcl.lib"/>
     <SPARELIBS value="vcl.lib dclusr50.lib Vcl50.lib Vclx50.lib dclusr50.lib"/>

@@ -4,7 +4,6 @@
 //---------------------------------------------------------------------------
 #include "koper_frm.h"
 #include "infos_frm.h"
-#include "lista_frm.h"
 //---------------------------------------------------------------------------
 #include "main.h"
 //---------------------------------------------------------------------------
@@ -19,17 +18,17 @@
 #pragma link "EXERES"
 #pragma resource "*.dfm"
 //---------------------------------------------------------------------------
-TInfosForm *InfosForm;
+TInfos_form *Infos_form;
 //---------------------------------------------------------------------------
 
-__fastcall TInfosForm::TInfosForm(TComponent* Owner)
+__fastcall TInfos_form::TInfos_form(TComponent* Owner)
     : TForm(Owner)
 {
 hInst = (HINSTANCE)HInstance;
 }
 //---------------------------------------------------------------------------
 
-int __fastcall TInfosForm::ZastopInfo(AnsiString DstFileName, AnsiString SrcFileName)
+int __fastcall TInfos_form::ZastopInfo(AnsiString DstFileName, AnsiString SrcFileName)
 {
 SHFILEINFO sfi;
 //---------------------------------------
@@ -44,7 +43,7 @@ sprintf(dateStrDst, "%02d-%02d-%02d, %02d:%02d:%02d\n",
 char sizeStrDst[32];
 if (findDataDst.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) sizeStrDst[0] = '\0';
 else
-	sprintf(sizeStrDst, "%s\n", KoperForm->GetBajtText(findDataDst.nFileSizeLow));
+	sprintf(sizeStrDst, "%s\n", Koper_form->GetBajtText(findDataDst.nFileSizeLow));
 if (findHandDst!=INVALID_HANDLE_VALUE)
 	FindClose(findHandDst);
 AnsiString tempNameDst = DstFileName;
@@ -77,7 +76,7 @@ sprintf(dateStrSrc, "%02d-%02d-%02d, %02d:%02d:%02d\n",
 char sizeStrSrc[32];
 if (findDataSrc.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) sizeStrSrc[0] = '\0';
 else
-	sprintf(sizeStrSrc, "%s\n", KoperForm->GetBajtText(findDataSrc.nFileSizeLow));
+	sprintf(sizeStrSrc, "%s\n", Koper_form->GetBajtText(findDataSrc.nFileSizeLow));
 if (findHandSrc!=INVALID_HANDLE_VALUE)
 	FindClose(findHandSrc);
 AnsiString tempNameSrc = SrcFileName;
@@ -102,21 +101,21 @@ return this->ShowModal();
 }
 //----------------------------------------------------------------------------
 
-void __fastcall TInfosForm::FormShow(TObject *Sender)
+void __fastcall TInfos_form::FormShow(TObject *Sender)
 {
-KoperForm->Timer1->Enabled = false;
+Koper_form->Timer1->Enabled = false;
 time=timeGetTime();
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TInfosForm::FormHide(TObject *Sender)
+void __fastcall TInfos_form::FormHide(TObject *Sender)
 {
-KoperForm->OldCzas+=timeGetTime()-time;
-KoperForm->Timer1->Enabled = true;
+Koper_form->OldCzas+=timeGetTime()-time;
+Koper_form->Timer1->Enabled = true;
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TInfosForm::FormCreate(TObject *Sender)
+void __fastcall TInfos_form::FormCreate(TObject *Sender)
 {
 Image3->Canvas->Brush->Color = clBtnFace;
 Image3->Canvas->FillRect(Rect(0,0,48,48));
@@ -125,14 +124,6 @@ DrawIconEx(Image3->Canvas->Handle,
 		   NULL,NULL,DI_NORMAL);
 }
 //---------------------------------------------------------------------------
-
-
-void __fastcall TInfosForm::Button1Click(TObject *Sender)
-{
-if (ListaForm->ShowModal()==mrYesToAll) { ModalResult=mrYesToAll; Hide(); }
-}
-//---------------------------------------------------------------------------
-
 
 
 

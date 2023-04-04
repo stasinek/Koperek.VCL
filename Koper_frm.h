@@ -15,13 +15,11 @@
 #include "ADVBAR.h"
 #include "SYSTRAY.h"
 //---------------------------------------------------------------------------
-class TKoperForm : public TForm
+class TKoper_form : public TForm
 {
 __published:	// IDE-managed Components
 //----------------------------------------------------------------------------
 	TTimer *Timer1;
-        TAdvancedBar *AdvancedBar2;
-	TSysTray *SysTray1;
     TPanel *Panel2;
     TSpeedButton *SpeedButton4;
     TSpeedButton *SpeedButton3;
@@ -30,8 +28,6 @@ __published:	// IDE-managed Components
     TPanel *Panel3;
     TPanel *Panel1;
     TPanel *Panel4;
-    TAdvancedBar *AdvancedBar5;
-    TAdvancedBar *AdvancedBar6;
     TLabel *Label1;
     TLabel *Label2;
     TLabel *Label3;
@@ -41,19 +37,22 @@ __published:	// IDE-managed Components
     TBevel *Bevel3;
     TBevel *Bevel4;
     TBevel *Bevel5;
-    TAdvancedBar *AdvancedBar1;
-    TAdvancedBar *AdvancedBar3;
-    TAdvancedBar *AdvancedBar4;
     TBevel *Bevel1;
     TSpeedButton *SpeedButton5;
     TBevel *Bevel6;
     TBevel *Bevel7;
+    TSysTray *SysTray1;
+    TAdvancedBar *AdvancedBar1;
+    TAdvancedBar *AdvancedBar2;
+    TAdvancedBar *AdvancedBar3;
+    TAdvancedBar *AdvancedBar4;
+    TAdvancedBar *AdvancedBar5;
+    TAdvancedBar *AdvancedBar6;
         void __fastcall FormCreate(TObject *Sender);
 	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
         void __fastcall Timer1Timer(TObject *Sender);
         void __fastcall SpeedButton1Click(TObject *Sender);
         void __fastcall SpeedButton2Click(TObject *Sender);
-	void __fastcall SpeedButton3Click(TObject *Sender);
 	void __fastcall SpeedButton4Click(TObject *Sender);
 	void __fastcall FormDestroy(TObject *Sender);
     void __fastcall SpeedButton5Click(TObject *Sender);
@@ -64,7 +63,7 @@ private:	// User declarations
 //----------------------------------------------------------------------------
 public:		// User declarations
 //----------------------------------------------------------------------------
-	__fastcall TKoperForm(TComponent* Owner);
+	__fastcall TKoper_form(TComponent* Owner);
 //----------------------------------------------------------------------------
 char *__stdcall GetBajtText (__int64 liczbaDoDzielenia);
 int   __stdcall DoBreak(__int32 BreakCode,__int32 BreakButton);
@@ -80,6 +79,6 @@ char *buffer1, *buffer2, *buffer3, *buffer4;
 //----------------------------------------------------------------------------
 };
 //---------------------------------------------------------------------------
-extern PACKAGE TKoperForm *KoperForm;
+extern PACKAGE TKoper_form *Koper_form;
 //---------------------------------------------------------------------------
 #endif

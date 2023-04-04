@@ -1,77 +1,33 @@
+[Closed Files]
+File_0=SourceModule,'C:\SRC\OBSOLETE\PROGS\Koperek.VCL\main.h',0,1,1,31,4,0,0
+File_1=SourceModule,'C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.h',0,1,153,1,165,0,0
+File_2=SourceModule,'C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Stack.h',0,1,1,13,23,0,0
+File_3=SourceModule,'C:\SRC\OBSOLETE\PROGS\Koperek.VCL\Kop32_common.cpp',0,1,1,51,30,0,0
+File_4=SourceModule,'C:\SRC\OBSOLETE\PROGS\Koperek.VCL\Break_frm.cpp',0,1,1,27,10,1,0
+File_5=SourceModule,'C:\SRC\OBSOLETE\PROGS\Koperek.VCL\Koper_frm.cpp',0,1,31,32,40,1,0
+File_6=SourceModule,'C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.h',0,1,1,23,7,0,0
+File_7=SourceModule,'C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.h',0,1,1,1,1,0,0
+File_8=SourceModule,'C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp',0,1,1,1,1,0,0
+File_9=SourceModule,'C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.cpp',0,1,1,1,1,0,0
+
 [Modules]
-Module0=H:\Drive\My Projects\OBSOLETE\PROGS\Koperek.VCL\Quest_frm.cpp
-Module1=H:\Drive\My Projects\OBSOLETE\FORM_TEMPLATES\About_frm.cpp
-Module2=H:\Drive\My Projects\OBSOLETE\PROGS\Koperek.VCL\Haslo_frm.cpp
-Module3=H:\Drive\My Projects\OBSOLETE\PROGS\Koperek.VCL\Infos_frm.cpp
-Module4=H:\Drive\My Projects\OBSOLETE\PROGS\Koperek.VCL\Journal_frm.cpp
-Module5=H:\Drive\My Projects\OBSOLETE\PROGS\Koperek.VCL\Koper_frm.cpp
-Module6=H:\Drive\My Projects\OBSOLETE\PROGS\Koperek.VCL\Lista_frm.cpp
-Module7=H:\Drive\My Projects\OBSOLETE\PROGS\Koperek.VCL\Kop32.bpr
-Module8=H:\Drive\My Projects\OBSOLETE\PROGS\Koperek.VCL\Break_frm.cpp
-Count=9
+Module0=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\Kop32.bpr
+Count=1
 EditWindowCount=1
 
-[H:\Drive\My Projects\OBSOLETE\PROGS\Koperek.VCL\Quest_frm.cpp]
-ModuleType=SourceModule
-FormState=1
-FormOnTop=0
-
-[H:\Drive\My Projects\OBSOLETE\FORM_TEMPLATES\About_frm.cpp]
-ModuleType=SourceModule
-FormState=1
-FormOnTop=1
-
-[H:\Drive\My Projects\OBSOLETE\PROGS\Koperek.VCL\Haslo_frm.cpp]
-ModuleType=SourceModule
-FormState=1
-FormOnTop=1
-
-[H:\Drive\My Projects\OBSOLETE\PROGS\Koperek.VCL\Infos_frm.cpp]
-ModuleType=SourceModule
-FormState=1
-FormOnTop=1
-
-[H:\Drive\My Projects\OBSOLETE\PROGS\Koperek.VCL\Journal_frm.cpp]
-ModuleType=SourceModule
-FormState=1
-FormOnTop=1
-
-[H:\Drive\My Projects\OBSOLETE\PROGS\Koperek.VCL\Koper_frm.cpp]
-ModuleType=SourceModule
-FormState=1
-FormOnTop=1
-
-[H:\Drive\My Projects\OBSOLETE\PROGS\Koperek.VCL\Lista_frm.cpp]
-ModuleType=SourceModule
-FormState=1
-FormOnTop=1
-
-[H:\Drive\My Projects\OBSOLETE\PROGS\Koperek.VCL\Kop32.bpr]
+[C:\SRC\OBSOLETE\PROGS\Koperek.VCL\Kop32.bpr]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[H:\Drive\My Projects\OBSOLETE\PROGS\Koperek.VCL\Break_frm.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[H:\Drive\My Projects\OBSOLETE\PROGS\Panel.VCL\ProjectGroup1.bpg]
+[C:\SRC\ProjectGroup1.bpg]
 FormState=0
 FormOnTop=0
 
 [EditWindow0]
-ViewCount=9
-CurrentView=7
+ViewCount=1
+CurrentView=0
 View0=0
-View1=1
-View2=2
-View3=3
-View4=4
-View5=5
-View6=6
-View7=7
-View8=8
 MessageView=MessageView@EditWindow0
 Create=1
 Visible=1
@@ -86,71 +42,15 @@ ClientWidth=862
 ClientHeight=475
 LeftPanelSize=0
 RightPanelSize=0
-BottomPanelSize=52
+BottomPanelSize=0
 BottomPanelClients=MessageView@EditWindow0
-BottomPanelData=000004000000000000000000000000000000000000000000000100000000000000000B0000004D65737361676556696577FFFFFFFF
+BottomPanelData=00000400010000000B0000004D657373616765566965770000000000000000000000000000000000FFFFFFFF
 
 [View0]
-Module=H:\Drive\My Projects\OBSOLETE\PROGS\Koperek.VCL\Kop32.cpp
+Module=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\Kop32.cpp
 CursorX=1
 CursorY=1
 TopLine=1
-LeftCol=1
-
-[View1]
-Module=H:\Drive\My Projects\OBSOLETE\FORM_TEMPLATES\About_frm.cpp
-CursorX=1
-CursorY=1
-TopLine=1
-LeftCol=1
-
-[View2]
-Module=H:\Drive\My Projects\OBSOLETE\PROGS\Koperek.VCL\Haslo_frm.cpp
-CursorX=1
-CursorY=1
-TopLine=1
-LeftCol=1
-
-[View3]
-Module=H:\Drive\My Projects\OBSOLETE\PROGS\Koperek.VCL\Infos_frm.cpp
-CursorX=1
-CursorY=1
-TopLine=1
-LeftCol=1
-
-[View4]
-Module=H:\Drive\My Projects\OBSOLETE\PROGS\Koperek.VCL\Journal_frm.cpp
-CursorX=1
-CursorY=1
-TopLine=1
-LeftCol=1
-
-[View5]
-Module=H:\Drive\My Projects\OBSOLETE\PROGS\Koperek.VCL\Koper_frm.cpp
-CursorX=1
-CursorY=1
-TopLine=1
-LeftCol=1
-
-[View6]
-Module=H:\Drive\My Projects\OBSOLETE\PROGS\Koperek.VCL\Lista_frm.cpp
-CursorX=1
-CursorY=1
-TopLine=1
-LeftCol=1
-
-[View7]
-Module=H:\Drive\My Projects\OBSOLETE\PROGS\Koperek.VCL\Quest_frm.cpp
-CursorX=53
-CursorY=18
-TopLine=1
-LeftCol=1
-
-[View8]
-Module=H:\Drive\My Projects\OBSOLETE\PROGS\Koperek.VCL\Break_frm.cpp
-CursorX=17
-CursorY=7
-TopLine=3
 LeftCol=1
 
 [Watches]
@@ -166,9 +66,9 @@ Count=0
 Create=1
 Visible=1
 State=2
-Left=9
-Top=15
-Width=1271
+Left=0
+Top=0
+Width=1280
 Height=105
 MaxLeft=-1
 MaxTop=-1
@@ -225,7 +125,7 @@ ClientHeight=60
 
 [PropertyInspector]
 Create=1
-Visible=0
+Visible=1
 State=0
 Left=56
 Top=179
@@ -240,22 +140,38 @@ LRDockWidth=190
 Dockable=1
 SplitPos=88
 ArrangeBy=Name
-SelectedItem=Caption
+SelectedItem=
 ExpandedItems=Font,Font.Style
 HiddenCategories=
 ShowStatusBar=1
 
+[CallStackWindow]
+Create=1
+Visible=0
+State=0
+Left=493
+Top=319
+Width=294
+Height=161
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=286
+ClientHeight=137
+TBDockHeight=161
+LRDockWidth=294
+Dockable=1
+
 [MessageView@EditWindow0]
 Create=1
-Visible=1
+Visible=0
 State=0
-Left=12
-Top=0
-Width=850
+Left=-62
+Top=-498
+Width=443
 Height=52
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=850
+ClientWidth=443
 ClientHeight=52
 TBDockHeight=52
 LRDockWidth=443

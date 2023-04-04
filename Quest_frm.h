@@ -14,7 +14,7 @@
 #include "BROWSEDLG.h"
 #include <Graphics.hpp>
 //---------------------------------------------------------------------------
-class TQuestForm : public TForm
+class TQuest_form : public TForm
 {
 __published:	// IDE-managed Components
 //---------------------------------------------------------------------------
@@ -65,6 +65,7 @@ __published:	// IDE-managed Components
     TCheckBox *CheckBox7;
     TCheckBox *CheckBox6;
     TCheckBox *CheckBox5;
+    TTabSheet *TabSheet3;
         void __fastcall Edit3Change(TObject *Sender);
         void __fastcall Edit2Change(TObject *Sender);
         void __fastcall SpeedButton1Click(TObject *Sender);
@@ -96,10 +97,10 @@ private:	// User declarations
 public:		// User declarations
 //---------------------------------------------------------------------------
 	int __fastcall Potwierdz(bool ZEnabled,bool DEnabled);
-	    __fastcall TQuestForm(TComponent* Owner);
+	    __fastcall TQuest_form(TComponent* Owner);
 //---------------------------------------------------------------------------
 };
 //---------------------------------------------------------------------------
-extern PACKAGE TQuestForm *QuestForm;
+extern PACKAGE TQuest_form *Quest_form;
 //---------------------------------------------------------------------------
 #endif

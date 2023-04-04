@@ -10,69 +10,23 @@ File_7=SourceModule,'C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\
 File_8=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE\FORM_TEMPLATES\Info_frm.cpp',0,1,119,15,29,1,0
 
 [Modules]
-Module0=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.h
-Module1=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.cpp
-Module2=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.cpp
-Module3=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_build_conf.h
-Module4=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_build_conf.h
-Module5=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp
-Module6=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.h
-Count=7
+Module0=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.bpr
+Count=1
 EditWindowCount=1
 
-[D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.h]
+[C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.bpr]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_build_conf.h]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_build_conf.h]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.h]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Program Files\Borland\CBuilder5\Projects\ProjectGroup1.bpg]
-FormState=0
-FormOnTop=0
-
-[D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.bpr]
+[C:\SRC\ProjectGroup1.bpg]
 FormState=0
 FormOnTop=0
 
 [EditWindow0]
-ViewCount=7
-CurrentView=1
+ViewCount=1
+CurrentView=0
 View0=0
-View1=1
-View2=2
-View3=3
-View4=4
-View5=5
-View6=6
 MessageView=MessageView@EditWindow0
 Create=1
 Visible=1
@@ -89,55 +43,13 @@ ClientWidth=1280
 ClientHeight=648
 LeftPanelSize=0
 RightPanelSize=0
-BottomPanelSize=0
+BottomPanelSize=52
 BottomPanelClients=MessageView@EditWindow0
-BottomPanelData=00000400010000000B0000004D657373616765566965770000000000000000000000000000000000FFFFFFFF
+BottomPanelData=000004000000000000000000000000000000000000000000000100000000000000000B0000004D65737361676556696577FFFFFFFF
 
 [View0]
-Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.cpp
-CursorX=20
-CursorY=3
-TopLine=1
-LeftCol=1
-
-[View1]
-Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.h
-CursorX=12
-CursorY=123
-TopLine=98
-LeftCol=1
-
-[View2]
-Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.cpp
-CursorX=24
-CursorY=8
-TopLine=1
-LeftCol=1
-
-[View3]
-Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_build_conf.h
-CursorX=18
-CursorY=1
-TopLine=1
-LeftCol=1
-
-[View4]
-Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp
-CursorX=35
-CursorY=5
-TopLine=1
-LeftCol=1
-
-[View5]
-Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.h
+Module=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.bpf
 CursorX=1
-CursorY=62
-TopLine=35
-LeftCol=1
-
-[View6]
-Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_build_conf.h
-CursorX=22
 CursorY=1
 TopLine=1
 LeftCol=1
@@ -232,9 +144,25 @@ ExpandedItems=
 HiddenCategories=Legacy
 ShowStatusBar=1
 
-[MessageView@EditWindow0]
+[CallStackWindow]
 Create=1
 Visible=0
+State=0
+Left=493
+Top=319
+Width=294
+Height=161
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=286
+ClientHeight=137
+TBDockHeight=161
+LRDockWidth=294
+Dockable=1
+
+[MessageView@EditWindow0]
+Create=1
+Visible=1
 State=0
 Left=12
 Top=0

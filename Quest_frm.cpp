@@ -8,10 +8,10 @@
 #pragma link "BROWSEDLG"
 #pragma resource "*.dfm"
 //---------------------------------------------------------------------------
-TQuestForm *QuestForm;
+TQuest_form *Quest_form;
 //---------------------------------------------------------------------------
 
-__fastcall TQuestForm::TQuestForm(TComponent* Owner)
+__fastcall TQuest_form::TQuest_form(TComponent* Owner)
     : TForm(Owner)
 {
 hInst = (HINSTANCE)HInstance;
@@ -19,7 +19,7 @@ Image1->Picture->Bitmap->Handle = LoadBitmap(hInst,"LEFTQUEST");
 }
 //---------------------------------------------------------------------------
 
-int __fastcall TQuestForm::Potwierdz(bool ZEnabled,bool DEnabled)
+int __fastcall TQuest_form::Potwierdz(bool ZEnabled,bool DEnabled)
 {
 if (ZEnabled==true)
    {if (Kop->list.src.Init.Count==0) SrcListCombo->Items->Text = "";
@@ -81,19 +81,19 @@ else return mrNo;
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TQuestForm::Edit3Change(TObject *Sender)
+void __fastcall TQuest_form::Edit3Change(TObject *Sender)
 {
 Kop->options.Masks.Text[COMMA] = AnsiString(Edit3->Text.c_str()).c_str();
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TQuestForm::Edit2Change(TObject *Sender)
+void __fastcall TQuest_form::Edit2Change(TObject *Sender)
 {
 Kop->options.Argts.Text[COMMA] = AnsiString(Edit2->Text.c_str()).c_str();
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TQuestForm::SpeedButton1Click(TObject *Sender)
+void __fastcall TQuest_form::SpeedButton1Click(TObject *Sender)
 {
 Application->ProcessMessages();
 if (SrcListCombo->ItemIndex==-1)
@@ -107,7 +107,7 @@ else
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TQuestForm::SpeedButton2Click(TObject *Sender)
+void __fastcall TQuest_form::SpeedButton2Click(TObject *Sender)
 {
 Application->ProcessMessages();
 if (DstListCombo->ItemIndex==-1)
@@ -121,7 +121,7 @@ else
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TQuestForm::SpeedButton3Click(TObject *Sender)
+void __fastcall TQuest_form::SpeedButton3Click(TObject *Sender)
 {
 BrowseDialog1->InitialPath = SrcListCombo->Text;
 Application->ProcessMessages();
@@ -141,7 +141,7 @@ if (BrowseDialog1->Execute())
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TQuestForm::SpeedButton4Click(TObject *Sender)
+void __fastcall TQuest_form::SpeedButton4Click(TObject *Sender)
 {
 BrowseDialog1->InitialPath = DstListCombo->Text;
 Application->ProcessMessages();
@@ -161,14 +161,14 @@ if (BrowseDialog1->Execute())
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TQuestForm::FormDestroy(TObject *Sender)
+void __fastcall TQuest_form::FormDestroy(TObject *Sender)
 {
 DeleteObject(Image1->Picture->Bitmap->Handle);
 }
 //---------------------------------------------------------------------------
 
 
-void __fastcall TQuestForm::Button2Click(TObject *Sender)
+void __fastcall TQuest_form::Button2Click(TObject *Sender)
 {
 if (PageControl1->ActivePageIndex==0)
    {PageControl1->ActivePageIndex =1;
@@ -185,7 +185,7 @@ if (PageControl1->ActivePageIndex==1)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TQuestForm::Button1Click(TObject *Sender)
+void __fastcall TQuest_form::Button1Click(TObject *Sender)
 {
 if (PageControl1->ActivePageIndex==1)
    {PageControl1->ActivePageIndex =0;
@@ -202,7 +202,7 @@ if (PageControl1->ActivePageIndex==0)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TQuestForm::CheckBox1Click(TObject *Sender)
+void __fastcall TQuest_form::CheckBox1Click(TObject *Sender)
 {
 if (CheckBox1->Checked) Kop->options.Methods |= mtXOR;
 else
@@ -210,7 +210,7 @@ else
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TQuestForm::CheckBox2Click(TObject *Sender)
+void __fastcall TQuest_form::CheckBox2Click(TObject *Sender)
 {
 if (CheckBox2->Checked) Kop->options.Methods |= mtSXQ;
 else
@@ -218,7 +218,7 @@ else
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TQuestForm::CheckBox3Click(TObject *Sender)
+void __fastcall TQuest_form::CheckBox3Click(TObject *Sender)
 {
 if (CheckBox3->Checked) Kop->options.Methods |= mtLZS;
 else
@@ -226,7 +226,7 @@ else
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TQuestForm::CheckBox4Click(TObject *Sender)
+void __fastcall TQuest_form::CheckBox4Click(TObject *Sender)
 {
 if (CheckBox4->Checked) Kop->options.Methods |= mtBWT;
 else
@@ -234,7 +234,7 @@ else
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TQuestForm::CheckBox5Click(TObject *Sender)
+void __fastcall TQuest_form::CheckBox5Click(TObject *Sender)
 {
 if (CheckBox5->Checked) Kop->options.Methods |= mtMTF;
 else
@@ -242,7 +242,7 @@ else
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TQuestForm::ComboBox1Change(TObject *Sender)
+void __fastcall TQuest_form::ComboBox1Change(TObject *Sender)
 {
 Kop->options.Dict = ComboBox1->Text.ToIntDef(256);
 if (Kop->options.Dict > 65536 || Kop->options.Dict < 64)
@@ -252,7 +252,7 @@ if (Kop->options.Dict > 65536 || Kop->options.Dict < 64)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TQuestForm::CheckBox6Click(TObject *Sender)
+void __fastcall TQuest_form::CheckBox6Click(TObject *Sender)
 {
 if (CheckBox5->Checked) Kop->options.Methods |= mtHUF;
 else
@@ -260,7 +260,7 @@ else
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TQuestForm::CheckBox7Click(TObject *Sender)
+void __fastcall TQuest_form::CheckBox7Click(TObject *Sender)
 {
 if (CheckBox5->Checked) Kop->options.Methods |= mtARI;
 else
@@ -268,10 +268,10 @@ else
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TQuestForm::SpeedButton5Click(TObject *Sender)
+void __fastcall TQuest_form::SpeedButton5Click(TObject *Sender)
 {
    Image2->Picture->Icon->Handle = LoadIcon(hInst,"MAINICON");
-   QuestForm->Caption = "Confirm file COPY...";
+   Quest_form->Caption = "Confirm file COPY...";
    SpeedButton5->Down = true;
    SpeedButton12->Enabled = false; Edit2->Enabled = false;
    PageControl1->ActivePageIndex =0;
@@ -281,10 +281,10 @@ void __fastcall TQuestForm::SpeedButton5Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TQuestForm::SpeedButton6Click(TObject *Sender)
+void __fastcall TQuest_form::SpeedButton6Click(TObject *Sender)
 {
    Image2->Picture->Icon->Handle = LoadIcon(hInst,"MAINICON2");
-   QuestForm->Caption = "Confirm file MOVE...";
+   Quest_form->Caption = "Confirm file MOVE...";
    SpeedButton6->Down = true;
    SpeedButton12->Enabled = false; Edit2->Enabled = false;
    PageControl1->ActivePageIndex =0;
@@ -294,10 +294,10 @@ void __fastcall TQuestForm::SpeedButton6Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TQuestForm::SpeedButton7Click(TObject *Sender)
+void __fastcall TQuest_form::SpeedButton7Click(TObject *Sender)
 {
    Image2->Picture->Icon->Handle = LoadIcon(hInst,"MAINICON3");
-   QuestForm->Caption = "Confirm file DELETION...";
+   Quest_form->Caption = "Confirm file DELETION...";
    SpeedButton7->Down = true;
    SpeedButton12->Enabled = false; Edit2->Enabled = false;
    PageControl1->ActivePageIndex =0;
@@ -307,10 +307,10 @@ void __fastcall TQuestForm::SpeedButton7Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TQuestForm::SpeedButton8Click(TObject *Sender)
+void __fastcall TQuest_form::SpeedButton8Click(TObject *Sender)
 {
    Image2->Picture->Icon->Handle = LoadIcon(hInst,"MAINICON4");
-   QuestForm->Caption = "Confirm Compression... (.eno)";
+   Quest_form->Caption = "Confirm Compression... (.eno)";
    SpeedButton8->Down = true;
    SpeedButton12->Enabled = false; Edit2->Enabled = false;
    PageControl1->ActivePageIndex =0;
@@ -340,10 +340,10 @@ void __fastcall TQuestForm::SpeedButton8Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TQuestForm::SpeedButton9Click(TObject *Sender)
+void __fastcall TQuest_form::SpeedButton9Click(TObject *Sender)
 {
    Image2->Picture->Icon->Handle = LoadIcon(hInst,"MAINICON5");
-   QuestForm->Caption = "Confirm Decompression...";
+   Quest_form->Caption = "Confirm Decompression...";
    SpeedButton9->Down = true;
    SpeedButton12->Enabled = false; Edit2->Enabled = false;
    PageControl1->ActivePageIndex =0;
@@ -354,16 +354,16 @@ void __fastcall TQuestForm::SpeedButton9Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TQuestForm::SpeedButton13Click(TObject *Sender)
+void __fastcall TQuest_form::SpeedButton13Click(TObject *Sender)
 {
 //SpeedButton11->Down = true;
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TQuestForm::SpeedButton10Click(TObject *Sender)
+void __fastcall TQuest_form::SpeedButton10Click(TObject *Sender)
 {
    Image2->Picture->Icon->Handle = LoadIcon(hInst,"MAINICON8");
-   QuestForm->Caption = "Confirm listing...";
+   Quest_form->Caption = "Confirm listing...";
    SpeedButton10->Down = true;
    SpeedButton12->Enabled = true;
    PageControl1->ActivePageIndex =0;
@@ -373,6 +373,7 @@ void __fastcall TQuestForm::SpeedButton10Click(TObject *Sender)
    Button2->Caption = "&OK";
 }
 //---------------------------------------------------------------------------
+
 
 
 

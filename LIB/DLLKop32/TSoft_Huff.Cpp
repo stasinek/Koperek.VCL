@@ -32,14 +32,12 @@ void __stdcall TSoft_Huff::Initialize(void)
 register int  i, e;
 //----------------------
 for (i = 0; i < CNUM; i++) {
-//----------------------
 	 son[i] = TREE + i;
 	 dad[TREE + i] = i;
 	 frq[i] = 1;
 	}
 //----------------------
 for (i = 0, e = CNUM; e < TREE; i+=2, e++) {
-//----------------------
 	 son[e]   = i;
 	 frq[e]   = frq[i] + frq[i+1];
      dad[i+0] = e;
@@ -57,7 +55,6 @@ void __stdcall TSoft_Huff::Reconstruct(void)
 register unsigned long i, e, k, f, l;
 //----------------------
 for (i = 0, e = 0; i < TREE; i++) {          /* collect leaf nodes in the first half of the table and replace the frq by (frq + 1) / 2 */
-//----------------------
  if (son[i]>= TREE)
 	{son[e] = son[i];
 	 frq[e] =(frq[i]+1)>>1;
@@ -66,7 +63,6 @@ for (i = 0, e = 0; i < TREE; i++) {          /* collect leaf nodes in the first 
 }
 //----------------------
 for (i = 0, e = CNUM; e < TREE; i+=2, e++) {  /* begin constructing tree by connecting sons */
-//----------------------
      f = frq[i] + frq[i+1];
          frq[e] = f;
     for (k = e; f < frq[k-1];) {
@@ -82,7 +78,6 @@ for (i = 0, e = CNUM; e < TREE; i+=2, e++) {  /* begin constructing tree by conn
 }
 //----------------------                      /* conect leaf sons /\ to upper */
 for (i = 0; i < TREE; i++) {
-//----------------------
          k = son[i];
      if (k>= TREE) dad[k] = i;
      else
@@ -150,11 +145,9 @@ register unsigned long node = dad[axdata_uncoded + TREE];
 register unsigned long code = 0;
 register unsigned char bits = 0;
 //----------------------            /* travel from leaf to ROOT */
-do {
-//----------------------            /* if node's address is odd-numbered, choose "1" add to code */
+do {                                /* if node's address is odd-numbered, choose "1" add to code */
 	code = (code<<1) | node & 0x00000001;
 	bits++;
-//----------------------
 } while ((node =dad[node])!=ROOT);
 //----------------------            /* send bits to output and update model */
 Update(axdata_uncoded);
@@ -174,12 +167,10 @@ unsigned long indata;
 bitMov(&indata,0,alpcode,alpcode_bit,24);
 code =  indata;
 //----------------------            /* travel from leaf to ROOT */
-do {
-//----------------------            /* select node depend on next bit */
+do {                                /* select node depend on next bit */
 	node |= code & 0x00000001;
 	code>>= 1;
 	bits++;
-//----------------------
 } while ((node =son[node]) <TREE);
 //----------------------            /* send bits to output and update model */
 alpdata_uncoded[0] = node-=TREE;

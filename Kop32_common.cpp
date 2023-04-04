@@ -5,7 +5,6 @@
 #include "Infos_frm.h"
 #include "Haslo_frm.h"
 #include "Koper_frm.h"
-#include "Lista_frm.h"
 #include "Quest_frm.h"
 #include "..\..\FORM_TEMPLATES\About_frm.h"
 #include "Journal_frm.h"
@@ -28,14 +27,13 @@ char *commandSrc;
 
 	Application->Initialize();
 	Application->Title = "SSTSOFT.Koperek-VCL";
-    Application->CreateForm(__classid(TBreakForm), &BreakForm);
-    Application->CreateForm(__classid(TInfosForm), &InfosForm);
-    Application->CreateForm(__classid(TJournalForm), &JournalForm);
-    Application->CreateForm(__classid(TKoperForm), &KoperForm);
-    Application->CreateForm(__classid(TListaForm), &ListaForm);
-    Application->CreateForm(__classid(TQuestForm), &QuestForm);
-    Application->CreateForm(__classid(TAboutForm), &AboutForm);
-    Application->CreateForm(__classid(THasloForm), &HasloForm);
+    Application->CreateForm(__classid(TBreak_form), &Break_form);
+    Application->CreateForm(__classid(TInfos_form), &Infos_form);
+    Application->CreateForm(__classid(TJournal_form), &Journal_form);
+    Application->CreateForm(__classid(TKoper_form), &Koper_form);
+    Application->CreateForm(__classid(TQuest_form), &Quest_form);
+    Application->CreateForm(__classid(TAbout_form), &About_form);
+    Application->CreateForm(__classid(THaslo_form), &Haslo_form);
     Application->ShowMainForm = false;
 
 if (strstr(temp1,"/SELECT")!=NULL)
@@ -63,7 +61,7 @@ else
 
 //---------------------
 if (useWizzard==true) {
-QuestForm->ShowModal();
+Quest_form->ShowModal();
 }
 else {
 //---------------------
@@ -97,7 +95,7 @@ delete Kop;
 //---------------------
 EXIT:
 //---------------------
-KoperForm->Timer1->Enabled = false;
+Koper_form->Timer1->Enabled = false;
 }
 catch (Exception &exception)
 {

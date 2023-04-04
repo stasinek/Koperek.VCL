@@ -8,17 +8,17 @@
 #pragma link "EXERES"
 #pragma resource "*.dfm"
 //---------------------------------------------------------------------------
-THasloForm *HasloForm;
+THaslo_form *Haslo_form;
 //---------------------------------------------------------------------------
 
-__fastcall THasloForm::THasloForm(TComponent* AOwner)
+__fastcall THaslo_form::THaslo_form(TComponent* AOwner)
 	: TForm(AOwner)
 {
 hInst = (HINSTANCE)HInstance;
 }
 //---------------------------------------------------------------------------
 
-void __fastcall THasloForm::OKBtnClick(TObject *Sender)
+void __fastcall THaslo_form::OKBtnClick(TObject *Sender)
 {
 if (Password1->Text!=Password2->Text)
 	MessageBoxA(NULL,"Podane has³a siê nie zgadzaj¹. Has³a te musz¹ byæ takie same w obu polach tekstowych.","Zmiana has³a...",MB_OK+MB_ICONWARNING);
@@ -31,14 +31,14 @@ else
 }
 //---------------------------------------------------------------------------
 
-void __fastcall THasloForm::FormShow(TObject *Sender)
+void __fastcall THaslo_form::FormShow(TObject *Sender)
 {
 Password1->Text = "";
 Password2->Text = "";
 }
 //---------------------------------------------------------------------------
 
-void __fastcall THasloForm::Password2Change(TObject *Sender)
+void __fastcall THaslo_form::Password2Change(TObject *Sender)
 {
 if (Password1->Text==Password2->Text) OKBtn->ModalResult = mrOk;
 else
@@ -46,7 +46,7 @@ else
 }
 //---------------------------------------------------------------------------
 
-void __fastcall THasloForm::Password1Change(TObject *Sender)
+void __fastcall THaslo_form::Password1Change(TObject *Sender)
 {
 if (Password1->Text==Password2->Text) OKBtn->ModalResult = mrOk;
 else
@@ -55,7 +55,7 @@ else
 }
 //---------------------------------------------------------------------------
 
-void __fastcall THasloForm::FormCreate(TObject *Sender)
+void __fastcall THaslo_form::FormCreate(TObject *Sender)
 {
 Image1->Canvas->Brush->Color = clBtnFace;
 Image1->Canvas->FillRect(Rect(0,0,32,32));

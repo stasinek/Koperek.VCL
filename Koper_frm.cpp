@@ -6,7 +6,6 @@
 #include "haslo_frm.h"
 #include "infos_frm.h"
 #include "break_frm.h"
-#include "lista_frm.h"
 #include "journal_frm.h"
 #include ".\LIB\DLLIO\TSoft_IO.h"
 //---------------------------------------------------------------------------
@@ -24,10 +23,10 @@
 #pragma link "SYSTRAY"
 #pragma resource "*.dfm"
 //---------------------------------------------------------------------------
-TKoperForm *KoperForm;
+TKoper_form *Koper_form;
 //---------------------------------------------------------------------------
 
-__fastcall TKoperForm::TKoperForm(TComponent* Owner)
+__fastcall TKoper_form::TKoper_form(TComponent* Owner)
 	: TForm(Owner)
 {
 lpcaption = new char[255];
@@ -40,13 +39,13 @@ buffer1 = new char[255];
 buffer2 = new char[255];
 buffer3 = new char[255];
 buffer4 = new char[255];
-Kop->OnBreak = KoperForm->DoBreak;
+Kop->OnBreak = Koper_form->DoBreak;
 hApp = (HINSTANCE)HInstance;
 
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TKoperForm::FormCreate(TObject *Sender)
+void __fastcall TKoper_form::FormCreate(TObject *Sender)
 {
 AdvancedBar5->Position = 0;
 AdvancedBar6->Position = 0;
@@ -54,7 +53,7 @@ AdvancedBar2->Position = 0;
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TKoperForm::Timer1Timer(TObject *Sender) {
+void __fastcall TKoper_form::Timer1Timer(TObject *Sender) {
 static int tik = 0;
 static double x, xold, ic;
 
@@ -156,19 +155,19 @@ if (Kop->options.Operation==opKODUJ && Kop->progress.src.all.Read!=0) {
 	}
 else AdvancedBar2->Visible = false;
 //--------------------------
-Application->Title = KoperForm->Caption;
+Application->Title = Koper_form->Caption;
 Application->ProcessMessages();
 }
 //----------------------------------------------------------------------------
 
-int __stdcall TKoperForm::DoBreak(__int32 BreakCode,__int32 BreakButton) {
+int __stdcall TKoper_form::DoBreak(__int32 BreakCode,__int32 BreakButton) {
 //static int ProgressDir = 1;
 
 if (BreakCode&opSEEKPROGRESS)
    {
-//	if (BreakForm->AdvancedBar1->Position >= 100 ) ProgressDir = -1;
-//	else if (BreakForm->AdvancedBar1->Position == 0) ProgressDir = 1;
-//    BreakForm->AdvancedBar1->Position = (BreakForm->AdvancedBar1->Position + ProgressDir);
+//	if (Break_form->AdvancedBar1->Position >= 100 ) ProgressDir = -1;
+//	else if (Break_form->AdvancedBar1->Position == 0) ProgressDir = 1;
+//    Break_form->AdvancedBar1->Position = (Break_form->AdvancedBar1->Position + ProgressDir);
 
 	if (BreakCode&isSRC) {
 	if (Kop->list.src.Main.Count>0) {
@@ -178,8 +177,8 @@ if (BreakCode&opSEEKPROGRESS)
 			strDel(temp0,3,8);
 			strInsert(temp0,3,"...\\\0");
 			}
-		if (strcmp(temp0, AnsiString(BreakForm->Label2->Caption.c_str()).c_str())!=0)
-		BreakForm->Label2->Caption = temp0;
+		if (strcmp(temp0, AnsiString(Break_form->Label2->Caption.c_str()).c_str())!=0)
+		Break_form->Label2->Caption = temp0;
 		}
 	}
 	if (BreakCode&isDST) {
@@ -190,13 +189,13 @@ if (BreakCode&opSEEKPROGRESS)
 			strDel(temp0,3,8);
 			strInsert(temp0,3,"...\\\0");
 			}
-		if (strcmp(temp0, AnsiString(BreakForm->Label2->Caption.c_str()).c_str())!=0)
-		BreakForm->Label2->Caption = temp0;
+		if (strcmp(temp0, AnsiString(Break_form->Label2->Caption.c_str()).c_str())!=0)
+		Break_form->Label2->Caption = temp0;
 		}
 	}
-	BreakForm->Label3->Caption = "There is " + (AnsiString)Kop->list.src.Main.Count + " files, total size " + GetBajtText(Kop->progress.src.all.Size);
-	if (Kop->list.dst.Main.Count!=0 && Kop->progress.dst.all.Size!=0) BreakForm->Label4->Caption = "In destination dir. " + (AnsiString)Kop->list.dst.Main.Count + " files, total size " + GetBajtText(Kop->progress.dst.all.Size);
-	KoperForm->Label5->Caption = BreakForm->Label3->Caption;
+	Break_form->Label3->Caption = "There is " + (AnsiString)Kop->list.src.Main.Count + " files, total size " + GetBajtText(Kop->progress.src.all.Size);
+	if (Kop->list.dst.Main.Count!=0 && Kop->progress.dst.all.Size!=0) Break_form->Label4->Caption = "In destination dir. " + (AnsiString)Kop->list.dst.Main.Count + " files, total size " + GetBajtText(Kop->progress.dst.all.Size);
+	Koper_form->Label5->Caption = Break_form->Label3->Caption;
    }
 if (BreakCode&onPROGRESS)
    {
@@ -261,11 +260,11 @@ if (BreakCode&opUSUN)
    }
 
 if (BreakCode&onSEEKING)
-   {Application->Title = BreakForm->Caption;
-	BreakForm->Show();
+   {Application->Title = Break_form->Caption;
+	Break_form->Show();
 /*    POINT curMousePoint;
 	GetCursorPos(&curMousePoint);
-	SetWindowPos(BreakForm->Handle,HWND_NOTOPMOST,
+	SetWindowPos(Break_form->Handle,HWND_NOTOPMOST,
 				 curMousePoint.x,curMousePoint.y,0,0,
 				 SWP_NOACTIVATE|SWP_NOSIZE|SWP_SHOWWINDOW);
 */   }
@@ -274,14 +273,14 @@ if (BreakCode&onIO)
    {
 	if (Kop->options.Operation==opLISTUJ)
 	   {Application->Title = "Listing files...";
-		BreakForm->Label1->Caption = Application->Title;
+		Break_form->Label1->Caption = Application->Title;
 		Application->ProcessMessages();
 		return mrNo;
 	   }
 	else
-	   {BreakForm->AdvancedBar1->Position = 1000;
-		BreakForm->SpeedButton3->Enabled = true;
-		while (Kop->options.Stop!=true && BreakForm->Visible==true) { Application->ProcessMessages(); Sleep(220); }
+	   {Break_form->AdvancedBar1->Position = 1000;
+		Break_form->SpeedButton3->Enabled = true;
+		while (Kop->options.Stop!=true && Break_form->Visible==true) { Application->ProcessMessages(); Sleep(220); }
 		if (Kop->options.Stop!=true) {
 		this->OldCzas = timeGetTime();
 		this->MineloCzasTikOld = timeGetTime();
@@ -289,10 +288,10 @@ if (BreakCode&onIO)
 		Timer1Timer(this);
 		Timer1->Enabled = true;
 		POINT curMousePoint;
-		KoperForm->Show();
+		Koper_form->Show();
 		}
 /*        GetCursorPos(&curMousePoint);
-		SetWindowPos(KoperForm->Handle,HWND_NOTOPMOST,
+		SetWindowPos(Koper_form->Handle,HWND_NOTOPMOST,
 					 curMousePoint.x,curMousePoint.y,0,0,
 					 SWP_NOACTIVATE|SWP_NOSIZE|SWP_SHOWWINDOW);
 */       }
@@ -300,16 +299,16 @@ if (BreakCode&onIO)
 else
 if (BreakCode&onQUEST)
    {
-	if (Kop->options.Operation==opUSUN) return QuestForm->Potwierdz(1,0);
+	if (Kop->options.Operation==opUSUN) return Quest_form->Potwierdz(1,0);
 	else
-	if (QuestForm->Potwierdz(1,1)!=mrYes)
+	if (Quest_form->Potwierdz(1,1)!=mrYes)
 		return mrNo;
 	else
 	if (Kop->options.Operation!=opKODUJ || Kop->options.Operation!=opDEKODUJ)
 		return mrYes;
 	else
 	if (strlen(Kop->GetPassword())==0)
-		return HasloForm->ShowModal();
+		return Haslo_form->ShowModal();
 	else
 		return mrYes;
    }
@@ -317,11 +316,11 @@ else
 if (BreakCode&onREPLACE_QUEST)
    {
 	if (Kop->list.src.Main.Count!=0 && Kop->list.src.Main.Count!=0)
-	return InfosForm->ZastopInfo(Kop->list.dst.Main.Items[Kop->list.iCur]->text,Kop->list.src.Main.Items[Kop->list.iCur]->text);
-	else return InfosForm->ZastopInfo("","");
+	return Infos_form->ZastopInfo(Kop->list.dst.Main.Items[Kop->list.iCur]->text,Kop->list.src.Main.Items[Kop->list.iCur]->text);
+	else return Infos_form->ZastopInfo("","");
    }
 if (MineloCzasJournal!=MineloCzas || BreakButtonJournal!=BreakButton || BreakCodeJournal!=BreakCode) {
-	/*JournalForm->ValueListEditor1->InsertRow((AnsiString)(int(MineloCzas/1000)/3600) + ":" + (AnsiString)int((int(MineloCzas/1000)%3600)/60) + ":" + (AnsiString)(int(MineloCzas/1000)%60) + " " + (AnsiString)(int(MineloCzas)%1000) + "ms",
+	/*Journal_form->ValueListEditor1->InsertRow((AnsiString)(int(MineloCzas/1000)/3600) + ":" + (AnsiString)int((int(MineloCzas/1000)%3600)/60) + ":" + (AnsiString)(int(MineloCzas/1000)%60) + " " + (AnsiString)(int(MineloCzas)%1000) + "ms",
 										 (AnsiString)BreakCode + " " + (AnsiString)BreakButton + " " +
 										 (AnsiString)Kop->progress.src.one.Read + " " + (AnsiString)Kop->progress.dst.one.Read + " " +
 										 (AnsiString)Kop->progress.src.all.Read + " " + (AnsiString)Kop->progress.dst.all.Read
@@ -338,14 +337,14 @@ return mrNo;
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TKoperForm::FormClose(TObject *Sender, TCloseAction &Action)
+void __fastcall TKoper_form::FormClose(TObject *Sender, TCloseAction &Action)
 {
 SpeedButton2Click(Sender);
 Kop->Stop();
 }
 //---------------------------------------------------------------------------
 
-char *__stdcall TKoperForm::GetBajtText(__int64 liczbaDoDzielenia) {
+char *__stdcall TKoper_form::GetBajtText(__int64 liczbaDoDzielenia) {
 static char text[16];
 
 if (liczbaDoDzielenia >= 1048576)
@@ -369,7 +368,7 @@ else
 //---------------------------------------------------------------------------
 
 
-void __fastcall TKoperForm::SpeedButton1Click(TObject *Sender)
+void __fastcall TKoper_form::SpeedButton1Click(TObject *Sender)
 {
 Pauza = !Pauza;
 Timer1->Enabled = !Pauza;
@@ -388,25 +387,19 @@ for (int time = timeGetTime(); Pauza==true; time = timeGetTime())
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TKoperForm::SpeedButton2Click(TObject *Sender)
+void __fastcall TKoper_form::SpeedButton2Click(TObject *Sender)
 {
 Pauza = false; Kop->Stop();
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TKoperForm::SpeedButton3Click(TObject *Sender)
+void __fastcall TKoper_form::SpeedButton4Click(TObject *Sender)
 {
-ListaForm->ShowModal();
+Journal_form->Show();
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TKoperForm::SpeedButton4Click(TObject *Sender)
-{
-JournalForm->Show();
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TKoperForm::FormDestroy(TObject *Sender)
+void __fastcall TKoper_form::FormDestroy(TObject *Sender)
 {
 delete lpcaption;
 delete temp0;
@@ -421,11 +414,11 @@ delete buffer4;
 }
 //---------------------------------------------------------------------------
 
-
-
-void __fastcall TKoperForm::SpeedButton5Click(TObject *Sender)
+void __fastcall TKoper_form::SpeedButton5Click(TObject *Sender)
 {
 // Resource limiter (inteligent pause)    
 }
 //---------------------------------------------------------------------------
+
+
 
