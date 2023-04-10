@@ -1,42 +1,42 @@
 ﻿[Closed Files]
-File_0=TSourceModule,'C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO_main.cpp',0,1,1,1,1,0,0,,
-File_1=TSourceModule,'C:\SRC\OBSOLETE\PROGS\Panel.VCL\UnitX.cpp',0,1,1,1,1,0,0,,
-File_2=TSourceModule,'C:\SRC\OBSOLETE\PROGS\Panel.VCL\Project_PCH1.h',0,1,1,1,1,0,0,,
-File_3=TSourceModule,'C:\Users\stasiek\MEGA\MEGAsync\My Projects\X86_LIBRARIES\STK\cpu\stk_cpu.h',0,1,1,51,2,0,0,,
-File_4=TSourceModule,'C:\Users\stasiek\MEGA\MEGAsync\My Projects\X86_LIBRARIES\STK\cpu\stk_cpu.cpp',0,1,1,28,218,0,0,,
-File_5=TSourceModule,'D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\RADDLLIO.cpp',0,1,27,24,22,0,0,,
-File_6=TSourceModule,'D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_build_conf.h',0,1,1,20,1,0,0,,
-File_7=TSourceModule,'D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.h',0,1,1,23,4,0,0,,
-File_8=TSourceModule,'D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp',0,1,848,21,852,0,0,,
-File_9=TSourceModule,'D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\RAD_DLLKop32.cpp',0,1,1,1,1,0,0,,
+File_0=TSourceModule,'C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.h',0,1,1,18,4,0,0,,
+File_1=TSourceModule,'C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_build_conf.h',0,1,1,6,4,0,0,,
+File_2=TSourceModule,'C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp',0,1,433,16,445,0,0,,
+File_3=TSourceModule,'C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\RADDLLIOPCH.h',0,1,1,1,1,0,0,,
+File_4=TSourceModule,'C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\RADDLLIO_main.cpp',0,1,9,18,4,0,0,,
+File_5=TSourceModule,'C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO_main.cpp',0,1,1,1,1,0,0,,
+File_6=TSourceModule,'C:\SRC\OBSOLETE\PROGS\Panel.VCL\UnitX.cpp',0,1,1,1,1,0,0,,
+File_7=TSourceModule,'C:\SRC\OBSOLETE\PROGS\Panel.VCL\Project_PCH1.h',0,1,1,1,1,0,0,,
+File_8=TSourceModule,'C:\Users\stasiek\MEGA\MEGAsync\My Projects\X86_LIBRARIES\STK\cpu\stk_cpu.h',0,1,1,51,2,0,0,,
+File_9=TSourceModule,'C:\Users\stasiek\MEGA\MEGAsync\My Projects\X86_LIBRARIES\STK\cpu\stk_cpu.cpp',0,1,1,28,218,0,0,,
 
 [Modules]
-Module0=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.h
-Module1=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp
-Module2=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_build_conf.h
-Module3=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\RADDLLIOPCH.h
-Module4=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\RADDLLIO_main.cpp
+Module0=C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.cpp
+Module1=C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\RADDLLDatabasePCH.h
+Module2=C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\RADDLLDatabase_main.cpp
+Module3=C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.h
+Module4=C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_build_conf.h
 Count=5
 EditWindowCount=1
 
-[C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.h]
+[C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.cpp]
 ModuleType=TSourceModule
 
-[C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp]
+[C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\RADDLLDatabasePCH.h]
 ModuleType=TSourceModule
 
-[C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_build_conf.h]
+[C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\RADDLLDatabase_main.cpp]
 ModuleType=TSourceModule
 
-[C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\RADDLLIOPCH.h]
+[C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.h]
 ModuleType=TSourceModule
 
-[C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\RADDLLIO_main.cpp]
+[C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_build_conf.h]
 ModuleType=TSourceModule
 
 [EditWindow0]
 ViewCount=5
-CurrentEditView=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.h
+CurrentEditView=C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.cpp
 View0=0
 View1=1
 View2=2
@@ -72,58 +72,58 @@ BottomMiddelPanelData=0000080001020100000009000000446F636B5369746530971D00000000
 
 [View0]
 CustomEditViewType=TEditView
-Module=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp
-CursorX=16
-CursorY=5
-TopLine=1
+Module=C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.h
+CursorX=1
+CursorY=109
+TopLine=109
 LeftCol=1
 Elisions=
 Bookmarks=
-EditViewName=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp
+EditViewName=C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.h
 
 [View1]
 CustomEditViewType=TEditView
-Module=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.h
-CursorX=18
-CursorY=60
-TopLine=1
-LeftCol=1
-Elisions=
-Bookmarks=
-EditViewName=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.h
-
-[View2]
-CustomEditViewType=TEditView
-Module=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_build_conf.h
-CursorX=6
-CursorY=4
-TopLine=1
-LeftCol=1
-Elisions=
-Bookmarks=
-EditViewName=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_build_conf.h
-
-[View3]
-CustomEditViewType=TEditView
-Module=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\RADDLLIO_main.cpp
-CursorX=18
-CursorY=4
-TopLine=9
-LeftCol=1
-Elisions=
-Bookmarks=
-EditViewName=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\RADDLLIO_main.cpp
-
-[View4]
-CustomEditViewType=TEditView
-Module=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\RADDLLIOPCH.h
+Module=C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\RADDLLDatabase_main.cpp
 CursorX=1
 CursorY=1
 TopLine=1
 LeftCol=1
 Elisions=
 Bookmarks=
-EditViewName=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\RADDLLIOPCH.h
+EditViewName=C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\RADDLLDatabase_main.cpp
+
+[View2]
+CustomEditViewType=TEditView
+Module=C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\RADDLLDatabasePCH.h
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\RADDLLDatabasePCH.h
+
+[View3]
+CustomEditViewType=TEditView
+Module=C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.cpp
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.cpp
+
+[View4]
+CustomEditViewType=TEditView
+Module=C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_build_conf.h
+CursorX=9
+CursorY=1
+TopLine=1
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_build_conf.h
 
 [UndockedDesigner]
 Count=0

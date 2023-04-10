@@ -59,7 +59,7 @@
         <ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\release\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
-        <ILINK_LibraryPath>D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\;D:\stasiek\My SugarSync\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <ILINK_LibraryPath>C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\;D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\;D:\stasiek\My SugarSync\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
         <VerInfo_Locale>1033</VerInfo_Locale>
@@ -113,24 +113,20 @@
         <VerInfo_Locale>1033</VerInfo_Locale>
     </PropertyGroup>
     <ItemGroup>
-        <CppCompile Include="RADDLLDatabase_main.cpp">
-            <BuildOrder>1</BuildOrder>
-        </CppCompile>
         <PCHCompile Include="RADDLLDatabasePCH.h">
             <BuildOrder>0</BuildOrder>
             <PCH>true</PCH>
         </PCHCompile>
+        <CppCompile Include="RADDLLDatabase_main.cpp">
+            <BuildOrder>1</BuildOrder>
+        </CppCompile>
         <CppCompile Include="TSoft_Database.cpp">
             <BuildOrder>2</BuildOrder>
         </CppCompile>
-        <ObjFiles Include="..\DLLIO\DLLIO.obj" Condition="'$(Platform)'=='Win32'">
+        <LibFiles Include="..\DLLIO\DLLIO.LIB" Condition="'$(Platform)'=='Win32'">
             <BuildOrder>3</BuildOrder>
             <IgnorePath>true</IgnorePath>
-        </ObjFiles>
-        <ObjFiles Include="..\DLLIO\TSoft_IO.obj" Condition="'$(Platform)'=='Win32'">
-            <BuildOrder>4</BuildOrder>
-            <IgnorePath>true</IgnorePath>
-        </ObjFiles>
+        </LibFiles>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -154,6 +150,16 @@
                     <ProjectProperties Name="VerifyPackages">True</ProjectProperties>
                     <ProjectProperties Name="IndexFiles">False</ProjectProperties>
                 </ProjectProperties>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\18.0\bpl\EssentialsCD240.bpl">TurboPack Essentials CBuilder Designtime package</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\18.0\bpl\AsyncProCD240.bpl">TurboPack Async Professional CBuilder Designtime Package</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\18.0\bpl\AbbreviaVCLCDesign240.bpl">TurboPack Abbrevia VCL Designtime CBuilder package</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\18.0\bpl\LockBoxVCLCD240.bpl">TurboPack LockBox CBuilder VCL designtime package</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\18.0\bpl\PngComponentsCDesign240.bpl">Png Components for CBuilder designtime</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\18.0\bpl\SynEditCD240.bpl">TurboPack SynEdit CBuilder designtime package</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\18.0\bpl\OnGuardCD230.bpl">TurboPack OnGuard CBuilder Designtime package</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\18.0\bpl\LockBox3CD.bpl">TurboPack LockBox 3 CBuilder runtime package</Excluded_Packages>
+                </Excluded_Packages>
             </CPlusPlusBuilder.Personality>
             <Platforms>
                 <Platform value="Win32">True</Platform>

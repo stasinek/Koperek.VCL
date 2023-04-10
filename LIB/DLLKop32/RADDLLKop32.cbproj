@@ -59,7 +59,7 @@
         <ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\release\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
-        <ILINK_LibraryPath>D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\;D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\;D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\;D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <ILINK_LibraryPath>C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\;C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\;D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\;D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\;D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\;D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
         <VerInfo_Locale>1033</VerInfo_Locale>
@@ -116,16 +116,16 @@
         <BCC_InstructionSet>5</BCC_InstructionSet>
     </PropertyGroup>
     <ItemGroup>
-        <ObjFiles Include="..\DLLDatabase\DLLDatabase.obj" Condition="'$(Platform)'=='Win32'">
+        <LibFiles Include="C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.lib" Condition="'$(Platform)'=='Win32'">
             <BuildOrder>15</BuildOrder>
             <IgnorePath>true</IgnorePath>
-        </ObjFiles>
-        <ObjFiles Include="..\DLLDatabase\TSoft_Database.obj" Condition="'$(Platform)'=='Win32'">
+        </LibFiles>
+        <LibFiles Include="C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.LIB" Condition="'$(Platform)'=='Win32'">
             <BuildOrder>16</BuildOrder>
             <IgnorePath>true</IgnorePath>
-        </ObjFiles>
-        <ObjFiles Include="..\DLLIO\DLLIO.obj" Condition="'$(Platform)'=='Win32'">
-            <BuildOrder>13</BuildOrder>
+        </LibFiles>
+        <ObjFiles Include="..\DLLDatabase\TSoft_Database.obj" Condition="'$(Platform)'=='Win32'">
+            <BuildOrder>16</BuildOrder>
             <IgnorePath>true</IgnorePath>
         </ObjFiles>
         <ObjFiles Include="..\DLLIO\TSoft_IO.obj" Condition="'$(Platform)'=='Win32'">

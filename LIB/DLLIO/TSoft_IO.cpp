@@ -390,7 +390,7 @@ return std::itoa(aint,str,10);
 }
 //---------------------------------------------------------------------------
 
-long   __stdcall strToInt(const char *asrc)
+long   __stdcall strToInt(const char *alpsrc)
 {
 #if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
@@ -442,7 +442,7 @@ strToIntRET:
  mov EAX,EBX
 }
 #else
-return atol(asrc);
+return atol(alpsrc);
 #endif
 }
 //---------------------------------------------------------------------------
@@ -1148,7 +1148,7 @@ bitmov_helper((unsigned char*)alpdst,adst_bit,(unsigned char*)alpsrc,asrc_bit,ab
 }
 //---------------------------------------------------------------------------
 
-__declspec(dllexport) void __stdcall bitSet(void *alpdst,const void *alpsrc,unsigned char adst_bit,unsigned char asrc_elsize,unsigned long adst_count)
+__declspec(dllexport) void __stdcall bitSet(void *alpdst,const void *alpsrc,unsigned char asrc_bit,unsigned char asrc_elsize,unsigned long adst_count)
 {
 #if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {

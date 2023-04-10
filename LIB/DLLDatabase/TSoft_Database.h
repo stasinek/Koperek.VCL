@@ -88,25 +88,25 @@ void  __stdcall set_Text	(long  aFormat,char *aText);
 //------------------------------------
 public:
 //------------------------------------
-DATABASE_IMPEXP 	 __stdcall  Database(void);
-DATABASE_IMPEXP 	 __stdcall  Database(char *aAlias);
-DATABASE_IMPEXP 	 __stdcall  Database(TSoft::Database *aOwner);
-DATABASE_IMPEXP 	 __stdcall ~Database(void);
+ 	 __stdcall  Database(void);
+ 	 __stdcall  Database(char *aAlias);
+ 	 __stdcall  Database(TSoft::Database *aOwner);
+ 	 __stdcall ~Database(void);
 //------------------------------------
-DATABASE_IMPEXP long __stdcall Mov	  	(TSoft::Database *aDatabase);
-DATABASE_IMPEXP long __stdcall Cat	  	(TSoft::Database *aDatabase);
-DATABASE_IMPEXP long __stdcall Cut	  	(void);
-DATABASE_IMPEXP void __stdcall Clr	  	(void);
+ long __stdcall Mov	  	(TSoft::Database *aDatabase);
+ long __stdcall Cat	  	(TSoft::Database *aDatabase);
+ long __stdcall Cut	  	(void);
+ void __stdcall Clr	  	(void);
 //------------------------------------
-DATABASE_IMPEXP long __stdcall Add	  	(Database::Item *aItems);
-DATABASE_IMPEXP void __stdcall Insert	(long aindex, Database::Item *aItems);
-DATABASE_IMPEXP void __stdcall Exchange (long aindex1, long aindex2);
-DATABASE_IMPEXP void __stdcall Delete	(long aindex);
-DATABASE_IMPEXP long __stdcall Find	 	(long aistart, char *aChar);
-DATABASE_IMPEXP void __stdcall Sort	 	();
+ long __stdcall Add	  	(Database::Item *aItems);
+ void __stdcall Insert	(long aindex, Database::Item *aItems);
+ void __stdcall Exchange (long aindex1, long aindex2);
+ void __stdcall Delete	(long aindex);
+ long __stdcall Find	 	(long aistart, char *aChar);
+ void __stdcall Sort	 	();
 //------------------------------------
-DATABASE_IMPEXP bool __stdcall Read	 	(void);
-DATABASE_IMPEXP bool __stdcall Save	 	(void);
+ bool __stdcall Read	 	(void);
+ bool __stdcall Save	 	(void);
 //------------------------------------
 __declspec(property(get=get_Owner,put=set_Owner)) TSoft::Database *Owner;
 __declspec(property(get=get_Level,put=set_Level)) long             Level;
@@ -121,9 +121,9 @@ __declspec(property(get=get_Text, put=set_Text))  char            *Text[];
 };
 //---------------------------------------------------------------------------
 }
-extern "C" DATABASE_IMPEXP TSoft::Database *__stdcall DATA_FROM_TEXT(TSoft::Database *aDatabase, char *aText, long aformat);
-extern "C" DATABASE_IMPEXP char *__stdcall TEXT_FROM_DATA(char **aText, TSoft::Database *aDatabase, long aformat);
-extern "C" DATABASE_IMPEXP TSoft::Database::Item *__stdcall ASCHAR(char *atext);
+DATABASE_IMPEXP TSoft::Database *__stdcall DATA_FROM_TEXT(TSoft::Database *aDatabase, char *aText, long aformat);
+DATABASE_IMPEXP char *__stdcall TEXT_FROM_DATA(char **aText, TSoft::Database *aDatabase, long aformat);
+DATABASE_IMPEXP TSoft::Database::Item *__stdcall ASCHAR(char *atext);
 //---------------------------------------------------------------------------
 #endif
 

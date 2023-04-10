@@ -1,33 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
+    <Transaction>1899-12-30 00:00:00.000.542,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BinTree.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.667,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_HDR.cpp</Transaction>
     <Transaction>1899-12-30 00:00:00.000.414,=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.obj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.444,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Ari.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.164,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.992,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Mtf.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.091,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Seeker.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.568,=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.obj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.760,=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.obj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.778,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Koder.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.721,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Huff.cpp</Transaction>
     <Transaction>1899-12-30 00:00:00.000.728,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.LIB</Transaction>
     <Transaction>1899-12-30 00:00:00.000.997,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.cpp</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.667,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_HDR.cpp</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.091,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Seeker.cpp</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.444,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Ari.cpp</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.542,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BinTree.cpp</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.136,D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\RADDLLKop32.cbproj=D:\stasiek\Embarcadero\Studio\Projects\Project2.cbproj</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.668,D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.lib=</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.760,=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.obj</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.107,D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\RAD_DLLKop32.cpp=D:\stasiek\Embarcadero\Studio\Projects\File1.cpp</Transaction>
     <Transaction>1899-12-30 00:00:00.000.984,D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.cpp=</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.721,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Huff.cpp</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.568,=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.obj</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.143,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Stack.cpp</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.647,=D:\stasiek\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.656,=D:\stasiek\Embarcadero\Studio\Projects\File1.cpp</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.368,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.lib</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.778,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Koder.cpp</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.183,=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.obj</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.927,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.cpp</Transaction>
     <Transaction>1899-12-30 00:00:00.000.717,D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp=</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.992,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Mtf.cpp</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.865,D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\RADDLLKop32PCH1.h=D:\stasiek\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.164,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.668,D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.lib=</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.368,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.lib</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.143,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Stack.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.183,=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.obj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.136,D:\stasiek\Embarcadero\Studio\Projects\Project2.cbproj=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\RADDLLKop32.cbproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.927,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.647,=D:\stasiek\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
     <Transaction>1899-12-30 00:00:00.000.004,D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.LIB=</Transaction>
     <Transaction>1899-12-30 00:00:00.000.595,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BWTMatrix.cpp</Transaction>
     <Transaction>1899-12-30 00:00:00.000.039,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Pharser.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.656,=D:\stasiek\Embarcadero\Studio\Projects\File1.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.865,D:\stasiek\Embarcadero\Studio\Projects\Project2PCH1.h=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\RADDLLKop32PCH1.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.107,D:\stasiek\Embarcadero\Studio\Projects\File1.cpp=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\RAD_DLLKop32.cpp</Transaction>
+    <Transaction>2023-04-10 23:48:57.698,C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.obj=</Transaction>
+    <Transaction>2023-04-10 23:48:59.530,C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.obj=</Transaction>
+    <Transaction>2023-04-10 23:49:08.498,=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.lib</Transaction>
+    <Transaction>2023-04-10 23:49:12.936,=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.LIB</Transaction>
   </Transactions>
 </BorlandProject>

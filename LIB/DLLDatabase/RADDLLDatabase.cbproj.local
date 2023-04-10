@@ -1,17 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>2018/01/21 16:27:35.000.127,=D:\stasiek\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
-    <Transaction>2018/01/21 16:27:35.000.137,=D:\stasiek\Embarcadero\Studio\Projects\File1.cpp</Transaction>
-    <Transaction>2018/01/21 16:28:14.000.935,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.cpp</Transaction>
-    <Transaction>2018/01/21 16:29:01.000.237,D:\stasiek\Embarcadero\Studio\Projects\File1.cpp=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\RADDLLDatabase.cpp</Transaction>
-    <Transaction>2018/01/21 16:29:14.000.236,D:\stasiek\Embarcadero\Studio\Projects\Project2PCH1.h=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\RADDLLDatabasePCH.h</Transaction>
-    <Transaction>2018/01/21 16:29:23.000.225,D:\stasiek\Embarcadero\Studio\Projects\Project2.cbproj=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\RADDLLDatabase.cbproj</Transaction>
-    <Transaction>2018/01/21 16:29:42.000.960,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp</Transaction>
-    <Transaction>2018/01/22 14:04:43.000.121,D:\stasiek\My SugarSync\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp=</Transaction>
-    <Transaction>2018/01/22 14:05:10.000.495,=D:\stasiek\My SugarSync\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.LIB</Transaction>
-    <Transaction>2018/04/10 19:35:05.000.100,D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.LIB=</Transaction>
-    <Transaction>2018/04/10 19:35:20.000.687,=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.obj</Transaction>
-    <Transaction>2018/04/10 19:35:56.000.773,=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.obj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.495,=D:\stasiek\My SugarSync\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.LIB</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.672,C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.obj=</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.225,D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\RADDLLDatabase.cbproj=D:\stasiek\Embarcadero\Studio\Projects\Project2.cbproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.960,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.773,=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.obj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.823,C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.obj=</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.236,D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\RADDLLDatabasePCH.h=D:\stasiek\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.100,D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.LIB=</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.127,=D:\stasiek\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.237,D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\RADDLLDatabase.cpp=D:\stasiek\Embarcadero\Studio\Projects\File1.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.829,=C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.LIB</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.935,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.687,=D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.obj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.137,=D:\stasiek\Embarcadero\Studio\Projects\File1.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.121,D:\stasiek\My SugarSync\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp=</Transaction>
   </Transactions>
 </BorlandProject>
