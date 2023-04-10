@@ -20,7 +20,7 @@ ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[C:\SRC\ProjectGroup1.bpg]
+[C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\ProjectGroup1.bpg]
 FormState=0
 FormOnTop=0
 
@@ -50,9 +50,9 @@ BottomPanelData=0000040000000000550000000000000000000500000000000001000000005500
 
 [View0]
 Module=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\DLLKop32.cpp
-CursorX=1
-CursorY=1
-TopLine=1
+CursorX=16
+CursorY=37
+TopLine=27
 LeftCol=1
 
 [Watches]

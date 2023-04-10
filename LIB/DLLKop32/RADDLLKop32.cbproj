@@ -136,7 +136,7 @@
             <BuildOrder>0</BuildOrder>
             <PCH>true</PCH>
         </PCHCompile>
-        <CppCompile Include="RAD_DLLKop32.cpp">
+        <CppCompile Include="RADDLLKop32_main.cpp">
             <BuildOrder>0</BuildOrder>
         </CppCompile>
         <CppCompile Include="TSoft_Ari.cpp">

@@ -4,8 +4,8 @@
   <MACROS>
     <VERSION value="BCB.06.00"/>
     <PROJECT value="DLLKop32.dll"/>
-    <OBJFILES value="DLLKop32.obj DLLTSoft_Kop32.obj DLLTSoft_Koder.obj DLLTSoft_BinTree.obj 
-      DLLTSoft_Database.obj DLLTSoft_DlaChara.obj"/>
+    <OBJFILES value="DLLKop32_main.obj TSoft_Kop32.obj TSoft_Koder.obj TSoft_BinTree.obj 
+      TSoft_Database.obj TSoft_DlaChara.obj"/>
     <RESFILES value="DLLKop32.res"/>
     <IDLFILES value=""/>
     <DEFFILE value=""/>
@@ -13,7 +13,7 @@
     <LIBFILES value=""/>
     <LIBRARIES value=""/>
     <SPARELIBS value=""/>
-    <PACKAGES value="     USRPKG.bpi"/>
+    <PACKAGES value="USRPKG.bpi"/>
     <PATHCPP value=".;"/>
     <PATHPAS value=".;"/>
     <PATHRC value=".;"/>
@@ -23,12 +23,11 @@
     <LINKER value="ilink32"/>
     <USERDEFINES value=""/>
     <SYSDEFINES value="NO_STRICT;_NO_VCL"/>
-    <MAINSOURCE value="DLLKop32.cpp"/>
+    <MAINSOURCE value="DLLKop32_main.cpp"/>
     <INCLUDEPATH value="$(BCB)\include"/>
     <LIBPATH value="$(BCB)\lib"/>
     <WARNINGS value=""/>
     <WARNOPTSTR value=""/>
-    <OTHERFILES value=""/>
   </MACROS>
   <OPTIONS>
     <CFLAG1 value="-WD -O2 -H=c:\PROGRA~1\borland\CBUILD~1\lib\vcl35.csm -Hc -w -Ve -Tkh30000 
@@ -40,26 +39,12 @@
     <AFLAGS value="/mx /w2 /zd"/>
     <LFLAGS value="-D&quot;&quot; -aa -Tpd -x -Gn -Gi"/>
     <IFLAGS value=""/>
-    <OTHERFILES value=""/>
   </OPTIONS>
   <LINKER>
     <ALLOBJ value="c0d32.obj $(OBJFILES)"/>
     <ALLRES value="$(RESFILES)"/>
-    <ALLLIB value="$(LIBFILES)  import32.lib cw32mt.lib"/>
-    <OTHERFILES value=""/>
+    <ALLLIB value="$(LIBFILES) import32.lib cw32mt.lib"/>
   </LINKER>
-  <FILELIST>
-      <FILE FILENAME="DLLKop32.cpp" FORMNAME="" UNITNAME="DLLKop32" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME="DLLTSoft_Kop32.cpp" FORMNAME="" UNITNAME="DLLTSoft_Kop32" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME="DLLTSoft_Koder.cpp" FORMNAME="" UNITNAME="DLLTSoft_Koder" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME="DLLTSoft_BinTree.cpp" FORMNAME="" UNITNAME="DLLTSoft_BinTree" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME="DLLTSoft_Database.cpp" FORMNAME="" UNITNAME="DLLTSoft_Database" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME="DLLTSoft_DlaChara.cpp" FORMNAME="" UNITNAME="DLLTSoft_DlaChara" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME="DLLKop32.res" FORMNAME="" UNITNAME="DLLKop32" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
-  </FILELIST>
-  <BUILDTOOLS>
-  </BUILDTOOLS>
-
   <IDEOPTIONS>
 [Version Info]
 IncludeVerInfo=1

@@ -1,4 +1,4 @@
-USEUNIT("DLLIO.cpp");
+USEUNIT("DLLIO_main.cpp");
 USEUNIT("TSoft_IO.cpp");
 USERES("DLLIO.res");
 //---------------------------------------------------------------------------

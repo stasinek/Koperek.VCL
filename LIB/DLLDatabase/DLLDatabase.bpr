@@ -4,7 +4,7 @@
   <MACROS>
     <VERSION value="BCB.05.03"/>
     <PROJECT value="DLLDatabase.dll"/>
-    <OBJFILES value="DLLDatabase.obj TSoft_Database.obj ..\DLLIO\DLLIO.obj"/>
+    <OBJFILES value="DLLDatabase_main.obj TSoft_Database.obj ..\DLLIO\DLLIO.obj"/>
     <RESFILES value=""/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>

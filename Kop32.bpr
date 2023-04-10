@@ -4,7 +4,7 @@
   <MACROS>
     <VERSION value="BCB.06.00"/>
     <PROJECT value="Kop32.exe"/>
-    <OBJFILES value="Kop32.obj Haslo_frm.obj Koper_frm.obj Break_frm.obj Infos_frm.obj 
+    <OBJFILES value="Kop32_main.obj Haslo_frm.obj Koper_frm.obj Break_frm.obj Infos_frm.obj 
       Journal_frm.obj Lista_frm.obj Quest_frm.obj 
       ..\..\FORM_TEMPLATES\About_frm.obj"/>
     <RESFILES value="Kop32.res"/>
@@ -29,7 +29,7 @@
     <LINKER value="ilink32"/>
     <USERDEFINES value="NO_WIN32_LEAN_AND_MEAN;_DEBUG"/>
     <SYSDEFINES value="NO_STRICT"/>
-    <MAINSOURCE value="Kop32.cpp"/>
+    <MAINSOURCE value="Kop32_main.cpp"/>
     <INCLUDEPATH value="LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;..\..\Packages;..\..\form_templates;..\..\forms;..\..;..;$(BCB)\include;$(BCB)\include\vcl;&quot;C:\Program Files\Borland\CBuilder6\Projects\&quot;"/>
     <LIBPATH value="LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;..\..\Packages;..\..\FORM_TEMPLATES;..\..\forms;..\..;..;$(BCB)\lib\obj;$(BCB)\lib;&quot;C:\Program Files\Borland\CBuilder6\Projects\&quot;;$(BCB)\Projects\Lib"/>
     <WARNINGS value="-w-par"/>

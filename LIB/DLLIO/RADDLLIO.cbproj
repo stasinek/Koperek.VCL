@@ -117,13 +117,13 @@
         <BCC_PCHName_Clang>RADDLLIOPCH.h</BCC_PCHName_Clang>
     </PropertyGroup>
     <ItemGroup>
-        <CppCompile Include="RADDLLIO.cpp">
-            <BuildOrder>1</BuildOrder>
-        </CppCompile>
         <PCHCompile Include="RADDLLIOPCH.h">
             <BuildOrder>0</BuildOrder>
             <PCH>true</PCH>
         </PCHCompile>
+        <CppCompile Include="RADDLLIO_main.cpp">
+            <BuildOrder>1</BuildOrder>
+        </CppCompile>
         <CppCompile Include="TSoft_IO.cpp">
             <BuildOrder>2</BuildOrder>
         </CppCompile>

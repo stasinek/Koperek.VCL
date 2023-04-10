@@ -113,7 +113,7 @@
         <VerInfo_Locale>1033</VerInfo_Locale>
     </PropertyGroup>
     <ItemGroup>
-        <CppCompile Include="RADDLLDatabase.cpp">
+        <CppCompile Include="RADDLLDatabase_main.cpp">
             <BuildOrder>1</BuildOrder>
         </CppCompile>
         <PCHCompile Include="RADDLLDatabasePCH.h">

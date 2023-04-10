@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>2018/01/21 16:29:56.000.823,=D:\stasiek\Embarcadero\Studio\Projects\File1.cpp</Transaction>
-    <Transaction>2018/01/21 16:29:56.000.819,=D:\stasiek\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
-    <Transaction>2018/01/21 16:31:23.000.277,D:\stasiek\Embarcadero\Studio\Projects\File1.cpp=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\RADDLLIO.cpp</Transaction>
-    <Transaction>2018/01/21 16:31:31.000.571,D:\stasiek\Embarcadero\Studio\Projects\Project2PCH1.h=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\RADDLLIOPCH.h</Transaction>
-    <Transaction>2018/01/21 16:31:38.000.782,D:\stasiek\Embarcadero\Studio\Projects\Project2.cbproj=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\RADDLLIO.cbproj</Transaction>
-    <Transaction>2018/01/21 16:31:48.000.211,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.819,=D:\stasiek\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.211,=D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.823,=D:\stasiek\Embarcadero\Studio\Projects\File1.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.571,D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\RADDLLIOPCH.h=D:\stasiek\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.782,D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\RADDLLIO.cbproj=D:\stasiek\Embarcadero\Studio\Projects\Project2.cbproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.277,D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\RADDLLIO.cpp=D:\stasiek\Embarcadero\Studio\Projects\File1.cpp</Transaction>
   </Transactions>
 </BorlandProject>

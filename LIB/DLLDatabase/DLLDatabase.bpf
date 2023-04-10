@@ -1,4 +1,4 @@
-USEUNIT("DLLDatabase.cpp");
+USEUNIT("DLLDatabase_main.cpp");
 USEUNIT("TSoft_Database.cpp");
 USEOBJ("..\DLLIO\DLLIO.obj");
 USELIB("..\DLLIO\DLLIO.LIB");

@@ -4,7 +4,7 @@
   <MACROS>
     <VERSION value="BCB.06.00"/>
     <PROJECT value="DLLKop32.dll"/>
-    <OBJFILES value="DLLKop32.obj TSoft_Kop32.obj TSoft_Koder.obj TSoft_Ari.obj TSoft_Huff.obj 
+    <OBJFILES value="DLLKop32_main.obj TSoft_Kop32.obj TSoft_Koder.obj TSoft_Ari.obj TSoft_Huff.obj 
       TSoft_BWTMatrix.obj TSoft_HDR.obj TSoft_MTF.obj TSoft_Seeker.obj 
       TSoft_Stack.obj TSoft_Pharser.obj TSoft_BinTree.obj"/>
     <RESFILES value="DLLKop32.res"/>
@@ -25,9 +25,9 @@
     <LINKER value="ilink32"/>
     <USERDEFINES value="BUILD_KOPDLL"/>
     <SYSDEFINES value="NO_STRICT;_NO_VCL"/>
-    <MAINSOURCE value="DLLKop32.cpp"/>
-    <INCLUDEPATH value="..\DLLIO;..\DLLI;..\DLLDatabase;..;$(BCB)\include"/>
-    <LIBPATH value="..\DLLIO;..\DLLI;..\DLLDatabase;..;$(BCB)\lib"/>
+    <MAINSOURCE value="DLLKop32_main.cpp"/>
+    <INCLUDEPATH value="..\DLLIO;..\DLLDatabase;..;$(BCB)\include"/>
+    <LIBPATH value="..\DLLIO;..\DLLDatabase;..;$(BCB)\lib"/>
     <WARNINGS value=""/>
     <WARNOPTSTR value=""/>
   </MACROS>
@@ -78,16 +78,18 @@ ProductVersion=1.0.0.0
 Comments=
 
 [HistoryLists\hlIncludePath]
-Count=3
-Item0=..\DLLIO;..\DLLI;..\DLLDatabase;..;$(BCB)\include
-Item1=..\DLLIO;..\DLLI;..\DLLDatabase;..\;$(BCB)\include
-Item2=$(BCB)\include
+Count=4
+Item0=..\DLLIO;..\DLLDatabase;..;$(BCB)\include
+Item1=..\DLLIO;..\DLLI;..\DLLDatabase;..;$(BCB)\include
+Item2=..\DLLIO;..\DLLI;..\DLLDatabase;..\;$(BCB)\include
+Item3=$(BCB)\include
 
 [HistoryLists\hlLibraryPath]
-Count=3
-Item0=..\DLLIO;..\DLLI;..\DLLDatabase;..;$(BCB)\lib
-Item1=..\DLLIO;..\DLLI;..\DLLDatabase;..\;$(BCB)\lib
-Item2=$(BCB)\lib
+Count=4
+Item0=..\DLLIO;..\DLLDatabase;..;$(BCB)\lib
+Item1=..\DLLIO;..\DLLI;..\DLLDatabase;..;$(BCB)\lib
+Item2=..\DLLIO;..\DLLI;..\DLLDatabase;..\;$(BCB)\lib
+Item3=$(BCB)\lib
 
 [HistoryLists\hlConditionals]
 Count=4
@@ -114,16 +116,5 @@ RemoteDebug=0
 [Compiler]
 ShowInfoMsgs=1
 LinkDebugVcl=1
-LinkCGLIB=0
-
-[CORBA]
-AddServerUnit=1
-AddClientUnit=1
-PrecompiledHeaders=1
-
-[Language]
-ActiveLang=
-ProjectLang=
-RootDir=
   </IDEOPTIONS>
 </PROJECT>
