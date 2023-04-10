@@ -4,7 +4,7 @@
   <MACROS>
     <VERSION value="BCB.06.00"/>
     <PROJECT value="Kop32_static.exe"/>
-    <OBJFILES value="Kop32_static.obj Kop32_common.obj Haslo_frm.obj Koper_frm.obj 
+    <OBJFILES value="Kop32_static_main.obj Koperek32_common_main.obj Haslo_frm.obj Koper_frm.obj 
       Break_frm.obj Infos_frm.obj Journal_frm.obj Quest_frm.obj 
       ..\..\FORM_TEMPLATES\About_frm.obj LIB\DLLIO\TSoft_IO.obj 
       LIB\DLLDatabase\TSoft_Database.obj LIB\DLLKop32\TSoft_Ari.obj 
@@ -33,7 +33,7 @@
     <LINKER value="ilink32"/>
     <USERDEFINES value="NO_WIN32_LEAN_AND_MEAN;STATIC"/>
     <SYSDEFINES value="NO_STRICT"/>
-    <MAINSOURCE value="Kop32_static.cpp"/>
+    <MAINSOURCE value="Kop32_static_main.cpp"/>
     <INCLUDEPATH value="..\..;..;LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;&quot;C:\Program Files\Borland\CBuilder6\Projects\&quot;;..\..\form_templates;..\..\forms;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages"/>
     <LIBPATH value="..\..\FORM_TEMPLATES;..\..;..;&quot;C:\Program Files\Borland\CBuilder6\Projects\&quot;;..\forms;LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\forms;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;LIB"/>
     <WARNINGS value="-w-par"/>
@@ -78,7 +78,7 @@ FileVersion=3.3.1.523
 InternalName=SSTSOFT.KOPEREK
 LegalCopyright=
 LegalTrademarks=
-OriginalFilename=Kop32.exe
+OriginalFilename=Kop32_static.exe
 ProductName=
 ProductVersion=1.0.0.0
 Comments=sstsoft@wp.pl

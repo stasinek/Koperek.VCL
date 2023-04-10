@@ -4,15 +4,15 @@
   <MACROS>
     <VERSION value="BCB.06.00"/>
     <PROJECT value="DLLKop32.dll"/>
-    <OBJFILES value="DLLKop32_main.obj TSoft_Kop32.obj TSoft_Koder.obj TSoft_Ari.obj TSoft_Huff.obj 
-      TSoft_BWTMatrix.obj TSoft_HDR.obj TSoft_MTF.obj TSoft_Seeker.obj 
-      TSoft_Stack.obj TSoft_Pharser.obj TSoft_BinTree.obj"/>
+    <OBJFILES value="DLLKop32_main.obj TSoft_Kop32.obj TSoft_Koder.obj TSoft_Ari.obj 
+      TSoft_Huff.obj TSoft_BWTMatrix.obj TSoft_HDR.obj TSoft_MTF.obj 
+      TSoft_Seeker.obj TSoft_Stack.obj TSoft_Pharser.obj TSoft_BinTree.obj"/>
     <RESFILES value="DLLKop32.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
     <DEFFILE value=""/>
     <RESDEPEN value="$(RESFILES)"/>
-    <LIBFILES value="..\DLLDatabase\DLLDatabase.lib ..\DLLIO\DLLIO.LIB"/>
+    <LIBFILES value="..\DLLIO\DLLIO.LIB ..\DLLDatabase\DLLDatabase.lib"/>
     <LIBRARIES value=""/>
     <SPARELIBS value=""/>
     <PACKAGES value="USRPKG.bpi"/>
@@ -23,7 +23,7 @@
     <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
     <RELEASELIBPATH value="$(BCB)\lib\release"/>
     <LINKER value="ilink32"/>
-    <USERDEFINES value="BUILD_KOPDLL"/>
+    <USERDEFINES value="BUILD_KOPDLL;_DEBUG"/>
     <SYSDEFINES value="NO_STRICT;_NO_VCL"/>
     <MAINSOURCE value="DLLKop32_main.cpp"/>
     <INCLUDEPATH value="..\DLLIO;..\DLLDatabase;..;$(BCB)\include"/>
@@ -66,11 +66,11 @@ Locale=1045
 CodePage=1250
 
 [Version Info Keys]
-CompanyName=TSOFT
-FileDescription=DLL (GUI)
+CompanyName=SSTSOFT
+FileDescription=DLLKop32
 FileVersion=3.0.1.53
 InternalName=
-LegalCopyright=
+LegalCopyright=Stanisław Stasiak
 LegalTrademarks=
 OriginalFilename=
 ProductName=DLLTSoft_Kop32
@@ -92,11 +92,12 @@ Item2=..\DLLIO;..\DLLI;..\DLLDatabase;..\;$(BCB)\lib
 Item3=$(BCB)\lib
 
 [HistoryLists\hlConditionals]
-Count=4
-Item0=BUILD_KOPDLL
-Item1=BUILD_DLL
-Item2=_NO_VCL;_RTLDLL
-Item3=_NO_VCL
+Count=5
+Item0=BUILD_KOPDLL;_DEBUG
+Item1=BUILD_KOPDLL
+Item2=BUILD_DLL
+Item3=_NO_VCL;_RTLDLL
+Item4=_NO_VCL
 
 [HistoryLists\hlRunParameters]
 Count=2

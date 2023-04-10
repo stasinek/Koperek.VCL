@@ -5,49 +5,49 @@
 #include "TSoft_IO.h"
 //---------------------------------------------------------------------------
 
-char *__stdcall strAlloc(long alength)
+__declspec(dllexport) char *__stdcall strAlloc(long alength)
 {
 return (char*)LocalAlloc(LPTR,alength);
 }
 //---------------------------------------------------------------------------
 
-char *__stdcall strAllocEx(long alength, const char *alpsrc)
+__declspec(dllexport) char *__stdcall strAllocEx(long alength, const char *alpsrc)
 {
 return strMov(strAlloc(alength),alpsrc);
 }
 //---------------------------------------------------------------------------
 
-char *__stdcall strReAlloc(char *alpdst, long alength)
+__declspec(dllexport) char *__stdcall strReAlloc(char *alpdst, long alength)
 {
 return (char*)LocalReAlloc(alpdst,alength,LMEM_MOVEABLE);
 }
 //---------------------------------------------------------------------------
 
-char *__stdcall strReAllocEx(char *alpdst, long alength, const char *alpsrc)
+__declspec(dllexport) char *__stdcall strReAllocEx(char *alpdst, long alength, const char *alpsrc)
 {
 return strMov(strReAlloc(alpdst,alength),alpsrc);
 }
 //---------------------------------------------------------------------------
 
-void __stdcall strFree(char *alpdst)
+__declspec(dllexport) void __stdcall strFree(char *alpdst)
 {
 LocalFree(alpdst);
 }
 //---------------------------------------------------------------------------
 
-char *__stdcall strDup(const char *alpdst)
+__declspec(dllexport) char *__stdcall strDup(const char *alpdst)
 {
 return strMov(strAlloc(strLen(alpdst)+1),alpdst);
 }
 //---------------------------------------------------------------------------
 
-char *__stdcall strReDup(char *alpdst, const char *alpsrc)
+__declspec(dllexport) char *__stdcall strReDup(char *alpdst, const char *alpsrc)
 {
 return strMov(strReAlloc(alpdst,strLen(alpsrc)+1),alpsrc);
 }
 //---------------------------------------------------------------------------
 
-long __stdcall strLen(const char *alpsrc) {
+__declspec(dllexport) long __stdcall strLen(const char *alpsrc) {
 #if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
  __asm {
   mov EDI,alpsrc
@@ -66,27 +66,27 @@ return strlen(alpsrc);
 }
 //---------------------------------------------------------------------------
 
-char *__stdcall strMov(char *alpdst,const char *alpsrc)
+__declspec(dllexport) char *__stdcall strMov(char *alpdst,const char *alpsrc)
 {
 ptrMov(alpdst,alpsrc,strLen(alpsrc)+1);
 return alpdst;
 }
 //---------------------------------------------------------------------------
 
-char *__stdcall strnMov(char *alpdst,const char *alpsrc,long alength)
+__declspec(dllexport) char *__stdcall strnMov(char *alpdst,const char *alpsrc,long alength)
 {
 ptrMov(alpdst,alpsrc,alength);
 return alpdst;
 }
 //---------------------------------------------------------------------------
 
-char *__stdcall strAdd(char *alpdst,const char *alpsrc)
+__declspec(dllexport) char *__stdcall strAdd(char *alpdst,const char *alpsrc)
 {
 return strcat(alpdst,alpsrc);
 }
 //---------------------------------------------------------------------------
 
-char *__stdcall strInsert(char *alpdst, long astart,const char *ainsert)
+__declspec(dllexport) char *__stdcall strInsert(char *alpdst, long astart,const char *ainsert)
 {
 long insertlen = strlen(ainsert), cellen = strlen(alpdst);
 if (insertlen==0)
@@ -100,7 +100,7 @@ return alpdst;
 }
 //---------------------------------------------------------------------------
 
-char *__stdcall strDel(char *alpdst, long astart, long alength)
+__declspec(dllexport) char *__stdcall strDel(char *alpdst, long astart, long alength)
 {
 strnMov((char*)((long)alpdst+astart),(char*)((long)alpdst+astart+alength),strLen(alpdst)-astart-alength);
 alpdst[strlen(alpdst)-alength] = 0;
@@ -108,7 +108,7 @@ return alpdst;
 }
 //---------------------------------------------------------------------------
 
-char *__stdcall strDelEnd(char *alpdst, long astart, long aend)
+__declspec(dllexport) char *__stdcall strDelEnd(char *alpdst, long astart, long aend)
 {
 strnMov((char*)((long)alpdst+astart),(char*)((long)alpdst+aend),strLen(alpdst)-aend);
 alpdst[strlen(alpdst)-(aend-astart)] = 0;
@@ -116,7 +116,7 @@ return alpdst;
 }
 //---------------------------------------------------------------------------
 
-long __stdcall strPos(const char *alpsrc, long a_start, const char *alpfnd)
+__declspec(dllexport) long __stdcall strPos(const char *alpsrc, long a_start, const char *alpfnd)
 {
 long a_src_size = strLen(alpsrc), fnd_size = strLen(alpfnd);
 #if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
@@ -194,7 +194,7 @@ strPosBREAK:
 }
 //---------------------------------------------------------------------------
 
-char *__stdcall strSub(char *alpdst,const char *alpsrc, long astart, long alength)
+__declspec(dllexport) char *__stdcall strSub(char *alpdst,const char *alpsrc, long astart, long alength)
 {
 strnMov(alpdst,(char*)((long)alpsrc+astart),alength);
 alpdst[alength] = 0;
@@ -202,7 +202,7 @@ return alpdst;
 }
 //---------------------------------------------------------------------------
 
-char *__stdcall strSubEnd(char *alpdst,const char *alpsrc, long astart, long aend)
+__declspec(dllexport) char *__stdcall strSubEnd(char *alpdst,const char *alpsrc, long astart, long aend)
 {
 strnMov(alpdst,(char*)((long)alpsrc+astart),aend-astart);
 alpdst[aend-astart] = 0;
@@ -210,7 +210,7 @@ return alpdst;
 }
 //---------------------------------------------------------------------------
 
-long __stdcall strDelimiter(const char *alpsrc, char adelimiter, long adirection)
+__declspec(dllexport) long __stdcall strDelimiter(const char *alpsrc, char adelimiter, long adirection)
 {
 if (adirection < 0)
 	{for (long pos = (long)strLen(alpsrc)-1; pos >= 0; pos--)
@@ -227,7 +227,7 @@ else
 }
 //---------------------------------------------------------------------------
 
-char *__stdcall strExchange(char *alpdst,const char *alpfnd,const char *alpexh)
+__declspec(dllexport) char *__stdcall strExchange(char *alpdst,const char *alpfnd,const char *alpexh)
 {
 for (long pos = 0, find, lenco = strLen(alpfnd), lennaco = strLen(alpexh), lencel = strLen(alpdst); pos < lencel; pos = find+lennaco)
 	{
@@ -240,7 +240,7 @@ return alpdst;
 }
 //---------------------------------------------------------------------------
 
-char *__stdcall strExchangeChar(char *alpdst, char alpfnd, char alpexh)
+__declspec(dllexport) char *__stdcall strExchangeChar(char *alpdst, char alpfnd, char alpexh)
 {
 for (long pos = 0, lencel = strlen(alpdst); pos < lencel; pos++)
 	{
@@ -250,7 +250,7 @@ return alpdst;
 }
 //---------------------------------------------------------------------------
 
-char *__stdcall strExtractFileRoot(char *alpdst,const char *alpsrc)
+__declspec(dllexport) char *__stdcall strExtractFileRoot(char *alpdst,const char *alpsrc)
 {
 long lensrc = strlen(alpsrc), b = 0, delimiter;
 
@@ -275,7 +275,7 @@ return alpdst;
 }
 //---------------------------------------------------------------------------
 
-char *__stdcall strExtractFilePath(char *alpdst,const char *alpsrc)
+__declspec(dllexport) char *__stdcall strExtractFilePath(char *alpdst,const char *alpsrc)
 {
 long lensrc = strlen(alpsrc), e = lensrc, b = 0, delimiter;
 
@@ -303,7 +303,7 @@ return alpdst;
 }
 //---------------------------------------------------------------------------
 
-char *__stdcall strExtractFileName(char *alpdst,const char *alpsrc)
+__declspec(dllexport) char *__stdcall strExtractFileName(char *alpdst,const char *alpsrc)
 {
 long lensrc = strlen(alpsrc), e = lensrc, b = 0, delimiter;
 
@@ -331,7 +331,7 @@ return alpdst;
  }
 //---------------------------------------------------------------------------
 
-char *__stdcall strExtractFileExtt(char *alpdst,const char *alpsrc)
+__declspec(dllexport) char *__stdcall strExtractFileExtt(char *alpdst,const char *alpsrc)
 {
 long lensrc = strlen(alpsrc), e = lensrc, b = 0, delimiter;
 
@@ -363,7 +363,7 @@ return alpdst;
  }
 //---------------------------------------------------------------------------
 
-char *__stdcall strFixFilePath(char *alpdst,const char *alpsrc)
+__declspec(dllexport) char *__stdcall strFixFilePath(char *alpdst,const char *alpsrc)
 {
 long lensrc = strlen(alpsrc), e = lensrc, b = 0;
 
@@ -383,7 +383,7 @@ alpdst[e-b]='\0'; return alpdst;
 //---------------------------------------------------------------------------
 #include <stdlib.h>
 
-char *__stdcall intToStr(long aint)
+__declspec(dllexport) char *__stdcall intToStr(long aint)
 {
 static char str[32];
 return std::itoa(aint,str,10);
@@ -447,25 +447,25 @@ return atol(asrc);
 }
 //---------------------------------------------------------------------------
 
-void *__stdcall ptrAlloc(long acount)
+__declspec(dllexport) void *__stdcall ptrAlloc(long acount)
 {
 return (void*)LocalAlloc(LPTR,acount);
 }
 //---------------------------------------------------------------------------
 
-void *__stdcall ptrReAlloc(void *alpdst, long acount)
+__declspec(dllexport) void *__stdcall ptrReAlloc(void *alpdst, long acount)
 {
 return (void*)LocalReAlloc(alpdst,acount,LMEM_MOVEABLE);
 }
 //---------------------------------------------------------------------------
 
-void __stdcall ptrFree(void *alpdst)
+__declspec(dllexport) void __stdcall ptrFree(void *alpdst)
 {
 LocalFree(alpdst);
 }
 //---------------------------------------------------------------------------
 
-void __stdcall ptrRev(void *alpdst,const void *alpsrc,long acount) {
+__declspec(dllexport) void __stdcall ptrRev(void *alpdst,const void *alpsrc,long acount) {
 #if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
  mov ESI,alpsrc
@@ -500,7 +500,7 @@ ptrRev_EXIT:
 }
 //---------------------------------------------------------------------------
 
-void __stdcall ptrMov(void *alpdst,const void *alpsrc,long acount) {
+__declspec(dllexport) void __stdcall ptrMov(void *alpdst,const void *alpsrc,long acount) {
 #if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
  mov ESI,alpsrc
@@ -553,7 +553,7 @@ memset(alpdst,aznakb,acount);
 }
 //---------------------------------------------------------------------------
 
-void __stdcall ptrSetEx(void *alpdst,const void *alpsrc,unsigned char aesize, long acount) {
+__declspec(dllexport) void __stdcall ptrSetEx(void *alpdst,const void *alpsrc,unsigned char aesize, long acount) {
 #if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
 //------------------------------------------
@@ -645,7 +645,7 @@ SETEXBIT_XX_BREAK:
 }
 //---------------------------------------------------------------------------
 
-void __stdcall ptrShl(void *alpdst,long acount) {
+__declspec(dllexport) void __stdcall ptrShl(void *alpdst,long acount) {
 #if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
  mov ECX,acount
@@ -666,7 +666,7 @@ memmove(alpdst,(void*)((size_t)alpdst-1),acount);
 }
 //---------------------------------------------------------------------------
 
-void __stdcall ptrShr(void *alpdst,long acount) {
+__declspec(dllexport) void __stdcall ptrShr(void *alpdst,long acount) {
 #if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
  mov ESI,alpdst
@@ -692,7 +692,7 @@ memmove(alpdst,(void*)((size_t)alpdst+1),acount);
 }
 //---------------------------------------------------------------------------
 
-long __stdcall ptrCmp(void *alpdst,const void *alpsrc,long acount) {
+__declspec(dllexport) long __stdcall ptrCmp(void *alpdst,const void *alpsrc,long acount) {
 #if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
   mov ESI,alpsrc
@@ -723,7 +723,7 @@ return memcmp(alpdst,alpsrc,acount);
 }
 //---------------------------------------------------------------------------
 
-unsigned long __stdcall ptrSca(void *alpdst,char aznakb,long acount) {
+__declspec(dllexport) unsigned long __stdcall ptrSca(void *alpdst,char aznakb,long acount) {
 #if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
   mov  AL,aznakb
@@ -747,7 +747,7 @@ return (size_t)memchr(alpdst,aznakb,acount)-(size_t)alpdst;
 }
 //---------------------------------------------------------------------------
 
-long __stdcall ptrChr(const void *alpdst,char aznakb,long acount) {
+__declspec(dllexport) long __stdcall ptrChr(const void *alpdst,char aznakb,long acount) {
 #if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
   mov  AL,aznakb
@@ -771,7 +771,7 @@ return (size_t)memchr(alpdst,aznakb,acount)-(size_t)alpdst;
 }
 //---------------------------------------------------------------------------
 
-long __stdcall ptrFndLast(const char *alpsrc,long asrc_min,long asrc_size,const char *alpfnd,long aco_size) {
+__declspec(dllexport) long __stdcall ptrFndLast(const char *alpsrc,long asrc_min,long asrc_size,const char *alpfnd,long aco_size) {
 // metoda Boyera-Moroe
 if (asrc_min+aco_size > asrc_size || aco_size<=0 || asrc_size<=0)
 	 return -1;
@@ -836,7 +836,7 @@ return -1;
 }
 //---------------------------------------------------------------------------
 
-long __stdcall ptrFnd(const char *alpsrc, long asrc_min, long asrc_size, const char *alpfnd, long aco_size) {
+__declspec(dllexport) long __stdcall ptrFnd(const char *alpsrc, long asrc_min, long asrc_size, const char *alpfnd, long aco_size) {
 // metoda Boyera-Moroe
 if (asrc_min+aco_size > asrc_size || aco_size<=0 || asrc_size<=0)
 	 return -1;
@@ -1019,7 +1019,7 @@ static void bitmov_helper(const unsigned char *src_org, int src_offset, unsigned
 }
 //---------------------------------------------------------------------------
 
-void __stdcall bitMov(void *alpdst,unsigned char adst_bit,const void *alpsrc,unsigned char asrc_bit,unsigned long abit_num)
+__declspec(dllexport) void __stdcall bitMov(void *alpdst,unsigned char adst_bit,const void *alpsrc,unsigned char asrc_bit,unsigned long abit_num)
 {
 #if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {
@@ -1148,7 +1148,7 @@ bitmov_helper((unsigned char*)alpdst,adst_bit,(unsigned char*)alpsrc,asrc_bit,ab
 }
 //---------------------------------------------------------------------------
 
-void __stdcall bitSet(void *alpdst,const void *alpsrc,unsigned char adst_bit,unsigned char asrc_elsize,unsigned long adst_count)
+__declspec(dllexport) void __stdcall bitSet(void *alpdst,const void *alpsrc,unsigned char adst_bit,unsigned char asrc_elsize,unsigned long adst_count)
 {
 #if (__BORLANDC__ > 0x551) || defined(_MSC_VER)
 __asm {

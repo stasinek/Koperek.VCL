@@ -4,7 +4,7 @@
 #pragma hdrstop
 #include <tchar.h>
 //---------------------------------------------------------------------------
-#include "main.h"
+#include "Koperek32_common_main.h"
 //---------------------------------------------------------------------------
 USEFORM("Lista_frm.cpp", ListaForm);
 USEFORM("Quest_frm.cpp", QuestForm);
@@ -22,6 +22,14 @@ USEFORM("Journal_frm.cpp", JournalForm);
 #include "Lista_frm.h"
 #include "Quest_frm.h"
 //---------------------------------------------------------------------------
+// DYNAMICZNE
+#include ".\LIB\DLLKop32\TSoft_Kop32.h"
+#include <malloc.h>
+#include <stdio.h>
+#include <fstream>
+#include <windows.h>
+__declspec(dllimport) TSoft::Kop32 *Kop;
+
 int WINAPI _tWinMain(HINSTANCE hApp, HINSTANCE, LPTSTR argts, int State)
 {
 bool useWizzard = false;

@@ -4,8 +4,8 @@
   <MACROS>
     <VERSION value="BCB.06.00"/>
     <PROJECT value="Kop32.exe"/>
-    <OBJFILES value="Kop32_main.obj Haslo_frm.obj Koper_frm.obj Break_frm.obj Infos_frm.obj 
-      Journal_frm.obj Lista_frm.obj Quest_frm.obj 
+    <OBJFILES value="Kop32_main.obj Koperek32_common_main.obj Haslo_frm.obj Koper_frm.obj 
+      Break_frm.obj Infos_frm.obj Journal_frm.obj Lista_frm.obj Quest_frm.obj 
       ..\..\FORM_TEMPLATES\About_frm.obj"/>
     <RESFILES value="Kop32.res"/>
     <IDLFILES value=""/>
@@ -14,8 +14,8 @@
     <RESDEPEN value="$(RESFILES) Haslo_frm.dfm Koper_frm.dfm Break_frm.dfm Infos_frm.dfm 
       Journal_frm.dfm Lista_frm.dfm Quest_frm.dfm 
       ..\..\FORM_TEMPLATES\About_frm.dfm"/>
-    <LIBFILES value="LIB\DLLKop32\DLLKop32.lib LIB\DLLDatabase\DLLDatabase.lib 
-      LIB\DLLIO\DLLIO.LIB"/>
+    <LIBFILES value="LIB\DLLIO\DLLIO.lib LIB\DLLDatabase\DLLDatabase.lib 
+      LIB\DLLKop32\DLLKop32.lib"/>
     <LIBRARIES value="dclusr50.lib Vclx50.lib Vcl50.lib dclusr50.lib vcl.lib"/>
     <SPARELIBS value="vcl.lib dclusr50.lib Vcl50.lib Vclx50.lib dclusr50.lib"/>
     <PACKAGES value="Vcl50.bpi Vclx50.bpi bcbsmp50.bpi dclocx50.bpi bcb2kaxserver50.bpi 

@@ -2,7 +2,7 @@
 #include <vcl.h>
 //---------------------------------------------------------------------------
 #include "haslo_frm.h"
-#include "main.h"
+#include "Koperek32_common_main.h"
 //---------------------------------------------------------------------------
 #pragma link "exeres"
 #pragma link "EXERES"

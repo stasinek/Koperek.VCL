@@ -2,8 +2,10 @@
 #ifndef DLLMainH
 #define DLLMainH
 //---------------------------------------------------------------------------
-#include "DLLTSoft_Kop32.h"
+#include "TSoft_Kop32.h"
 //---------------------------------------------------------------------------
-//TSoft_Kop32 *kop;
+#ifdef BUILD_KOPDLL // exported if library is built
+TSoft_Kop32 *kop;
+#endif 
 //---------------------------------------------------------------------------
 #endif

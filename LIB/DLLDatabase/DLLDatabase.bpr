@@ -4,7 +4,7 @@
   <MACROS>
     <VERSION value="BCB.05.03"/>
     <PROJECT value="DLLDatabase.dll"/>
-    <OBJFILES value="DLLDatabase_main.obj TSoft_Database.obj ..\DLLIO\DLLIO.obj"/>
+    <OBJFILES value="DLLDatabase_main.obj TSoft_Database.obj"/>
     <RESFILES value=""/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
@@ -14,14 +14,14 @@
     <LIBRARIES value=""/>
     <SPARELIBS value=""/>
     <PACKAGES value="Vcl50.bpi dclusr50.bpi"/>
-    <PATHCPP value=".;..\DLLIO"/>
+    <PATHCPP value=".;"/>
     <PATHPAS value=".;"/>
     <PATHRC value=".;"/>
     <PATHASM value=".;"/>
     <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
     <RELEASELIBPATH value="$(BCB)\lib\release"/>
     <LINKER value="tlink32"/>
-    <USERDEFINES value="_DEBUG;BUILD_DLLDATABASE"/>
+    <USERDEFINES value="BUILD_DLLDATABASE;_DEBUG"/>
     <SYSDEFINES value="NO_STRICT;_NO_VCL"/>
     <MAINSOURCE value="DLLDatabase.bpf"/>
     <INCLUDEPATH value="$(BCB)\include;$(BCB)\include\vcl"/>
@@ -44,7 +44,7 @@
   <IDEOPTIONS>
 [Version Info]
 IncludeVerInfo=1
-AutoIncBuild=0
+AutoIncBuild=1
 MajorVer=5
 MinorVer=0
 Release=0
@@ -58,11 +58,11 @@ Locale=1045
 CodePage=1250
 
 [Version Info Keys]
-CompanyName=TSoft
+CompanyName=SSTSOFT
 FileDescription=
 FileVersion=5.0.0.3
 InternalName=TSoftDatabase
-LegalCopyright=
+LegalCopyright=Stanisław Stasiak
 LegalTrademarks=
 OriginalFilename=DLLDatabase
 ProductName=
@@ -82,12 +82,13 @@ Count=1
 Item0=$(BCB)\source\vcl
 
 [HistoryLists\hlConditionals]
-Count=5
-Item0=_DEBUG;BUILD_DLLDATABASE
-Item1=_DEBUG;BUILD_DLLDATABASE;BUILD_DLLIO
-Item2=_DEBUG;BUILD_DATABASEDLL
-Item3=_DEBUG;BUILD_DLL
-Item4=_DEBUG
+Count=6
+Item0=BUILD_DLLDATABASE;_DEBUG
+Item1=_DEBUG;BUILD_DLLDATABASE
+Item2=_DEBUG;BUILD_DLLDATABASE;BUILD_DLLIO
+Item3=_DEBUG;BUILD_DATABASEDLL
+Item4=_DEBUG;BUILD_DLL
+Item5=_DEBUG
 
 [Debugging]
 DebugSourceDirs=$(BCB)\source\vcl

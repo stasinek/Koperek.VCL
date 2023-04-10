@@ -166,7 +166,7 @@
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
     </PropertyGroup>
     <ItemGroup>
-        <CppCompile Include="break_frm.cpp">
+        <CppCompile Include="Break_frm.cpp">
             <Form>BreakForm</Form>
             <FormType>dfm</FormType>
             <DependentOn>Break_frm.h</DependentOn>
@@ -214,7 +214,7 @@
             <DependentOn>Lista_frm.h</DependentOn>
             <BuildOrder>7</BuildOrder>
         </CppCompile>
-        <CppCompile Include="main.cpp">
+        <CppCompile Include="Koperek_common_main.cpp">
             <BuildOrder>8</BuildOrder>
         </CppCompile>
         <CppCompile Include="Quest_frm.cpp">
@@ -223,7 +223,7 @@
             <DependentOn>Quest_frm.h</DependentOn>
             <BuildOrder>10</BuildOrder>
         </CppCompile>
-        <CppCompile Include="RADKoperek32.cpp">
+        <CppCompile Include="RADKoperek32_main.cpp">
             <BuildOrder>0</BuildOrder>
         </CppCompile>
         <PCHCompile Include="RADKoperekPCH1.h">
@@ -255,7 +255,7 @@
         <BorlandProject>
             <CPlusPlusBuilder.Personality>
                 <Source>
-                    <Source Name="MainSource">RADKoperek32.cpp</Source>
+                    <Source Name="MainSource">RADKoperek32_main.cpp</Source>
                 </Source>
                 <ProjectProperties>
                     <ProjectProperties Name="AutoShowDeps">False</ProjectProperties>

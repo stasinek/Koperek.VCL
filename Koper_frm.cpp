@@ -9,7 +9,7 @@
 #include "journal_frm.h"
 #include ".\LIB\DLLIO\TSoft_IO.h"
 //---------------------------------------------------------------------------
-#include "main.h"
+#include "Koperek32_common_main.h"
 //----------------------------------------------------------------------------
 #pragma link "advbar"
 #pragma link "systray"

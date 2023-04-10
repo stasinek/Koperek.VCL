@@ -25,6 +25,8 @@
 //   explicitly add MEMMGR.LIB as this will be done implicitly for you
 //---------------------------------------------------------------------------
 USERES("DLLKop32.res");
+USELIB("..\..\LIB\DLLIO\DLLIO.LIB");
+USELIB("..\..\LIB\DLLDatabase\DLLDatabase.lib");
 USEUNIT("TSoft_Kop32.cpp");
 USEUNIT("TSoft_Koder.cpp");
 USEUNIT("TSoft_Ari.cpp");
@@ -36,16 +38,13 @@ USEUNIT("TSoft_Seeker.cpp");
 USEUNIT("TSoft_Stack.cpp");
 USEUNIT("TSoft_Pharser.cpp");
 USEUNIT("TSoft_BinTree.cpp");
-USELIB("..\..\LIB\DLLDatabase\DLLDatabase.lib");
-USELIB("..\..\LIB\DLLIO\DLLIO.LIB");
 //---------------------------------------------------------------------------
+#pragma argsused
 __declspec(dllexport) TSoft::Kop32 *Kop;
-//---------------------------------------------------------------------------
-
-int WINAPI DllEntryPoint(HINSTANCE, unsigned long reason, void*)
+__declspec(dllexport)int WINAPI DllEntryPoint(HINSTANCE, unsigned long reason, void*)
 {
-if (reason==DLL_PROCESS_ATTACH) Kop = new TSoft::Kop32;
-if (reason==DLL_PROCESS_DETACH) delete Kop;
+    if (reason==DLL_PROCESS_ATTACH) Kop = new TSoft::Kop32;
+    if (reason==DLL_PROCESS_DETACH) delete Kop;
 return 1;
 }
 //---------------------------------------------------------------------------

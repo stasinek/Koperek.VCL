@@ -21,7 +21,7 @@
 #include <windows.h>
 #include "TSoft_IO.h"
 #pragma argsused
-int WINAPI DllEntryPoint(HINSTANCE hinst, unsigned long reason, void* lpReserved)
+__declspec(dllexport) int WINAPI DllEntryPoint(HINSTANCE hinst, unsigned long reason, void* lpReserved)
 {
 return 1;
 }

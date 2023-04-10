@@ -3,7 +3,7 @@
 //---------------------------------------------------------------------------
 #include "Koper_frm.h"
 #include "quest_frm.h"
-#include "main.h"
+#include "Koperek32_common_main.h"
 //---------------------------------------------------------------------------
 #pragma link "BROWSEDLG"
 #pragma resource "*.dfm"

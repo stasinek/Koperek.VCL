@@ -1441,7 +1441,7 @@ object Quest_form: TQuest_form
             TabStop = False
             Anchors = [akLeft, akTop, akRight]
             Ctl3D = True
-            ItemHeight = 13
+            ItemHeight = 0
             MaxLength = 430
             ParentCtl3D = False
             TabOrder = 5
@@ -1462,7 +1462,7 @@ object Quest_form: TQuest_form
             Height = 21
             TabStop = False
             Anchors = [akLeft, akTop, akRight]
-            ItemHeight = 13
+            ItemHeight = 0
             MaxLength = 430
             TabOrder = 7
             Text = 'Disabled'

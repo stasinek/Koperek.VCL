@@ -22,7 +22,7 @@
     <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
     <RELEASELIBPATH value="$(BCB)\lib\release"/>
     <LINKER value="tlink32"/>
-    <USERDEFINES value="_DEBUG;BUILD_DLLIO"/>
+    <USERDEFINES value="BUILD_DLLIO;_DEBUG"/>
     <SYSDEFINES value="NO_STRICT;_NO_VCL"/>
     <MAINSOURCE value="DLLIO.bpf"/>
     <INCLUDEPATH value="$(BCB)\include;$(BCB)\include\vcl"/>
@@ -45,23 +45,23 @@
   <IDEOPTIONS>
 [Version Info]
 IncludeVerInfo=1
-AutoIncBuild=0
+AutoIncBuild=1
 MajorVer=1
-MinorVer=0
+MinorVer=2
 Release=0
 Build=0
 Debug=0
 PreRelease=0
 Special=0
 Private=0
-DLL=0
+DLL=1
 Locale=1033
 CodePage=1252
 
 [Version Info Keys]
 CompanyName=TSOFT
 FileDescription=
-FileVersion=1.0.0.0
+FileVersion=1.2.0.0
 InternalName=SSTSOFT.IO
 LegalCopyright=
 LegalTrademarks=
@@ -83,11 +83,12 @@ Count=1
 Item0=$(BCB)\source\vcl
 
 [HistoryLists\hlConditionals]
-Count=4
-Item0=_DEBUG;BUILD_DLLIO
-Item1=_DEBUG;BUILD_IODLL
-Item2=_DEBUG;BUILD_DLL
-Item3=_DEBUG
+Count=5
+Item0=BUILD_DLLIO;_DEBUG
+Item1=_DEBUG;BUILD_DLLIO
+Item2=_DEBUG;BUILD_IODLL
+Item3=_DEBUG;BUILD_DLL
+Item4=_DEBUG
 
 [Debugging]
 DebugSourceDirs=$(BCB)\source\vcl

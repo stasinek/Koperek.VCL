@@ -5,7 +5,7 @@
 #include "koper_frm.h"
 #include "infos_frm.h"
 //---------------------------------------------------------------------------
-#include "main.h"
+#include "Koperek32_common_main.h"
 //---------------------------------------------------------------------------
 #include <shlobj.h>
 #include <stdio.h>

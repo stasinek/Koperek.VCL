@@ -1,5 +1,5 @@
 //---------------------------------------------------------------------------
-#include "Kop32_common.h"
+#include "Koperek32_common_main.h"
 //---------------------------------------------------------------------------
 #include "Break_frm.h"
 #include "Infos_frm.h"
@@ -9,8 +9,7 @@
 #include "..\..\FORM_TEMPLATES\About_frm.h"
 #include "Journal_frm.h"
 //---------------------------------------------------------------------------
-TSoft::Kop32 *Kop;
-DWORD WINAPI WinMainCommon(HINSTANCE hApp, HINSTANCE hInst, char *argts, int State)
+DWORD WINAPI WinMain_common(HINSTANCE hApp, HINSTANCE hInst, char *argts, int State)
 {
 bool useWizzard = false;
 
