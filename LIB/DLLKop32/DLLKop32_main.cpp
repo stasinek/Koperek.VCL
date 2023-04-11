@@ -2,6 +2,8 @@
 #include <windows.h>
 #include <condefs.h>
 #pragma hdrstop
+#pragma package(smart_init)
+#pragma argsused
 //---------------------------------------------------------------------------
 #include "TSoft_Kop32.h"
 //---------------------------------------------------------------------------
@@ -25,8 +27,8 @@
 //   explicitly add MEMMGR.LIB as this will be done implicitly for you
 //---------------------------------------------------------------------------
 USERES("DLLKop32.res");
-USELIB("..\..\LIB\DLLIO\DLLIO.LIB");
-USELIB("..\..\LIB\DLLDatabase\DLLDatabase.lib");
+USELIB("..\DLLIO\DLLIO.LIB");
+USELIB("..\DLLDatabase\DLLDatabase.lib");
 USEUNIT("TSoft_Kop32.cpp");
 USEUNIT("TSoft_Koder.cpp");
 USEUNIT("TSoft_Ari.cpp");
@@ -39,7 +41,6 @@ USEUNIT("TSoft_Stack.cpp");
 USEUNIT("TSoft_Pharser.cpp");
 USEUNIT("TSoft_BinTree.cpp");
 //---------------------------------------------------------------------------
-#pragma argsused
 __declspec(dllexport) TSoft::Kop32 *Kop;
 __declspec(dllexport)int WINAPI DllEntryPoint(HINSTANCE, unsigned long reason, void*)
 {

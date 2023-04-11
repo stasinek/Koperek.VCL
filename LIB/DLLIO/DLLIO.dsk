@@ -13,8 +13,9 @@ File_9=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE\FORM_TEMPLATES\Info_
 [Modules]
 Module0=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO_main.cpp
 Module1=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp
-Module2=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.BPR
-Count=3
+Module2=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.h
+Module3=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.BPR
+Count=4
 EditWindowCount=1
 
 [C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO_main.cpp]
@@ -27,21 +28,27 @@ ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
+[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.h]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
 [C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.BPR]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\ProjectGroup1.bpg]
+[C:\SRC\ProjectGroup1.bpg]
 FormState=0
 FormOnTop=0
 
 [EditWindow0]
-ViewCount=3
+ViewCount=4
 CurrentView=0
 View0=0
 View1=1
 View2=2
+View3=3
 MessageView=MessageView@EditWindow0
 Create=1
 Visible=1
@@ -64,8 +71,8 @@ BottomPanelData=0000040000000000000000000000000000000000000000000001000000000000
 
 [View0]
 Module=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO_main.cpp
-CursorX=23
-CursorY=24
+CursorX=1
+CursorY=27
 TopLine=1
 LeftCol=1
 
@@ -78,8 +85,15 @@ LeftCol=1
 
 [View2]
 Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp
-CursorX=47
-CursorY=8
+CursorX=3
+CursorY=6
+TopLine=1
+LeftCol=1
+
+[View3]
+Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.h
+CursorX=1
+CursorY=5
 TopLine=1
 LeftCol=1
 

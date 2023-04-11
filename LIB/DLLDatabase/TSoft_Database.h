@@ -1,11 +1,10 @@
 //---------------------------------------------------------------------------
 //-----------------Stanislaw Stasiak "SSTSOFT.pl" 2001-2002------------------
 //---------------------------------------------------------------------------
-#ifndef __TSoft_Database_HDR__
-#define __TSoft_Database_HDR__
+#ifndef __TSoft_Database_H
+#define __TSoft_Database_H
 //---------------------------------------------------------------------------
 #include "./../DLLIO/TSoft_IO.h"
-//---------------------------------------------------------------------------
 #include "TSoft_build_conf.h"
 //---------------------------------------------------------------------------
 #define COMMA  1
@@ -121,9 +120,9 @@ __declspec(property(get=get_Text, put=set_Text))  char            *Text[];
 };
 //---------------------------------------------------------------------------
 }
-DATABASE_IMPEXP TSoft::Database *__stdcall DATA_FROM_TEXT(TSoft::Database *aDatabase, char *aText, long aformat);
-DATABASE_IMPEXP char *__stdcall TEXT_FROM_DATA(char **aText, TSoft::Database *aDatabase, long aformat);
-DATABASE_IMPEXP TSoft::Database::Item *__stdcall ASCHAR(char *atext);
+extern "C" DATABASE_IMPEXP TSoft::Database *__stdcall DATA_FROM_TEXT(TSoft::Database *aDatabase, char *aText, long aformat);
+extern "C" DATABASE_IMPEXP char *__stdcall TEXT_FROM_DATA(char **aText, TSoft::Database *aDatabase, long aformat);
+extern "C" DATABASE_IMPEXP TSoft::Database::Item *__stdcall ASCHAR(char *atext);
 //---------------------------------------------------------------------------
 #endif
 

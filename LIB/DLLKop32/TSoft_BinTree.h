@@ -1,12 +1,11 @@
 //---------------------------------------------------------------------------
 //-----------------Stanislaw Stasiak "SSTSOFT.pl" 2001-2002------------------
 //---------------------------------------------------------------------------
-#ifndef __TSoft_BinTree_HDR__
-#define __TSoft_BinTree_HDR__
-#include <windows.h>
-#pragma hdrstop
+#ifndef __TSoft_BinTree_H
+#define __TSoft_BinTree_H
 //---------------------------------------------------------------------------
 #include "TSoft_build_conf.h"
+#include "TSoft_HDR.h"
 //---------------------------------------------------------------------------
 #define FIND_MIN  (DWORD)0x00000002
 #define FIND_MAX  (DWORD)0x000000FF

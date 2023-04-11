@@ -1,5 +1,11 @@
 //---------------------------------------------------------------------------
-#include "Koperek32_common_main.h"
+#include <vcl.h>
+#include <windows.h>
+#include <malloc.h>
+#include <stdio.h>
+#include <fstream>
+#pragma hdrstop
+#define WIN32_LEAN_AND_MEAN
 //---------------------------------------------------------------------------
 #include "Break_frm.h"
 #include "Infos_frm.h"
@@ -8,6 +14,7 @@
 #include "Quest_frm.h"
 #include "..\..\FORM_TEMPLATES\About_frm.h"
 #include "Journal_frm.h"
+#include "Koperek32_common_main.h"
 //---------------------------------------------------------------------------
 DWORD WINAPI WinMain_common(HINSTANCE hApp, HINSTANCE hInst, char *argts, int State)
 {

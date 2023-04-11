@@ -2,8 +2,9 @@
 //-----------------Stanislaw Stasiak "SSTSOFT.pl" 2001-2002------------------
 //---------------------------------------------------------------------------
 #include <windows.h>
-#include "TSoft_HDR.h"
+#pragma hdrstop
 //---------------------------------------------------------------------------
+#include "TSoft_HDR.h"
 //---------------------------------------------------------------------------
 
 unsigned char __stdcall __ptrptr_hdrcoder::Price_ptrPass(DWORD axdata_uncoded_length)

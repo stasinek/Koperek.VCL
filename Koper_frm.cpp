@@ -1,5 +1,10 @@
 //---------------------------------------------------------------------------
 #include <vcl.h>
+<<<<<<< HEAD
+#include <stdio.h>
+=======
+>>>>>>> github/master
+#pragma hdrstop
 //---------------------------------------------------------------------------
 #include "koper_frm.h"
 #include "quest_frm.h"
@@ -7,18 +12,16 @@
 #include "infos_frm.h"
 #include "break_frm.h"
 #include "journal_frm.h"
-#include ".\LIB\DLLIO\TSoft_IO.h"
-//---------------------------------------------------------------------------
+<<<<<<< HEAD
 #include "Koperek32_common_main.h"
 //----------------------------------------------------------------------------
-#pragma link "advbar"
-#pragma link "systray"
+=======
+//#include ".\LIB\DLLIO\TSoft_IO.h"
+#include "Koperek32_common_main.h"
+//----------------------------------------------------------------------------
 #pragma link "ADVBAR"
 #pragma link "SYSTRAY"
-#pragma link "ADVBAR"
-#pragma link "SYSTRAY"
-#pragma link "ADVBAR"
-#pragma link "SYSTRAY"
+>>>>>>> github/master
 #pragma link "ADVBAR"
 #pragma link "SYSTRAY"
 #pragma resource "*.dfm"

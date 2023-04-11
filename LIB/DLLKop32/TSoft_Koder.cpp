@@ -4,15 +4,17 @@
 #include <windows.h>
 #include <stdio.h>
 #include <conio.h>
-#include "..\DLLIO\TSoft_IO.h"
+#pragma hdrstop
+//---------------------------------------------------------------------------
+#include "TSoft_Koder.h"
 #include "TSoft_BWTMatrix.h"
-#include "TSoft_HDR.h"
 #include "TSoft_BinTree.h"
 #include "TSoft_Huff.h"
 #include "TSoft_Ari.h"
 #include "TSoft_Mtf.h"
-#pragma hdrstop
-#include "TSoft_Koder.h"
+#include "TSoft_HDR.h"
+#include "..\DLLIO\TSoft_IO.h"
+//---------------------------------------------------------------------------
 
 static unsigned long CRC32_tab[256] =
  {

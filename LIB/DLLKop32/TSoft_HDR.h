@@ -1,5 +1,5 @@
-#ifndef __TSoft_HDR_HDR__
-#define __TSoft_HDR_HDR__
+#ifndef __TSoft_HDR_H
+#define __TSoft_HDR_H
 //---------------------------------------------------------------------------
 #define XMODE_MASK BYTE(0x03L)
 #define XPASS_CODE BYTE(0x00L)

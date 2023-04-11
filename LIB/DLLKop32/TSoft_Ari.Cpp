@@ -1,7 +1,9 @@
 //---------------------------------------------------------------------------
 #include <windows.h>
-#include "..\DLLIO\TSoft_IO.h"
+#pragma hdrstop
+//---------------------------------------------------------------------------
 #include "TSoft_Ari.h"
+#include "..\DLLIO\TSoft_IO.h"
 //---------------------------------------------------------------------------
 
 /*  If you are not familiar with arithmetic compression, you should read

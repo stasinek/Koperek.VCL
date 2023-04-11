@@ -1,4 +1,9 @@
 //---------------------------------------------------------------------------
+#include <vcl.h>
+#include <windows.h>
+#pragma hdrstop
+#define WIN32_LEAN_AND_MEAN
+//---------------------------------------------------------------------------
 #include "Koperek32_common_main.h"
 //---------------------------------------------------------------------------
 USEUNIT("Koperek32_common_main.cpp");
@@ -25,10 +30,10 @@ USEUNIT("LIB\DLLKop32\TSoft_Pharser.cpp");
 USEUNIT("LIB\DLLKop32\TSoft_Seeker.cpp");
 USEUNIT("LIB\DLLKop32\TSoft_Stack.cpp");
 //---------------------------------------------------------------------------
-// STATIC KOP
+// STATIC KOP BODY LINKED here, initialized inside WinMain_common
 TSoft::Kop32 *Kop;
 WINAPI WinMain(HINSTANCE hApp, HINSTANCE hInst, char *argts, int State)
 {
-return WinMainCommon(hApp,hInst,argts,State);
+return WinMain_common(hApp,hInst,argts,State);
 }
 //---------------------------------------------------------------------------

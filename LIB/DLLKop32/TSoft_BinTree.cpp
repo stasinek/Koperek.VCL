@@ -1,8 +1,10 @@
 //---------------------------------------------------------------------------
 #include <windows.h>
-#include "..\DLLIO\TSoft_IO.h"
-#include "TSoft_HDR.h"
+#pragma hdrstop
+//---------------------------------------------------------------------------
 #include "TSoft_BinTree.h"
+#include "TSoft_HDR.h"
+#include "..\DLLIO\TSoft_IO.h"
 //---------------------------------------------------------------------------
 // tym wiêcej bitów im wiêksze slide window, 12 dla 4096
 //#define HASH_SIZE (unsigned long)(256<<8)

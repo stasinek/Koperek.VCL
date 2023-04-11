@@ -48,7 +48,7 @@ AutoIncBuild=1
 MajorVer=5
 MinorVer=0
 Release=0
-Build=3
+Build=4
 Debug=0
 PreRelease=0
 Special=0
@@ -60,7 +60,7 @@ CodePage=1250
 [Version Info Keys]
 CompanyName=SSTSOFT
 FileDescription=
-FileVersion=5.0.0.3
+FileVersion=5.0.0.4
 InternalName=TSoftDatabase
 LegalCopyright=Stanisław Stasiak
 LegalTrademarks=

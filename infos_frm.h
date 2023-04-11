@@ -1,16 +1,17 @@
 //---------------------------------------------------------------------------
-#ifndef Infos_frm_H
-#define Infos_frm_H
+#ifndef __Infos_frm_H
+#define __Infos_frm_H
 //---------------------------------------------------------------------------
 #include <Classes.hpp>
 #include <Controls.hpp>
 #include <StdCtrls.hpp>
 #include <Forms.hpp>
 #include <ExtCtrls.hpp>
-#include ".\..\..\PACKAGES\exeres.h"
 #include <ComCtrls.hpp>
-#include "EXERES.h"
 #include <Buttons.hpp>
+//---------------------------------------------------------------------------
+#include ".\..\..\PACKAGES\exeres.h"
+#include "EXERES.h"
 //---------------------------------------------------------------------------
 class TInfos_form : public TForm
 {

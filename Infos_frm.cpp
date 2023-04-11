@@ -1,17 +1,16 @@
 //---------------------------------------------------------------------------
 #include <vcl.h>
+#include <shlobj.h>
+#include <stdio.h>
+#include <shellapi.h>
 #pragma hdrstop
 //---------------------------------------------------------------------------
 #include "koper_frm.h"
 #include "infos_frm.h"
-//---------------------------------------------------------------------------
 #include "Koperek32_common_main.h"
 //---------------------------------------------------------------------------
-#include <shlobj.h>
-#include <stdio.h>
-#include <shellapi.h>
-//---------------------------------------------------------------------------
 #pragma link "exeres"
+#pragma link "EXERES"
 #pragma link "EXERES"
 #pragma link "EXERES"
 #pragma link "EXERES"

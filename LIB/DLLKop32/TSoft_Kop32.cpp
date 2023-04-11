@@ -1,13 +1,13 @@
 //---------------------------------------------------------------------------
 //-----------------Stanislaw Stasiak "TSoft"-2001-2004-----------------------
 //---------------------------------------------------------------------------
-//---------------------------------------------------------------------------
 #include <windows.h>
 #include <winbase.h>
+#pragma hdrstop
 //---------------------------------------------------------------------------
-#include "TSoft_Koder.h"
-#include "TSoft_Pharser.h"
 #include "TSoft_Kop32.h"
+#include "TSoft_Pharser.h"
+#include "TSoft_Koder.h"
 //---------------------------------------------------------------------------
 
 DWORD WINAPI TSoft::Kop32::WriteFileThread( LPVOID a) {
@@ -72,14 +72,14 @@ Clr();
 
 void  __stdcall TSoft::Kop32::SetPassword(const char *ausrpassword) {
 strMov(password.FUsr,ausrpassword);
-strMov(password.FEnc,ausrpassword); password.FSize = strLen(ausrpassword);
+strMov(password.FEnc,ausrpassword); password.FSize = (__int8)strLen(ausrpassword);
 
-int  pos;  __int64 kod = 0;
+int  pos;  __int64 checksum = 0;
 for (pos = password.FSize-1; pos!=-1; pos--)
-	 {kod +=password.FEnc[pos];
+	 {checksum +=password.FEnc[pos];
 	 }
 for (pos = password.FSize-1; pos!=-1; pos--)
-    {password.FEnc[pos]^= (kod % (pos+1)) ^ pos;
+    {password.FEnc[pos] = password.FEnc[pos] ^ (char)((checksum % (pos+1)) ^ pos);
 	 }
 }
 //---------------------------------------------------------------------------

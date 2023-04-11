@@ -2,6 +2,8 @@
 //-----------------Stanislaw Stasiak "SSTSOFT.pl" 2001-2002------------------
 //---------------------------------------------------------------------------
 #include <windows.h>
+#pragma hdrstop
+//---------------------------------------------------------------------------
 #include "TSoft_IO.h"
 //---------------------------------------------------------------------------
 
@@ -1253,7 +1255,7 @@ BITSET_XX_BREAK:
 #else
     register size_t bits = adst_count * 8;
     register void *src = (void*)alpsrc;
-    register unsigned __int8 dst_bit = adst_bit;
+    register unsigned __int8 dst_bit = asrc_bit;
     register char *dst = (char*)alpdst;
     register __int32 aku,zr;
     while (bits> 0) {

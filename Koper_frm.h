@@ -1,6 +1,6 @@
 //---------------------------------------------------------------------------
-#ifndef Koper_frm_H
-#define Koper_frm_H
+#ifndef __Koper_frm_H
+#define __Koper_frm_H
 //---------------------------------------------------------------------------
 #include <Classes.hpp>
 #include <Controls.hpp>
@@ -8,9 +8,10 @@
 #include <Forms.hpp>
 #include <ComCtrls.hpp>
 #include <ExtCtrls.hpp>
-#include <mmsystem.h>
-#include ".\..\..\PACKAGES\advbar.h"
 #include <Buttons.hpp>
+#include <mmsystem.h>
+//---------------------------------------------------------------------------
+#include ".\..\..\PACKAGES\advbar.h"
 #include ".\..\..\PACKAGES\systray.h"
 #include "ADVBAR.h"
 #include "SYSTRAY.h"

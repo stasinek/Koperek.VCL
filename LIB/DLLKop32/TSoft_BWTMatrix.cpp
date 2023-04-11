@@ -1,8 +1,9 @@
 //---------------------------------------------------------------------------
 #include <windows.h>
-#include "..\DLLIO\TSoft_IO.h"
-#include "TSoft_BWTMatrix.h"
 #pragma hdrstop
+//---------------------------------------------------------------------------
+#include "TSoft_BWTMatrix.h"
+#include "..\DLLIO\TSoft_IO.h"
 //---------------------------------------------------------------------------
 
 __stdcall TSoft_BWTMatrix::TSoft_BWTMatrix(unsigned long ablock)

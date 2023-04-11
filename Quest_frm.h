@@ -1,18 +1,19 @@
 //---------------------------------------------------------------------------
-#ifndef __quest_frm_H
-#define __quest_frm_H
+#ifndef __Quest_frm_H
+#define __Quest_frm_H
 //---------------------------------------------------------------------------
 #include <Classes.hpp>
 #include <Buttons.hpp>
 #include <ExtCtrls.hpp>
 #include <StdCtrls.hpp>
+#include <ComCtrls.hpp>
 #include <Controls.hpp>
+#include <Graphics.hpp>
+//---------------------------------------------------------------------------
 #include ".\..\..\PACKAGES\browsedlg.h"
 #include ".\..\..\PACKAGES\advbar.h"
 #include ".\..\..\PACKAGES\hintbox.h"
-#include <ComCtrls.hpp>
 #include "BROWSEDLG.h"
-#include <Graphics.hpp>
 //---------------------------------------------------------------------------
 class TQuest_form : public TForm
 {
