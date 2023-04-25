@@ -1,18 +1,12 @@
 //---------------------------------------------------------------------------
-#include <vcl.h>
-#include <windows.h>
-#pragma hdrstop
-#define WIN32_LEAN_AND_MEAN
+#include "Kop32_common.h"
 //---------------------------------------------------------------------------
-#include "Koperek32_common_main.h"
-//---------------------------------------------------------------------------
-USEUNIT("Koperek32_common_main.cpp");
+USEUNIT("Kop32_common.cpp");
 USEFORM("Haslo_frm.cpp", Haslo_form);
 USEFORM("Koper_frm.cpp", Koper_form);
 USEFORM("Break_frm.cpp", Break_form);
 USEFORM("Infos_frm.cpp", Infos_form);
 USEFORM("Journal_frm.cpp", Journal_form);
-USEFORM("Lista_frm.cpp", Lista_form);
 USEFORM("Quest_frm.cpp", Quest_form);
 USEFORM("..\..\FORM_TEMPLATES\About_frm.cpp", About_form);
 USEUNIT("LIB\DLLIO\TSoft_IO.cpp");
@@ -28,11 +22,10 @@ USEUNIT("LIB\DLLKop32\TSoft_Mtf.cpp");
 USEUNIT("LIB\DLLKop32\TSoft_Pharser.cpp");
 USEUNIT("LIB\DLLKop32\TSoft_Seeker.cpp");
 USEUNIT("LIB\DLLKop32\TSoft_Stack.cpp");
-USERES("Kop32_static_main.res");
+USERES("Kop32_static.res");
 //---------------------------------------------------------------------------
-TSoft::Kop32 *Kop;
 WINAPI WinMain(HINSTANCE hApp, HINSTANCE hInst, char *argts, int State)
 {
-return WinMain_common(hApp,hInst,argts,State);
+return WinMainCommon(hApp,hInst,argts,State);
 }
 //---------------------------------------------------------------------------

@@ -13,7 +13,7 @@
       LIB\DLLKop32\TSoft_Koder.obj LIB\DLLKop32\TSoft_Kop32.obj 
       LIB\DLLKop32\TSoft_Mtf.obj LIB\DLLKop32\TSoft_Pharser.obj 
       LIB\DLLKop32\TSoft_Seeker.obj LIB\DLLKop32\TSoft_Stack.obj"/>
-    <RESFILES value="Kop32_static.res"/>
+    <RESFILES value="Kop32_static_main.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
     <DEFFILE value=""/>
@@ -60,8 +60,8 @@
 [Version Info]
 IncludeVerInfo=1
 AutoIncBuild=0
-MajorVer=3
-MinorVer=3
+MajorVer=1
+MinorVer=1
 Release=1
 Build=523
 Debug=0
@@ -73,14 +73,14 @@ Locale=1045
 CodePage=1250
 
 [Version Info Keys]
-CompanyName=TSOFT/ SSTSOFT Stanislaw Stasiak 2000-2018
+CompanyName=TSOFT/ SSTSOFT
 FileDescription=
-FileVersion=3.3.1.523
-InternalName=SSTSOFT.KOPEREK
-LegalCopyright=
+FileVersion=1.1.1.523
+InternalName=SSTSOFT.KOPEREK.VCL-static
+LegalCopyright=Stanislaw Stasiak
 LegalTrademarks=
 OriginalFilename=Kop32_static.exe
-ProductName=
+ProductName=Koperek.VCL-static
 ProductVersion=1.0.0.0
 Comments=sstsoft@wp.pl
 
@@ -145,16 +145,5 @@ RemoteDebug=0
 [Compiler]
 ShowInfoMsgs=1
 LinkDebugVcl=1
-LinkCGLIB=0
-
-[CORBA]
-AddServerUnit=1
-AddClientUnit=1
-PrecompiledHeaders=1
-
-[Language]
-ActiveLang=
-ProjectLang=
-RootDir=
   </IDEOPTIONS>
 </PROJECT>

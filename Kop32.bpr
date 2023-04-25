@@ -7,7 +7,7 @@
     <OBJFILES value="Kop32_main.obj Koperek32_common_main.obj Haslo_frm.obj Koper_frm.obj 
       Break_frm.obj Infos_frm.obj Journal_frm.obj Lista_frm.obj Quest_frm.obj 
       ..\..\FORM_TEMPLATES\About_frm.obj"/>
-    <RESFILES value="Kop32.res"/>
+    <RESFILES value="Kop32.res Kop32_main.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
     <DEFFILE value=""/>
@@ -55,9 +55,9 @@
 [Version Info]
 IncludeVerInfo=1
 AutoIncBuild=0
-MajorVer=3
-MinorVer=3
-Release=1
+MajorVer=1
+MinorVer=1
+Release=0
 Build=523
 Debug=0
 PreRelease=1
@@ -68,14 +68,14 @@ Locale=1045
 CodePage=1250
 
 [Version Info Keys]
-CompanyName=TSOFT/ SSTSOFT Stanislaw Stasiak 2000-2018
+CompanyName=TSOFT/ SSTSOFT
 FileDescription=
-FileVersion=3.3.1.523
+FileVersion=1.1.0.523
 InternalName=SSTSOFT.KOPEREK
-LegalCopyright=
+LegalCopyright=Stanislaw Stasiak
 LegalTrademarks=
 OriginalFilename=Kop32.exe
-ProductName=
+ProductName=Koperek.VCL
 ProductVersion=1.0.0.0
 Comments=sstsoft@wp.pl
 

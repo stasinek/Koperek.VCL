@@ -11,13 +11,18 @@ File_8=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE\FORM_TEMPLATES\Info_
 
 [Modules]
 Module0=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase_main.cpp
-Module1=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.cpp
-Module2=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.h
-Module3=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.bpr
+Module1=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.bpr
+Module2=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.cpp
+Module3=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.h
 Count=4
 EditWindowCount=1
 
 [C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase_main.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.bpr]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
@@ -28,11 +33,6 @@ FormState=0
 FormOnTop=0
 
 [C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.h]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.bpr]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0

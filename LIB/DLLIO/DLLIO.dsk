@@ -12,13 +12,18 @@ File_9=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE\FORM_TEMPLATES\Info_
 
 [Modules]
 Module0=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO_main.cpp
-Module1=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp
-Module2=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.h
-Module3=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.BPR
+Module1=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.BPR
+Module2=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp
+Module3=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.h
 Count=4
 EditWindowCount=1
 
 [C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO_main.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.BPR]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
@@ -29,11 +34,6 @@ FormState=0
 FormOnTop=0
 
 [C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.h]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.BPR]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0

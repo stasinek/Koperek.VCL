@@ -15,6 +15,7 @@ USERES("Kop32.res");
 USELIB("LIB\DLLIO\DLLIO.lib");
 USELIB("LIB\DLLDatabase\DLLDatabase.lib");
 USELIB("LIB\DLLKop32\DLLKop32.lib");
+USERES("Kop32_main.res");
 //---------------------------------------------------------------------------
 #define WIN32_LEAN_AND_MEAN
 #include "Koperek32_common_main.h"

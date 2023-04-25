@@ -5,7 +5,7 @@
     <VERSION value="BCB.05.03"/>
     <PROJECT value="DLLDatabase.dll"/>
     <OBJFILES value="DLLDatabase_main.obj TSoft_Database.obj"/>
-    <RESFILES value=""/>
+    <RESFILES value="DLLDatabase.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
     <DEFFILE value=""/>
@@ -45,10 +45,10 @@
 [Version Info]
 IncludeVerInfo=1
 AutoIncBuild=1
-MajorVer=5
-MinorVer=0
+MajorVer=1
+MinorVer=1
 Release=0
-Build=4
+Build=5
 Debug=0
 PreRelease=0
 Special=0
@@ -58,9 +58,9 @@ Locale=1045
 CodePage=1250
 
 [Version Info Keys]
-CompanyName=SSTSOFT
+CompanyName=TSOFT/SSTSOFT
 FileDescription=
-FileVersion=5.0.0.4
+FileVersion=1.1.0.5
 InternalName=TSoftDatabase
 LegalCopyright=Stanisław Stasiak
 LegalTrademarks=

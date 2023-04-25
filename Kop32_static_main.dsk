@@ -29,7 +29,7 @@ Visible=1
 State=2
 Left=200
 Top=122
-Width=870
+Width=1080
 Height=502
 MaxLeft=-4
 MaxTop=97
@@ -45,8 +45,8 @@ BottomPanelData=0000040000000000000000000000000000000000000000000001000000000000
 
 [View0]
 Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Kop32_static_main.cpp
-CursorX=33
-CursorY=33
+CursorX=59
+CursorY=17
 TopLine=1
 LeftCol=1
 

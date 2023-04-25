@@ -1,6 +1,7 @@
 USEUNIT("DLLDatabase_main.cpp");
 USEUNIT("TSoft_Database.cpp");
 USELIB("..\DLLIO\DLLIO.LIB");
+USERES("DLLDatabase.res");
 //---------------------------------------------------------------------------
 This file is used by the project manager only and should be treated like the project file
 DllEntryPoint

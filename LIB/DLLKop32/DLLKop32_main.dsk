@@ -2,191 +2,42 @@
 File_0=SourceModule,'C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Seeker.h',0,1,1,19,4,0,0
 
 [Modules]
-<<<<<<< HEAD
-Module0=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BinTree.h
-Module1=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Stack.h
+Module0=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Stack.h
+Module1=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\DLLKop32.bpr
 Module2=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_MTF.cpp
 Module3=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_MTF.h
-Module4=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Seeker.cpp
-Module5=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Pharser.cpp
-Module6=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Stack.cpp
-Module7=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BWTMatrix.cpp
-Module8=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BinTree.cpp
-Module9=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Ari.cpp
-Module10=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.cpp
-Module11=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\DLLKop32.bpr
-Module12=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Koder.h
-Module13=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Koder.cpp
-Module14=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Huff.h
-Module15=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Huff.cpp
-Module16=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BWTMatrix.h
-Module17=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.h
-Module18=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_HDR.h
-Module19=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_HDR.cpp
-Count=20
+Module4=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Pharser.cpp
+Module5=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.cpp
+Module6=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.h
+Count=7
 EditWindowCount=1
-
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BinTree.h]
-=======
-Module0=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.cpp
-Module1=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Seeker.cpp
-Module2=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Stack.cpp
-Module3=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Stack.h
-Module4=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Ari.cpp
-Module5=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BinTree.cpp
-Module6=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BinTree.h
-Module7=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Koder.h
-Module8=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Koder.cpp
-Module9=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Huff.h
-Module10=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Huff.cpp
-Module11=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BWTMatrix.h
-Module12=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BWTMatrix.cpp
-Module13=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Pharser.cpp
-Module14=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_MTF.cpp
-Module15=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.h
-Module16=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\DLLKop32.bpr
-Module17=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_HDR.h
-Module18=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_HDR.cpp
-Count=19
-EditWindowCount=1
-
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Seeker.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Stack.cpp]
->>>>>>> github/master
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
 
 [C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Stack.h]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-<<<<<<< HEAD
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_MTF.cpp]
-=======
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Ari.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BinTree.cpp]
->>>>>>> github/master
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-<<<<<<< HEAD
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_MTF.h]
-=======
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BinTree.h]
->>>>>>> github/master
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-<<<<<<< HEAD
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Seeker.cpp]
-=======
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Koder.h]
->>>>>>> github/master
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-<<<<<<< HEAD
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Pharser.cpp]
-=======
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Koder.cpp]
->>>>>>> github/master
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-<<<<<<< HEAD
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Stack.cpp]
-=======
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Huff.h]
->>>>>>> github/master
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-<<<<<<< HEAD
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BWTMatrix.cpp]
-=======
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Huff.cpp]
->>>>>>> github/master
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-<<<<<<< HEAD
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BinTree.cpp]
-=======
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BWTMatrix.h]
->>>>>>> github/master
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-<<<<<<< HEAD
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Ari.cpp]
-=======
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BWTMatrix.cpp]
->>>>>>> github/master
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-<<<<<<< HEAD
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.cpp]
-=======
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Pharser.cpp]
->>>>>>> github/master
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-<<<<<<< HEAD
 [C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\DLLKop32.bpr]
-=======
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
 [C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_MTF.cpp]
->>>>>>> github/master
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Koder.h]
+[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_MTF.h]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Koder.cpp]
+[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Pharser.cpp]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Huff.h]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Huff.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BWTMatrix.h]
+[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.cpp]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
@@ -196,36 +47,65 @@ ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-<<<<<<< HEAD
-=======
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\DLLKop32.bpr]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
->>>>>>> github/master
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_HDR.h]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_HDR.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
 [C:\SRC\ProjectGroup1.bpg]
 FormState=0
 FormOnTop=0
 
+[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BinTree.h]
+FormState=0
+FormOnTop=0
+
+[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Seeker.cpp]
+FormState=0
+FormOnTop=0
+
+[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Stack.cpp]
+FormState=0
+FormOnTop=0
+
+[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BWTMatrix.cpp]
+FormState=0
+FormOnTop=0
+
+[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BinTree.cpp]
+FormState=0
+FormOnTop=0
+
+[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Ari.cpp]
+FormState=0
+FormOnTop=0
+
+[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Koder.h]
+FormState=0
+FormOnTop=0
+
+[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Koder.cpp]
+FormState=0
+FormOnTop=0
+
+[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Huff.h]
+FormState=0
+FormOnTop=0
+
+[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Huff.cpp]
+FormState=0
+FormOnTop=0
+
+[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BWTMatrix.h]
+FormState=0
+FormOnTop=0
+
+[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_HDR.h]
+FormState=0
+FormOnTop=0
+
+[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_HDR.cpp]
+FormState=0
+FormOnTop=0
+
 [EditWindow0]
-<<<<<<< HEAD
-ViewCount=20
-CurrentView=11
-=======
-ViewCount=19
-CurrentView=2
->>>>>>> github/master
+ViewCount=7
+CurrentView=6
 View0=0
 View1=1
 View2=2
@@ -233,22 +113,6 @@ View3=3
 View4=4
 View5=5
 View6=6
-View7=7
-View8=8
-View9=9
-View10=10
-View11=11
-View12=12
-View13=13
-View14=14
-View15=15
-View16=16
-View17=17
-View18=18
-<<<<<<< HEAD
-View19=19
-=======
->>>>>>> github/master
 MessageView=MessageView@EditWindow0
 Create=1
 Visible=1
@@ -287,26 +151,17 @@ LeftCol=1
 Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.cpp
 CursorX=18
 CursorY=97
-<<<<<<< HEAD
 TopLine=1
-=======
-TopLine=82
->>>>>>> github/master
 LeftCol=1
 
 [View3]
 Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_MTF.cpp
 CursorX=1
-<<<<<<< HEAD
 CursorY=2
-=======
-CursorY=3
->>>>>>> github/master
 TopLine=1
 LeftCol=1
 
 [View4]
-<<<<<<< HEAD
 Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_MTF.h
 CursorX=16
 CursorY=7
@@ -321,164 +176,9 @@ TopLine=1
 LeftCol=1
 
 [View6]
-=======
-Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Pharser.cpp
-CursorX=1
-CursorY=6
-TopLine=1
-LeftCol=1
-
-[View5]
->>>>>>> github/master
-Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Seeker.cpp
-CursorX=13
-CursorY=3
-TopLine=1
-LeftCol=1
-
-<<<<<<< HEAD
-[View7]
-=======
-[View6]
->>>>>>> github/master
-Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Stack.cpp
-CursorX=1
-CursorY=8
-TopLine=1
-LeftCol=1
-
-<<<<<<< HEAD
-[View8]
 Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Stack.h
 CursorX=1
 CursorY=13
-TopLine=1
-LeftCol=1
-
-[View9]
-=======
-[View7]
-Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Stack.h
-CursorX=24
-CursorY=6
-TopLine=1
-LeftCol=1
-
-[View8]
->>>>>>> github/master
-Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Ari.cpp
-CursorX=1
-CursorY=4
-TopLine=1
-LeftCol=1
-
-<<<<<<< HEAD
-[View10]
-=======
-[View9]
->>>>>>> github/master
-Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BinTree.cpp
-CursorX=81
-CursorY=3
-TopLine=1
-LeftCol=1
-
-<<<<<<< HEAD
-[View11]
-=======
-[View10]
->>>>>>> github/master
-Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BinTree.h
-CursorX=23
-CursorY=8
-TopLine=1
-LeftCol=1
-
-<<<<<<< HEAD
-[View12]
-=======
-[View11]
->>>>>>> github/master
-Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BWTMatrix.cpp
-CursorX=67
-CursorY=1
-TopLine=1
-LeftCol=1
-
-<<<<<<< HEAD
-[View13]
-=======
-[View12]
->>>>>>> github/master
-Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BWTMatrix.h
-CursorX=28
-CursorY=4
-TopLine=1
-LeftCol=1
-
-<<<<<<< HEAD
-[View14]
-=======
-[View13]
->>>>>>> github/master
-Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Huff.cpp
-CursorX=1
-CursorY=2
-TopLine=1
-LeftCol=1
-
-<<<<<<< HEAD
-[View15]
-=======
-[View14]
->>>>>>> github/master
-Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Huff.h
-CursorX=52
-CursorY=7
-TopLine=1
-LeftCol=1
-
-<<<<<<< HEAD
-[View16]
-=======
-[View15]
->>>>>>> github/master
-Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Koder.cpp
-CursorX=1
-CursorY=7
-TopLine=1
-LeftCol=1
-
-<<<<<<< HEAD
-[View17]
-=======
-[View16]
->>>>>>> github/master
-Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Koder.h
-CursorX=1
-CursorY=1
-TopLine=1
-LeftCol=1
-
-<<<<<<< HEAD
-[View18]
-=======
-[View17]
->>>>>>> github/master
-Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_HDR.cpp
-CursorX=1
-CursorY=7
-TopLine=1
-LeftCol=1
-
-<<<<<<< HEAD
-[View19]
-=======
-[View18]
->>>>>>> github/master
-Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_HDR.h
-CursorX=113
-CursorY=7
 TopLine=1
 LeftCol=1
 
