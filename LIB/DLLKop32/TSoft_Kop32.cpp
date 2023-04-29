@@ -49,26 +49,17 @@ return 0;
 }
 //---------------------------------------------------------------------------
 
-__stdcall TSoft::Kop32::Kop32() {
-
-OnBreak = DoBreak; OnError = DoError;
-
-options.Batch.Alias = "OPT_BATCH";
-options.Masks.Alias = "OPT_MASKS";
-options.Argts.Alias = "OPT_ARGTS";
-
+__stdcall TSoft::Kop32::Kop32() : OnError(&DoError), OnBreak(&DoBreak)
+{
 list.src.Init.Alias = "SRC_INIT";
 list.src.Main.Alias = "SRC_MAIN";
 list.dst.Init.Alias = "DST_INIT";
 list.dst.Main.Alias = "DST_MAIN";
-
-Clr();
 }
 //---------------------------------------------------------------------------
 
 __stdcall TSoft::Kop32::~Kop32(void)
 {
-Clr();
 }
 //---------------------------------------------------------------------------
 

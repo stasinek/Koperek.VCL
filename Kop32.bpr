@@ -39,8 +39,8 @@
       -I&quot;C:\Program Files\Borland\CBuilder6\Projects\.&quot; -I..\..\form_templates 
       -I..\..\forms -I$(BCB)\include -I$(BCB)\include\vcl -I..\..\Packages 
       -src_suffix cpp -DNO_WIN32_LEAN_AND_MEAN -D_DEBUG -boa"/>
-    <CFLAG1 value="-O2 -H=$(BCB)\lib\vcl50.csm -Hc -Q -Vx -Ve -xf -xp -VF -C -ff -X- -ps -a8 
-      -6 -b -d -k -y -v -vi- -c -tW -tWM"/>
+    <CFLAG1 value="-O2 -H=$(BCB)\lib\vcl50.csm -Hc -Q -Vx -Ve -xf -xp -VF -C -ff -X- -a8 -6 
+      -b -d -k -y -v -vi- -c -tW -tWM"/>
     <PFLAGS value="-$YD -$W -$I- -$A8 -v -JPHNE -M"/>
     <RFLAGS value=""/>
     <AFLAGS value="/ml /w2 /zi"/>
@@ -57,7 +57,7 @@ IncludeVerInfo=1
 AutoIncBuild=0
 MajorVer=1
 MinorVer=1
-Release=0
+Release=1
 Build=523
 Debug=0
 PreRelease=1
@@ -69,13 +69,13 @@ CodePage=1250
 
 [Version Info Keys]
 CompanyName=TSOFT/ SSTSOFT
-FileDescription=
-FileVersion=1.1.0.523
-InternalName=SSTSOFT.KOPEREK
+FileDescription=Custom copy handler, directory lister and file compressor
+FileVersion=1.1.1.523
+InternalName=SSTSOFT.KOPEREK.VCL-static
 LegalCopyright=Stanislaw Stasiak
 LegalTrademarks=
-OriginalFilename=Kop32.exe
-ProductName=Koperek.VCL
+OriginalFilename=Kop32_static.exe
+ProductName=Koperek.VCL-static
 ProductVersion=1.0.0.0
 Comments=sstsoft@wp.pl
 

@@ -29,6 +29,9 @@ typedef class DATABASE_IMPEXP Item {
 		void *fdata[8];
 		long  ftext_size;
 		char *ftext;
+
+        __stdcall  __maciez() : fnode(NULL), ftext(NULL), ftext_size(0) { ftext = strAlloc(1); fnode = new TSoft::Database; }
+        __stdcall ~__maciez() { if (fnode) delete fnode; if (ftext) strFree(ftext);  }
 	} maciez;
 	//------------------------------------
     private:

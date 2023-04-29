@@ -44,6 +44,8 @@ USEUNIT("TSoft_Kop32_Seeker.cpp");
 //__declspec(dllexport) TSoft::Kop32 *Kop;
 __declspec(dllexport)int WINAPI DllEntryPoint(HINSTANCE, unsigned long reason, void*)
 {
+//    if (reason==DLL_PROCESS_ATTACH)MessageBox (NULL,"We are now inside your function in your DLL","Your Message Title",MB_OK);
+      if (reason==DLL_PROCESS_DETACH)  MessageBox (NULL,"Bye","Your Message Title",MB_OK);
 //    if (reason==DLL_PROCESS_ATTACH) Kop = new TSoft::Kop32;
 //    if (reason==DLL_PROCESS_DETACH) delete Kop;
 return 1;

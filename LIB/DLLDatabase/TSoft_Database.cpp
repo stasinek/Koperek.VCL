@@ -9,10 +9,8 @@
 //---------------------------------------------------------------------------
 //ASCHAR
 //---------------------------------------------------------------------------
-__declspec(dllexport) __stdcall TSoft::Database::Item::Item(void)
+__declspec(dllexport) __stdcall TSoft::Database::Item::Item(void) : maciez()
 {
-maciez.ftext = strAlloc(1);
-maciez.fnode = new TSoft::Database();
 data = maciez.fdata;
 data_size = maciez.fdata_size;
 for (long i = 0; i < 8; i++)
@@ -23,10 +21,8 @@ maciez.fipos = 0;
 }
 //---------------------------------------------------------------------------
 
-__declspec(dllexport)  __stdcall TSoft::Database::Item::Item(char *atext, TSoft::Database *adatabase, long aipos)
+__declspec(dllexport)  __stdcall TSoft::Database::Item::Item(char *atext, TSoft::Database *adatabase, long aipos) : maciez()
 {
-maciez.ftext = strAlloc(1);
-maciez.fnode = new TSoft::Database();
 data = maciez.fdata;
 data_size = maciez.fdata_size;
 for (long i = 0; i < 8; i++)
@@ -43,7 +39,7 @@ maciez.fipos = aipos;
 
 __declspec(dllexport)  __stdcall TSoft::Database::Item::~Item(void)
 {
-delete maciez.fnode; strFree(maciez.ftext);
+strFree(maciez.ftext);
 }
 //---------------------------------------------------------------------------
 

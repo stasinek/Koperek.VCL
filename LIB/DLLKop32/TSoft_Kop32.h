@@ -108,12 +108,18 @@ struct __destination {
 	HANDLE Hand, HandMap;
 	unsigned __int32 Read, Size; __int8 Percent;
 	__buffer buffer;
+    __stdcall __destination() : Hand(NULL), HandMap(NULL), Read(0), Size(0), Percent(0) {
+            }
 }  src, dst;
 } file;
 //------------------------------------
 struct __password {
 	char  FEnc[48], FUsr[48];
 	unsigned __int8  FSize;
+    __stdcall __password() : FSize(0) {
+         memset(&FEnc,sizeof(FEnc),NULL);
+         memset(&FUsr,sizeof(FUsr),NULL);
+        }
 } password;
 //------------------------------------
 public:
@@ -131,15 +137,19 @@ struct __options {
 	unsigned __int32 Operation, Break, Error;
 	bool Stop;
 	DATABASE_IMPEXP TSoft::Database Masks, Argts, Batch;
-
 	unsigned __int32 Cut, Block, Methods, Dict;
 	bool Cached;
+    __stdcall __options() : Operation(0), Break(0), Error(0), Stop(false), Cut(0), Block(0), Methods(0), Dict(0), Cached(false),
+                            Masks("OPT_MASKS"), Argts("OPT_ARGTS"), Batch("OPT_BATCH") {
+        }
 } options;
 //------------------------------------
 struct __progress {
 struct __destination {
 struct __group {
 	unsigned __int64 Read, Size; __int8 Percent;
+    __stdcall __group() : Read(0), Size(0), Percent(0) {
+            }
 } one, all;
 } src, dst;
 } progress;
