@@ -5,29 +5,39 @@ File_2=SourceModule,'E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Seeker
 File_3=SourceModule,'C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Seeker.h',0,1,1,19,4,0,0
 
 [Modules]
-Module0=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_build_conf.h
-Module1=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.h
-Module2=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.cpp
-Module3=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\DLLKop32.bpr
-Module4=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.cpp
-Module5=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.h
-Module6=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32_Seeker.h
-Module7=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Pharser.cpp
-Module8=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32_Seeker.cpp
-Module9=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_MTF.cpp
-Module10=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Pharser.h
-Module11=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Stack.cpp
-Module12=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Stack.h
-Module13=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_MTF.h
-Module14=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BWTMatrix.h
-Module15=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BWTMatrix.cpp
-Module16=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_MTF.cpp
-Module17=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Ari.h
+Module0=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Ari.h
+Module1=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_build_conf.h
+Module2=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\DLLKop32.bpr
+Module3=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.h
+Module4=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.cpp
+Module5=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.cpp
+Module6=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.h
+Module7=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32_Seeker.h
+Module8=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Pharser.cpp
+Module9=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32_Seeker.cpp
+Module10=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_MTF.cpp
+Module11=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Pharser.h
+Module12=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Stack.cpp
+Module13=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Stack.h
+Module14=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_MTF.h
+Module15=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BWTMatrix.h
+Module16=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_BWTMatrix.cpp
+Module17=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_MTF.cpp
 Module18=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Ari.cpp
 Count=19
 EditWindowCount=1
 
+[E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Ari.h]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
 [C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_build_conf.h]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\DLLKop32.bpr]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
@@ -38,11 +48,6 @@ FormState=0
 FormOnTop=0
 
 [C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\DLLKop32.bpr]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
@@ -112,11 +117,6 @@ ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Ari.h]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
 [E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Ari.cpp]
 ModuleType=SourceModule
 FormState=0
@@ -128,7 +128,7 @@ FormOnTop=0
 
 [EditWindow0]
 ViewCount=19
-CurrentView=1
+CurrentView=3
 View0=0
 View1=1
 View2=2
@@ -191,8 +191,8 @@ LeftCol=1
 
 [View3]
 Module=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Ari.h
-CursorX=1
-CursorY=12
+CursorX=55
+CursorY=7
 TopLine=1
 LeftCol=1
 

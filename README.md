@@ -1,81 +1,76 @@
-# dclusr50.VCL
+#dclusr50.VCL
 
-
-Put into ./SRC/OBSOLETE/PACKAGES
-
-Applications (.VCL) into ./SRC/OBSOLETE/PROG/Application.VCL
-
-Forms -> ./SRC/OBSOLETE/PROG/FORM_TEMPLATES/
-
+Application uses non standard controls.
+Before you start put content of dclusr50.VCL repo into ./SRC/OBSOLETE/PACKAGES
+Application repo (.VCL) into ./SRC/OBSOLETE/PROG/Koperek.VCL
+Forms repo -> ./SRC/OBSOLETE/PROG/FORM_TEMPLATES/
 Libraries -> ./SRC/X86_LIBRARIES/
-Classes.h -> ./SRC/X86_WIN32_CLASSES/
+Classes.VCL repo -> ./SRC/X86_WIN32_CLASSES/
 
-
-First - compile/install controls then compile application
-
+Before you open project, you must compile/install user package and install into your IDE toolbox, 
+then open and compile application. Otherwise IDE will ask you about missing .bpl library
 
 # Koperek_VCL
 
-""C:\Koperek" /o... /bufor{1024} /argts{blabla;#file;#size;#attr;#path} /maska{*.txt,*.blabla,jeszcze.blabla} /kopiuj /przenies /usun /koduj /dekoduj /listuj /break{q} "c:\Katalog docelowy"" 
+""C:\Koperek.exe" /o... /bufor{1024} /argts{blabla;#file;#size;#attr;#path} /maska{*.txt,*.blabla,another mask.blabla} /copy /move /delete /code /decode /list /break{q} "c:\Destination directory"" 
 
-/kopiuj
-kopiowanie plikow(katalogow) o nazwach znajduj¹cych siê w schowku do "Katalog docelowy"
-np. uruchomienie "Koperek.exe /kopiuj d:\smieci" spowoduje skopiowanie plików do d:\smieci
+/copy
+copying files (directories) with names in the clipboard to "Destination directory"
+e.g. running "Koperek.exe /copy d:\junk" will copy files to d:\junk
 
-/przenies
-przeniesienie plikow(katalogow) o nazwach znajduj¹cych siê w schowku do "Katalog docelowy"
-np. uruchomienie "Koperek.exe /przenies d:\smieci" spowoduje przeniesienie do d:\smieci
+/move
+moving files (directories) with names in the clipboard to "Target directory"
+e.g. running "Dill.exe /move d:\junk" will move to d:\junk
 
-/koduj
-szyfrowanie plikow(katalogow) o nazwach znajduj¹cych siê w schowku do "Katalog docelowy"
-np. uruchomienie "Koperek.exe /koduj d:\smieci" spowoduje zakodowanie do d:\smieci
+/encode
+encrypting files (directories) with names in the clipboard to "Target directory"
+e.g. running "Dill.exe /encode d:\junk" will encode to d:\junk
 
-/dekoduj
-deszyfrowanie plikow(katalogow) znajduj¹cych siê w schowku do "Katalog docelowy"
-np. uruchomienie "Koperek.exe /dekoduj d:\smieci" spowoduje przeniesienie do d:\smieci
+/decode
+decryption of files (directories) in the clipboard to "Target directory"
+e.g. running "Dill.exe /decode d:\junk" will take you to d:\junk
 
-/listuj
-umieszczenie w schowku jesli docel = "Clipboard:" lub w pliku listy plików z "C:\katalog zrodlowy"
-np. uruchomienie "Koperek.exe /listuj d:\log.txt" spowoduje zlistowanie katalogu do logu w pliku d:\log.txt
+/list
+put in clipboard if destination = "Clipboard:" or in filelist file from "C:\source directory"
+e.g. running "Koperek.exe /list d:\log.txt" will list the directory to the log in the file d:\log.txt
 
-/usun
-Usuniecie "Katalog docelowy"
-Uruchomienie "Koperek.exe /usun d:\smieci" spowoduje usuniêcie d:\smieci
+/delete
+Delete "Target Directory"
+Running "Dill.exe /remove d:\junk" will delete d:\junk
 
 /cutsize{x}
-gdzie x to liczba bajtów, od jakiej zostanie skrócony plik 
+where x is the number of bytes from which the file will be shortened
 
-/bufor{x}
-gdzie x to liczba Kbajtów, zmiana bufora plikowego
-(domyœlna w programie to 64KB) 
+/buffer{x}
+where x is the number of Kbytes, file buffer change
+(default in the program is 64KB)
 
 /break{?}
-t = potwierdzaj na wszystkie pytania
-n = zaprzeczaj na wszystkie pytania
-q = pytaj usera o odpowiedŸ
+t = confirm to all questions
+n = deny all questions
+q = ask user for answer
 
-/maska{maska1,maska2,maskaN}
-wykonuje operacje na plikach o nazwach spelnaiaj¹cych warunek nazwa pasuje do maska1 || maska2 || maskaN
+/mask{mask1,mask2,maskN}
+performs operations on files with names satisfying the condition name matches mask1 || mask2 || maskN
+there is no black list mask implemented YET
 
-/argts{jeden,drugi,...#}
-parametry lini listowania gdzie dyrektywy: #file, #path, #size, #attr to nazwa kolejnego pliku, katalogu, rozmiaru, atrybutów. Jeden, drugi - sta³e bêd¹ poprostu przepisane
+/argts{one,second,...#}
+enables you to format list line by line 
+using directives: #file, #path, #size, #attr are the name of the next file, directory, size, attributes. One, the other - the constants will simply be rewritten
 
 /o...
-okno informacji o programie
+program information window
 
-/zaznacz
-np. uruchomienie "Koperek.exe /zaznacz  "C:\Windows" "c:\temp" "C:\autoexec.bat" spowoduje utworzenie w schowku listy tych plików potrzebnej do wykonania okreœlonej w nastêpnym wywo³aniu operacji 
+/select
+e.g. running "Koperek.exe /select "C:\Windows" "c:\temp" "C:\autoexec.bat" will create a list of these files in the clipboard needed to perform the operation specified in the next call
 
 /dict{x}
-gdzie x to liczba bajtów, zmiana rozmiaru s³ownika kompresji LZ77 
-(domyœlna w programie to 4KB) 
+where x is the number of bytes, resizing the LZ77 compression dictionary
+(default in the program is 4KB)
 
-Program napisany przez Stanis³aw Stasiak "TSoft, where?"(do you want to superfreak today?) (R) 2000-2002
-w C++Builder 3 licencjonowanego na RoSt 2002 (R)
+Program written by Stanis³aw Stasiak "TSoft, where?" (R) 2000-2002 in C++Builder 3 licensed under RoSt 2002 (R)
 
-Szyforwanie jest oparte na metodach:
-EXOrowanie, QDRowanie
-Kompresja jest oparta na metodach:
-LZ77,RLE,BWT,MTF
+Encryption is based on the most basic methods: EXORing, QDRing (row->collumns)
+Compression is based on the methods: LZ77 simmilar to used NTFS,RLE,BWT,MTF,HUF,ARI
 
-w przypadku wpisania niew³aœciwego has³a do dekodowania niechybnie czeka AccessViolation
+If you enter the wrong password for decoding, AccessViolation will inevitably occur there is no error handling on this part

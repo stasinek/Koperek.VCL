@@ -4,14 +4,14 @@ File_1=SourceModule,'C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKOP32\main.h',0,1,
 File_2=SourceModule,'C:\PROGRAM FILES\BORLAND\CBUILDER5\INCLUDE\CommCtrl.h',0,1,5936,9,5956,0,0
 
 [Modules]
-Module0=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.cpp
-Module1=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Koper_frm.cpp
-Module2=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Lista_frm.cpp
+Module0=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Break_frm.cpp
+Module1=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Quest_frm.cpp
+Module2=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Journal_frm.cpp
 Module3=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Infos_frm.cpp
-Module4=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Journal_frm.cpp
-Module5=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Quest_frm.cpp
-Module6=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Break_frm.cpp
-Module7=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Kop32.bpr
+Module4=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Lista_frm.cpp
+Module5=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Koper_frm.cpp
+Module6=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Kop32.bpr
+Module7=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.cpp
 Module8=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Koperek32_common_main.h
 Module9=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Koperek32_common_main.cpp
 Module10=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Koper_frm.cpp
@@ -22,27 +22,7 @@ Module14=C:\Users\stasiek\My Projects\OBSOLETE\FORM_TEMPLATES\About_frm.cpp
 Count=15
 EditWindowCount=1
 
-[E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Koper_frm.cpp]
-ModuleType=SourceModule
-FormState=1
-FormOnTop=0
-
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Lista_frm.cpp]
-ModuleType=SourceModule
-FormState=1
-FormOnTop=1
-
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Infos_frm.cpp]
-ModuleType=SourceModule
-FormState=1
-FormOnTop=0
-
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Journal_frm.cpp]
+[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Break_frm.cpp]
 ModuleType=SourceModule
 FormState=1
 FormOnTop=0
@@ -52,12 +32,32 @@ ModuleType=SourceModule
 FormState=1
 FormOnTop=0
 
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Break_frm.cpp]
+[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Journal_frm.cpp]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=0
+
+[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Infos_frm.cpp]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=0
+
+[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Lista_frm.cpp]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=1
+
+[E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Koper_frm.cpp]
 ModuleType=SourceModule
 FormState=1
 FormOnTop=0
 
 [E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Kop32.bpr]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.cpp]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
@@ -103,7 +103,7 @@ FormOnTop=0
 
 [EditWindow0]
 ViewCount=20
-CurrentView=11
+CurrentView=17
 View0=0
 View1=1
 View2=2
