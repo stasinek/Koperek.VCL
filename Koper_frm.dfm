@@ -238,7 +238,7 @@ object Koper_form: TKoper_form
       TextSuffix = '%'
     end
     object AdvancedBar4: TAdvancedBar
-      Left = 48
+      Left = 28
       Top = 92
       Width = 100
       Height = 20
@@ -246,8 +246,8 @@ object Koper_form: TKoper_form
       TextSuffix = '%'
     end
     object AdvancedBar5: TAdvancedBar
-      Left = 68
-      Top = 144
+      Left = 28
+      Top = 132
       Width = 100
       Height = 20
       TextBackColor = clHighlight

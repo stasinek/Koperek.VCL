@@ -10,24 +10,13 @@ File_7=SourceModule,'C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\
 File_8=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE\FORM_TEMPLATES\Info_frm.cpp',0,1,119,15,29,1,0
 
 [Modules]
-Module0=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase_main.cpp
-Module1=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.bpr
+Module0=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase_main.cpp
+Module1=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.h
 Module2=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.cpp
-Module3=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.h
-Count=4
+Count=3
 EditWindowCount=1
 
-[C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase_main.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.bpr]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.cpp]
+[E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase_main.cpp]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
@@ -37,17 +26,29 @@ ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[C:\SRC\ProjectGroup1.bpg]
+[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Windows\SYSTEM32\ProjectGroup1.bpg]
+FormState=0
+FormOnTop=0
+
+[E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.bpr]
+FormState=0
+FormOnTop=0
+
+[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.bpr]
 FormState=0
 FormOnTop=0
 
 [EditWindow0]
-ViewCount=4
-CurrentView=0
+ViewCount=3
+CurrentView=2
 View0=0
 View1=1
 View2=2
-View3=3
 MessageView=MessageView@EditWindow0
 Create=1
 Visible=1
@@ -69,30 +70,23 @@ BottomPanelClients=MessageView@EditWindow0
 BottomPanelData=000004000000000000000000000000000000000000000000000100000000000000000B0000004D65737361676556696577FFFFFFFF
 
 [View0]
-Module=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase_main.cpp
-CursorX=1
-CursorY=5
-TopLine=1
-LeftCol=1
-
-[View1]
 Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.cpp
 CursorX=1
 CursorY=7
 TopLine=1
 LeftCol=1
 
-[View2]
+[View1]
 Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.h
-CursorX=4
-CursorY=8
+CursorX=10
+CursorY=7
 TopLine=1
 LeftCol=1
 
-[View3]
-Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase.bpf
-CursorX=31
-CursorY=2
+[View2]
+Module=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase_main.cpp
+CursorX=1
+CursorY=4
 TopLine=1
 LeftCol=1
 

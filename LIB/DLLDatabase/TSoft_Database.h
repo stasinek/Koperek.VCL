@@ -1,8 +1,8 @@
 //---------------------------------------------------------------------------
 //-----------------Stanislaw Stasiak "SSTSOFT.pl" 2001-2002------------------
 //---------------------------------------------------------------------------
-#ifndef __TSoft_Database_H
-#define __TSoft_Database_H
+#ifndef __TSoft_Database_HDR__
+#define __TSoft_Database_HDR__
 //---------------------------------------------------------------------------
 #include "./../DLLIO/TSoft_IO.h"
 #include "TSoft_build_conf.h"

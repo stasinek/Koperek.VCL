@@ -12,7 +12,7 @@
       LIB\DLLKop32\TSoft_HDR.obj LIB\DLLKop32\TSoft_Huff.obj 
       LIB\DLLKop32\TSoft_Koder.obj LIB\DLLKop32\TSoft_Kop32.obj 
       LIB\DLLKop32\TSoft_Mtf.obj LIB\DLLKop32\TSoft_Pharser.obj 
-      LIB\DLLKop32\TSoft_Seeker.obj LIB\DLLKop32\TSoft_Stack.obj"/>
+      LIB\DLLKop32\TSoft_Stack.obj LIB\DLLKop32\TSoft_Kop32_Seeker.obj"/>
     <RESFILES value="Kop32_static_main.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>

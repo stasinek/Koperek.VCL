@@ -7,7 +7,7 @@
     <OBJFILES value="Kop32_main.obj Koperek32_common_main.obj Haslo_frm.obj Koper_frm.obj 
       Break_frm.obj Infos_frm.obj Journal_frm.obj Lista_frm.obj Quest_frm.obj 
       ..\..\FORM_TEMPLATES\About_frm.obj"/>
-    <RESFILES value="Kop32.res Kop32_main.res"/>
+    <RESFILES value="Kop32.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
     <DEFFILE value=""/>
@@ -30,8 +30,8 @@
     <USERDEFINES value="NO_WIN32_LEAN_AND_MEAN;_DEBUG"/>
     <SYSDEFINES value="NO_STRICT"/>
     <MAINSOURCE value="Kop32_main.cpp"/>
-    <INCLUDEPATH value="LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;..\..\Packages;..\..\form_templates;..\..\forms;..\..;..;$(BCB)\include;$(BCB)\include\vcl;&quot;C:\Program Files\Borland\CBuilder6\Projects\&quot;"/>
-    <LIBPATH value="LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;..\..\Packages;..\..\FORM_TEMPLATES;..\..\forms;..\..;..;$(BCB)\lib\obj;$(BCB)\lib;&quot;C:\Program Files\Borland\CBuilder6\Projects\&quot;;$(BCB)\Projects\Lib"/>
+    <INCLUDEPATH value="LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;..\..\Packages;..\..\form_templates;..\..\forms;..\..;..;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;..\..\Packages;..\..\FORM_TEMPLATES;..\..\forms;..\..;..;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\Projects\Lib"/>
     <WARNINGS value="-w-par"/>
   </MACROS>
   <OPTIONS>
@@ -80,42 +80,44 @@ ProductVersion=1.0.0.0
 Comments=sstsoft@wp.pl
 
 [HistoryLists\hlIncludePath]
-Count=16
-Item0=LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;..\..\Packages;..\..\form_templates;..\..\forms;..\..;..;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Borland\CBuilder6\Projects\
-Item1=..\..\Packages;..\..\form_templates;..\..\forms;LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;..\..;..;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\include;$(BCB)\include\vcl
-Item2=..\..;..;LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;C:\Program Files\Borland\CBuilder6\Projects\;..\..\form_templates;..\..\forms;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages
-Item3=..\..;..\;LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;C:\Program Files\Borland\CBuilder6\Projects\;..\..\form_templates;..\..\forms;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages
-Item4=LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;C:\Program Files\Borland\CBuilder6\Projects\;..\..\form_templates;..\..\forms;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages
-Item5=.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;C:\Program Files\Borland\CBuilder6\Projects;..\..\form_templates;..\..\forms;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages
-Item6=.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;C:\Program Files\Borland\CBuilder6\Projects;..\..\form_templates;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;..\..\forms;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages
-Item7=C:\Program Files\Borland\CBuilder6\Projects;..\..\form_templates;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;..\..\forms;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages
-Item8=C:\Program Files\Borland\CBuilder6\Projects;..\..\FORM_TEMPLATES;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;..\..\FORM_TEMPLATES;$(BCB)\include;$(BCB)\include\vcl;..\Packages
-Item9=..\..\FORM_TEMPLATES;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;..\..\FORM_TEMPLATES;$(BCB)\include;$(BCB)\include\vcl;..\Packages
-Item10=..\..\FORM_TEMPLATES;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;..\..\FORM_TEMPLATES;$(BCB)\include;$(BCB)\include\vcl;..\Packages;.\LIB\DLLKop32
-Item11=..\..\FORM_TEMPLATES;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;..\..\FORM_TEMPLATES;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages;.\LIB\DLLKop32
-Item12=.\LIB\DLLIO;..\..\FORM_TEMPLATES;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages;.\LIB\DLLKop32
-Item13=..\..\FORM_TEMPLATES;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages;.\LIB\DLLKop32
-Item14=..\..\FORM_TEMPLATES;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages;.\LIB
-Item15=..\..\FORM_TEMPLATES;$(BCB)\include;$(BCB)\include\vcl
+Count=17
+Item0=LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;..\..\Packages;..\..\form_templates;..\..\forms;..\..;..;$(BCB)\include;$(BCB)\include\vcl
+Item1=LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;..\..\Packages;..\..\form_templates;..\..\forms;..\..;..;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Borland\CBuilder6\Projects\
+Item2=..\..\Packages;..\..\form_templates;..\..\forms;LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;..\..;..;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\include;$(BCB)\include\vcl
+Item3=..\..;..;LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;C:\Program Files\Borland\CBuilder6\Projects\;..\..\form_templates;..\..\forms;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages
+Item4=..\..;..\;LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;C:\Program Files\Borland\CBuilder6\Projects\;..\..\form_templates;..\..\forms;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages
+Item5=LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;C:\Program Files\Borland\CBuilder6\Projects\;..\..\form_templates;..\..\forms;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages
+Item6=.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;C:\Program Files\Borland\CBuilder6\Projects;..\..\form_templates;..\..\forms;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages
+Item7=.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;C:\Program Files\Borland\CBuilder6\Projects;..\..\form_templates;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;..\..\forms;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages
+Item8=C:\Program Files\Borland\CBuilder6\Projects;..\..\form_templates;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;..\..\forms;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages
+Item9=C:\Program Files\Borland\CBuilder6\Projects;..\..\FORM_TEMPLATES;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;..\..\FORM_TEMPLATES;$(BCB)\include;$(BCB)\include\vcl;..\Packages
+Item10=..\..\FORM_TEMPLATES;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;..\..\FORM_TEMPLATES;$(BCB)\include;$(BCB)\include\vcl;..\Packages
+Item11=..\..\FORM_TEMPLATES;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;..\..\FORM_TEMPLATES;$(BCB)\include;$(BCB)\include\vcl;..\Packages;.\LIB\DLLKop32
+Item12=..\..\FORM_TEMPLATES;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;..\..\FORM_TEMPLATES;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages;.\LIB\DLLKop32
+Item13=.\LIB\DLLIO;..\..\FORM_TEMPLATES;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages;.\LIB\DLLKop32
+Item14=..\..\FORM_TEMPLATES;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages;.\LIB\DLLKop32
+Item15=..\..\FORM_TEMPLATES;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages;.\LIB
+Item16=..\..\FORM_TEMPLATES;$(BCB)\include;$(BCB)\include\vcl
 
 [HistoryLists\hlLibraryPath]
-Count=16
-Item0=LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;..\..\Packages;..\..\FORM_TEMPLATES;..\..\forms;..\..;..;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\Projects\Lib
-Item1=LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;..\..\Packages;..\..\FORM_TEMPLATES;..\..\forms;..\..;..;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
-Item2=..\..\FORM_TEMPLATES;..\..;..;C:\Program Files\Borland\CBuilder6\Projects\;..\forms;LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\forms;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;LIB
-Item3=..\..\FORM_TEMPLATES;..\..;..\;C:\Program Files\Borland\CBuilder6\Projects\;..\forms;LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\forms;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;LIB
-Item4=C:\Program Files\Borland\CBuilder6\Projects\;..\forms;LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\forms;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;LIB
-Item5=C:\Program Files\Borland\CBuilder6\Projects;..\forms;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\forms;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;.\LIB
-Item6=C:\Program Files\Borland\CBuilder6\Projects;..\forms;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;.\LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\forms;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;.\LIB
-Item7=C:\Program Files\Borland\CBuilder6\Projects;..\..\FORM_TEMPLATES;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;.\LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\FORM_TEMPLATES;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;.\LIB
-Item8=C:\Program Files\Borland\CBuilder6\Projects;..\..\FORM_TEMPLATES;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;.\LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\FORM_TEMPLATES;$(BCB)\lib\obj;$(BCB)\lib;..\Packages;.\LIB
-Item9=..\..\FORM_TEMPLATES;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;.\LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\FORM_TEMPLATES;$(BCB)\lib\obj;$(BCB)\lib;..\Packages;.\LIB
-Item10=..\..\FORM_TEMPLATES;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;.\LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\FORM_TEMPLATES;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;.\LIB
-Item11=.\LIB\DLLIO;.\LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\FORM_TEMPLATES;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;.\LIB
-Item12=.\LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\FORM_TEMPLATES;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;.\LIB
-Item13=$(BCB)\Projects\Lib;..\..\FORM_TEMPLATES;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;.\LIB
-Item14=..\..\FORM_TEMPLATES;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;.\LIB
-Item15=..\..\FORM_TEMPLATES;$(BCB)\lib\obj;$(BCB)\lib
+Count=17
+Item0=LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;..\..\Packages;..\..\FORM_TEMPLATES;..\..\forms;..\..;..;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\Projects\Lib
+Item1=LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;..\..\Packages;..\..\FORM_TEMPLATES;..\..\forms;..\..;..;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\Projects\Lib
+Item2=LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;..\..\Packages;..\..\FORM_TEMPLATES;..\..\forms;..\..;..;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item3=..\..\FORM_TEMPLATES;..\..;..;C:\Program Files\Borland\CBuilder6\Projects\;..\forms;LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\forms;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;LIB
+Item4=..\..\FORM_TEMPLATES;..\..;..\;C:\Program Files\Borland\CBuilder6\Projects\;..\forms;LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\forms;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;LIB
+Item5=C:\Program Files\Borland\CBuilder6\Projects\;..\forms;LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\forms;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;LIB
+Item6=C:\Program Files\Borland\CBuilder6\Projects;..\forms;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\forms;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;.\LIB
+Item7=C:\Program Files\Borland\CBuilder6\Projects;..\forms;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;.\LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\forms;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;.\LIB
+Item8=C:\Program Files\Borland\CBuilder6\Projects;..\..\FORM_TEMPLATES;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;.\LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\FORM_TEMPLATES;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;.\LIB
+Item9=C:\Program Files\Borland\CBuilder6\Projects;..\..\FORM_TEMPLATES;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;.\LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\FORM_TEMPLATES;$(BCB)\lib\obj;$(BCB)\lib;..\Packages;.\LIB
+Item10=..\..\FORM_TEMPLATES;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;.\LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\FORM_TEMPLATES;$(BCB)\lib\obj;$(BCB)\lib;..\Packages;.\LIB
+Item11=..\..\FORM_TEMPLATES;.\LIB\DLLIO;.\LIB\DLLDatabase;.\LIB\DLLKop32;.\LIB\DLLIO;.\LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\FORM_TEMPLATES;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;.\LIB
+Item12=.\LIB\DLLIO;.\LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\FORM_TEMPLATES;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;.\LIB
+Item13=.\LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\FORM_TEMPLATES;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;.\LIB
+Item14=$(BCB)\Projects\Lib;..\..\FORM_TEMPLATES;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;.\LIB
+Item15=..\..\FORM_TEMPLATES;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;.\LIB
+Item16=..\..\FORM_TEMPLATES;$(BCB)\lib\obj;$(BCB)\lib
 
 [HistoryLists\hlDebugSourcePath]
 Count=1

@@ -6,7 +6,7 @@
     <PROJECT value="DLLKop32.dll"/>
     <OBJFILES value="DLLKop32_main.obj TSoft_Kop32.obj TSoft_Koder.obj TSoft_Ari.obj 
       TSoft_Huff.obj TSoft_BWTMatrix.obj TSoft_HDR.obj TSoft_MTF.obj 
-      TSoft_Seeker.obj TSoft_Stack.obj TSoft_Pharser.obj TSoft_BinTree.obj"/>
+      TSoft_Stack.obj TSoft_Pharser.obj TSoft_BinTree.obj TSoft_Kop32_Seeker.obj"/>
     <RESFILES value="DLLKop32.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>

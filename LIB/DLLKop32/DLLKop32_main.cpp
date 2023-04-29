@@ -36,16 +36,16 @@ USEUNIT("TSoft_Huff.cpp");
 USEUNIT("TSoft_BWTMatrix.cpp");
 USEUNIT("TSoft_HDR.cpp");
 USEUNIT("TSoft_MTF.cpp");
-USEUNIT("TSoft_Seeker.cpp");
 USEUNIT("TSoft_Stack.cpp");
 USEUNIT("TSoft_Pharser.cpp");
 USEUNIT("TSoft_BinTree.cpp");
+USEUNIT("TSoft_Kop32_Seeker.cpp");
 //---------------------------------------------------------------------------
-__declspec(dllexport) TSoft::Kop32 *Kop;
+//__declspec(dllexport) TSoft::Kop32 *Kop;
 __declspec(dllexport)int WINAPI DllEntryPoint(HINSTANCE, unsigned long reason, void*)
 {
-    if (reason==DLL_PROCESS_ATTACH) Kop = new TSoft::Kop32;
-    if (reason==DLL_PROCESS_DETACH) delete Kop;
+//    if (reason==DLL_PROCESS_ATTACH) Kop = new TSoft::Kop32;
+//    if (reason==DLL_PROCESS_DETACH) delete Kop;
 return 1;
 }
 //---------------------------------------------------------------------------

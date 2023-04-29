@@ -11,19 +11,19 @@ File_8=SourceModule,'C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\
 File_9=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE\FORM_TEMPLATES\Info_frm.cpp',0,1,119,15,29,1,0
 
 [Modules]
-Module0=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO_main.cpp
-Module1=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.BPR
+Module0=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.BPR
+Module1=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO_main.cpp
 Module2=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp
 Module3=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.h
 Count=4
 EditWindowCount=1
 
-[C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO_main.cpp]
+[E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.BPR]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.BPR]
+[E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO_main.cpp]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
@@ -38,13 +38,17 @@ ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[C:\SRC\ProjectGroup1.bpg]
+[C:\Windows\SYSTEM32\ProjectGroup1.bpg]
+FormState=0
+FormOnTop=0
+
+[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.BPR]
 FormState=0
 FormOnTop=0
 
 [EditWindow0]
 ViewCount=4
-CurrentView=0
+CurrentView=2
 View0=0
 View1=1
 View2=2
@@ -70,22 +74,22 @@ BottomPanelClients=MessageView@EditWindow0
 BottomPanelData=000004000000000000000000000000000000000000000000000100000000000000000B0000004D65737361676556696577FFFFFFFF
 
 [View0]
-Module=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO_main.cpp
-CursorX=1
-CursorY=27
+Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp
+CursorX=3
+CursorY=6
 TopLine=1
 LeftCol=1
 
 [View1]
-Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.bpf
-CursorX=1
-CursorY=1
+Module=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO_main.cpp
+CursorX=3
+CursorY=12
 TopLine=1
 LeftCol=1
 
 [View2]
-Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp
-CursorX=3
+Module=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\DLLIO.bpf
+CursorX=1
 CursorY=6
 TopLine=1
 LeftCol=1
@@ -93,8 +97,8 @@ LeftCol=1
 [View3]
 Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.h
 CursorX=1
-CursorY=5
-TopLine=1
+CursorY=2
+TopLine=44
 LeftCol=1
 
 [Watches]

@@ -49,7 +49,7 @@ AutoIncBuild=1
 MajorVer=1
 MinorVer=2
 Release=0
-Build=1
+Build=2
 Debug=0
 PreRelease=0
 Special=0
@@ -59,11 +59,11 @@ Locale=1045
 CodePage=1250
 
 [Version Info Keys]
-CompanyName=TSOFT/SSTSOFT Stanislaw Stasiak 2000-2018
+CompanyName=TSOFT/SSTSOFT
 FileDescription=
-FileVersion=1.2.0.1
+FileVersion=1.2.0.2
 InternalName=SSTSOFT.DLLIO
-LegalCopyright=
+LegalCopyright=Stanislaw Stasiak 2000-2023
 LegalTrademarks=
 OriginalFilename=DLLIO.dll
 ProductName=Koperek DLLIO

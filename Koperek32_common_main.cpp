@@ -19,17 +19,18 @@
 DWORD WINAPI WinMain_common(HINSTANCE hApp, HINSTANCE hInst, char *argts, int State)
 {
 bool useWizzard = false;
+int temp1_len = 0; char *temp1 = NULL;
+int temp2_len = 0; char *temp2 = NULL;
+char *commandSrc = NULL;
+char *commandDst = NULL;
 
 try
 {
-Kop = new TSoft::Kop32;
-int temp1_len = strlen(argts); char *temp1 = (char*)malloc(temp1_len+4);
-int temp2_len = 0; char *temp2 = NULL;
-char *commandDst = (char*)malloc(temp1_len+4);
+temp1_len = strlen(argts); temp1 = (char*)malloc(temp1_len+4);
+commandDst = (char*)malloc(temp1_len+4);
 strcpy(commandDst,argts);
 strcpy(temp1,argts);
-strupr(temp1);                      
-char *commandSrc;
+strupr(temp1);
 
 	Application->Initialize();
 	Application->Title = "SSTSOFT.Koperek-VCL";
@@ -67,22 +68,23 @@ else
 
 //---------------------
 if (useWizzard==true) {
-Quest_form->ShowModal();
+    Quest_form->ShowModal();
 }
 else {
 //---------------------
+char *clip_ptr = NULL;
 if (OpenClipboard(NULL))
    {
-   	if (IsClipboardFormatAvailable(CF_TEXT))
+    if (IsClipboardFormatAvailable(CF_TEXT))
    		{
-       	char *clip_str = (char*)GetClipboardData(CF_TEXT);
-       	if (clip_str!=NULL) {
-           	commandSrc = (char*)malloc(strlen(clip_str)+4); strcpy(commandSrc,clip_str);
-           	}
-       	else commandSrc = (char*)calloc(4,1);
+       	clip_ptr = (char*)GetClipboardData(CF_TEXT);
    		}
    	CloseClipboard();
 	}
+    if (clip_ptr!=NULL) { // if initialized get data, if not initialize empty string
+        commandSrc = (char*)malloc(strlen(clip_ptr)+4);
+        strcpy(commandSrc,clip_ptr);
+    }
     else commandSrc = (char*)calloc(4,1);
     temp2_len = strlen("SOURCE: ")+strlen(commandSrc)+strlen("\n\rDESTINATION: ")+strlen(commandDst)+4;
 	temp2 = (char*)malloc(temp2_len);
@@ -93,10 +95,6 @@ if (OpenClipboard(NULL))
 //JournalForm->ValueListEditor1->InsertRow(commandDst,commandSrc,false);
 Kop->Execute(commandDst,commandSrc);
 //JournalForm->ValueListEditor1->Strings->SaveToFile("Journal_" +(AnsiString)int(KoperForm->OldCzas)+".txt");
-delete commandSrc;
-delete temp2;
-delete commandDst;
-delete Kop;
 }
 //---------------------
 EXIT:
@@ -107,7 +105,13 @@ catch (Exception &exception)
 {
 	Application->ShowException(&exception);
 }
+
 if (useWizzard==false) DeleteObject(Application->Icon->Handle);
+if (temp1!=NULL) delete temp1;
+if (temp2!=NULL) delete temp2;
+if (commandSrc!=NULL) delete commandSrc;
+if (commandDst!=NULL) delete commandDst;
+if (Kop!=NULL) delete Kop;
 return 1;
 }
 //---------------------------------------------------------------------------

@@ -2,12 +2,12 @@
 //-----------------Stanislaw Stasiak "SSTSOFT.pl" 2001-2002------------------
 // --------------------cos jak SHFileOperation(..., ...);--------------------
 //---------------------------------------------------------------------------
-#ifndef __TSoft_Stack_H
-#define __TSoft_Stack_H
+#ifndef __TSoft_Stack_HDR__
+#define __TSoft_Stack_HDR__
 //---------------------------------------------------------------------------
 #include "TSoft_build_conf.h"
 //---------------------------------------------------------------------------
-#define STACKSTR			(WORD)2048
+#define STACKSTR			(WORD)1024
 #define STACKCNT			(WORD)20
 //---------------------------------------------------------------------------
 class KOP_IMPEXP __stack {

@@ -10,7 +10,8 @@
 #include "TSoft_Koder.h"
 //---------------------------------------------------------------------------
 
-DWORD WINAPI TSoft::Kop32::WriteFileThread( LPVOID a) {
+DWORD WINAPI TSoft::Kop32::WriteFileThread( LPVOID a)
+{
 register TSoft::Kop32 *Caller = (TSoft::Kop32*)a;
 
  while ((Caller->WriteFileThreadControl & 2) == 0) {
@@ -65,7 +66,8 @@ Clr();
 }
 //---------------------------------------------------------------------------
 
-__stdcall TSoft::Kop32::~Kop32(void) {
+__stdcall TSoft::Kop32::~Kop32(void)
+{
 Clr();
 }
 //---------------------------------------------------------------------------
@@ -96,7 +98,8 @@ return password.FSize;
 }
 //---------------------------------------------------------------------------
 
-void __stdcall TSoft::Kop32::Clr(void) {
+void __stdcall TSoft::Kop32::Clr(void)
+{
 ptrSet(&progress,sizeof(progress),NULL);
 ptrSet(&options, sizeof(options), NULL);
 ptrSet(&file, sizeof(file),	NULL);
@@ -113,7 +116,8 @@ options.Argts.Clr();
 }
 //---------------------------------------------------------------------------
 
-int __stdcall TSoft::Kop32::Execute(const char *AlpDst, const char *AlpSrc) {
+int __stdcall TSoft::Kop32::Execute(const char *AlpDst, const char *AlpSrc)
+{
 char  *templpDst = stack.Push(STACKSTR+strLen(AlpDst));
 strMov(templpDst,AlpDst);
 char  *templpSrc = stack.Push(STACKSTR+strLen(AlpSrc));

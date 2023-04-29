@@ -1,5 +1,5 @@
-#ifndef __main_H__
-#define __Koperek32_common_main_H
+#ifndef __Koperek32_common_main_HDR__
+#define __Koperek32_common_main_HDR__
 //---------------------------------------------------------------------------
 #include ".\LIB\DLLKop32\TSoft_Kop32.h"
 //---------------------------------------------------------------------------

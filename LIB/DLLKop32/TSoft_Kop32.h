@@ -1,12 +1,12 @@
 //---------------------------------------------------------------------------
 //-----------------Stanislaw Stasiak "TSoft"-2001-2002--------------------------
 //---------------------------------------------------------------------------
-#ifndef __TSoft_Kop32_H
-#define __TSoft_Kop32_H
+#ifndef __TSoft_Kop32_HDR__
+#define __TSoft_Kop32_HDR__
 //---------------------------------------------------------------------------
+#include "TSoft_build_conf.h"
 #include "./../DLLDatabase/TSoft_Database.h"
 #include "TSoft_Stack.h"
-#include "TSoft_build_conf.h"
 //---------------------------------------------------------------------------
 // z VCL'a
 //---------------------------------------------------------------------------
@@ -67,9 +67,6 @@ typedef struct {
 	HANDLE Hand;
 	WIN32_FIND_DATA Data;
 } __find;
-//------------------------------------
-#define STACKSTR			(WORD)2048
-#define STACKCNT			(WORD)20
 //------------------------------------
 typedef struct {
 	void *Lptr;

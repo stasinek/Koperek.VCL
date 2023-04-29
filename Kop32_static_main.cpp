@@ -26,13 +26,14 @@ USEUNIT("LIB\DLLKop32\TSoft_Koder.cpp");
 USEUNIT("LIB\DLLKop32\TSoft_Kop32.cpp");
 USEUNIT("LIB\DLLKop32\TSoft_Mtf.cpp");
 USEUNIT("LIB\DLLKop32\TSoft_Pharser.cpp");
-USEUNIT("LIB\DLLKop32\TSoft_Seeker.cpp");
 USEUNIT("LIB\DLLKop32\TSoft_Stack.cpp");
 USERES("Kop32_static_main.res");
+USEUNIT("LIB\DLLKop32\TSoft_Kop32_Seeker.cpp");
 //---------------------------------------------------------------------------
 TSoft::Kop32 *Kop;
 WINAPI WinMain(HINSTANCE hApp, HINSTANCE hInst, char *argts, int State)
 {
-return WinMain_common(hApp,hInst,argts,State);
+    Kop = new TSoft::Kop32;
+    return WinMain_common(hApp,hInst,argts,State);
 }
 //---------------------------------------------------------------------------

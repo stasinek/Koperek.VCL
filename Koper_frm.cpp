@@ -27,7 +27,7 @@ __fastcall TKoper_form::TKoper_form(TComponent* Owner)
 	: TForm(Owner)
 {
 lpcaption = new char[255];
-temp0 = new char[10240];
+temp0 = new char[255*10]; // MAX_PATH x 10 should be enough for most users
 temp1 = new char[255];
 temp2 = new char[255];
 temp3 = new char[255];
