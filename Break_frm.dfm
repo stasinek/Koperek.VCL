@@ -3,7 +3,7 @@ object Break_form: TBreak_form
   Top = 169
   BorderIcons = []
   BorderStyle = bsDialog
-  Caption = 'Koperek'
+  Caption = 'SSTSOFT->Koperek.VCL'
   ClientHeight = 107
   ClientWidth = 529
   Color = clBtnFace
@@ -14,6 +14,9 @@ object Break_form: TBreak_form
   Font.Style = []
   OldCreateOrder = True
   Position = poScreenCenter
+  DesignSize = (
+    529
+    107)
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
@@ -31,21 +34,22 @@ object Break_form: TBreak_form
   end
   object Label2: TLabel
     Left = 8
-    Top = 28
-    Width = 3
+    Top = 25
+    Width = 31
     Height = 13
+    Caption = 'Label2'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
     Font.Name = 'Default'
-    Font.Style = [fsBold]
+    Font.Style = []
     ParentFont = False
   end
   object SpeedButton1: TSpeedButton
-    Left = 405
-    Top = 44
+    Left = 411
+    Top = 43
     Width = 35
-    Height = 34
+    Height = 35
     AllowAllUp = True
     Anchors = [akRight, akBottom]
     GroupIndex = 2
@@ -77,10 +81,10 @@ object Break_form: TBreak_form
     OnClick = SpeedButton1Click
   end
   object SpeedButton2: TSpeedButton
-    Left = 369
-    Top = 44
+    Left = 370
+    Top = 43
     Width = 35
-    Height = 34
+    Height = 35
     AllowAllUp = True
     Anchors = [akRight, akBottom]
     GroupIndex = 1
@@ -107,9 +111,10 @@ object Break_form: TBreak_form
   end
   object Label3: TLabel
     Left = 8
-    Top = 48
-    Width = 3
+    Top = 44
+    Width = 31
     Height = 13
+    Caption = 'Label3'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -120,8 +125,9 @@ object Break_form: TBreak_form
   object Label4: TLabel
     Left = 8
     Top = 64
-    Width = 3
+    Width = 31
     Height = 13
+    Caption = 'Label4'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -130,9 +136,9 @@ object Break_form: TBreak_form
     ParentFont = False
   end
   object SpeedButton3: TSpeedButton
-    Left = 445
+    Left = 452
     Top = 8
-    Width = 77
+    Width = 70
     Height = 70
     AllowAllUp = True
     Anchors = [akRight, akBottom]
@@ -214,7 +220,7 @@ object Break_form: TBreak_form
     Left = 8
     Top = 84
     Width = 513
-    Height = 20
+    Height = 18
     TextBackColor = clHighlight
     TextSuffix = '%'
   end

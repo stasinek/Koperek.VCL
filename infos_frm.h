@@ -46,6 +46,7 @@ __published:	// IDE-managed Components
     TLabel *Label2;
     TSpeedButton *SpeedButton2;
     TBevel *Bevel4;
+	TButton *Button1;
 	void __fastcall FormShow(TObject *Sender);
 	void __fastcall FormHide(TObject *Sender);
 //---------------------------------------------------------------------------

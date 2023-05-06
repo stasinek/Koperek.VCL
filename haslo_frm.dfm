@@ -25,6 +25,9 @@ object Haslo_form: THaslo_form
     Align = alBottom
     BevelOuter = bvLowered
     TabOrder = 0
+    DesignSize = (
+      447
+      50)
     object Label4: TLabel
       Left = 16
       Top = 20
@@ -105,24 +108,27 @@ object Haslo_form: THaslo_form
       Align = alBottom
       BevelOuter = bvNone
       TabOrder = 0
+      DesignSize = (
+        358
+        81)
       object Label1: TLabel
-        Left = 18
-        Top = 20
+        Left = 14
+        Top = 24
         Width = 50
         Height = 13
         Caption = '&Password:'
       end
       object Label2: TLabel
-        Left = 18
+        Left = 14
         Top = 48
-        Width = 90
+        Width = 110
         Height = 13
-        Caption = '&RETYPE password:'
+        Caption = '&REPEAT the password:'
       end
       object Password1: TEdit
-        Left = 124
+        Left = 133
         Top = 15
-        Width = 222
+        Width = 213
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         PasswordChar = '*'
@@ -130,9 +136,9 @@ object Haslo_form: THaslo_form
         OnChange = Password1Change
       end
       object Password2: TEdit
-        Left = 124
+        Left = 133
         Top = 43
-        Width = 222
+        Width = 213
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         PasswordChar = '*'
@@ -147,13 +153,16 @@ object Haslo_form: THaslo_form
       Height = 45
       Align = alTop
       BevelOuter = bvNone
-      Caption = 'Panel3'
       Color = clInfoBk
       TabOrder = 1
+      ExplicitTop = -3
+      DesignSize = (
+        358
+        45)
       object Label3: TLabel
         Left = 18
-        Top = 11
-        Width = 278
+        Top = 16
+        Width = 327
         Height = 13
         Anchors = [akLeft, akTop, akRight]
         Caption = 'Set Your password for protecting a compressed file (.eno)'

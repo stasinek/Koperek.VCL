@@ -36,12 +36,8 @@ __published:	// IDE-managed Components
     TLabel *Label5;
     TBevel *Bevel2;
     TBevel *Bevel3;
-    TBevel *Bevel4;
-    TBevel *Bevel5;
     TBevel *Bevel1;
     TSpeedButton *SpeedButton5;
-    TBevel *Bevel6;
-    TBevel *Bevel7;
     TSysTray *SysTray1;
     TAdvancedBar *AdvancedBar1;
     TAdvancedBar *AdvancedBar2;

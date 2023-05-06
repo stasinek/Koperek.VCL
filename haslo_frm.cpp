@@ -3,7 +3,7 @@
 #pragma hdrstop
 //---------------------------------------------------------------------------
 #include "haslo_frm.h"
-#include "Koperek32_common_main.h"
+#include "Kop32_common_main.h"
 //---------------------------------------------------------------------------
 #pragma link "exeres"
 #pragma link "EXERES"

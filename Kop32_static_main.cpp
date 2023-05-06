@@ -4,9 +4,9 @@
 #pragma hdrstop
 #define WIN32_LEAN_AND_MEAN
 //---------------------------------------------------------------------------
-#include "Koperek32_common_main.h"
+#include "Kop32_common_main.h"
 //---------------------------------------------------------------------------
-USEUNIT("Koperek32_common_main.cpp");
+USEUNIT("Kop32_common_main.cpp");
 USEFORM("Haslo_frm.cpp", Haslo_form);
 USEFORM("Koper_frm.cpp", Koper_form);
 USEFORM("Break_frm.cpp", Break_form);

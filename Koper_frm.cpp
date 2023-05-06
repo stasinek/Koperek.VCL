@@ -9,10 +9,9 @@
 #include "infos_frm.h"
 #include "break_frm.h"
 #include "journal_frm.h"
-#include "Koperek32_common_main.h"
+#include "Kop32_common_main.h"
 //----------------------------------------------------------------------------
 //#include ".\LIB\DLLIO\TSoft_IO.h"
-#include "Koperek32_common_main.h"
 //----------------------------------------------------------------------------
 #pragma link "ADVBAR"
 #pragma link "SYSTRAY"

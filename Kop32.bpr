@@ -4,7 +4,7 @@
   <MACROS>
     <VERSION value="BCB.06.00"/>
     <PROJECT value="Kop32.exe"/>
-    <OBJFILES value="Kop32_main.obj Koperek32_common_main.obj Haslo_frm.obj Koper_frm.obj 
+    <OBJFILES value="Kop32_main.obj Kop32_common_main.obj Haslo_frm.obj Koper_frm.obj 
       Break_frm.obj Infos_frm.obj Journal_frm.obj Lista_frm.obj Quest_frm.obj 
       ..\..\FORM_TEMPLATES\About_frm.obj"/>
     <RESFILES value="Kop32.res"/>

@@ -4,8 +4,8 @@ object Koper_form: TKoper_form
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsDialog
   Caption = 'sstsoft->Koperek - please wait...'
-  ClientHeight = 397
-  ClientWidth = 577
+  ClientHeight = 415
+  ClientWidth = 574
   Color = clBtnFace
   Constraints.MinHeight = 320
   Constraints.MinWidth = 550
@@ -25,14 +25,19 @@ object Koper_form: TKoper_form
   TextHeight = 13
   object Panel2: TPanel
     Left = 0
-    Top = 325
-    Width = 577
+    Top = 343
+    Width = 574
     Height = 72
     Align = alBottom
     BevelOuter = bvLowered
     TabOrder = 0
+    ExplicitTop = 325
+    ExplicitWidth = 577
+    DesignSize = (
+      574
+      72)
     object SpeedButton4: TSpeedButton
-      Left = 12
+      Left = 9
       Top = 12
       Width = 95
       Height = 48
@@ -60,9 +65,10 @@ object Koper_form: TKoper_form
         4150000000000000000012323232111111000000000000000000012323210000
         0000000000000000000000111110000000000000000000000000}
       OnClick = SpeedButton4Click
+      ExplicitLeft = 12
     end
     object SpeedButton3: TSpeedButton
-      Left = 112
+      Left = 109
       Top = 12
       Width = 45
       Height = 48
@@ -75,9 +81,10 @@ object Koper_form: TKoper_form
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
+      ExplicitLeft = 112
     end
     object SpeedButton1: TSpeedButton
-      Left = 468
+      Left = 462
       Top = 12
       Width = 45
       Height = 48
@@ -108,9 +115,10 @@ object Koper_form: TKoper_form
       ShowHint = True
       Spacing = 0
       OnClick = SpeedButton1Click
+      ExplicitLeft = 465
     end
     object SpeedButton2: TSpeedButton
-      Left = 516
+      Left = 513
       Top = 12
       Width = 49
       Height = 48
@@ -141,9 +149,10 @@ object Koper_form: TKoper_form
       ShowHint = True
       Spacing = 0
       OnClick = SpeedButton2Click
+      ExplicitLeft = 516
     end
     object SpeedButton5: TSpeedButton
-      Left = 412
+      Left = 411
       Top = 12
       Width = 45
       Height = 48
@@ -211,44 +220,47 @@ object Koper_form: TKoper_form
       ShowHint = True
       Spacing = 0
       OnClick = SpeedButton5Click
+      ExplicitLeft = 414
     end
   end
   object Panel3: TPanel
     Left = 0
     Top = 0
     Width = 185
-    Height = 325
+    Height = 343
     Align = alLeft
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitHeight = 325
     object Bevel1: TBevel
       Left = 135
       Top = 0
       Width = 50
-      Height = 325
+      Height = 343
       Align = alRight
       Shape = bsRightLine
+      ExplicitHeight = 325
     end
     object AdvancedBar3: TAdvancedBar
       Left = 28
-      Top = 48
-      Width = 100
+      Top = 129
+      Width = 121
       Height = 20
       TextBackColor = clHighlight
       TextSuffix = '%'
     end
     object AdvancedBar4: TAdvancedBar
       Left = 28
-      Top = 92
-      Width = 100
+      Top = 172
+      Width = 121
       Height = 20
       TextBackColor = clHighlight
       TextSuffix = '%'
     end
     object AdvancedBar5: TAdvancedBar
       Left = 28
-      Top = 132
-      Width = 100
+      Top = 216
+      Width = 121
       Height = 20
       TextBackColor = clHighlight
       TextSuffix = '%'
@@ -257,24 +269,27 @@ object Koper_form: TKoper_form
   object Panel1: TPanel
     Left = 185
     Top = 0
-    Width = 392
-    Height = 325
+    Width = 389
+    Height = 343
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 2
+    ExplicitWidth = 392
+    ExplicitHeight = 325
     object Panel4: TPanel
       Left = 0
       Top = 0
-      Width = 392
+      Width = 389
       Height = 313
       Align = alTop
       BevelOuter = bvNone
       BorderWidth = 10
       TabOrder = 0
+      ExplicitWidth = 392
       object Label1: TLabel
         Left = 10
-        Top = 73
-        Width = 372
+        Top = 30
+        Width = 369
         Height = 20
         Align = alTop
         AutoSize = False
@@ -283,11 +298,13 @@ object Koper_form: TKoper_form
         ShowAccelChar = False
         Transparent = True
         Layout = tlCenter
+        ExplicitLeft = 12
+        ExplicitTop = 74
       end
       object Label2: TLabel
         Left = 10
-        Top = 24
-        Width = 372
+        Top = 10
+        Width = 369
         Height = 20
         Align = alTop
         AutoSize = False
@@ -302,22 +319,26 @@ object Koper_form: TKoper_form
         ShowAccelChar = False
         Transparent = True
         Layout = tlCenter
+        ExplicitLeft = 6
+        ExplicitTop = 20
       end
       object Label3: TLabel
         Left = 10
-        Top = 103
-        Width = 372
+        Top = 63
+        Width = 369
         Height = 20
         Align = alTop
         Caption = 'Actual speed ~ '
         Constraints.MinHeight = 20
         Transparent = True
         Layout = tlCenter
+        ExplicitLeft = 12
+        ExplicitTop = 103
       end
       object Label4: TLabel
         Left = 10
         Top = 290
-        Width = 372
+        Width = 369
         Height = 13
         Align = alBottom
         AutoSize = False
@@ -329,66 +350,41 @@ object Koper_form: TKoper_form
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = True
+        ExplicitWidth = 372
       end
       object Label5: TLabel
         Left = 10
-        Top = 44
-        Width = 372
+        Top = 50
+        Width = 369
         Height = 13
         Align = alTop
         Caption = 'Left x.xx MB and xxxx files.'
+        ExplicitLeft = 12
+        ExplicitTop = 77
       end
       object Bevel2: TBevel
         Left = 10
-        Top = 270
-        Width = 372
+        Top = 285
+        Width = 369
         Height = 5
         Align = alBottom
         Shape = bsBottomLine
+        ExplicitLeft = 6
+        ExplicitTop = 279
       end
       object Bevel3: TBevel
         Left = 10
-        Top = 93
-        Width = 372
+        Top = 83
+        Width = 369
         Height = 10
         Align = alTop
         Shape = bsTopLine
-      end
-      object Bevel4: TBevel
-        Left = 10
-        Top = 57
-        Width = 372
-        Height = 16
-        Align = alTop
-        Shape = bsSpacer
-      end
-      object Bevel5: TBevel
-        Left = 10
-        Top = 275
-        Width = 372
-        Height = 15
-        Align = alBottom
-        Shape = bsSpacer
-      end
-      object Bevel6: TBevel
-        Left = 10
-        Top = 10
-        Width = 372
-        Height = 6
-        Align = alTop
-        Shape = bsSpacer
-      end
-      object Bevel7: TBevel
-        Left = 10
-        Top = 16
-        Width = 372
-        Height = 8
-        Align = alTop
-        Shape = bsSpacer
+        ExplicitLeft = 6
+        ExplicitTop = 113
       end
       object AdvancedBar1: TAdvancedBar
         Left = 12
-        Top = 56
+        Top = 129
         Width = 369
         Height = 20
         TextBackColor = clHighlight
@@ -396,7 +392,7 @@ object Koper_form: TKoper_form
       end
       object AdvancedBar2: TAdvancedBar
         Left = 12
-        Top = 128
+        Top = 172
         Width = 369
         Height = 20
         TextBackColor = clHighlight
@@ -404,7 +400,7 @@ object Koper_form: TKoper_form
       end
       object AdvancedBar6: TAdvancedBar
         Left = 12
-        Top = 168
+        Top = 216
         Width = 369
         Height = 20
         TextBackColor = clHighlight
@@ -420,7 +416,7 @@ object Koper_form: TKoper_form
     Top = 341
   end
   object SysTray1: TSysTray
-    Hint = 'Some Hint'
+    Hint = '????t????'
     Left = 224
     Top = 341
   end

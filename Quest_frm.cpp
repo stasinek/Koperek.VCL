@@ -3,8 +3,8 @@
 #pragma hdrstop
 //---------------------------------------------------------------------------
 #include "Koper_frm.h"
-#include "quest_frm.h"
-#include "Koperek32_common_main.h"
+#include "Quest_frm.h"
+#include "Kop32_common_main.h"
 //---------------------------------------------------------------------------
 #pragma link "BROWSEDLG"
 #pragma link "BROWSEDLG"

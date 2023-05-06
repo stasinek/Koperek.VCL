@@ -1,6 +1,6 @@
 //---------------------------------------------------------------------------
-#ifndef __Quest_frm_H
-#define __Quest_frm_H
+#ifndef __Quest_frm_HDR__
+#define __Quest_frm_HDR__
 //---------------------------------------------------------------------------
 #include <Classes.hpp>
 #include <Buttons.hpp>

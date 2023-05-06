@@ -4,23 +4,23 @@
 #pragma hdrstop
 #include <tchar.h>
 //---------------------------------------------------------------------------
-#include "Koperek32_common_main.h"
+#include "Kop32_common_main.h"
 //---------------------------------------------------------------------------
-USEFORM("Lista_frm.cpp", ListaForm);
-USEFORM("Quest_frm.cpp", QuestForm);
-USEFORM("Infos_frm.cpp", InfosForm);
-USEFORM("Haslo_frm.cpp", HasloForm);
-USEFORM("break_frm.cpp", BreakForm);
-USEFORM("Koper_frm.cpp", KoperForm);
-USEFORM("Journal_frm.cpp", JournalForm);
+USEFORM("Lista_frm.cpp", Lista_form);
+USEFORM("Quest_frm.cpp", Quest_form);
+USEFORM("Infos_frm.cpp", Infos_form);
+USEFORM("Haslo_frm.cpp", Haslo_form);
+USEFORM("Break_frm.cpp", Break_form);
+USEFORM("Koper_frm.cpp", Koper_form);
+USEFORM("Journal_frm.cpp", Journal_form);
 //---------------------------------------------------------------------------
-#include "Break_frm.h"
-#include "Infos_frm.h"
-#include "Haslo_frm.h"
-#include "Journal_frm.h"
-#include "Koper_frm.h"
 #include "Lista_frm.h"
 #include "Quest_frm.h"
+#include "Infos_frm.h"
+#include "Haslo_frm.h"
+#include "Break_frm.h"
+#include "Koper_frm.h"
+#include "Journal_frm.h"
 //---------------------------------------------------------------------------
 // DYNAMICZNE
 #include ".\LIB\DLLKop32\TSoft_Kop32.h"
@@ -47,13 +47,13 @@ strcpy(commandSrc,"");
 	Application->Initialize();
 	Application->Title = "SSTSOFT.Koperek-VCL";
 	Application->MainFormOnTaskBar = false;
-	Application->CreateForm(__classid(TQuestForm), &QuestForm);
-		Application->CreateForm(__classid(TBreakForm), &BreakForm);
-		Application->CreateForm(__classid(THasloForm), &HasloForm);
-		Application->CreateForm(__classid(TInfosForm), &InfosForm);
-		Application->CreateForm(__classid(TJournalForm), &JournalForm);
-		Application->CreateForm(__classid(TKoperForm), &KoperForm);
-		Application->CreateForm(__classid(TListaForm), &ListaForm);
+	Application->CreateForm(__classid(TQuest_form), &Quest_form);
+		Application->CreateForm(__classid(TBreak_form), &Break_form);
+		Application->CreateForm(__classid(THaslo_form), &Haslo_form);
+		Application->CreateForm(__classid(TInfos_form), &Infos_form);
+		Application->CreateForm(__classid(TJournal_form), &Journal_form);
+		Application->CreateForm(__classid(TKoper_form), &Koper_form);
+		Application->CreateForm(__classid(TLista_form), &Lista_form);
 		Application->ShowMainForm = false;
 
 if (strstr(temp,"/SELECT")!=NULL)
@@ -81,7 +81,7 @@ else
 
 //---------------------
 if (useWizzard==true) {
-QuestForm->ShowModal();
+Quest_form->ShowModal();
 }
 else {
 //---------------------
@@ -112,7 +112,7 @@ Kop->Execute(commandDst,commandSrc);
 //---------------------
 EXIT:
 //---------------------
-KoperForm->Timer1->Enabled = false;
+Koper_form->Timer1->Enabled = false;
 delete commandSrc;
 delete temp;
 delete commandDst;

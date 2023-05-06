@@ -14,7 +14,7 @@
 #include "Quest_frm.h"
 #include "..\..\FORM_TEMPLATES\About_frm.h"
 #include "Journal_frm.h"
-#include "Koperek32_common_main.h"
+#include "Kop32_common_main.h"
 //---------------------------------------------------------------------------
 DWORD WINAPI WinMain_common(HINSTANCE hApp, HINSTANCE hInst, char *argts, int State)
 {

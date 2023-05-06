@@ -7,7 +7,7 @@
 //---------------------------------------------------------------------------
 #include "koper_frm.h"
 #include "infos_frm.h"
-#include "Koperek32_common_main.h"
+#include "Kop32_common_main.h"
 //---------------------------------------------------------------------------
 #pragma link "exeres"
 #pragma link "EXERES"
