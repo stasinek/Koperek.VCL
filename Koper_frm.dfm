@@ -31,11 +31,6 @@ object Koper_form: TKoper_form
     Align = alBottom
     BevelOuter = bvLowered
     TabOrder = 0
-    ExplicitTop = 325
-    ExplicitWidth = 577
-    DesignSize = (
-      574
-      72)
     object SpeedButton4: TSpeedButton
       Left = 9
       Top = 12
@@ -65,7 +60,6 @@ object Koper_form: TKoper_form
         4150000000000000000012323232111111000000000000000000012323210000
         0000000000000000000000111110000000000000000000000000}
       OnClick = SpeedButton4Click
-      ExplicitLeft = 12
     end
     object SpeedButton3: TSpeedButton
       Left = 109
@@ -81,7 +75,6 @@ object Koper_form: TKoper_form
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitLeft = 112
     end
     object SpeedButton1: TSpeedButton
       Left = 462
@@ -115,7 +108,6 @@ object Koper_form: TKoper_form
       ShowHint = True
       Spacing = 0
       OnClick = SpeedButton1Click
-      ExplicitLeft = 465
     end
     object SpeedButton2: TSpeedButton
       Left = 513
@@ -149,7 +141,6 @@ object Koper_form: TKoper_form
       ShowHint = True
       Spacing = 0
       OnClick = SpeedButton2Click
-      ExplicitLeft = 516
     end
     object SpeedButton5: TSpeedButton
       Left = 411
@@ -220,7 +211,6 @@ object Koper_form: TKoper_form
       ShowHint = True
       Spacing = 0
       OnClick = SpeedButton5Click
-      ExplicitLeft = 414
     end
   end
   object Panel3: TPanel
@@ -231,7 +221,6 @@ object Koper_form: TKoper_form
     Align = alLeft
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitHeight = 325
     object Bevel1: TBevel
       Left = 135
       Top = 0
@@ -239,7 +228,6 @@ object Koper_form: TKoper_form
       Height = 343
       Align = alRight
       Shape = bsRightLine
-      ExplicitHeight = 325
     end
     object AdvancedBar3: TAdvancedBar
       Left = 28
@@ -274,8 +262,6 @@ object Koper_form: TKoper_form
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 2
-    ExplicitWidth = 392
-    ExplicitHeight = 325
     object Panel4: TPanel
       Left = 0
       Top = 0
@@ -285,7 +271,6 @@ object Koper_form: TKoper_form
       BevelOuter = bvNone
       BorderWidth = 10
       TabOrder = 0
-      ExplicitWidth = 392
       object Label1: TLabel
         Left = 10
         Top = 30
@@ -298,8 +283,6 @@ object Koper_form: TKoper_form
         ShowAccelChar = False
         Transparent = True
         Layout = tlCenter
-        ExplicitLeft = 12
-        ExplicitTop = 74
       end
       object Label2: TLabel
         Left = 10
@@ -319,8 +302,6 @@ object Koper_form: TKoper_form
         ShowAccelChar = False
         Transparent = True
         Layout = tlCenter
-        ExplicitLeft = 6
-        ExplicitTop = 20
       end
       object Label3: TLabel
         Left = 10
@@ -332,8 +313,6 @@ object Koper_form: TKoper_form
         Constraints.MinHeight = 20
         Transparent = True
         Layout = tlCenter
-        ExplicitLeft = 12
-        ExplicitTop = 103
       end
       object Label4: TLabel
         Left = 10
@@ -350,7 +329,6 @@ object Koper_form: TKoper_form
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = True
-        ExplicitWidth = 372
       end
       object Label5: TLabel
         Left = 10
@@ -359,8 +337,6 @@ object Koper_form: TKoper_form
         Height = 13
         Align = alTop
         Caption = 'Left x.xx MB and xxxx files.'
-        ExplicitLeft = 12
-        ExplicitTop = 77
       end
       object Bevel2: TBevel
         Left = 10
@@ -369,8 +345,6 @@ object Koper_form: TKoper_form
         Height = 5
         Align = alBottom
         Shape = bsBottomLine
-        ExplicitLeft = 6
-        ExplicitTop = 279
       end
       object Bevel3: TBevel
         Left = 10
@@ -379,8 +353,6 @@ object Koper_form: TKoper_form
         Height = 10
         Align = alTop
         Shape = bsTopLine
-        ExplicitLeft = 6
-        ExplicitTop = 113
       end
       object AdvancedBar1: TAdvancedBar
         Left = 12

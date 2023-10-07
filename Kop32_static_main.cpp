@@ -2,9 +2,12 @@
 #include <vcl.h>
 #include <windows.h>
 #pragma hdrstop
-#define WIN32_LEAN_AND_MEAN
 //---------------------------------------------------------------------------
 #include "Kop32_common_main.h"
+//---------------------------------------------------------------------------
+#if __BORLANDC__ < 0x550
+#else
+#endif
 //---------------------------------------------------------------------------
 USEUNIT("Kop32_common_main.cpp");
 USEFORM("Haslo_frm.cpp", Haslo_form);

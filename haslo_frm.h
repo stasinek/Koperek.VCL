@@ -1,6 +1,6 @@
 //----------------------------------------------------------------------------
-#ifndef __Haslo_frm_H
-#define __Haslo_frm_H
+#ifndef __Haslo_frm_HDR__
+#define __Haslo_frm_HDR__
 //----------------------------------------------------------------------------
 #include <Buttons.hpp>
 #include <StdCtrls.hpp>
@@ -19,7 +19,6 @@ class THaslo_form : public TForm
 {
 __published:
 //----------------------------------------------------------------------------
-	TExeResource *ExeResource1;
     TPanel *Panel1;
     TButton *OKBtn;
     TButton *CancelBtn;
@@ -35,6 +34,7 @@ __published:
     TPanel *Panel3;
     TLabel *Label3;
     TImage *Image1;
+    TExeResource *ExeResource1;
 	void __fastcall FormShow(TObject *Sender);
 	void __fastcall Password2Change(TObject *Sender);
 	void __fastcall Password1Change(TObject *Sender);

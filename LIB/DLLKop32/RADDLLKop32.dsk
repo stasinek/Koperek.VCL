@@ -11,22 +11,17 @@ File_8=TSourceModule,'D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLI
 File_9=TSourceModule,'D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp',0,1,848,21,852,0,0,,
 
 [Modules]
-Module0=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\RADDLLKop32PCH1.h
-Module1=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_HDR.cpp
-Count=2
+Module0=default.htm
+Count=1
 EditWindowCount=1
 
-[C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\RADDLLKop32PCH1.h]
-ModuleType=TSourceModule
-
-[C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_HDR.cpp]
-ModuleType=TSourceModule
+[default.htm]
+ModuleType=TURLModule
 
 [EditWindow0]
-ViewCount=2
-CurrentEditView=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\RADDLLKop32PCH1.h
+ViewCount=1
+CurrentView=0
 View0=0
-View1=1
 PercentageSizes=1
 Create=1
 Visible=1
@@ -56,26 +51,8 @@ BottomMiddlePanelClients=DockSite0
 BottomMiddelPanelData=0000080001020100000009000000446F636B5369746530971D00000000000002EF06000000000000FFFFFFFF
 
 [View0]
-CustomEditViewType=TEditView
-Module=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\RADDLLKop32PCH1.h
-CursorX=1
-CursorY=1
-TopLine=1
-LeftCol=1
-Elisions=
-Bookmarks=
-EditViewName=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\RADDLLKop32PCH1.h
-
-[View1]
-CustomEditViewType=TEditView
-Module=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_HDR.cpp
-CursorX=1
-CursorY=90
-TopLine=706
-LeftCol=1
-Elisions=
-Bookmarks=
-EditViewName=C:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_HDR.cpp
+CustomEditViewType=TWelcomePageView
+WelcomePageURL=bds:/default.htm
 
 [UndockedDesigner]
 Count=0

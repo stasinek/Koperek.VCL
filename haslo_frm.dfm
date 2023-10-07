@@ -25,9 +25,6 @@ object Haslo_form: THaslo_form
     Align = alBottom
     BevelOuter = bvLowered
     TabOrder = 0
-    DesignSize = (
-      447
-      50)
     object Label4: TLabel
       Left = 16
       Top = 20
@@ -108,9 +105,6 @@ object Haslo_form: THaslo_form
       Align = alBottom
       BevelOuter = bvNone
       TabOrder = 0
-      DesignSize = (
-        358
-        81)
       object Label1: TLabel
         Left = 14
         Top = 24
@@ -155,14 +149,10 @@ object Haslo_form: THaslo_form
       BevelOuter = bvNone
       Color = clInfoBk
       TabOrder = 1
-      ExplicitTop = -3
-      DesignSize = (
-        358
-        45)
       object Label3: TLabel
         Left = 18
         Top = 16
-        Width = 327
+        Width = 278
         Height = 13
         Anchors = [akLeft, akTop, akRight]
         Caption = 'Set Your password for protecting a compressed file (.eno)'
@@ -171,11 +161,7 @@ object Haslo_form: THaslo_form
     end
   end
   object ExeResource1: TExeResource
-    Kind = rkICON
-    LibFileName = 'shell32.dll'
-    SizeX = 32
-    SizeY = 32
-    Left = 31
-    Top = 77
+    Left = 24
+    Top = 81
   end
 end

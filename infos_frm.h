@@ -18,7 +18,6 @@ class TInfos_form : public TForm
 //---------------------------------------------------------------------------
 __published:	// IDE-managed Components
 //---------------------------------------------------------------------------
-	TExeResource *ExeResource1;
 	TStatusBar *StatusBar1;
     TPanel *Panel1;
     TButton *Tak;
@@ -47,6 +46,7 @@ __published:	// IDE-managed Components
     TSpeedButton *SpeedButton2;
     TBevel *Bevel4;
 	TButton *Button1;
+    TExeResource *ExeResource1;
 	void __fastcall FormShow(TObject *Sender);
 	void __fastcall FormHide(TObject *Sender);
 //---------------------------------------------------------------------------

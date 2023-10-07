@@ -4,9 +4,9 @@
   <MACROS>
     <VERSION value="BCB.06.00"/>
     <PROJECT value="Kop32_static.exe"/>
-    <OBJFILES value="Kop32_static_main.obj Kop32_common_main.obj Haslo_frm.obj 
-      Koper_frm.obj Break_frm.obj Infos_frm.obj Journal_frm.obj Lista_frm.obj 
-      Quest_frm.obj ..\..\FORM_TEMPLATES\About_frm.obj LIB\DLLIO\TSoft_IO.obj 
+    <OBJFILES value="Kop32_static_main.obj Kop32_common_main.obj Haslo_frm.obj Koper_frm.obj 
+      Break_frm.obj Infos_frm.obj Journal_frm.obj Lista_frm.obj Quest_frm.obj 
+      ..\..\FORM_TEMPLATES\About_frm.obj LIB\DLLIO\TSoft_IO.obj 
       LIB\DLLDatabase\TSoft_Database.obj LIB\DLLKop32\TSoft_Ari.obj 
       LIB\DLLKop32\TSoft_BinTree.obj LIB\DLLKop32\TSoft_BWTMatrix.obj 
       LIB\DLLKop32\TSoft_HDR.obj LIB\DLLKop32\TSoft_Huff.obj 
@@ -21,8 +21,8 @@
       Journal_frm.dfm Lista_frm.dfm Quest_frm.dfm 
       ..\..\FORM_TEMPLATES\About_frm.dfm"/>
     <LIBFILES value=""/>
-    <LIBRARIES value="dclusr50.lib Vclx50.lib Vcl50.lib dclusr50.lib vcl.lib"/>
-    <SPARELIBS value="vcl.lib dclusr50.lib Vcl50.lib Vclx50.lib dclusr50.lib"/>
+    <LIBRARIES value="sstdcl50.lib dclusr50.lib Vclx50.lib Vcl50.lib dclusr50.lib vcl.lib"/>
+    <SPARELIBS value="vcl.lib dclusr50.lib Vcl50.lib Vclx50.lib dclusr50.lib sstdcl50.lib"/>
     <PACKAGES value="Vcl50.bpi Vclx50.bpi bcbsmp50.bpi dclocx50.bpi bcb2kaxserver50.bpi 
       dclusr50.bpi"/>
     <PATHCPP value=".;..\..\FORM_TEMPLATES;LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32"/>

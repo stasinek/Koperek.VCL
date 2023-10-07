@@ -5,15 +5,10 @@
 #include <shellapi.h>
 #pragma hdrstop
 //---------------------------------------------------------------------------
-#include "koper_frm.h"
-#include "infos_frm.h"
 #include "Kop32_common_main.h"
+#include "Koper_frm.h"
+#include "Infos_frm.h"
 //---------------------------------------------------------------------------
-#pragma link "exeres"
-#pragma link "EXERES"
-#pragma link "EXERES"
-#pragma link "EXERES"
-#pragma link "EXERES"
 #pragma link "EXERES"
 #pragma resource "*.dfm"
 //---------------------------------------------------------------------------

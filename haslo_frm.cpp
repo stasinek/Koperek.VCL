@@ -2,10 +2,9 @@
 #include <vcl.h>
 #pragma hdrstop
 //---------------------------------------------------------------------------
-#include "haslo_frm.h"
+#include "Haslo_frm.h"
 #include "Kop32_common_main.h"
 //---------------------------------------------------------------------------
-#pragma link "exeres"
 #pragma link "EXERES"
 #pragma resource "*.dfm"
 //---------------------------------------------------------------------------

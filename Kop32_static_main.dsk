@@ -1,13 +1,12 @@
 [Modules]
 Module0=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Kop32_static.bpr
-Module1=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Koperek32_common_main.h
-Module2=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Koperek32_common_main.cpp
+Module1=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Kop32_common_main.h
+Module2=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Infos_frm.cpp
 Module3=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.cpp
-Module4=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Koperek32_common_main.cpp
-Module5=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.h
-Module6=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp
-Module7=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32_Seeker.cpp
-Count=8
+Module4=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.h
+Module5=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp
+Module6=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32_Seeker.cpp
+Count=7
 EditWindowCount=1
 
 [E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Kop32_static.bpr]
@@ -15,22 +14,17 @@ ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Koperek32_common_main.h]
+[E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Kop32_common_main.h]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Koperek32_common_main.cpp]
+[E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Infos_frm.cpp]
 ModuleType=SourceModule
-FormState=0
+FormState=1
 FormOnTop=0
 
 [E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Koperek32_common_main.cpp]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
@@ -55,8 +49,8 @@ FormState=0
 FormOnTop=0
 
 [EditWindow0]
-ViewCount=8
-CurrentView=1
+ViewCount=7
+CurrentView=0
 View0=0
 View1=1
 View2=2
@@ -64,7 +58,6 @@ View3=3
 View4=4
 View5=5
 View6=6
-View7=7
 MessageView=MessageView@EditWindow0
 Create=1
 Visible=1
@@ -86,55 +79,48 @@ BottomPanelClients=MessageView@EditWindow0
 BottomPanelData=000004000000000000000000000000000000000000000000000100000000000000000B0000004D65737361676556696577FFFFFFFF
 
 [View0]
-Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\Koperek32_common_main.cpp
+Module=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Kop32_static_main.cpp
 CursorX=1
-CursorY=25
+CursorY=12
 TopLine=1
 LeftCol=1
 
 [View1]
-Module=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Kop32_static_main.cpp
-CursorX=1
-CursorY=33
+Module=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Kop32_common_main.h
+CursorX=5
+CursorY=1
 TopLine=1
 LeftCol=1
 
 [View2]
 Module=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.cpp
-CursorX=36
-CursorY=9
+CursorX=28
+CursorY=7
 TopLine=1
 LeftCol=1
 
 [View3]
+Module=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Infos_frm.cpp
+CursorX=8
+CursorY=12
+TopLine=1
+LeftCol=1
+
+[View4]
 Module=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.h
 CursorX=63
 CursorY=6
 TopLine=1
 LeftCol=1
 
-[View4]
-Module=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Koperek32_common_main.cpp
-CursorX=45
-CursorY=1
-TopLine=7
-LeftCol=1
-
 [View5]
-Module=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Koperek32_common_main.h
-CursorX=8
-CursorY=6
-TopLine=1
-LeftCol=1
-
-[View6]
 Module=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_IO.cpp
 CursorX=2
 CursorY=1021
 TopLine=1
 LeftCol=1
 
-[View7]
+[View6]
 Module=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32_Seeker.cpp
 CursorX=1
 CursorY=1
@@ -228,7 +214,7 @@ LRDockWidth=190
 Dockable=1
 SplitPos=85
 ArrangeBy=Name
-SelectedItem=
+SelectedItem=Caption
 ExpandedItems=
 HiddenCategories=Legacy
 ShowStatusBar=1

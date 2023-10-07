@@ -10,19 +10,21 @@ File_7=SourceModule,'C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\
 File_8=SourceModule,'C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLKop32\TSoft_Kop32.cpp',0,1,63,26,77,0,0
 
 [Modules]
-Module0=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.h
-Module1=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.cpp
+Module0=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Kop32_common_main.cpp
+Module1=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Kop32_common_main.h
 Module2=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.cpp
 Module3=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase_main.cpp
-Count=4
+Module4=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.h
+Module5=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.cpp
+Count=6
 EditWindowCount=1
 
-[E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.h]
+[E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Kop32_common_main.cpp]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.cpp]
+[E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Kop32_common_main.h]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
@@ -37,7 +39,17 @@ ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[E:\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Snake.VCL\ProjectGroup1.bpg]
+[E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.h]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Windows\SYSTEM32\ProjectGroup1.bpg]
 FormState=0
 FormOnTop=0
 
@@ -46,12 +58,14 @@ FormState=0
 FormOnTop=0
 
 [EditWindow0]
-ViewCount=4
-CurrentView=2
+ViewCount=6
+CurrentView=1
 View0=0
 View1=1
 View2=2
 View3=3
+View4=4
+View5=5
 MessageView=MessageView@EditWindow0
 Create=1
 Visible=1
@@ -73,27 +87,41 @@ BottomPanelClients=MessageView@EditWindow0
 BottomPanelData=000004000000000000000000000000000000000000000000000100000000000000000B0000004D65737361676556696577FFFFFFFF
 
 [View0]
+Module=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Kop32_common_main.h
+CursorX=9
+CursorY=2
+TopLine=1
+LeftCol=1
+
+[View1]
+Module=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\Kop32_common_main.cpp
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+
+[View2]
 Module=C:\Users\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.cpp
 CursorX=117
 CursorY=25
 TopLine=7
 LeftCol=1
 
-[View1]
+[View3]
 Module=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.cpp
 CursorX=55
 CursorY=9
 TopLine=1
 LeftCol=1
 
-[View2]
+[View4]
 Module=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\TSoft_Database.h
-CursorX=33
-CursorY=33
+CursorX=16
+CursorY=8
 TopLine=1
 LeftCol=1
 
-[View3]
+[View5]
 Module=E:\SRC\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLDatabase\DLLDatabase_main.cpp
 CursorX=1
 CursorY=4

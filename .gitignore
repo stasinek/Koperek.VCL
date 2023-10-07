@@ -39,3 +39,4 @@ _ReSharper*/
 *.map
 journal*.*
 *.map
+*([0-9]).*
