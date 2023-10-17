@@ -1,8 +1,9 @@
 //---------------------------------------------------------------------------
 #include <windows.h>
-#include "..\DLLIO\TSoft_IO.h"
 #pragma hdrstop
+//---------------------------------------------------------------------------
 #include "TSoft_Huff.h"
+#include "..\DLLIO\TSoft_IO.h"
 //---------------------------------------------------------------------------
 #define CNUM	 (256) 		   /* kinds of characters (character code = 0..N_CHAR-1) */
 #define TREE 	 (CNUM*2-1)    /* size of table */

@@ -6,8 +6,8 @@ object Quest_form: TQuest_form
   ClientHeight = 395
   ClientWidth = 634
   Color = clBtnFace
-  Constraints.MaxHeight = 420
-  Constraints.MaxWidth = 640
+  Constraints.MaxHeight = 422
+  Constraints.MaxWidth = 642
   Constraints.MinHeight = 420
   Constraints.MinWidth = 640
   DefaultMonitor = dmDesktop
@@ -33,7 +33,6 @@ object Quest_form: TQuest_form
     BevelOuter = bvNone
     Color = clBlack
     TabOrder = 2
-    ExplicitHeight = 352
     object Image1: TImage
       Left = 10
       Top = 10
@@ -1199,11 +1198,6 @@ object Quest_form: TQuest_form
     Align = alBottom
     BevelOuter = bvLowered
     TabOrder = 0
-    ExplicitTop = 352
-    ExplicitWidth = 632
-    DesignSize = (
-      634
-      41)
     object Button3: TButton
       Left = 465
       Top = 10
@@ -1246,8 +1240,6 @@ object Quest_form: TQuest_form
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitWidth = 407
-    ExplicitHeight = 352
     object Panel0: TPanel
       Left = 0
       Top = 0
@@ -1257,7 +1249,6 @@ object Quest_form: TQuest_form
       BevelOuter = bvNone
       Color = clInfoBk
       TabOrder = 0
-      ExplicitWidth = 407
       object Label5: TLabel
         Left = 20
         Top = 12
@@ -1291,8 +1282,6 @@ object Quest_form: TQuest_form
       BevelOuter = bvNone
       BorderWidth = 10
       TabOrder = 1
-      ExplicitTop = 52
-      ExplicitWidth = 407
       object PageControl1: TPageControl
         Left = 10
         Top = 31
@@ -1302,12 +1291,8 @@ object Quest_form: TQuest_form
         Align = alBottom
         Style = tsFlatButtons
         TabOrder = 0
-        ExplicitWidth = 387
         object TabSheet1: TTabSheet
           Caption = 'Global options...'
-          DesignSize = (
-            381
-            228)
           object SpeedButton3: TSpeedButton
             Left = 318
             Top = 108
@@ -1453,12 +1438,13 @@ object Quest_form: TQuest_form
             Top = 108
             Width = 306
             Height = 21
+            TabStop = False
             Anchors = [akLeft, akTop, akRight]
             Ctl3D = True
+            ItemHeight = 0
             MaxLength = 430
             ParentCtl3D = False
             TabOrder = 5
-            TabStop = False
             Text = 'Disabled'
           end
           object StaticText4: TStaticText
@@ -1474,10 +1460,11 @@ object Quest_form: TQuest_form
             Top = 152
             Width = 306
             Height = 21
+            TabStop = False
             Anchors = [akLeft, akTop, akRight]
+            ItemHeight = 0
             MaxLength = 430
             TabOrder = 7
-            TabStop = False
             Text = 'Disabled'
           end
           object CheckBox8: TCheckBox
@@ -1500,9 +1487,6 @@ object Quest_form: TQuest_form
         object TabSheet2: TTabSheet
           Caption = 'Compression options...'
           ImageIndex = 1
-          DesignSize = (
-            381
-            228)
           object StaticText5: TStaticText
             Left = 5
             Top = 16
@@ -1517,6 +1501,7 @@ object Quest_form: TQuest_form
             Width = 59
             Height = 21
             Anchors = [akLeft, akTop, akRight]
+            ItemHeight = 13
             TabOrder = 1
             Text = '4096'
             OnChange = ComboBox1Change
@@ -1642,8 +1627,6 @@ object Quest_form: TQuest_form
     Align = alRight
     BevelOuter = bvNone
     TabOrder = 3
-    ExplicitLeft = 564
-    ExplicitHeight = 352
     object SpeedButton5: TSpeedButton
       Left = 16
       Top = 12
@@ -1841,7 +1824,7 @@ object Quest_form: TQuest_form
       Left = 0
       Top = 0
       Width = 9
-      Height = 352
+      Height = 354
       Align = alLeft
       Shape = bsLeftLine
     end

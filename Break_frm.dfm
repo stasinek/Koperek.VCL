@@ -14,9 +14,6 @@ object Break_form: TBreak_form
   Font.Style = []
   OldCreateOrder = True
   Position = poScreenCenter
-  DesignSize = (
-    529
-    107)
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
