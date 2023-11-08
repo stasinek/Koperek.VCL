@@ -4,9 +4,9 @@
   <MACROS>
     <VERSION value="BCB.06.00"/>
     <PROJECT value="DLLKop32.dll"/>
-    <OBJFILES value="DLLKop32_main.obj TSoft_Kop32.obj TSoft_Koder.obj TSoft_Ari.obj 
-      TSoft_Huff.obj TSoft_BWTMatrix.obj TSoft_HDR.obj TSoft_MTF.obj 
-      TSoft_Stack.obj TSoft_Pharser.obj TSoft_BinTree.obj TSoft_Kop32_Seeker.obj"/>
+    <OBJFILES value="DLLKop32.obj TSoft_Kop32.obj TSoft_Koder.obj TSoft_Ari.obj TSoft_Huff.obj 
+      TSoft_BWTMatrix.obj TSoft_HDR.obj TSoft_MTF.obj TSoft_Stack.obj 
+      TSoft_Pharser.obj TSoft_BinTree.obj TSoft_Kop32_Seeker.obj"/>
     <RESFILES value="DLLKop32.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
@@ -25,7 +25,7 @@
     <LINKER value="ilink32"/>
     <USERDEFINES value="BUILD_KOPDLL;_DEBUG"/>
     <SYSDEFINES value="NO_STRICT;_NO_VCL"/>
-    <MAINSOURCE value="DLLKop32_main.cpp"/>
+    <MAINSOURCE value="DLLKop32.cpp"/>
     <INCLUDEPATH value="..\DLLIO;..\DLLDatabase;..;$(BCB)\include"/>
     <LIBPATH value="..\DLLIO;..\DLLDatabase;..;$(BCB)\lib"/>
     <WARNINGS value=""/>
@@ -66,11 +66,11 @@ Locale=1045
 CodePage=1250
 
 [Version Info Keys]
-CompanyName=TSOFT/SSTSOFT
-FileDescription=DLL (GUI)
+CompanyName=SSTSOFT
+FileDescription=Toolkit build for Koperek.VCL
 FileVersion=1.1.0.53
 InternalName=DLLKOP32
-LegalCopyright=Stanislaw Stasiak
+LegalCopyright=Stanislaw Stasiak 2000-2023
 LegalTrademarks=
 OriginalFilename=DLLKop32.dll
 ProductName=DLLKop32

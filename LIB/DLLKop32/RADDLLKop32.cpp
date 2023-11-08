@@ -1,13 +1,4 @@
 //---------------------------------------------------------------------------
-//-------- COPYRIGHT: Stanislaw Stasiak "SSTSOFT.pl" @2001-2002 -------------
-//-------- https://github.com/stasinek/Koperek.VCL --------------------------
-//---------------------------------------------------------------------------
-#include <windows.h>
-#pragma hdrstop
-#pragma argsused
-//---------------------------------------------------------------------------
-#include "TSoft_Database.h"
-//---------------------------------------------------------------------------
 //   Important note about DLL memory management when your DLL uses the
 //   static version of the RunTime Library:
 //
@@ -27,9 +18,19 @@
 //   If your DLL uses the dynamic version of the RTL, you do not need to
 //   explicitly add MEMMGR.LIB as this will be done implicitly for you
 //---------------------------------------------------------------------------
-__declspec(dllexport) int WINAPI DllEntryPoint(HINSTANCE hinst, unsigned long reason, void* lpReserved)
-{
-    return 1;
-}
+#include <windows.h>
+#pragma hdrstop
+#include <condefs.h>
+#include "TSoft_Kop32.h"
+#pragma hdrstop
+#pragma argsused
+__declspec(dllexport) TSoft::Kop32 *Kop;
 //---------------------------------------------------------------------------
- 
+
+extern "C" int _libmain(unsigned long reason)
+{
+if (reason==DLL_PROCESS_ATTACH)
+	Kop = new TSoft::Kop32;
+return 1;
+}
+

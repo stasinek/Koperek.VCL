@@ -1,5 +1,6 @@
 //---------------------------------------------------------------------------
-//-----------------Stanislaw Stasiak "TSoft"-2001-2004-----------------------
+//-------- COPYRIGHT: Stanislaw Stasiak SSTSOFT.pl @2001-2004 ---------------
+//-------- https://github.com/stasinek/Koperek.VCL --------------------------
 //---------------------------------------------------------------------------
 #include <windows.h>
 #include <winbase.h>
@@ -769,17 +770,17 @@ for (int iT = 0; iT < options.Argts.Count; iT++)
 	 {
 	 strMov(templpStr1,options.Argts.Items[iT]->text);
 
-	 strExchange(templpStr1,"%filename%",
+	 strExchange(templpStr1,"%name",
 					list.src.Main.Items[aindex]->text);
-	 strExchange(templpStr1,"%path%",
+	 strExchange(templpStr1,"%path",
 					strExtractFilePath(templpStr2,list.src.Main.Items[aindex]->text));
-	 strExchange(templpStr1,"%file%",
+	 strExchange(templpStr1,"%file",
 					strExtractFileName(templpStr2,list.src.Main.Items[aindex]->text));
-	 strExchange(templpStr1,"%extt%",
+	 strExchange(templpStr1,"%extt",
 					strExtractFileExtt(templpStr2,list.src.Main.Items[aindex]->text));
-	 strExchange(templpStr1,"%size%",
+	 strExchange(templpStr1,"%size",
 					intToStr(list.src.Main.Items[aindex]->data_size[SIZE]));
-	 strExchange(templpStr1,"%attr%",
+	 strExchange(templpStr1,"%attr",
 					intToStr(list.src.Main.Items[aindex]->data_size[ATTRIB]));
 
 	 options.Batch.Add(ASCHAR(templpStr1));

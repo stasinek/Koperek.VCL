@@ -58,8 +58,8 @@ Locale=1045
 CodePage=1250
 
 [Version Info Keys]
-CompanyName=TSOFT/SSTSOFT
-FileDescription=
+CompanyName=SSTSOFT
+FileDescription=Toolkit build for Koperek.VCL
 FileVersion=1.1.0.5
 InternalName=SSTSOFT.Database
 LegalCopyright=Stanisław Stasiak 2002-2023

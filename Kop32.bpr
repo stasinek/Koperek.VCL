@@ -4,10 +4,10 @@
   <MACROS>
     <VERSION value="BCB.06.00"/>
     <PROJECT value="Kop32.exe"/>
-    <OBJFILES value="Kop32_main.obj Kop32_common_main.obj Haslo_frm.obj Koper_frm.obj 
-      Break_frm.obj Infos_frm.obj Journal_frm.obj Lista_frm.obj Quest_frm.obj 
+    <OBJFILES value="Kop32.obj Kop32_common.obj Haslo_frm.obj Koper_frm.obj Break_frm.obj 
+      Infos_frm.obj Journal_frm.obj Lista_frm.obj Quest_frm.obj 
       ..\..\FORM_TEMPLATES\About_frm.obj"/>
-    <RESFILES value="Kop32.res"/>
+    <RESFILES value="Kop32.res Kop32_common.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
     <DEFFILE value=""/>
@@ -16,7 +16,7 @@
       ..\..\FORM_TEMPLATES\About_frm.dfm"/>
     <LIBFILES value="LIB\DLLIO\DLLIO.lib LIB\DLLDatabase\DLLDatabase.lib 
       LIB\DLLKop32\DLLKop32.lib"/>
-    <LIBRARIES value="sstdcl50.lib  Vclx50.lib Vcl50.lib vcl.lib"/>
+    <LIBRARIES value="sstdcl50.lib Vclx50.lib Vcl50.lib vcl.lib"/>
     <SPARELIBS value="vcl.lib Vcl50.lib Vclx50.lib sstdcl50.lib"/>
     <PACKAGES value="Vcl50.bpi Vclx50.bpi bcbsmp50.bpi dclocx50.bpi bcb2kaxserver50.bpi"/>
     <PATHCPP value=".;..\..\FORM_TEMPLATES"/>
@@ -28,7 +28,7 @@
     <LINKER value="ilink32"/>
     <USERDEFINES value="NO_WIN32_LEAN_AND_MEAN;_DEBUG"/>
     <SYSDEFINES value="NO_STRICT"/>
-    <MAINSOURCE value="Kop32_main.cpp"/>
+    <MAINSOURCE value="Kop32.cpp"/>
     <INCLUDEPATH value="LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;..\..\Packages;..\..\form_templates;..\..\forms;..\..;..;$(BCB)\include;$(BCB)\include\vcl"/>
     <LIBPATH value="LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;..\..\Packages;..\..\FORM_TEMPLATES;..\..\forms;..\..;..;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\Projects\Lib"/>
     <WARNINGS value="-w-par"/>
@@ -52,7 +52,7 @@
   </LINKER>
   <IDEOPTIONS>
 [Version Info]
-IncludeVerInfo=0
+IncludeVerInfo=1
 AutoIncBuild=0
 MajorVer=1
 MinorVer=1

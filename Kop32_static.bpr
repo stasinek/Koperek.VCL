@@ -4,7 +4,7 @@
   <MACROS>
     <VERSION value="BCB.06.00"/>
     <PROJECT value="Kop32_static.exe"/>
-    <OBJFILES value="Kop32_static_main.obj Kop32_common_main.obj Haslo_frm.obj Koper_frm.obj 
+    <OBJFILES value="Kop32_static.obj Kop32_common.obj Haslo_frm.obj Koper_frm.obj 
       Break_frm.obj Infos_frm.obj Journal_frm.obj Lista_frm.obj Quest_frm.obj 
       ..\..\FORM_TEMPLATES\About_frm.obj LIB\DLLIO\TSoft_IO.obj 
       LIB\DLLDatabase\TSoft_Database.obj LIB\DLLKop32\TSoft_Ari.obj 
@@ -13,7 +13,7 @@
       LIB\DLLKop32\TSoft_Koder.obj LIB\DLLKop32\TSoft_Kop32.obj 
       LIB\DLLKop32\TSoft_Mtf.obj LIB\DLLKop32\TSoft_Pharser.obj 
       LIB\DLLKop32\TSoft_Stack.obj LIB\DLLKop32\TSoft_Kop32_Seeker.obj"/>
-    <RESFILES value="Kop32_static_main.res"/>
+    <RESFILES value="Kop32_static.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
     <DEFFILE value=""/>
@@ -34,7 +34,7 @@
     <LINKER value="ilink32"/>
     <USERDEFINES value="NO_WIN32_LEAN_AND_MEAN;STATIC"/>
     <SYSDEFINES value="NO_STRICT"/>
-    <MAINSOURCE value="Kop32_static_main.cpp"/>
+    <MAINSOURCE value="Kop32_static.cpp"/>
     <INCLUDEPATH value="..\..;..;LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;&quot;C:\Program Files\Borland\CBuilder6\Projects\&quot;;..\..\form_templates;..\..\forms;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages"/>
     <LIBPATH value="..\..\FORM_TEMPLATES;..\..;..;&quot;C:\Program Files\Borland\CBuilder6\Projects\&quot;;..\forms;LIB\DLLIO;LIB\DLLDatabase;LIB\DLLKop32;$(BCB)\Projects\Lib;..\..\forms;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;LIB"/>
     <WARNINGS value="-w-par"/>
@@ -136,7 +136,7 @@ Item6=_DEBUG
 DebugSourceDirs=$(BCB)\source\vcl
 
 [Parameters]
-RunParams=/LIST D:\LISTA.TXT
+RunParams=/LIST H:\test.txt
 HostApplication=
 RemoteHost=
 RemotePath=

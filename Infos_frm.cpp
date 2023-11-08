@@ -5,7 +5,7 @@
 #include <shellapi.h>
 #pragma hdrstop
 //---------------------------------------------------------------------------
-#include "Kop32_common_main.h"
+#include "Kop32_common.h"
 #include "Koper_frm.h"
 #include "Infos_frm.h"
 //---------------------------------------------------------------------------

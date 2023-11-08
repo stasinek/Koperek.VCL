@@ -1,7 +1,7 @@
 object ListaForm: TListaForm
   Left = 30
   Top = 94
-  Width = 916
+  Width = 924
   Height = 495
   Caption = 'Lista'
   Color = clBtnFace
@@ -27,8 +27,8 @@ object ListaForm: TListaForm
   end
   object Panel1: TPanel
     Left = 0
-    Top = 398
-    Width = 908
+    Top = 386
+    Width = 900
     Height = 51
     Align = alBottom
     BevelOuter = bvLowered
@@ -171,8 +171,8 @@ object ListaForm: TListaForm
   object Panel3: TPanel
     Left = 0
     Top = 309
-    Width = 908
-    Height = 89
+    Width = 900
+    Height = 77
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 2

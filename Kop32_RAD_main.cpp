@@ -4,7 +4,7 @@
 #pragma hdrstop
 #include <tchar.h>
 //---------------------------------------------------------------------------
-#include "Kop32_common_main.h"
+#include "Kop32_common.h"
 //---------------------------------------------------------------------------
 USEFORM("Lista_frm.cpp", Lista_form);
 USEFORM("Quest_frm.cpp", Quest_form);

@@ -1,8 +1,9 @@
 //---------------------------------------------------------------------------
-//-----------------Stanislaw Stasiak "TSoft"-2001-2002--------------------------
+//-------- COPYRIGHT: Stanislaw Stasiak SSTSOFT.pl @2001-2004 ---------------
+//-------- https://github.com/stasinek/Koperek.VCL --------------------------
 //---------------------------------------------------------------------------
-#ifndef __TSoft_Kop32_HDR__
-#define __TSoft_Kop32_HDR__
+#ifndef __TSoft_Kop32_h__
+#define __TSoft_Kop32_h__
 //---------------------------------------------------------------------------
 #include "TSoft_build_conf.h"
 #include "./../DLLDatabase/TSoft_Database.h"

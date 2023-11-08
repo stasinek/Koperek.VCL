@@ -4,7 +4,7 @@
 //---------------------------------------------------------------------------
 #include "Koper_frm.h"
 #include "Quest_frm.h"
-#include "Kop32_common_main.h"
+#include "Kop32_common.h"
 //---------------------------------------------------------------------------
 #pragma link "BROWSEDLG"
 #pragma link "BROWSEDLG"

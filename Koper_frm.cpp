@@ -1,15 +1,15 @@
 //---------------------------------------------------------------------------
-#include <vcl.h>
 #include <stdio.h>
+#include <vcl.h>
 #pragma hdrstop
 //---------------------------------------------------------------------------
+#include "Kop32_common.h"
 #include "koper_frm.h"
 #include "quest_frm.h"
 #include "haslo_frm.h"
 #include "infos_frm.h"
 #include "break_frm.h"
 #include "journal_frm.h"
-#include "Kop32_common_main.h"
 //----------------------------------------------------------------------------
 //#include ".\LIB\DLLIO\TSoft_IO.h"
 //----------------------------------------------------------------------------

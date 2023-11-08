@@ -6,8 +6,8 @@ object Quest_form: TQuest_form
   ClientHeight = 395
   ClientWidth = 634
   Color = clBtnFace
-  Constraints.MaxHeight = 422
-  Constraints.MaxWidth = 642
+  Constraints.MaxHeight = 433
+  Constraints.MaxWidth = 650
   Constraints.MinHeight = 420
   Constraints.MinWidth = 640
   DefaultMonitor = dmDesktop
@@ -1287,7 +1287,7 @@ object Quest_form: TQuest_form
         Top = 31
         Width = 389
         Height = 259
-        ActivePage = TabSheet3
+        ActivePage = TabSheet1
         Align = alBottom
         Style = tsFlatButtons
         TabOrder = 0
@@ -1401,7 +1401,7 @@ object Quest_form: TQuest_form
             AutoSelect = False
             AutoSize = False
             TabOrder = 1
-            Text = '#file'
+            Text = '%name'
             OnChange = Edit2Change
           end
           object StaticText2: TStaticText
@@ -1441,7 +1441,7 @@ object Quest_form: TQuest_form
             TabStop = False
             Anchors = [akLeft, akTop, akRight]
             Ctl3D = True
-            ItemHeight = 0
+            ItemHeight = 13
             MaxLength = 430
             ParentCtl3D = False
             TabOrder = 5
@@ -1462,7 +1462,7 @@ object Quest_form: TQuest_form
             Height = 21
             TabStop = False
             Anchors = [akLeft, akTop, akRight]
-            ItemHeight = 0
+            ItemHeight = 13
             MaxLength = 430
             TabOrder = 7
             Text = 'Disabled'

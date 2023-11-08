@@ -3,7 +3,7 @@
 #pragma hdrstop
 //---------------------------------------------------------------------------
 #include "Haslo_frm.h"
-#include "Kop32_common_main.h"
+#include "Kop32_common.h"
 //---------------------------------------------------------------------------
 #pragma link "EXERES"
 #pragma resource "*.dfm"
